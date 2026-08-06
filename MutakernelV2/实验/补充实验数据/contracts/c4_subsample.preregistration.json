@@ -1,0 +1,568 @@
+{
+ "protocol": {
+  "id": "c4-subsample-p2-random-v1",
+  "basis": "E3_契约缺口补齐计划_L3与C4.md §2.3.2 (2026-07-30 拍板)",
+  "frame": "all 184 TritonBench_G_v1 tasks",
+  "n": 60,
+  "stratification": "manifest difficulty (5 strata), proportional allocation, floor quotas, remainder rule B (seeded systematic sampling)",
+  "stopping_rule": "write until n=60 references are authored; if the person-hour budget is exhausted first, stop then (prefix of length m is a valid pi=m/184 sample); no other stopping allowed",
+  "seed": 42,
+  "undecidable_tasks": "never resampled or replaced (§2.3.2(7))"
+ },
+ "evidence": {
+  "manifest_sha256": "78d730f062d6c6ee1c369da0df3bd98b7039c192313600b578ecda9a55d8b0a2",
+  "script_sha256": "6dc4c8e792ce1898ea29f577a69be4e3bf58dc37c9e745f56e9fb95da7f079e9",
+  "generated_at": "2026-08-01T02:32:59.251219+00:00",
+  "strata": {
+   "1": {
+    "N_h": 3,
+    "exact_quota": 0.978261,
+    "floor": 0,
+    "remainder": 0.978261,
+    "n_h": 1,
+    "got_extra_slot": true
+   },
+   "2": {
+    "N_h": 27,
+    "exact_quota": 8.804348,
+    "floor": 8,
+    "remainder": 0.804348,
+    "n_h": 9,
+    "got_extra_slot": true
+   },
+   "3": {
+    "N_h": 65,
+    "exact_quota": 21.195652,
+    "floor": 21,
+    "remainder": 0.195652,
+    "n_h": 21,
+    "got_extra_slot": false
+   },
+   "4": {
+    "N_h": 84,
+    "exact_quota": 27.391304,
+    "floor": 27,
+    "remainder": 0.391304,
+    "n_h": 27,
+    "got_extra_slot": false
+   },
+   "5": {
+    "N_h": 5,
+    "exact_quota": 1.630435,
+    "floor": 1,
+    "remainder": 0.630435,
+    "n_h": 2,
+    "got_extra_slot": true
+   }
+  },
+  "pi_constant_check": "max|pi_i - 60/184| < 1e-12 asserted",
+  "monte_carlo_selfcheck": {
+   "reps": 1000,
+   "per_stratum": {
+    "1": {
+     "empirical": 0.975,
+     "expected": 0.978261
+    },
+    "2": {
+     "empirical": 0.805,
+     "expected": 0.804348
+    },
+    "3": {
+     "empirical": 0.195,
+     "expected": 0.195652
+    },
+    "4": {
+     "empirical": 0.401,
+     "expected": 0.391304
+    },
+    "5": {
+     "empirical": 0.624,
+     "expected": 0.630435
+    }
+   },
+   "note": "empirical extra-slot frequency vs remainder; mechanism check only, real draw uses seed=42"
+  }
+ },
+ "sample_by_writing_order": [
+  {
+   "writing_order": 1,
+   "task_id": "add_example.py",
+   "repo": "intel/intel-xpu-backend-for-triton",
+   "difficulty": 2,
+   "star": 144,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 2,
+   "task_id": "mul_exponent_compensator.py",
+   "repo": "wenchenvincent/scripts",
+   "difficulty": 1,
+   "star": 0,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 3,
+   "task_id": "multinomial_sampling.py",
+   "repo": "InternLM/lmdeploy",
+   "difficulty": 3,
+   "star": 4740,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 4,
+   "task_id": "parallel_retention_attention.py",
+   "repo": "josStorer/RWKV-Runner",
+   "difficulty": 4,
+   "star": 5337,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 5,
+   "task_id": "quantize_copy_kv.py",
+   "repo": "S-LoRA/S-LoRA",
+   "difficulty": 4,
+   "star": 1760,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 6,
+   "task_id": "flash_decode2_llama.py",
+   "repo": "ModelTC/lightllm",
+   "difficulty": 3,
+   "star": 2647,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 7,
+   "task_id": "int4_matmul.py",
+   "repo": "ModelTC/lightllm",
+   "difficulty": 5,
+   "star": 2647,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 8,
+   "task_id": "chunk_delta_fwd.py",
+   "repo": "josStorer/RWKV-Runner",
+   "difficulty": 4,
+   "star": 5337,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 9,
+   "task_id": "vector_addition.py",
+   "repo": "triton-lang/triton",
+   "difficulty": 2,
+   "star": 13556,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 10,
+   "task_id": "layer_norm_liger.py",
+   "repo": "linkedin/Liger-Kernel",
+   "difficulty": 3,
+   "star": 3606,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 11,
+   "task_id": "context_attn_llama.py",
+   "repo": "ModelTC/lightllm",
+   "difficulty": 4,
+   "star": 2647,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 12,
+   "task_id": "fused_rwkv6_kernel.py",
+   "repo": "sustcsonglin/flash-linear-attention",
+   "difficulty": 3,
+   "star": 1382,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 13,
+   "task_id": "lightning_attention.py",
+   "repo": "OpenNLPLab/lightning-attention",
+   "difficulty": 3,
+   "star": 187,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 14,
+   "task_id": "rowwise_quantization_triton.py",
+   "repo": "bitsandbytes-foundation/bitsandbytes",
+   "difficulty": 3,
+   "star": 6354,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 15,
+   "task_id": "reversed_cumsum.py",
+   "repo": "sustcsonglin/flash-linear-attention",
+   "difficulty": 4,
+   "star": 1382,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 16,
+   "task_id": "matmul_dequantize_int4.py",
+   "repo": "ModelTC/lightllm",
+   "difficulty": 4,
+   "star": 2647,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 17,
+   "task_id": "token_attn_llama2.py",
+   "repo": "S-LoRA/S-LoRA",
+   "difficulty": 4,
+   "star": 1760,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 18,
+   "task_id": "bmm_chunk_bwd.py",
+   "repo": "MzeroMiko/VMamba",
+   "difficulty": 4,
+   "star": 2235,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 19,
+   "task_id": "rmsnorm_fused_llama.py",
+   "repo": "S-LoRA/S-LoRA",
+   "difficulty": 3,
+   "star": 1760,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 20,
+   "task_id": "chunk_cumsum_vector.py",
+   "repo": "sustcsonglin/flash-linear-attention",
+   "difficulty": 3,
+   "star": 1382,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 21,
+   "task_id": "rope_embedding.py",
+   "repo": "Lightning-AI/litgpt",
+   "difficulty": 4,
+   "star": 10833,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 22,
+   "task_id": "square_matrix.py",
+   "repo": "gpu-mode/lectures",
+   "difficulty": 2,
+   "star": 3106,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 23,
+   "task_id": "int8_quantization.py",
+   "repo": "thu-ml/SageAttention",
+   "difficulty": 2,
+   "star": 600,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 24,
+   "task_id": "swiglu_fwd.py",
+   "repo": "MzeroMiko/VMamba",
+   "difficulty": 3,
+   "star": 2235,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 25,
+   "task_id": "triton_conv2d_fwd.py",
+   "repo": "BobMcDear/attorch",
+   "difficulty": 4,
+   "star": 486,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 26,
+   "task_id": "int8_dequant_matmul.py",
+   "repo": "bitsandbytes-foundation/bitsandbytes",
+   "difficulty": 3,
+   "star": 6354,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 27,
+   "task_id": "destindex_copy_kv2.py",
+   "repo": "S-LoRA/S-LoRA",
+   "difficulty": 2,
+   "star": 1760,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 28,
+   "task_id": "sin_computation.py",
+   "repo": "pytorch/pytorch",
+   "difficulty": 2,
+   "star": 84636,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 29,
+   "task_id": "context_attn_fwd.py",
+   "repo": "ModelTC/lightllm",
+   "difficulty": 4,
+   "star": 2647,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 30,
+   "task_id": "rbe_triton_transform.py",
+   "repo": "ELS-RD/kernl",
+   "difficulty": 4,
+   "star": 1537,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 31,
+   "task_id": "matmul_triton2.py",
+   "repo": "Carinaqyy/FX_Plus",
+   "difficulty": 3,
+   "star": 0,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 32,
+   "task_id": "batched_vecmat_mult.py",
+   "repo": "triton-lang/triton",
+   "difficulty": 3,
+   "star": 13556,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 33,
+   "task_id": "matmul_triton_autotune.py",
+   "repo": "triton-lang/triton",
+   "difficulty": 4,
+   "star": 13556,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 34,
+   "task_id": "chunk_retention_ops.py",
+   "repo": "sustcsonglin/flash-linear-attention",
+   "difficulty": 4,
+   "star": 1382,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 35,
+   "task_id": "layer_norm_ops.py",
+   "repo": "HazyResearch/ThunderKittens",
+   "difficulty": 5,
+   "star": 1710,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 36,
+   "task_id": "int8_matmul_quantization.py",
+   "repo": "S-LoRA/S-LoRA",
+   "difficulty": 4,
+   "star": 1760,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 37,
+   "task_id": "rotary_emb_nopad.py",
+   "repo": "hpcaitech/ColossalAI",
+   "difficulty": 4,
+   "star": 38848,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 38,
+   "task_id": "kldiv_ops.py",
+   "repo": "linkedin/Liger-Kernel",
+   "difficulty": 3,
+   "star": 3606,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 39,
+   "task_id": "chunk_gla_simple.py",
+   "repo": "sustcsonglin/flash-linear-attention",
+   "difficulty": 4,
+   "star": 1382,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 40,
+   "task_id": "triton_attention.py",
+   "repo": "jeromeku/triton-aot",
+   "difficulty": 4,
+   "star": 0,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 41,
+   "task_id": "attn_fwd_triton.py",
+   "repo": "thu-ml/SageAttention",
+   "difficulty": 4,
+   "star": 600,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 42,
+   "task_id": "rmsnorm_triton.py",
+   "repo": "ELS-RD/kernl",
+   "difficulty": 2,
+   "star": 1537,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 43,
+   "task_id": "flash_attn.py",
+   "repo": "66RING/tiny-flash-attention",
+   "difficulty": 4,
+   "star": 216,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 44,
+   "task_id": "fast_rms_layernorm.py",
+   "repo": "unslothai/unsloth",
+   "difficulty": 4,
+   "star": 18751,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 45,
+   "task_id": "nested_loops_processing.py",
+   "repo": "microsoft/triton-shared",
+   "difficulty": 4,
+   "star": 197,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 46,
+   "task_id": "attention_fwd_triton2.py",
+   "repo": "thu-ml/SageAttention",
+   "difficulty": 4,
+   "star": 600,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 47,
+   "task_id": "masked_select.py",
+   "repo": "FlagOpen/FlagGems",
+   "difficulty": 3,
+   "star": 347,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 48,
+   "task_id": "swiglu_backward.py",
+   "repo": "MzeroMiko/VMamba",
+   "difficulty": 3,
+   "star": 2235,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 49,
+   "task_id": "quant_transpose_kernel.py",
+   "repo": "bitsandbytes-foundation/bitsandbytes",
+   "difficulty": 4,
+   "star": 6354,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 50,
+   "task_id": "rmsnorm_fused.py",
+   "repo": "declare-lab/instruct-eval",
+   "difficulty": 3,
+   "star": 532,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 51,
+   "task_id": "rmsnorm_implementation.py",
+   "repo": "alipay/PainlessInferenceAcceleration",
+   "difficulty": 3,
+   "star": 290,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 52,
+   "task_id": "attention_fwd_triton3.py",
+   "repo": "microsoft/MInference",
+   "difficulty": 4,
+   "star": 813,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 53,
+   "task_id": "l2_norm_triton2.py",
+   "repo": "josStorer/RWKV-Runner",
+   "difficulty": 3,
+   "star": 5337,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 54,
+   "task_id": "destindex_copy_kv1.py",
+   "repo": "ModelTC/lightllm",
+   "difficulty": 3,
+   "star": 2647,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 55,
+   "task_id": "kldiv_triton.py",
+   "repo": "JunnYu/paddlenlp_gpu_ops",
+   "difficulty": 3,
+   "star": 1,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 56,
+   "task_id": "softmax_triton1.py",
+   "repo": "pytorch-labs/triton-cpu",
+   "difficulty": 2,
+   "star": 35,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 57,
+   "task_id": "rms_rbe_matmul.py",
+   "repo": "ELS-RD/kernl",
+   "difficulty": 4,
+   "star": 1537,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 58,
+   "task_id": "rope_transform.py",
+   "repo": "turbo-llm/turbo-alignment",
+   "difficulty": 3,
+   "star": 333,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 59,
+   "task_id": "ksoftmax_triton.py",
+   "repo": "HazyResearch/fly",
+   "difficulty": 4,
+   "star": 195,
+   "pi_i": 0.32608695652173914
+  },
+  {
+   "writing_order": 60,
+   "task_id": "dropout_triton.py",
+   "repo": "triton-lang/triton",
+   "difficulty": 2,
+   "star": 13556,
+   "pi_i": 0.32608695652173914
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+import _remote
+c = _remote.connect()
+_remote.run(c, "ls /root/mk_v2/tests/ 2>/dev/null | head -40; echo ---; ls /root/mk_v2/ | grep -Ei 'pytest|conftest|setup.cfg|pyproject'", timeout=30)
+print("=== pytest available? ===")
+_remote.run(c, "cd /root/mk_v2 && /root/miniconda3/bin/python -c 'import pytest;print(pytest.__version__)'", timeout=30)
+print("=== existing cse/grade tests ===")
+_remote.run(c, "ls /root/mk_v2/tests/ 2>/dev/null | grep -Ei 'cse|grade|falsif|stress'", timeout=30)
+print("=== lane3 current state ===")
+_remote.run(c, "ps -eo pid,etime,cmd | grep -E 'lane 3|_mutant_worker.*P53' | grep -v grep", timeout=30)
+c.close()

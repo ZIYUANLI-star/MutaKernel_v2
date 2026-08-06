@@ -1,0 +1,103 @@
+{
+ "cell_id": "conf__L1_P16__launch_config_mutate__0__equiv",
+ "kind": "confirm",
+ "kernel": "L1_P16",
+ "stage": "equiv",
+ "probe_id": "L1_P16__launch_config_mutate__0",
+ "probe_ids": null,
+ "positions": null,
+ "position": {
+  "round_type": "stress",
+  "policy": "structured_ramp",
+  "sub_index": 0,
+  "round_index": null,
+  "seed": 10020
+ },
+ "planned_replays": 20,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P16__launch_config_mutate__0",
+  "base_seed": 10020,
+  "equiv_runs": 0,
+  "stress_repeats": 1,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "structured_ramp",
+  "structured_ramp",
+  "structured_ramp",
+  "structured_ramp",
+  "structured_ramp",
+  "structured_ramp"
+ ],
+ "validation_status": "fail",
+ "valid_rounds": 0,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 900,
+ "wall_s": 4.6,
+ "divergence": {
+  "round_type": "stress",
+  "policy": "structured_ramp",
+  "sub_index": 0,
+  "seed": 10020,
+  "detail": "output_diverged",
+  "input_summary": [
+   {
+    "shape": [
+     8192,
+     2048
+    ],
+    "dtype": "torch.float32",
+    "min": 0.0,
+    "max": 0.9999999403953552,
+    "mean": 0.4999999403953552,
+    "has_nan": false,
+    "has_inf": false
+   },
+   {
+    "shape": [
+     8192,
+     4096
+    ],
+    "dtype": "torch.float32",
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.4999999403953552,
+    "has_nan": false,
+    "has_inf": false
+   }
+  ],
+  "oracle": {
+   "status": "fail",
+   "compared_leaves": 3,
+   "reason": "observed 1 output mismatch(es)",
+   "mismatches": [
+    {
+     "path": "$['output']",
+     "kind": "value",
+     "message": "8388608 value(s) exceed rtol=0.01, atol=0.01; max_abs_error=31.8789",
+     "reference": "Tensor(shape=(2048, 4096), dtype=torch.float32, device=cuda:0, layout=torch.strided)",
+     "candidate": "Tensor(shape=(2048, 4096), dtype=torch.float32, device=cuda:0, layout=torch.strided)"
+    }
+   ]
+  },
+  "errors": []
+ },
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "structured_ramp",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "fail",
+   "max_abs_error": 31.8789,
+   "reason": "observed 1 output mismatch(es)"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-31T00:21:20.643132"
+}

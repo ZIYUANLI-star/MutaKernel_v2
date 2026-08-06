@@ -1,0 +1,84 @@
+{
+ "cell_id": "conf__L2_P81__launch_config_mutate__2__equiv",
+ "kind": "confirm",
+ "kernel": "L2_P81",
+ "stage": "equiv",
+ "probe_id": "L2_P81__launch_config_mutate__2",
+ "probe_ids": null,
+ "positions": null,
+ "position": {
+  "round_type": "random",
+  "policy": null,
+  "sub_index": null,
+  "round_index": 0,
+  "seed": 10000
+ },
+ "planned_replays": 1,
+ "planned_rounds": 1,
+ "cfg_digest": {
+  "mutant_id": "L2_P81__launch_config_mutate__2",
+  "base_seed": 10000,
+  "equiv_runs": 1,
+  "stress_repeats": 0,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [],
+ "validation_status": "fail",
+ "valid_rounds": 0,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 900,
+ "wall_s": 3.8,
+ "divergence": {
+  "round_type": "random",
+  "round_index": 0,
+  "seed": 10000,
+  "policy": null,
+  "detail": "output_diverged",
+  "input_summary": [
+   {
+    "shape": [
+     1024,
+     8192
+    ],
+    "dtype": "torch.float32",
+    "min": 0.0,
+    "max": 0.9999999403953552,
+    "mean": 0.5000038743019104,
+    "has_nan": false,
+    "has_inf": false
+   }
+  ],
+  "oracle": {
+   "status": "fail",
+   "compared_leaves": 4,
+   "reason": "observed 1 output mismatch(es)",
+   "mismatches": [
+    {
+     "path": "$['output']",
+     "kind": "value",
+     "message": "30059 value(s) exceed rtol=0.01, atol=0.01; max_abs_error=0.364785",
+     "reference": "Tensor(shape=(1024, 8192), dtype=torch.float32, device=cuda:0, layout=torch.strided)",
+     "candidate": "Tensor(shape=(1024, 8192), dtype=torch.float32, device=cuda:0, layout=torch.strided)"
+    }
+   ]
+  },
+  "errors": []
+ },
+ "rounds": [
+  {
+   "round_type": "random",
+   "policy": null,
+   "sub_index": null,
+   "round_index": 0,
+   "seed": 10000,
+   "status": "fail",
+   "max_abs_error": 0.364785,
+   "reason": "observed 1 output mismatch(es)"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-31T00:21:04.376428"
+}

@@ -1,0 +1,253 @@
+{
+ "cell_id": "ctrl__L1_P98__equiv__near_zero",
+ "kind": "control",
+ "kernel": "L1_P98",
+ "stage": "equiv",
+ "probe_id": null,
+ "probe_ids": [
+  "L1_P98__const_perturb__10",
+  "L1_P98__const_perturb__11",
+  "L1_P98__epsilon_modify__1"
+ ],
+ "positions": [
+  [
+   "near_zero",
+   0
+  ],
+  [
+   "near_zero",
+   1
+  ]
+ ],
+ "position": null,
+ "planned_replays": 10,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P98__WC_AUDIT_CONTROL__equiv",
+  "base_seed": 10020,
+  "equiv_runs": 0,
+  "stress_repeats": 2,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "near_zero",
+  "near_zero",
+  "near_zero",
+  "near_zero",
+  "near_zero",
+  "near_zero"
+ ],
+ "validation_status": "pass",
+ "valid_rounds": 20,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 900,
+ "wall_s": 115.5,
+ "divergence": null,
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "near_zero",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 3 compared output leaf/leaves agree"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-30T22:56:48.244480"
+}

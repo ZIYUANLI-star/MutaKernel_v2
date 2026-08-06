@@ -1,0 +1,5326 @@
+{
+ "files": {
+  "cse_observations_env_v1.jsonl": {
+   "lines": 8,
+   "inconclusive": 8
+  },
+  "cse_observations_lane0.jsonl": {
+   "lines": 3,
+   "inconclusive": 0
+  },
+  "cse_observations_lane0_timeout_v1.jsonl": {
+   "lines": 36,
+   "inconclusive": 36
+  },
+  "cse_observations_lane1.jsonl": {
+   "lines": 123,
+   "inconclusive": 0
+  },
+  "cse_observations_lane2.jsonl": {
+   "lines": 124,
+   "inconclusive": 0
+  },
+  "cse_observations_lane3.jsonl": {
+   "lines": 1,
+   "inconclusive": 0
+  },
+  "cse_observations_lane4.jsonl": {
+   "lines": 2,
+   "inconclusive": 0
+  },
+  "cse_observations_lane5.jsonl": {
+   "lines": 1,
+   "inconclusive": 0
+  },
+  "equiv_observations.jsonl": {
+   "lines": 527,
+   "inconclusive": 1
+  },
+  "equiv_observations_lane0.jsonl": {
+   "lines": 57,
+   "inconclusive": 0
+  },
+  "equiv_observations_lane1.jsonl": {
+   "lines": 255,
+   "inconclusive": 1
+  },
+  "equiv_observations_lane2.jsonl": {
+   "lines": 33,
+   "inconclusive": 0
+  },
+  "equiv_observations_lane3.jsonl": {
+   "lines": 36,
+   "inconclusive": 0
+  },
+  "equiv_observations_lane4_requeue.jsonl": {
+   "lines": 74,
+   "inconclusive": 0
+  },
+  "equiv_observations_timeout_v1.jsonl": {
+   "lines": 64,
+   "inconclusive": 64
+  },
+  "equiv_observations_timeout_v2.jsonl": {
+   "lines": 57,
+   "inconclusive": 57
+  }
+ },
+ "inconclusive": [
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P96__arith_replace__12",
+   "kernel": "L1_P96",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "out_of_memory",
+   "timed_out": false,
+   "wall_ms": 1875648.0,
+   "trial_summary": {
+    "n_trials": 49,
+    "by_type_status": {
+     "random/inconclusive": 40,
+     "stress/inconclusive": 9
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 49,
+    "env_void_of_non_pass": 49,
+    "non_pass_reasons_sample": [
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has "
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": false,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 0,
+     "rounds_planned": 103,
+     "random_rounds_passed": 0,
+     "stress_rounds_passed": 0,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P96__arith_replace__14",
+   "kernel": "L1_P96",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "out_of_memory",
+   "timed_out": false,
+   "wall_ms": 1879034.3,
+   "trial_summary": {
+    "n_trials": 51,
+    "by_type_status": {
+     "random/inconclusive": 30,
+     "random/pass": 10,
+     "stress/pass": 11
+    },
+    "random_pass": 10,
+    "stress_pass": 11,
+    "non_pass": 30,
+    "env_void_of_non_pass": 30,
+    "non_pass_reasons_sample": [
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has "
+    ],
+    "valid_rounds": 21,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": false,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 21,
+     "rounds_planned": 103,
+     "random_rounds_passed": 10,
+     "stress_rounds_passed": 11,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P96__relop_replace__8",
+   "kernel": "L1_P96",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "out_of_memory",
+   "timed_out": false,
+   "wall_ms": 2518191.7,
+   "trial_summary": {
+    "n_trials": 60,
+    "by_type_status": {
+     "random/inconclusive": 40,
+     "stress/inconclusive": 20
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 60,
+    "env_void_of_non_pass": 60,
+    "non_pass_reasons_sample": [
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has "
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": false,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 0,
+     "rounds_planned": 103,
+     "random_rounds_passed": 0,
+     "stress_rounds_passed": 0,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__3",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "out_of_memory",
+   "timed_out": false,
+   "wall_ms": 3594258.2,
+   "trial_summary": {
+    "n_trials": 103,
+    "by_type_status": {
+     "random/inconclusive": 5,
+     "random/pass": 35,
+     "stress/pass": 63
+    },
+    "random_pass": 35,
+    "stress_pass": 63,
+    "non_pass": 5,
+    "env_void_of_non_pass": 5,
+    "non_pass_reasons_sample": [
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has "
+    ],
+    "valid_rounds": 98,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "STILL_LIKELY_EQUIVALENT",
+    "status": "pass",
+    "evidence": {
+     "resource_degraded": true,
+     "environmental_voided_rounds": 5,
+     "rounds_completed": 98,
+     "rounds_planned": 103,
+     "random_rounds_passed": 35,
+     "stress_rounds_passed": 63,
+     "grading_threshold": {
+      "min_valid_rounds": 77,
+      "min_random_passes": 30,
+      "min_stress_passes": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__7",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "other_unknown",
+   "timed_out": false,
+   "wall_ms": 1110428.4,
+   "trial_summary": {
+    "n_trials": 44,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 4
+    },
+    "random_pass": 40,
+    "stress_pass": 4,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 44,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": false,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 44,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 4,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__4",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "other_unknown",
+   "timed_out": false,
+   "wall_ms": 1357287.7,
+   "trial_summary": {
+    "n_trials": 49,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 9
+    },
+    "random_pass": 40,
+    "stress_pass": 9,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 49,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": false,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 49,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 9,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P22__relop_replace__6",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 3604461.3,
+   "trial_summary": {
+    "n_trials": 102,
+    "by_type_status": {
+     "random/inconclusive": 39,
+     "random/pass": 1,
+     "stress/pass": 62
+    },
+    "random_pass": 1,
+    "stress_pass": 62,
+    "non_pass": 39,
+    "env_void_of_non_pass": 39,
+    "non_pass_reasons_sample": [
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has ",
+     "validation setup failed: InputIsolationError: cannot preserve tensor view geometry: OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has "
+    ],
+    "valid_rounds": 63,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 63,
+     "rounds_planned": 103,
+     "random_rounds_passed": 1,
+     "stress_rounds_passed": 62,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_env_v1.jsonl",
+   "probe_id": "L1_P22__relop_replace__8",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "out_of_memory",
+   "timed_out": false,
+   "wall_ms": 2348336.2,
+   "trial_summary": {
+    "n_trials": 71,
+    "by_type_status": {
+     "random/inconclusive": 40,
+     "stress/inconclusive": 2,
+     "stress/pass": 29
+    },
+    "random_pass": 0,
+    "stress_pass": 29,
+    "non_pass": 42,
+    "env_void_of_non_pass": 42,
+    "non_pass_reasons_sample": [
+     "reference execution failed; candidate correctness is undecidable",
+     "reference execution failed; candidate correctness is undecidable",
+     "reference execution failed; candidate correctness is undecidable"
+    ],
+    "valid_rounds": 29,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": false,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 29,
+     "rounds_planned": 103,
+     "random_rounds_passed": 0,
+     "stress_rounds_passed": 29,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P16__arith_replace__6",
+   "kernel": "L1_P16",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1800308.3,
+   "trial_summary": {
+    "n_trials": 60,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 20
+    },
+    "random_pass": 40,
+    "stress_pass": 20,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 60,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 60,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 20,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P19__arith_replace__3",
+   "kernel": "L1_P19",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1803389.7,
+   "trial_summary": {
+    "n_trials": 58,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 18
+    },
+    "random_pass": 40,
+    "stress_pass": 18,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 58,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 58,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 18,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P19__relop_replace__1",
+   "kernel": "L1_P19",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1803056.4,
+   "trial_summary": {
+    "n_trials": 59,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 19
+    },
+    "random_pass": 40,
+    "stress_pass": 19,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 59,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 59,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 19,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P20__arith_replace__18",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802041.8,
+   "trial_summary": {
+    "n_trials": 60,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 20
+    },
+    "random_pass": 40,
+    "stress_pass": 20,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 60,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 60,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 20,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__3",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802251.4,
+   "trial_summary": {
+    "n_trials": 59,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 19
+    },
+    "random_pass": 40,
+    "stress_pass": 19,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 59,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 59,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 19,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__7",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1800921.9,
+   "trial_summary": {
+    "n_trials": 56,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 16
+    },
+    "random_pass": 40,
+    "stress_pass": 16,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 56,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 56,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 16,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__4",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1805767.3,
+   "trial_summary": {
+    "n_trials": 58,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 18
+    },
+    "random_pass": 40,
+    "stress_pass": 18,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 58,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 58,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 18,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P20__const_perturb__11",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801889.7,
+   "trial_summary": {
+    "n_trials": 58,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 18
+    },
+    "random_pass": 40,
+    "stress_pass": 18,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 58,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 58,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 18,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P20__mask_boundary__0",
+   "kernel": "L1_P20",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801510.3,
+   "trial_summary": {
+    "n_trials": 59,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 19
+    },
+    "random_pass": 40,
+    "stress_pass": 19,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 59,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 59,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 19,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P21__relop_replace__3",
+   "kernel": "L1_P21",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802864.5,
+   "trial_summary": {
+    "n_trials": 59,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 19
+    },
+    "random_pass": 40,
+    "stress_pass": 19,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 59,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 59,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 19,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P21__relop_replace__0",
+   "kernel": "L1_P21",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802734.5,
+   "trial_summary": {
+    "n_trials": 60,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 20
+    },
+    "random_pass": 40,
+    "stress_pass": 20,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 60,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 60,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 20,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P21__relop_replace__5",
+   "kernel": "L1_P21",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802750.1,
+   "trial_summary": {
+    "n_trials": 60,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 20
+    },
+    "random_pass": 40,
+    "stress_pass": 20,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 60,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 60,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 20,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P21__const_perturb__2",
+   "kernel": "L1_P21",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801720.5,
+   "trial_summary": {
+    "n_trials": 59,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 19
+    },
+    "random_pass": 40,
+    "stress_pass": 19,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 59,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 59,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 19,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P21__mask_boundary__0",
+   "kernel": "L1_P21",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801237.0,
+   "trial_summary": {
+    "n_trials": 58,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 18
+    },
+    "random_pass": 40,
+    "stress_pass": 18,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 58,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 58,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 18,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__arith_replace__20",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801256.6,
+   "trial_summary": {
+    "n_trials": 69,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 29
+    },
+    "random_pass": 40,
+    "stress_pass": 29,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 69,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 69,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 29,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__relop_replace__6",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801966.5,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__relop_replace__8",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801593.8,
+   "trial_summary": {
+    "n_trials": 73,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 33
+    },
+    "random_pass": 40,
+    "stress_pass": 33,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 73,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 73,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 33,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__const_perturb__21",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801114.8,
+   "trial_summary": {
+    "n_trials": 73,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 33
+    },
+    "random_pass": 40,
+    "stress_pass": 33,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 73,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 73,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 33,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__const_perturb__0",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801907.8,
+   "trial_summary": {
+    "n_trials": 74,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 34
+    },
+    "random_pass": 40,
+    "stress_pass": 34,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 74,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 74,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 34,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__const_perturb__6",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801079.2,
+   "trial_summary": {
+    "n_trials": 74,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 34
+    },
+    "random_pass": 40,
+    "stress_pass": 34,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 74,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 74,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 34,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__index_replace__10",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801888.8,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__mask_boundary__0",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801262.7,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P22__mask_boundary__1",
+   "kernel": "L1_P22",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801427.2,
+   "trial_summary": {
+    "n_trials": 73,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 33
+    },
+    "random_pass": 40,
+    "stress_pass": 33,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 73,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 73,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 33,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__const_perturb__3",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801818.2,
+   "trial_summary": {
+    "n_trials": 73,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 33
+    },
+    "random_pass": 40,
+    "stress_pass": 33,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 73,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 73,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 33,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__const_perturb__2",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801661.9,
+   "trial_summary": {
+    "n_trials": 74,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 34
+    },
+    "random_pass": 40,
+    "stress_pass": 34,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 74,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 74,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 34,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__const_perturb__1",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801408.7,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__index_replace__6",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802254.8,
+   "trial_summary": {
+    "n_trials": 74,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 34
+    },
+    "random_pass": 40,
+    "stress_pass": 34,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 74,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 74,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 34,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__mask_boundary__0",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801276.7,
+   "trial_summary": {
+    "n_trials": 71,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 31
+    },
+    "random_pass": 40,
+    "stress_pass": 31,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 71,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 71,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 31,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__mask_boundary__1",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801901.3,
+   "trial_summary": {
+    "n_trials": 74,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 34
+    },
+    "random_pass": 40,
+    "stress_pass": 34,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 74,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 74,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 34,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__init_modify__0",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801290.4,
+   "trial_summary": {
+    "n_trials": 70,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 30
+    },
+    "random_pass": 40,
+    "stress_pass": 30,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 70,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 70,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 30,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P23__init_modify__1",
+   "kernel": "L1_P23",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802063.0,
+   "trial_summary": {
+    "n_trials": 74,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 34
+    },
+    "random_pass": 40,
+    "stress_pass": 34,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 74,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 74,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 34,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P24__relop_replace__7",
+   "kernel": "L1_P24",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1800839.2,
+   "trial_summary": {
+    "n_trials": 70,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 30
+    },
+    "random_pass": 40,
+    "stress_pass": 30,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 70,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 70,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 30,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P24__const_perturb__9",
+   "kernel": "L1_P24",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801590.6,
+   "trial_summary": {
+    "n_trials": 70,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 30
+    },
+    "random_pass": 40,
+    "stress_pass": 30,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 70,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 70,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 30,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P24__const_perturb__4",
+   "kernel": "L1_P24",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801474.3,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P24__const_perturb__13",
+   "kernel": "L1_P24",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1801600.4,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "cse_observations_lane0_timeout_v1.jsonl",
+   "probe_id": "L1_P24__index_replace__12",
+   "kernel": "L1_P24",
+   "phase": "cse",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 1802013.5,
+   "trial_summary": {
+    "n_trials": 72,
+    "by_type_status": {
+     "random/pass": 40,
+     "stress/pass": 32
+    },
+    "random_pass": 40,
+    "stress_pass": 32,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 72,
+    "divergence": false
+   },
+   "regrade_dryrun": {
+    "outcome": "INCONCLUSIVE",
+    "status": "inconclusive",
+    "evidence": {
+     "budget_exhausted": true,
+     "partial_result": true,
+     "round_timeouts": 0,
+     "rounds_completed": 72,
+     "rounds_planned": 103,
+     "random_rounds_passed": 40,
+     "stress_rounds_passed": 32,
+     "grading_threshold": {
+      "random": 40,
+      "stress": 42
+     }
+    }
+   }
+  },
+  {
+   "file": "equiv_observations.jsonl",
+   "probe_id": "L1_P95__relop_replace__5",
+   "kernel": "L1_P95",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "other_unknown",
+   "timed_out": false,
+   "wall_ms": 61365.7,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_lane1.jsonl",
+   "probe_id": "L1_P95__relop_replace__5",
+   "kernel": "L1_P95",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "other_unknown",
+   "timed_out": false,
+   "wall_ms": 61365.7,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P16__arith_replace__6",
+   "kernel": "L1_P16",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 419906.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P19__arith_replace__3",
+   "kernel": "L1_P19",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420991.1,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P19__relop_replace__1",
+   "kernel": "L1_P19",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421857.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P20__arith_replace__18",
+   "kernel": "L1_P20",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420564.7,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__3",
+   "kernel": "L1_P20",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421113.8,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__7",
+   "kernel": "L1_P20",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422337.3,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P20__relop_replace__4",
+   "kernel": "L1_P20",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421150.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P20__const_perturb__11",
+   "kernel": "L1_P20",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421356.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P20__mask_boundary__0",
+   "kernel": "L1_P20",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421517.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P21__relop_replace__3",
+   "kernel": "L1_P21",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420868.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P21__relop_replace__0",
+   "kernel": "L1_P21",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422800.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P21__relop_replace__5",
+   "kernel": "L1_P21",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421690.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P21__const_perturb__2",
+   "kernel": "L1_P21",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420970.3,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P21__mask_boundary__0",
+   "kernel": "L1_P21",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421153.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__arith_replace__20",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420485.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__relop_replace__6",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421417.3,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__relop_replace__8",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421927.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__const_perturb__21",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421649.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__const_perturb__0",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421384.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__const_perturb__6",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422211.8,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__index_replace__10",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422041.7,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__mask_boundary__0",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420688.3,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P22__mask_boundary__1",
+   "kernel": "L1_P22",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421378.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__arith_replace__13",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421332.3,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__const_perturb__3",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422052.9,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__const_perturb__2",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422522.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__const_perturb__1",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422547.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__index_replace__5",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420197.9,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__index_replace__6",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421689.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__sync_remove__1",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422011.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__sync_remove__3",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422119.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__mask_boundary__2",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422310.8,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__mask_boundary__0",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421724.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__mask_boundary__1",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422433.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__init_modify__0",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422162.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P23__init_modify__1",
+   "kernel": "L1_P23",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421536.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__relop_replace__7",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420962.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__const_perturb__9",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421377.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__const_perturb__4",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421792.8,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__const_perturb__13",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421898.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__index_replace__12",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421851.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__sync_remove__3",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421656.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__sync_remove__1",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 423394.0,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__cast_remove__0",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421059.7,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__init_modify__0",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421551.9,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P24__init_modify__1",
+   "kernel": "L1_P24",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422012.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P25__arith_replace__12",
+   "kernel": "L1_P25",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421098.1,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P25__relop_replace__3",
+   "kernel": "L1_P25",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421677.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__arith_replace__43",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420592.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__arith_replace__2",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421376.7,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__arith_replace__6",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422402.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__relop_replace__5",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422254.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__relop_replace__19",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421581.2,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__const_perturb__22",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422275.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__const_perturb__35",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421636.9,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__mask_boundary__0",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422188.3,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__launch_config_mutate__2",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421414.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P27__launch_config_mutate__1",
+   "kernel": "L1_P27",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421442.0,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P29__arith_replace__10",
+   "kernel": "L1_P29",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421160.6,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P29__arith_replace__19",
+   "kernel": "L1_P29",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421724.8,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P29__relop_replace__9",
+   "kernel": "L1_P29",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 420725.5,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P29__const_perturb__6",
+   "kernel": "L1_P29",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421550.1,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P29__const_perturb__8",
+   "kernel": "L1_P29",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 422138.9,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v1.jsonl",
+   "probe_id": "L1_P29__cast_remove__4",
+   "kernel": "L1_P29",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 421588.4,
+   "trial_summary": {
+    "n_trials": 0,
+    "by_type_status": {},
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": null,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P21__relop_replace__3",
+   "kernel": "L1_P21",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "out_of_memory",
+   "timed_out": false,
+   "wall_ms": 748861.1,
+   "trial_summary": {
+    "n_trials": 32,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 12
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 32,
+    "env_void_of_non_pass": 32,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P37__index_replace__11",
+   "kernel": "L1_P37",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 905621.5,
+   "trial_summary": {
+    "n_trials": 23,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 3
+    },
+    "random_pass": 20,
+    "stress_pass": 3,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 23,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__arith_replace__8",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903237.3,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 6
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 26,
+    "env_void_of_non_pass": 26,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__arith_replace__7",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901944.2,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 6
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 26,
+    "env_void_of_non_pass": 26,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__relop_replace__6",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903434.7,
+   "trial_summary": {
+    "n_trials": 28,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 8
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 28,
+    "env_void_of_non_pass": 28,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__const_perturb__0",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901526.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 7
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 27,
+    "env_void_of_non_pass": 27,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__const_perturb__2",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903963.4,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 7
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 27,
+    "env_void_of_non_pass": 27,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__sync_remove__1",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902889.3,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 7
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 27,
+    "env_void_of_non_pass": 27,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__sync_remove__0",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902688.1,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 7
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 27,
+    "env_void_of_non_pass": 27,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__mask_boundary__0",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903027.2,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 6
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 26,
+    "env_void_of_non_pass": 26,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P39__epsilon_modify__0",
+   "kernel": "L1_P39",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902320.3,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/inconclusive": 20,
+     "stress/inconclusive": 6
+    },
+    "random_pass": 0,
+    "stress_pass": 0,
+    "non_pass": 26,
+    "env_void_of_non_pass": 26,
+    "non_pass_reasons_sample": [
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit",
+     "candidate execution hit a resource/infrastructure limit"
+    ],
+    "valid_rounds": 0,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P46__relop_replace__5",
+   "kernel": "L1_P46",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 905672.7,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P46__const_perturb__0",
+   "kernel": "L1_P46",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902818.3,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P46__const_perturb__13",
+   "kernel": "L1_P46",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902166.9,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P46__const_perturb__5",
+   "kernel": "L1_P46",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903791.8,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P46__index_replace__5",
+   "kernel": "L1_P46",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903316.9,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P46__mask_boundary__0",
+   "kernel": "L1_P46",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902668.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P48__const_perturb__1",
+   "kernel": "L1_P48",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902018.0,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P48__const_perturb__0",
+   "kernel": "L1_P48",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901772.7,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P51__arith_replace__15",
+   "kernel": "L1_P51",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902795.2,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P51__relop_replace__5",
+   "kernel": "L1_P51",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901114.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P51__mask_boundary__0",
+   "kernel": "L1_P51",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902579.1,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__arith_replace__17",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902643.8,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__arith_replace__16",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902796.1,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__const_perturb__0",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903659.9,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__const_perturb__4",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903735.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__const_perturb__7",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 904677.7,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__index_replace__12",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902861.3,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P53__mask_boundary__5",
+   "kernel": "L1_P53",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901946.7,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P47__mask_boundary__5",
+   "kernel": "L1_P47",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 904225.1,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P49__arith_replace__11",
+   "kernel": "L1_P49",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 904507.3,
+   "trial_summary": {
+    "n_trials": 25,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 5
+    },
+    "random_pass": 20,
+    "stress_pass": 5,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 25,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P49__const_perturb__8",
+   "kernel": "L1_P49",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903397.1,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P49__const_perturb__7",
+   "kernel": "L1_P49",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903416.8,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P49__index_replace__6",
+   "kernel": "L1_P49",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901331.6,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P49__init_modify__6",
+   "kernel": "L1_P49",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 905475.5,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P49__init_modify__0",
+   "kernel": "L1_P49",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903061.5,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__arith_replace__34",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903425.4,
+   "trial_summary": {
+    "n_trials": 25,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 5
+    },
+    "random_pass": 20,
+    "stress_pass": 5,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 25,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__arith_replace__11",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903835.1,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__const_perturb__0",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901749.6,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__const_perturb__10",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902472.6,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__const_perturb__7",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902428.0,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__index_replace__5",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902474.4,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__mask_boundary__4",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902818.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P52__launch_config_mutate__0",
+   "kernel": "L1_P52",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903444.4,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P94__relop_replace__6",
+   "kernel": "L1_P94",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903070.4,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P94__const_perturb__3",
+   "kernel": "L1_P94",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 900854.1,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P94__const_perturb__7",
+   "kernel": "L1_P94",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903026.6,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P94__sync_remove__2",
+   "kernel": "L1_P94",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901889.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P94__mask_boundary__0",
+   "kernel": "L1_P94",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 905280.2,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__arith_replace__6",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 903968.4,
+   "trial_summary": {
+    "n_trials": 25,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 5
+    },
+    "random_pass": 20,
+    "stress_pass": 5,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 25,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__arith_replace__12",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902507.0,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__arith_replace__14",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 901898.2,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__const_perturb__2",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902633.9,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__const_perturb__1",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902869.0,
+   "trial_summary": {
+    "n_trials": 26,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 6
+    },
+    "random_pass": 20,
+    "stress_pass": 6,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 26,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__const_perturb__4",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 904673.5,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__index_replace__4",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902639.5,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  },
+  {
+   "file": "equiv_observations_timeout_v2.jsonl",
+   "probe_id": "L1_P96__index_replace__5",
+   "kernel": "L1_P96",
+   "phase": "equiv",
+   "outcome": "INCONCLUSIVE",
+   "inconclusive_class": "timeout",
+   "timed_out": true,
+   "wall_ms": 902570.9,
+   "trial_summary": {
+    "n_trials": 27,
+    "by_type_status": {
+     "random/pass": 20,
+     "stress/pass": 7
+    },
+    "random_pass": 20,
+    "stress_pass": 7,
+    "non_pass": 0,
+    "env_void_of_non_pass": 0,
+    "non_pass_reasons_sample": [],
+    "valid_rounds": 27,
+    "divergence": false
+   }
+  }
+ ],
+ "reconcile": {
+  "lane0_targets": 206,
+  "done": 7,
+  "pending": 199,
+  "sum_check_206": 206,
+  "pending_not_covered_by_345": [],
+  "lane_pending_counts": {
+   "3": 98,
+   "4": 47,
+   "5": 54
+  },
+  "lane_pending_ids": {
+   "3": [
+    "L1_P19__arith_replace__3",
+    "L1_P19__relop_replace__1",
+    "L1_P21__const_perturb__2",
+    "L1_P21__mask_boundary__0",
+    "L1_P21__relop_replace__0",
+    "L1_P21__relop_replace__3",
+    "L1_P21__relop_replace__5",
+    "L1_P35__arith_replace__16",
+    "L1_P35__cast_remove__0",
+    "L1_P35__const_perturb__1",
+    "L1_P35__const_perturb__4",
+    "L1_P35__index_replace__35",
+    "L1_P35__index_replace__39",
+    "L1_P35__mask_boundary__0",
+    "L1_P35__mask_boundary__2",
+    "L1_P35__mask_boundary__3",
+    "L1_P35__relop_replace__7",
+    "L1_P35__sync_remove__0",
+    "L1_P37__arith_replace__14",
+    "L1_P37__epsilon_modify__0",
+    "L1_P37__launch_config_mutate__0",
+    "L1_P37__sync_remove__0",
+    "L1_P37__sync_remove__1",
+    "L1_P39__const_perturb__0",
+    "L1_P39__const_perturb__2",
+    "L1_P39__epsilon_modify__0",
+    "L1_P39__relop_replace__6",
+    "L1_P46__const_perturb__0",
+    "L1_P46__const_perturb__13",
+    "L1_P46__const_perturb__5",
+    "L1_P46__index_replace__5",
+    "L1_P46__mask_boundary__0",
+    "L1_P46__relop_replace__0",
+    "L1_P46__relop_replace__5",
+    "L1_P47__mask_boundary__1",
+    "L1_P47__mask_boundary__5",
+    "L1_P47__relop_replace__5",
+    "L1_P48__const_perturb__0",
+    "L1_P48__const_perturb__1",
+    "L1_P49__arith_replace__11",
+    "L1_P49__const_perturb__7",
+    "L1_P49__const_perturb__8",
+    "L1_P49__index_replace__19",
+    "L1_P49__index_replace__6",
+    "L1_P49__init_modify__0",
+    "L1_P49__init_modify__6",
+    "L1_P49__launch_config_mutate__1",
+    "L1_P49__relop_replace__12",
+    "L1_P49__sync_remove__1",
+    "L1_P51__arith_replace__15",
+    "L1_P51__mask_boundary__0",
+    "L1_P51__relop_replace__5",
+    "L1_P52__arith_replace__11",
+    "L1_P52__arith_replace__34",
+    "L1_P52__const_perturb__0",
+    "L1_P52__const_perturb__10",
+    "L1_P52__const_perturb__7",
+    "L1_P52__index_replace__4",
+    "L1_P52__index_replace__5",
+    "L1_P52__launch_config_mutate__0",
+    "L1_P52__launch_config_mutate__4",
+    "L1_P52__mask_boundary__4",
+    "L1_P53__arith_replace__16",
+    "L1_P53__arith_replace__17",
+    "L1_P53__const_perturb__0",
+    "L1_P53__const_perturb__4",
+    "L1_P53__const_perturb__7",
+    "L1_P53__index_replace__12",
+    "L1_P53__index_replace__8",
+    "L1_P53__mask_boundary__0",
+    "L1_P53__mask_boundary__3",
+    "L1_P53__mask_boundary__5",
+    "L1_P53__relop_replace__0",
+    "L1_P53__relop_replace__4",
+    "L1_P93__arith_replace__4",
+    "L1_P93__index_replace__2",
+    "L1_P93__index_replace__3",
+    "L1_P93__mask_boundary__0",
+    "L1_P93__mask_boundary__1",
+    "L1_P94__const_perturb__3",
+    "L1_P94__const_perturb__7",
+    "L1_P94__mask_boundary__0",
+    "L1_P94__relop_replace__6",
+    "L1_P94__relop_replace__7",
+    "L1_P94__sync_remove__0",
+    "L1_P94__sync_remove__2",
+    "L1_P96__arith_replace__12",
+    "L1_P96__arith_replace__14",
+    "L1_P96__const_perturb__1",
+    "L1_P96__const_perturb__2",
+    "L1_P96__const_perturb__4",
+    "L1_P96__index_replace__4",
+    "L1_P96__index_replace__5",
+    "L1_P96__launch_config_mutate__0",
+    "L1_P96__launch_config_mutate__1",
+    "L1_P96__mask_boundary__0",
+    "L1_P96__mask_boundary__2",
+    "L1_P96__relop_replace__8"
+   ],
+   "4": [
+    "L1_P20__const_perturb__11",
+    "L1_P20__mask_boundary__0",
+    "L1_P20__relop_replace__4",
+    "L1_P20__relop_replace__7",
+    "L1_P24__cast_remove__0",
+    "L1_P24__const_perturb__13",
+    "L1_P24__const_perturb__4",
+    "L1_P24__const_perturb__9",
+    "L1_P24__index_replace__12",
+    "L1_P24__init_modify__0",
+    "L1_P24__init_modify__1",
+    "L1_P24__relop_replace__7",
+    "L1_P27__arith_replace__2",
+    "L1_P27__arith_replace__43",
+    "L1_P27__arith_replace__6",
+    "L1_P27__const_perturb__22",
+    "L1_P27__const_perturb__35",
+    "L1_P27__launch_config_mutate__1",
+    "L1_P27__launch_config_mutate__2",
+    "L1_P27__mask_boundary__0",
+    "L1_P27__relop_replace__19",
+    "L1_P27__relop_replace__5",
+    "L1_P29__arith_replace__10",
+    "L1_P29__arith_replace__19",
+    "L1_P29__cast_remove__4",
+    "L1_P29__const_perturb__6",
+    "L1_P29__const_perturb__8",
+    "L1_P29__relop_replace__9",
+    "L1_P44__relop_replace__5",
+    "L1_P91__arith_replace__30",
+    "L1_P91__arith_replace__31",
+    "L1_P91__const_perturb__0",
+    "L1_P91__index_replace__13",
+    "L1_P91__index_replace__2",
+    "L1_P91__index_replace__4",
+    "L1_P91__mask_boundary__1",
+    "L1_P91__mask_boundary__2",
+    "L1_P91__mask_boundary__4",
+    "L1_P91__relop_replace__5",
+    "L1_P99__cast_remove__0",
+    "L1_P99__cast_remove__1",
+    "L1_P99__cast_remove__2",
+    "L1_P99__const_perturb__0",
+    "L1_P99__mask_boundary__0",
+    "L1_P99__mask_boundary__1",
+    "L1_P99__mask_boundary__2",
+    "L1_P99__relop_replace__2"
+   ],
+   "5": [
+    "L1_P22__const_perturb__0",
+    "L1_P22__const_perturb__21",
+    "L1_P22__const_perturb__6",
+    "L1_P22__index_replace__10",
+    "L1_P22__mask_boundary__0",
+    "L1_P22__mask_boundary__1",
+    "L1_P22__relop_replace__6",
+    "L1_P22__relop_replace__8",
+    "L1_P23__const_perturb__1",
+    "L1_P23__const_perturb__2",
+    "L1_P23__const_perturb__3",
+    "L1_P23__index_replace__6",
+    "L1_P23__init_modify__0",
+    "L1_P23__init_modify__1",
+    "L1_P23__mask_boundary__0",
+    "L1_P23__mask_boundary__1",
+    "L1_P25__arith_replace__12",
+    "L1_P25__relop_replace__3",
+    "L1_P30__arith_replace__9",
+    "L1_P30__index_replace__11",
+    "L1_P30__index_replace__8",
+    "L1_P30__index_replace__9",
+    "L1_P30__mask_boundary__1",
+    "L1_P30__relop_replace__1",
+    "L1_P41__arith_replace__54",
+    "L1_P41__broadcast_unsafe__0",
+    "L1_P41__broadcast_unsafe__1",
+    "L1_P41__const_perturb__0",
+    "L1_P41__const_perturb__7",
+    "L1_P41__index_replace__5",
+    "L1_P41__index_replace__6",
+    "L1_P41__init_modify__0",
+    "L1_P41__init_modify__2",
+    "L1_P41__launch_config_mutate__3",
+    "L1_P41__mask_boundary__0",
+    "L1_P41__mask_boundary__2",
+    "L1_P41__mask_boundary__3",
+    "L1_P41__relop_replace__2",
+    "L1_P5__arith_replace__5",
+    "L1_P5__relop_replace__0",
+    "L1_P90__arith_replace__1",
+    "L1_P90__arith_replace__6",
+    "L1_P90__index_replace__2",
+    "L1_P90__index_replace__3",
+    "L1_P90__mask_boundary__1",
+    "L1_P90__mask_boundary__2",
+    "L1_P90__mask_boundary__3",
+    "L1_P90__relop_replace__0",
+    "L1_P90__relop_replace__1",
+    "L1_P98__arith_replace__1",
+    "L1_P98__mask_boundary__0",
+    "L1_P98__mask_boundary__1",
+    "L1_P98__relop_replace__0",
+    "L1_P98__relop_replace__8"
+   ]
+  },
+  "completed_files": {
+   "cse_completed_lane0.json": 3,
+   "cse_completed_lane1.json": 123,
+   "cse_completed_lane2.json": 124,
+   "cse_completed_lane3.json": 1,
+   "cse_completed_lane4.json": 2,
+   "cse_completed_lane5.json": 1
+  },
+  "dup_probe_ids_across_active_obs": [],
+  "global_targets_all_lanes": 453,
+  "archived_probe_status": {
+   "cse_observations_lane0_timeout_v1.jsonl": [
+    {
+     "probe_id": "L1_P16__arith_replace__6",
+     "in_done_union": true,
+     "in_pending_345": false,
+     "lane": null
+    },
+    {
+     "probe_id": "L1_P19__arith_replace__3",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P19__relop_replace__1",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P20__arith_replace__18",
+     "in_done_union": true,
+     "in_pending_345": false,
+     "lane": null
+    },
+    {
+     "probe_id": "L1_P20__relop_replace__3",
+     "in_done_union": true,
+     "in_pending_345": false,
+     "lane": null
+    },
+    {
+     "probe_id": "L1_P20__relop_replace__7",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P20__relop_replace__4",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P20__const_perturb__11",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P20__mask_boundary__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P21__relop_replace__3",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P21__relop_replace__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P21__relop_replace__5",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P21__const_perturb__2",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P21__mask_boundary__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P22__arith_replace__20",
+     "in_done_union": true,
+     "in_pending_345": false,
+     "lane": null
+    },
+    {
+     "probe_id": "L1_P22__relop_replace__6",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__relop_replace__8",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__const_perturb__21",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__const_perturb__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__const_perturb__6",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__index_replace__10",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__mask_boundary__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__mask_boundary__1",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__const_perturb__3",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__const_perturb__2",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__const_perturb__1",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__index_replace__6",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__mask_boundary__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__mask_boundary__1",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__init_modify__0",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P23__init_modify__1",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P24__relop_replace__7",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P24__const_perturb__9",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P24__const_perturb__4",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P24__const_perturb__13",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P24__index_replace__12",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    }
+   ],
+   "cse_observations_env_v1.jsonl": [
+    {
+     "probe_id": "L1_P96__arith_replace__12",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P96__arith_replace__14",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P96__relop_replace__8",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 3
+    },
+    {
+     "probe_id": "L1_P20__relop_replace__3",
+     "in_done_union": true,
+     "in_pending_345": false,
+     "lane": null
+    },
+    {
+     "probe_id": "L1_P20__relop_replace__7",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P20__relop_replace__4",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 4
+    },
+    {
+     "probe_id": "L1_P22__relop_replace__6",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    },
+    {
+     "probe_id": "L1_P22__relop_replace__8",
+     "in_done_union": false,
+     "in_pending_345": true,
+     "lane": 5
+    }
+   ]
+  },
+  "plan_lane_meta": [
+   {
+    "lane": 0,
+    "role": "heavy-serial",
+    "kernel_count": 31,
+    "probe_count": 206,
+    "est_seconds": 352162.3,
+    "est_hours": 97.82
+   },
+   {
+    "lane": 1,
+    "role": "light-parallel",
+    "kernel_count": 19,
+    "probe_count": 123,
+    "est_seconds": 42199.0,
+    "est_hours": 11.72
+   },
+   {
+    "lane": 2,
+    "role": "light-parallel",
+    "kernel_count": 18,
+    "probe_count": 124,
+    "est_seconds": 41794.4,
+    "est_hours": 11.61
+   },
+   {
+    "lane": 3,
+    "role": "heavy-serial-v2 (0.92)",
+    "kernel_count": 16,
+    "probe_count": 99,
+    "est_seconds": 281345.6,
+    "est_hours": 78.15,
+    "split_from": 0,
+    "timeout_s": 3600,
+    "queue_note": "resource-risk kernels scheduled last so they run after lanes 4/5 finish (oversubscription window)"
+   },
+   {
+    "lane": 4,
+    "role": "safe-parallel (0.45)",
+    "kernel_count": 7,
+    "probe_count": 49,
+    "est_seconds": 103265.1,
+    "est_hours": 28.68,
+    "split_from": 0,
+    "timeout_s": 3600
+   },
+   {
+    "lane": 5,
+    "role": "safe-parallel (0.45)",
+    "kernel_count": 8,
+    "probe_count": 55,
+    "est_seconds": 104393.4,
+    "est_hours": 29.0,
+    "split_from": 0,
+    "timeout_s": 3600
+   }
+  ]
+ },
+ "guard": {
+  "script": "#!/bin/bash\n# E1 CSE guard v8 (2026-07-27): lanes 3/4/5, 3600s probe budget,\n# partial-evidence backstop in the driver.\nRUNS=/root/mk_v2_runs\nPIDFILE=$RUNS/e1_guard.pid\n\nif [ -f \"$PIDFILE\" ] && kill -0 \"$(cat \"$PIDFILE\")\" 2>/dev/null; then\n  echo \"guard already running ($(cat \"$PIDFILE\"))\"; exit 0\nfi\necho $$ > \"$PIDFILE\"\nfor L in 3 4 5; do\n  echo \"[guard $(date '+%F %T %z')] GUARD_STARTED (v8, 3600s budget) pid=$$\" >> \"$RUNS/e1_cse_lane$L.log\"\ndone\n\nCYCLE=0\nwhile true; do\n  sleep 120\n  CYCLE=$((CYCLE+1))\n  for L in 3 4 5; do\n    LOG=$RUNS/e1_cse_lane$L.log\n    OBS=$RUNS/e1/cse_observations_lane$L.jsonl\n    MARK=$RUNS/e1/CSE_DONE_LANE$L\n    if [ -f \"$MARK\" ]; then continue; fi\n    if [ $((CYCLE % 15)) -eq 0 ]; then\n      N=$(wc -l < \"$OBS\" 2>/dev/null || echo 0)\n      echo \"[guard progress $(date '+%F %T %z')] cse lane $L obs=$N\" >> \"$LOG\"\n    fi\n    if grep -q 'cse-falsify DONE' \"$LOG\"; then\n      touch \"$MARK\"\n      echo \"[guard $(date '+%F %T %z')] cse lane $L DONE marker written\" >> \"$LOG\"\n      continue\n    fi\n    if ! pgrep -f \"run_e1_cse_falsify.py.*--lane $L\\$\" > /dev/null; then\n      if [ \"$L\" = \"3\" ]; then FRAC=0.92; else FRAC=0.45; fi\n      echo \"[guard $(date '+%F %T %z')] AUTORESTART cse lane $L: driver missing, relaunching\" >> \"$LOG\"\n      cd /root/mk_v2 && nohup env \\\n        PATH=/usr/local/cuda/bin:/root/miniconda3/bin:/usr/local/bin:/usr/bin:/bin \\\n        TORCH_EXTENSIONS_DIR=/root/mk_v2_runs/torch_ext \\\n        MK_GPU_MEMORY_FRACTION=$FRAC \\\n        /root/miniconda3/bin/python -u scripts/run_e1_cse_falsify.py \\\n        --out-dir /root/mk_v2_runs/e1 --kernelbench-root KernelBench \\\n        --timeout 3600 --lane-plan /root/mk_v2_runs/e1/cse_lane_plan.json \\\n        --lane $L >> \"$LOG\" 2>&1 &\n    fi\n  done\n  if [ -f \"$RUNS/e1/CSE_DONE_LANE3\" ] && [ -f \"$RUNS/e1/CSE_DONE_LANE4\" ] && [ -f \"$RUNS/e1/CSE_DONE_LANE5\" ]; then\n    touch \"$RUNS/e1/CSE_DONE\"\n    echo \"[guard $(date '+%F %T %z')] split lanes done; CSE_DONE written; guard exiting\" >> \"$RUNS/e1_cse_lane3.log\"\n    rm -f \"$PIDFILE\"\n    exit 0\n  fi\ndone\n",
+  "pid": "91232",
+  "pid_alive": true,
+  "log_tail": null,
+  "ps": [
+   " 89919 bash -c cd /root/mk_v2 && nohup env PATH=/usr/local/cuda/bin:/root/miniconda3/bin:/usr/local/bin:/usr/bin:/bin TORCH_EXTENSIONS_DIR=/root/mk_v2_runs/torch_ext MK_GPU_MEMORY_FRACTION=0.92 /root/miniconda3/bin/python -u scripts/run_e1_cse_falsify.py --out-dir /root/mk_v2_runs/e1 --kernelbench-root KernelBench --timeout 3600 --lane-plan /root/mk_v2_runs/e1/cse_lane_plan.json --lane 3 >> /root/mk_v2_runs/e1_cse_lane3.log 2>&1 & echo L3_UP",
+   " 89920 /root/miniconda3/bin/python -u scripts/run_e1_cse_falsify.py --out-dir /root/mk_v2_runs/e1 --kernelbench-root KernelBench --timeout 3600 --lane-plan /root/mk_v2_runs/e1/cse_lane_plan.json --lane 3",
+   " 90127 bash -c cd /root/mk_v2 && nohup env PATH=/usr/local/cuda/bin:/root/miniconda3/bin:/usr/local/bin:/usr/bin:/bin TORCH_EXTENSIONS_DIR=/root/mk_v2_runs/torch_ext MK_GPU_MEMORY_FRACTION=0.45 /root/miniconda3/bin/python -u scripts/run_e1_cse_falsify.py --out-dir /root/mk_v2_runs/e1 --kernelbench-root KernelBench --timeout 3600 --lane-plan /root/mk_v2_runs/e1/cse_lane_plan.json --lane 4 >> /root/mk_v2_runs/e1_cse_lane4.log 2>&1 & echo L4_UP",
+   " 90128 /root/miniconda3/bin/python -u scripts/run_e1_cse_falsify.py --out-dir /root/mk_v2_runs/e1 --kernelbench-root KernelBench --timeout 3600 --lane-plan /root/mk_v2_runs/e1/cse_lane_plan.json --lane 4",
+   " 91229 bash -c chmod +x /root/mk_v2_runs/e1_guard_cse_split.sh && nohup /root/mk_v2_runs/e1_guard_cse_split.sh >/dev/null 2>&1 & sleep 3; cat /root/mk_v2_runs/e1_guard.pid; echo GUARD_V9_UP",
+   " 91232 /bin/bash /root/mk_v2_runs/e1_guard_cse_split.sh"
+  ],
+  "done_markers": [
+   "CSE_DONE_LANE1",
+   "CSE_DONE_LANE2"
+  ]
+ },
+ "manifests": {
+  "3": {
+   "run_id": "e1-cse-20260727-140416",
+   "started_at": "2026-07-27T06:04:16.176350+00:00",
+   "timeout_s": 3600,
+   "round_timeout_s": 90,
+   "partial_evidence_thresholds": {
+    "random_rounds": 40,
+    "min_stress_rounds": 42,
+    "stress_rounds_planned": 63,
+    "rule": "all random passes + >=2/3 stress passes, no divergence"
+   },
+   "resource_degraded_thresholds": {
+    "min_valid_rounds": 77,
+    "min_random_passes": 30,
+    "min_stress_passes": 42,
+    "rule": "completed probe whose non-pass rounds are ALL environmental (VRAM/host OOM, round watchdog) grades STILL_LIKELY_EQUIVALENT; environment incidents are not subject-semantics evidence"
+   }
+  },
+  "4": {
+   "run_id": "e1-cse-20260727-140435",
+   "started_at": "2026-07-27T06:04:35.152628+00:00",
+   "timeout_s": 3600,
+   "round_timeout_s": 90,
+   "partial_evidence_thresholds": {
+    "random_rounds": 40,
+    "min_stress_rounds": 42,
+    "stress_rounds_planned": 63,
+    "rule": "all random passes + >=2/3 stress passes, no divergence"
+   },
+   "resource_degraded_thresholds": {
+    "min_valid_rounds": 77,
+    "min_random_passes": 30,
+    "min_stress_passes": 42,
+    "rule": "completed probe whose non-pass rounds are ALL environmental (VRAM/host OOM, round watchdog) grades STILL_LIKELY_EQUIVALENT; environment incidents are not subject-semantics evidence"
+   }
+  },
+  "5": {
+   "run_id": "e1-cse-20260727-140455",
+   "started_at": "2026-07-27T06:04:55.621943+00:00",
+   "timeout_s": 3600,
+   "round_timeout_s": 90,
+   "partial_evidence_thresholds": {
+    "random_rounds": 40,
+    "min_stress_rounds": 42,
+    "stress_rounds_planned": 63,
+    "rule": "all random passes + >=2/3 stress passes, no divergence"
+   },
+   "resource_degraded_thresholds": {
+    "min_valid_rounds": 77,
+    "min_random_passes": 30,
+    "min_stress_passes": 42,
+    "rule": "completed probe whose non-pass rounds are ALL environmental (VRAM/host OOM, round watchdog) grades STILL_LIKELY_EQUIVALENT; environment incidents are not subject-semantics evidence"
+   }
+  }
+ }
+}

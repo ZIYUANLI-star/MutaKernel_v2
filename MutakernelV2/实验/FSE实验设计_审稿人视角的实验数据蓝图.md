@@ -195,742 +195,885 @@
   303/453 未收官）保持 "?"。
 - 交叉拟合闭合率 73% 为 interim 下界（CSE 未收官），维持 "?" 不填。
 
-# 5 Experimental Evaluation
+修订记录 v1.12（2026-07-30，§5.3 oracle 条款增补；仅措辞与条款，未改任何数字）：
+- 背景：B9 移植的本体协议使用 fp64 CPU 参考 + 逐 (op,dtype) 校准容差
+  （p95×1.5），与原 §5.3 "Oracle unification"（主对比各行共用同一
+  dtype-aware 容差）字面冲突。拍板结论：预算匹配要求同等算力预算而非同一
+  oracle——oracle 是被测验证器设计的组成部分，强行统一会把外部基线降为
+  strawman。
+- §5.3 原单段 "Oracle unification" 拆为四段：
+  1) *What budget matching unifies*——明确统一项为冻结科目集、输入/GPU 时间
+     预算、三值判决计数规则、统计口径；
+  2) *Oracle unification within our own configurations*——统一判定管线的适用
+     范围收窄为我们自己的行（M-full / M-dir / B1u / B3–B6 与 2×2 因子分解），
+     原 2×2 因子分解与 headline 效应定义（B1u→M-full）逐字保留；
+  3) *Exception: ported validators retain their published oracles*——B7/B8/B9
+     按已发表协议保留各自 oracle，B11 保留其原生属性检查；B9 逐条说明
+     （fp64 参考 + p95×1.5 校准容差是该行要测的设计轴，替换即制造 strawman）；
+  4) *The asymmetry is an object of analysis, not a blemish*——把 oracle 不
+     对称本身列为分析对象，并挂钩已量化的 p95×1.5 脆弱性机制（fp16 大归约
+     误差塌缩到二进制网格；1.5 < 2 使容差必然落在两网格点之间，故不变比值
+     max/tol = 4/3；fp32 不受影响）与 1/32 的单元内假阳性下界。
+- §5 RQ2 问题陈述与 §6 Internal 威胁段同步改写为"我们自己的行统一 oracle、
+  移植行保留其已发表 oracle，不对称如实报告并分析"，消除与 §5.3 的字面矛盾。
+- 数据纪律：未改动任何已填数字；新段中随样本增长的三项脆弱性比率（单元级、
+  fp16 单元级、贴边单元数）按惯例留 "?"，其 interim 实测值与机制推导见
+  补充实验数据/E3_B9校准决定与限制说明.md §6，待 B9 全量校准收官后按数据填充
+  流程回填；不变量（max/tol = 4/3、1.5 < 2、fp16-only）已定稿写入。
+- Table 6a/6b、Table 7 的行列与占位符未改动；文件头历史修订记录按惯例不追改。
 
-We evaluate MutaKernel through five research questions:
+修订记录 v1.13（2026-07-30，Table 6a 覆盖范围缺口标注；仅范围声明，未改任何数字）：
+- 拍板结论：空列如实标注比沉默安全。Table 6a 表后新增
+  *Declared coverage gaps of Table 6a.* 段，逐条声明两处当前不在冻结科目集内的
+  子空间，并说明其性质与补齐路径：
+  1) **TritonBench-G（C4）列对所有预算匹配行（含 M-full/M-dir）为空**。原因经逐
+     文件核实是语料性质而非某一行的能力缺陷：每个任务文件自带 Triton kernel 与
+     其测试函数，其官方评测的参考值由**被测文件自身**产出，语料不提供任何独立
+     参考实现，故 B1u/B7/B8/B9/B11/M-full/M-dir 的差分判定同等无对照。缺口对各
+     行一致，不产生行间偏差；其代价是外部效度在该列补齐前只由 CUDA 语料承担；
+  2) 补齐路径已定并写入正文：对 184 个任务做**预注册均匀随机抽样**（固定种子）、
+     自撰 PyTorch 参考，该列届时按子样本报告并显式声明抽样设计与纳入概率，接入
+     §5.1.5 已有的 Horvitz–Thompson / Hájek 估计量（不另造口径）；参考与语料自带
+     记录值不一致时人工判定，归因到内核的不一致本身记为一项发现，一致仅算冒烟
+     校验、不构成参考正确性证明；
+  3) **C2/C3/C5 三列当前覆盖其引用的 KernelBench L1+L2 任务（250 任务中的 200）**，
+     余 50 个 L3 任务缺失属**工程缺口**：用于契约提取的 vendored 基准树缺 level3
+     目录，任务定义本身在 artifact 内完整且经逐文件摘要核验与 level1/level2 同一
+     上游 revision；补齐后三列覆盖 250 任务。L3 中输出非单张量的科目落在 B9 port
+     可判定域之外，按 §5.3 的不可判定口径计入分母、不计检出。
+- 数据纪律：未改动任何已填数字；未填任何 "?"；Table 6a 的行列与单元格占位符逐字
+  未动；新增的 250/200/50/184 为科目集计数（来源：契约批次 freeze 记录与语料
+  manifest），非实验结果数字。
+- 依据文档：补充实验数据/E3_契约缺口补齐计划_L3与C4.md（抽样协议、功效分析与
+  人工审核流程）。
 
-- **RQ1 (Natural false acceptance).** Among real LLM- and RL-generated GPU
-  kernels accepted by the de-facto standard validator, how many contain
-  independently confirmed, in-contract defects?
-- **RQ2 (Budget-matched effectiveness).** Under equal candidate-execution
-  and equal GPU-time budgets and a *unified oracle*, how does MutaKernel
-  compare against the baseline validators of Table 2 in confirmed-defect
-  recall, alarm precision, and cost—and how much of any difference is
-  attributable to inputs versus oracle strictness?
-- **RQ3 (External validity).** How do all validators perform on an
-  *independently labeled* corpus whose ground truth was established by a
-  third party: a public seeded-bug corpus?
-- **RQ4 (Controlled fault study).** Which fault classes does the baseline
-  validator systematically miss on controlled fault probes, and does
-  mutation-derived evidence predict the detection of natural defects?
-- **RQ5 (Component contribution).** Which of MutaKernel's components—the
-  five stress dimensions and site-directed policy selection—contribute to
-  detection, and at what cost?
+修订记录 v1.14（2026-07-30，Table 6a 缺口段补两句区间宽度口径；未改任何数字）：
+- 背景：C4 子样本方案定案（n=60、按 `difficulty` 五层比例分配、余数随机化使
+  π_i 精确等于 60/184）后，功效分析给出两条会被审稿人自行算出的结论，拍板要求
+  先行显式披露，避免读成"作者未意识到"。
+- 在 v1.13 的 *Declared coverage gaps of Table 6a.* 段的 TritonBench-G 小节末尾
+  追加一段，承接补齐路径说明，写明两点：
+  1) 该列区间偏宽的根因是**抽出的确认缺陷池规模**（= 子样本量 × 语料缺陷密度），
+     而**不是**自撰参考的份数，也不是抽样设计——换任何抽样方案乃至 184 任务普查
+     都改变不了这一点；
+  2) 逐语料假设检验在任何可撰写的子样本量下都拿不到，但这是**遵循**既定设计而非
+     未达标：per-cell 区间进 artifact、检验只在聚合层（Table 6b）计算，C4 的缺陷
+     在聚合层参与合并比较并确有贡献。
+- 数据纪律：未改动任何已填数字；未填任何 "?"；未引入任何新数字（段内仅复用已出现
+  的 184）；Table 6a 的行列与单元格逐字未动。
 
-Section 5.1 describes subjects, baselines, infrastructure, the
-ground-truth protocol, and metrics; Sections 5.2–5.6 answer RQ1–RQ5;
-Section 5.7 reports cost; Section 5.8 delimits appendix material;
-Section 6 discusses threats.
+修订记录 v1.15（2026-08-01，E1 收官定版填充：Table 10、§5.5 CSE 证伪句、
+§5.6 交叉拟合闭合率、§5.7 成本；数据源与口径逐项列明）：
+- 前提：E1 全阶段收官——equiv 527 探针与 CSE 453 探针全部定级；WC-1 见证复核
+  审计 + 导师裁定（WC1_20260731）+ 7 条生产口径补跑（requeue_final）已通过
+  一次性账本修订落账（e1/amendment_v1/amendment_manifest.json，12 处变更、
+  9 行原始记录归档，全程可回溯）；清算表 §7.4-1 的 P37 字段修正已执行
+  （5 处 policy_skip_reason → oracle_indiscriminative_for_kernel，含备份）。
+- Table 10 填充（修订后冻结账本实算，blueprint_batch1.json）：
+  - Machine-proven eq.：A 9 / B–D 0 / Overall 9（四条版本化静态规则的账面定版；
+    v1.10 暂缓的原因已消除——E1 关账后该账面不再变动）；
+  - Witnessed non-eq., survived：A 20 / B 40 / C 8 / D 0 / Overall 68（遵 7.4-4
+    以冻结账本实算为准，此前两轮离线预测 82/81 均作废不采用）；
+  - Detection rate (witnessed) = Killed/(Killed+Witnessed)：90.3 / 89.4 / 61.9 /
+    100.0 / 88.8 %；INCONCLUSIVE 列与 κ 遵 7.4-3 留 "?"（人工盲审未做）；
+  - 表脚注补 P95 崩溃型见证声明（7.4-2，`L1_P95__relop_replace__5`）与
+    P68/P98 间歇性标注（账本内 wc1_annotation 可查）。
+- §5.5 CSE 句：证伪 7/453（1.5 %）——7 条 FALSIFIED 全部带可复放契约内反例，
+  含 WC-1 复核后维持的 P94（间歇性，对照臂 45 轮干净）；escape-mechanism
+  百分比需 GPU 审计阶段，留 "?" 仅填分母 68。
+- §5.5 RQ4 答句：漏检率 11.2 %（68/607）；分类别 A 9.7 / B 10.6 / C 38.1 /
+  D 0 %——原句 "concentrated in ML-numerical and LLM-pattern" 与数据不符
+  （D 类 0 漏检），按事实改写为仅 ML-numerical 集中（38.1 % vs 其余 ≤10.6 %）；
+  ρ 与留出集分类学覆盖率依赖 E3/人工标注，留 "?"。
+- §5.6：折数 5；交叉拟合闭合率 73.3 %（55/75，离线保守下界；终版分母 75 =
+  68 equiv 见证 + 7 CSE 证伪；analysis/final/a1_*）。v1.11 "interim 不填"的
+  前提（CSE 未收官）已消除，本次为终版数。
+- §5.7：deploy 模式单候选中位 214.8 s（p95 925.5 s，n=527）、full-audit 模式
+  中位 557.1 s（n=453）；1,000 候选 deploy 口径 59.7 GPU-hours（中位外推）；
+  budget–recall 曲线 32 轮处饱和（combined 召回 89.3 %，32–75 轮零增量，与
+  既定部署预算 32 一致；analysis/final/a3_*、a4_*）。云价、JIT 占比、B7/B9
+  对比值待 E3，留 "?"。
+- 数据源：远端 /root/mk_v2_runs/e1/{amendment_v1, analysis/final}（终版重算
+  命令见 离线复用分析_汇总.md §7）；本次填入数字与 blueprint_batch1.json、
+  a1/a3/a4 输出逐位一致。
 
-## 5.1 Experimental Setup
+修订记录 v1.16（2026-08-01，CUDA-L1 列排程声明；仅措辞与范围声明，未改任何数字）：
+- 用户拍板：E3 执行战役先跑 AI-CUDA-Engineer（C3）与 KernelBench-samples（C5）
+  两列（wave-1 冻结科目集 653 个 L1/L2 科目，清单
+  补充实验数据/e3_campaign_scope_v1.json），CUDA-L1（85 科目）推迟为后续波次。
+- 在 Table 6a 的 *Declared coverage gaps* 段追加 CUDA-L1 排程声明一段：明确该
+  推迟是运行排序决定而非语料或验证器性质；契约、预算与判定管线跨列一致，晚填
+  不会引入行间偏差；列未填前，跨语料主张仅覆盖已报告语料。
+- 涉及 CUDA-L1 的格子（Table 6a 第一列、§5.2 审计表 CUDA-L1 行）保持 "?"
+  待后续波次；RQ1/RQ2 答句中依赖四语料齐全的措辞留待该列回填时定稿。
+- 数据纪律：未改动任何已填数字；未填任何 "?"；Table 6a 行列与占位符逐字未动。
 
-### 5.1.1 Subject Corpora
+修订记录 v1.17（2026-08-01，云价口径拍板；填 §5.7 一格）：
+- §5.7 云成本：59.7 GPU-hours × $0.93/GPU·h ≈ **$56**（on-demand）。
+- 口径来源：NVIDIA A800 80GB NVL 按需价 $0.93/GPU·h（getdeploying.com A800
+  页，2026-07-29 更新，GPUhub on-demand pay-as-you-go 无承诺档）。取按需
+  专属档而非 marketplace 竞价档（后者 $0.47–0.67 波动大、不可稳定引用）。
+- 该值为引用口径（单价 × 已实测 GPU-hours），非新实验数据；单价与来源将
+  写入论文脚注。
+- 同日完成的三项人工程序（详见 人工依赖清单 与对应备忘）：L1/L2 200 份契约
+  签核（代理代行，批次 sha256=df790f70…，2 份修订）；机器证明 9 条
+  spot-check（9/9 前提核验通过）；headline 反例独立复放核查（WC-1 已以更强
+  协议覆盖 83/83 见证）。均不改动蓝图数字。
 
-Table 1 summarizes the seven corpora. All corpora, task contracts, and
-inclusion rules were frozen—with content-addressed stable IDs—*before* any
-V2 validator outcome was observed.
+修订记录 v1.18（2026-08-02，B9 校准收官；填 §5.3 脆弱性句 + 一处措辞按数据修正）：
+- B9 校准 400/400 单元收官（终态：382 calibrated_ok / 10 calibrated_heavy_tail
+  / 8 controls_incomplete；后者入 undecidable 账本，按预注册规则计入分母、
+  不计检出，与 §5.3 既有条款一致）。
+- §5.3 脆弱性句填入：10/392 校准单元（2.6 %）触发 p95×1.5 重尾；fp16 9/194
+  （4.6 %）、fp32 1/198（0.5 %）；另有 106/194 fp16 单元（54.6 %）32 个对照
+  全落单一格点（贴边），一次抽样即可翻转——采样噪声主导的判定不稳定性。
+- **措辞修正（数据驱动）**：v1.13 曾按 interim 样本（n=17）把 "fp16-only" 写入
+  机制段；全量数据出现 1 个 fp32 重尾单元（L1_P99 TripletMarginLoss，标量输出，
+  误差取 0/1/3 ulp @2⁻²²，max/tol=2.0）——同一离散格点机制经"标量输出"退化
+  路径在 fp32 复现。原句 "all of them fp16" 改为按 dtype 分列并补机制说明；
+  该修正**加强**而非削弱原论证：不稳定性跟随误差网格塌缩，而非 fp16 格式本身。
+- 佐证（工件内）：fp16 校准单元误差取值中位数 = 1 个不同值，fp32 = 17 个；
+  对照样本级假阳率 10/12,544（0.08 %）。数据源：远端 e3_b9_calib/
+  b9_calib_final_summary.json（时间戳去重口径，dedup_rule 字段内注明）。
 
-**Table 1. Subject corpora.** (Subject counts read "included /
-collected" under the frozen v1.0 inclusion rules—non-empty source,
-resolvable benchmark task, non-duplicate after normalization, language
-as declared; the frozen, content-hashed manifests and per-item exclusion
-reasons are released with the artifact.)
+修订记录 v1.19（2026-08-05，两处审稿人视角的披露性增补；未改任何数字）：
+- **C1↔C2–C5 任务重叠披露（§5.1.1 数据分离段）**：C1 受控故障语料的 90 个
+  源任务全部取自 KernelBench L1/L2，与 C2/C3/C5 所引用的任务集在*任务级*
+  重合（wave-1 冻结科目集覆盖同一任务集的 200 个任务）；内核实现层面不
+  相交（测试语料的科目均为 LLM/RL 生成实现，非 C1 探针本体）。新增段落
+  如实声明该重合、说明唯一受影响的推导工件是 M-dir 的故障-应力映射，并
+  预注册两条缓解措施（重合任务科目单独标注 + 剔除重合任务的敏感性分析
+  随 artifact 发布）。
+- **early-stop-on-fail 执行语义披露（§5.3 预算匹配段后）**：wave-1 部署
+  于 2026-08-04 启用该执行杠杆（决定与 Git/环境指纹记录见
+  补充实验数据/E3_战役启动决定_C2暂缓_20260801.md）。新增段落写明其
+  精确语义：科目级检出判定不受影响（首个 FAIL 已充分），仅影响 per-case
+  预算记账口径；skipped_after_fail 的 case 不入分母、不计检出。
+- **盲审日志留存协议（不改动蓝图数字，记录于此备查）**：Lane M 逐 case
+  worker 日志全量留存（与 observations.jsonl 一一对应），审计相关日志
+  （观测账本、worker 日志、run/环境/计划清单、守护日志）已开始定期打包
+  异地备份至 补充实验数据/lane_m_盲审日志备份/（首包 20260805_1216，
+  md5 7ced7432d9fe489b46178f39c3b83406，与远端逐字节一致）。
 
-| ID | Corpus | Language | Subjects | Role | Ground truth |
+修订记录 v1.20（2026-08-05，wave-1.5 补链战役预注册；未改任何数字）：
+- **补链战役设计冻结**：为补齐本蓝图中全部机器可产出占位符，wave-1.5
+  战役（Lane D = M-dir 行、Lane G = legacy-oracle 两行、Lane L = LODO
+  五行、Lane P = B7/B8/B9/B11 批量、Lane C6 = 种子缺陷语料）的完整设计
+  在任何 lane 执行之前冻结于 补充实验数据/E3_wave15_补链战役设计_20260805.md，
+  由远端编排器在 Lane M 收盘后自动串行接力。
+- **三条分析层复用规则预注册**（详见设计文档 §2）：R1 oracle 单调性结转
+  （legacy 容差逐 dtype 不严于统一 oracle，PASS/崩溃结转，仅 FAIL 科目
+  重跑）；R2 保留 case 结果复用（M-full 零 FAIL 科目的 LODO 保留部分直接
+  复用，仅补跑重分配 case）；R3 已检出科目 LODO 全行重跑。复用只发生在
+  聚合分析层，观测账本永不掺入未真实执行的记录；规则随 artifact 披露。
+- **Table 11 口径落地**：LODO 的"等预算重新分配"具体化为确定性规则
+  retained-cycle-seed-increment（设计文档 §3 的维度划分表与补足规则），
+  M-dir 行的预算补满规则 general-cycle-derive-seed 一并预注册（§4）。
+
+修订记录 v1.21（2026-08-05，wave-2 补链战役武装；未改任何数字）：
+- **wave-2 执行链冻结并武装**：为补齐 Table 6a 声明的 KB_L3 覆盖缺口与
+  port 复现三格，wave-2 战役在 wave-1.5 之后由第二台编排器自动接力
+  （远端 wave2/orchestrator.log 为权威运行日志）。阶段顺序：W1 冻结提交
+  → W2 port 保真复现（B7 对 robust-kbench 原生 highlighted 集、B8 对
+  KernelBenchX kbx_corpus 110 个状态、B9 对 Lane C6 离线聚合）→ W3 B9
+  L3 校准（50 任务 × fp32/fp16，沿用 v2 队列驱动与逐单元日志）→ W4 L3
+  容差图 → W5/W6 Lane M2/D2（100 个 wave-2 KB_L3 科目：C5 62 + C3 38，
+  六策略行 16,400 case + M-dir 3,000 case）→ W7 子集派生 → W8–W10
+  Lane G2/L2a/L2b（复用 v1.20 预注册规则 R1–R3，不重跑已覆盖科目）→
+  W11 Lane P2（B7/B8/B9/B11 批量）→ W12 离线收官分析（全 PASS 层功效
+  参数、等时截断曲线、port 保真汇总）。
+- **wave-2 科目与契约**：100 个 KB_L3 科目清单与 50 份 L3 契约
+  （contracts_l3_signed_v2.jsonl，规则预审 + 裁定复核，工作底稿随
+  artifact 披露）在任何 wave-2 GPU case 执行之前生成并冻结
+  （wave2_subject_manifest.json，manifest sha 随 run_manifest 记录）。
+- **不重复保证**：wave-2 仅覆盖 wave-1 冻结科目集之外的 KB_L3 子空间；
+  wave-1.5 与 wave-2 的账本文件相互独立、append-only，聚合层按
+  subject_id 去重校验。
+- 数据纪律：未改动任何已填数字；未填任何 "?"；表格行列与占位符逐字未动。
+
+# 5 实验评估
+
+我们通过五个研究问题评估 MutaKernel：
+
+- **RQ1（自然误收）。** 在被事实标准验证器接受的真实 LLM 与 RL 生成 GPU
+  内核中，有多少包含经独立确认的契约内缺陷？
+- **RQ2（预算匹配的有效性）。** 在候选执行次数与 GPU 时间双重对等的预算下
+  ——我们自己的全部配置共用*统一 oracle*，各移植验证器保留其已发表协议的
+  oracle（见 5.3 节）——MutaKernel 与 Table 2 所列基线验证器在确认缺陷
+  召回、告警精确率与成本上相比如何？差异中有多少可归因于输入、多少可归因
+  于 oracle 严格性？
+- **RQ3（外部效度）。** 全部验证器在一个*独立标注*语料上表现如何？该语料
+  的真值由第三方建立：一个公开的种子缺陷（seeded-bug）语料。
+- **RQ4（受控故障研究）。** 在受控故障探针上，基线验证器系统性漏掉哪些
+  故障类？由变异推导的证据能否预测自然缺陷的检出？
+- **RQ5（组件贡献）。** MutaKernel 的组件——五个应力维度与位点定向的策略
+  选择——各自对检出贡献几何？代价是什么？
+
+5.1 节描述科目、基线、基础设施、真值协议与度量；5.2–5.6 节回答
+RQ1–RQ5；5.7 节报告成本；5.8 节划定附录材料范围；第 6 节讨论效度威胁。
+
+## 5.1 实验设置
+
+### 5.1.1 科目语料
+
+Table 1 汇总七个语料。全部语料、任务契约与纳入规则都在观测到任何 V2
+验证器结果*之前*冻结，并带内容寻址的 stable ID。
+
+**Table 1. 科目语料。**（科目计数按"纳入 / 收集"（included / collected）
+口径，遵循冻结的 v1.0 纳入规则——源码非空、基准任务可定位、规范化后
+非重复、语言与声明一致；冻结的内容哈希 manifest 与逐条排除原因随
+artifact 发布。）
+
+| ID | 语料 | 语言 | 科目数 | 角色 | 真值 |
 |----|--------|----------|---------:|------|--------------|
-| C1 | Mutation probes over 90 validator-accepted KernelBench L1/L2 kernels (16 operators, first-order, ≤3 per kernel–operator pair) | CUDA | 1,646 | RQ4, RQ5 | Replayed non-equivalence witnesses + blinded equivalence audit (injected fault class/site known by construction, but not itself a defect label) |
-| C2 | CUDA-L1 [26] public kernels | CUDA | 85 / 241 collected | RQ1, RQ2 | Blinded human audit |
-| C3 | AI-CUDA-Engineer [22] archive | CUDA | 227 / 229 collected (task-level; one content-addressed accepted representative per task) | RQ1, RQ2 | Blinded human audit |
-| C4 | TritonBench-G [25] kernels | Triton | 184 / 184 collected | RQ1, RQ2 | Blinded human audit |
-| C5 | KernelBench-samples [31] frontier-model generations (official greedy-baseline release) | CUDA | 1,720 / 1,724 collected | RQ1, RQ2 | Blinded human audit |
-| C6 | gpuemu seeded-bug corpus [Sarkar 2026] | Triton/CPU | 26 ops: 16 correct controls + 10 seeded bugs | RQ3 | Public third-party labels |
-| C8 | KernelBench L3 / backward-enabled bounded sample | CUDA | ? (8–10 tasks) | Generalization (appendix) | Same as C1 |
+| C1 | 基于 90 个验证器接受的 KernelBench L1/L2 内核的变异探针（16 算子、一阶、每（内核,算子）对 ≤3 个） | CUDA | 1,646 | RQ4, RQ5 | 复放的非等价见证 + 盲评等价审计（注入的故障类/位点按构造已知，但其本身不是缺陷标签） |
+| C2 | CUDA-L1 [26] 公开内核 | CUDA | 85 / 241 collected | RQ1, RQ2 | 盲评人工审计 |
+| C3 | AI-CUDA-Engineer [22] 档案 | CUDA | 227 / 229 collected（任务级；每任务取一个内容寻址的 accepted 代表） | RQ1, RQ2 | 盲评人工审计 |
+| C4 | TritonBench-G [25] 内核 | Triton | 184 / 184 collected | RQ1, RQ2 | 盲评人工审计 |
+| C5 | KernelBench-samples [31] 前沿模型生成内核（官方贪心基线发布） | CUDA | 1,720 / 1,724 collected | RQ1, RQ2 | 盲评人工审计 |
+| C6 | gpuemu 种子缺陷语料 [Sarkar 2026] | Triton/CPU | 26 算子：16 个正确对照 + 10 个种子缺陷 | RQ3 | 公开第三方标签 |
+| C8 | KernelBench L3 / 启用 backward 的有界样本 | CUDA | ? (8–10 任务) | 泛化性（附录） | 同 C1 |
 
-The CUDA-L1 inclusion rate deserves note: 141 of the 156 excluded
-entries contain no custom CUDA kernel at all—they are PyTorch-level
-optimizations (backend flags, autocast, CUDA-graph capture) and thus
-fall outside the scope of kernel validation; the remaining 15 are
-normalized duplicates. Across the four natural corpora, no two included
-subjects share a normalized source hash.
+CUDA-L1 的纳入率值得说明：156 个被排除条目中有 141 个完全不含自定义
+CUDA 内核——它们是 PyTorch 级优化（后端旗标、autocast、CUDA-graph
+捕获），落在内核验证范围之外；其余 15 个是规范化重复。在四个自然语料
+之间，没有任何两个被纳入的科目共享同一规范化源码哈希。
 
-Every task carries a versioned *correctness contract* (schema v1) that
-fixes valid shapes and variable dimensions, supported dtypes, value domain,
-layout and aliasing assumptions, execution modes, determinism requirements,
-and a dtype-aware oracle tolerance (float32: atol=rtol=1e-4; float16 and
-bfloat16: 1e-2, following the vendored KernelBench implementation). A test
-outside the contract can never produce an in-contract defect report; such
-findings are reported separately as extended-contract observations.
+每个任务都带一份版本化的*正确性契约*（schema v1），固定了合法形状与
+可变维度、支持的 dtype、取值域、布局与别名假设、执行模式、确定性要求，
+以及 dtype 感知的 oracle 容差（float32：atol=rtol=1e-4；float16 与
+bfloat16：1e-2，沿用 vendored KernelBench 实现）。契约外的测试永远
+不能产生契约内缺陷报告；此类发现作为扩展契约（extended-contract）
+观测单独报告。
 
-*Contract governance.* Contracts are not an author degree of freedom.
-Each contract is extracted automatically from the benchmark's own
-artifacts wherever possible—the reference implementation, its
-`get_inputs`/`get_init_inputs` specification, and published task
-documentation—with only the boundary clauses (value domain, variable
-dimensions, determinism) requiring human judgment. Two authors reviewed
-every contract independently (clause-level agreement: ? %; disagreements
-resolved before freezing), and all contracts were content-hashed and
-frozen *before any V2 validator outcome was observed*. Later amendments
-are version-controlled with recorded reasons and never applied
-retroactively to already-sealed runs. When a case's contract status
-cannot be established, its outcome is INCONCLUSIVE and is never counted
-as a defect.
+*契约治理。* 契约不是作者的自由度。每份契约尽可能从基准自身的工件中
+自动提取——参考实现、其 `get_inputs`/`get_init_inputs` 规约与已发表的
+任务文档——只有边界条款（取值域、可变维度、确定性）需要人工判断。两位
+作者独立复核每份契约（条款级一致率：? %；分歧在冻结前解决），全部契约
+经内容哈希并在*观测到任何 V2 验证器结果之前*冻结。后续修订均带版本
+控制与记录在案的理由，且永不追溯适用于已封存的运行。当某个 case 的
+契约状态无法确立时，其结果记 INCONCLUSIVE，永不计为缺陷。
 
-*Data separation.* To prevent leakage between design and measurement,
-the corpora play fixed, disjoint roles: the operator taxonomy and the
-stress-policy library were designed on the *historical pilot data and the
-1,020-generation development corpus* (V1); all calibration constants
-(directed-budget fraction, evidence-grade thresholds) were fixed on a
-pilot subset of C1; the fault-to-stress map used by M-dir is derived
-solely from the C1 probe study and frozen—content-hashed—*before* any
-C2–C5 subject is executed. C2–C5 serve exclusively as test corpora and
-contributed to no design or calibration decision. Taxonomy-coverage
-claims (Section 5.6) are therefore reported twice: on the development
-corpus (descriptive only) and on the *held-out natural defects confirmed
-in C2–C5* (the evaluative number), complemented by leave-one-corpus-out
-analysis. Within C1, any evaluation of an artifact derived from C1
-itself (the fault-to-stress map in Section 5.6) uses task-level
-cross-fitting so that no probe is judged by a map its own task helped
-build.
+*数据分离。* 为防止设计与测量之间的泄漏，各语料扮演固定且不相交的
+角色：算子分类学与应力策略库设计于*历史先导数据与 1,020 条生成的开发
+语料*（V1）；全部校准常量（定向预算比例、证据等级阈值）固定于 C1 的
+先导子集；M-dir 使用的故障-应力映射（fault-to-stress map）仅从 C1
+探针研究推导，并在执行任何 C2–C5 科目*之前*经内容哈希冻结。C2–C5 只
+作为测试语料使用，未对任何设计或校准决定作出贡献。因此分类学覆盖率
+主张（5.6 节）报告两次：开发语料上的（仅描述性）与 *C2–C5 中确认的
+留出自然缺陷*上的（评估性数字），并辅以留一语料（leave-one-corpus-out）
+分析。在 C1 内部，对任何由 C1 自身推导的工件（5.6 节的故障-应力映射）
+的评估都使用任务级交叉拟合，使任何探针都不会被其所属任务参与构建的
+映射评判。
 
-### 5.1.2 Compared Validators
+*任务级重合的披露。* 上述分离是在*实现层面*的：C1 的 90 个源任务全部
+取自 KernelBench L1/L2，而 C2/C3/C5 的科目正是围绕同一基准任务集生成
+的 LLM/RL 实现，因此两侧在*任务*上重合、在*内核实现*上不相交（任何
+测试科目都不是 C1 探针本体，C1 探针也从未进入测试队列）。该重合唯一
+可能影响的推导工件是 M-dir 的故障-应力映射——它按算子类别而非按任务
+索引，但其推导数据毕竟来自同一任务集。我们如实报告而非回避：
+（i）落在重合任务上的 C2/C3/C5 科目在 M-dir 的逐科目结果中单独标注；
+（ii）artifact 附带一份剔除全部重合任务科目后的 M-dir 敏感性分析，
+若结论方向翻转则如实报告。M-full 不消费该映射，不受此重合影响。
 
-Table 2 lists the thirteen validator configurations. The primary
-equal-budget evaluation is reported in three tables with disjoint roles:
-the *per-corpus coverage matrix* (Table 6a) crosses every external
-validator with the four natural corpora individually, the *aggregate
-external comparison* (Table 6b) contains the third-party tools B7–B9,
-the separately metered B11, the descriptive anchors B1/B1u, and our two
-configurations, and the *design-increment decomposition* (Table 7)
-contains the constructed ladder B3–B6 together with the oracle factorial
-rows (Section 5.3); B2 is the Triton-side native anchor reported on its
-compatible corpus, and B10 appears in the appendix. Rows B3–B6 form a
-strengthening ladder of *simple but strengthened* baselines that
-isolates, in order, the contribution of test volume, value-distribution
-diversity, classical boundary-value analysis, and execution-context
-diversity; they reuse individual policies from our library but apply
-them uniformly, without fault-class priors or dimension composition.
-(The term *ablation* is reserved for the leave-one-dimension-out
-experiment of Table 11, which removes components from M-full; Table 7
-instead builds the baseline up one design ingredient at a time.) External tools are
-run in two modes: *native* (the tool's own protocol on its compatible task
-interface, pinned to the commit in our artifact) and *port* (the tool's
-testing idea re-implemented on our frozen subjects under matched budgets);
-the two modes are never merged in one table row.
+### 5.1.2 对比验证器
 
-**Table 2. Compared validators.** Budget-matched rows execute exactly 32
-candidate invocations per subject.
+Table 2 列出十三个验证器配置。主等预算评估由三张角色互斥的表报告：
+*逐语料覆盖矩阵*（Table 6a）将每个外部验证器与四个自然语料逐一交叉；
+*聚合外部对比*（Table 6b）包含第三方工具 B7–B9、单独计量的 B11、
+描述性锚点 B1/B1u 与我们的两个配置；*设计增量分解*（Table 7）包含
+构造阶梯 B3–B6 与 oracle 因子分解行（5.3 节）；B2 是 Triton 侧原生
+锚点，报告于其兼容语料，B10 见附录。B3–B6 构成一个*简单但逐步加强*
+的基线阶梯，依次隔离测试量、值分布多样性、经典边界值分析与执行上下文
+多样性的贡献；它们复用我们策略库中的单个策略，但均匀施加、不带故障类
+先验、不做维度组合。（*消融*一词保留给 Table 11 的
+leave-one-dimension-out 实验，它从 M-full 中移除组件；Table 7 则是
+把基线一次一个设计要素地*向上*构建。）外部工具以两种模式运行：
+*native*（工具自身协议跑在其兼容的任务接口上，钉在我们 artifact 中的
+commit）与 *port*（工具的测试思想在我们冻结的科目上、匹配预算下重新
+实现）；两种模式永不合并在同一表行。
 
-| ID | Validator | Protocol summary | Mode |
+**Table 2. 对比验证器。** 预算匹配的行每科目精确执行 32 次候选调用。
+
+| ID | 验证器 | 协议摘要 | 模式 |
 |----|-----------|------------------|------|
-| B1 | KernelBench default [31] | 5 random draws, fixed shape/dtype, allclose, eval mode | Native (vendored) |
-| B2 | TritonBench default [25] | Same family as B1, Triton side | Native |
-| B3 | IID compute-matched | 32 i.i.d. random draws, default context | Constructed |
-| B4 | Diversified values | 8 value distributions × 4 seeds, undirected | Constructed |
-| B5 | Boundary-value suite | 8 boundary policies × 4 seeds (BVA [19, 30]) | Constructed |
-| B6 | Dtype/mode/config grid | fp16/bf16, train(+backward), batch ∈ {1,4,16,64} | Constructed |
-| B7 | robust-kbench [23] | Multi-init × multi-input × fwd+bwd, statistical output filters | Native + port |
-| B8 | KernelBenchX [40] | Standard/outlier/boundary inputs, dtype-aware oracles, 176 Triton tasks | Native + port |
-| B9 | Seeded differential fuzzing [Sarkar 2026] | Op-schema-aware sampling, fp64 CPU reference, per-(op,dtype) calibrated tolerances | Port |
-| B10 | LLM self-review | Frontier-LLM code review, no execution | Separately costed (appendix) |
-| B11 | Compute Sanitizer (NVIDIA, 2023.1.1) | memcheck/racecheck/synccheck/initcheck instrumentation | Native, alarm types reported separately |
-| M-full | MutaKernel (full suite) | 21 stress policies + dtype/train/repeat/config dimensions, three-way differential oracle | Ours |
-| M-dir | MutaKernel (site-directed) | Static site fingerprint → fault-to-stress map lookup; 70% directed + 30% general budget | Ours |
+| B1 | KernelBench 默认 [31] | 5 次随机抽样、固定形状/dtype、allclose、eval 模式 | Native（vendored） |
+| B2 | TritonBench 默认 [25] | 与 B1 同族，Triton 侧 | Native |
+| B3 | IID 计算量匹配 | 32 次 i.i.d. 随机抽样、默认上下文 | 构造 |
+| B4 | 值多样化 | 8 种值分布 × 4 种子、无定向 | 构造 |
+| B5 | 边界值套件 | 8 种边界策略 × 4 种子（BVA [19, 30]） | 构造 |
+| B6 | Dtype/模式/配置网格 | fp16/bf16、train(+backward)、batch ∈ {1,4,16,64} | 构造 |
+| B7 | robust-kbench [23] | 多初始化 × 多输入 × fwd+bwd、统计输出滤波 | Native + port |
+| B8 | KernelBenchX [40] | 标准/离群/边界输入、dtype 感知 oracle、176 个 Triton 任务 | Native + port |
+| B9 | 种子差分模糊测试 [Sarkar 2026] | 算子 schema 感知采样、fp64 CPU 参考、逐（算子,dtype）校准容差 | Port |
+| B10 | LLM 自审 | 前沿 LLM 代码审查、不执行 | 单独计费（附录） |
+| B11 | Compute Sanitizer（NVIDIA, 2023.1.1） | memcheck/racecheck/synccheck/initcheck 插桩 | Native，告警类型单独报告 |
+| M-full | MutaKernel（完整套件） | 21 个应力策略 + dtype/train/repeat/config 维度、三方差分 oracle | 我们的 |
+| M-dir | MutaKernel（位点定向） | 静态位点指纹 → 故障-应力映射查询；70% 定向 + 30% 通用预算 | 我们的 |
 
-*Port fidelity.* For every ported baseline we (i) release the complete
-port source, (ii) document a clause-by-clause alignment with the original
-protocol, marking unsupported features explicitly rather than silently
-dropping them, and (iii) validate the port by re-running it on the
-original tool's *native* dataset and comparing against the tool's
-published results (reproduction deltas: B7 ?, B8 ?, B9 ?; details in the
-artifact). We contacted the original authors of B7–B9 for protocol
-confirmation (correspondence status recorded in the artifact). Native
-rows are reported under the tools' own unrestricted protocols in the
-appendix and are never merged with budget-matched port rows.
+*移植保真（Port fidelity）。* 对每个移植基线我们 (i) 发布完整移植
+源码；(ii) 记录与原协议的逐条款对齐文档，不支持的特性显式标注而非
+静默丢弃；(iii) 通过在原工具的 *native* 数据集上复跑并与其已发表结果
+对比来验证移植（复现偏差：B7 ?、B8 ?、B9 ?；细节见 artifact）。我们
+已联系 B7–B9 的原作者确认协议（通信记录存于 artifact）。Native 行按
+工具自身的无限制协议报告于附录，永不与预算匹配的 port 行合并。
 
-Note that MutaKernel's *online* validation path executes no mutant:
-M-dir consumes only a static source fingerprint (a millisecond-scale
-regex/AST scan) and the offline-derived, frozen fault-to-stress map.
-Mutation analysis appears exclusively in the offline study of RQ4.
+注意 MutaKernel 的*在线*验证路径不执行任何变异体：M-dir 只消费一个
+静态源码指纹（毫秒级 regex/AST 扫描）与离线推导、已冻结的故障-应力
+映射。变异分析只出现在 RQ4 的离线研究中。
 
-Formal-verification approaches—Kuiper [Martínez et al. 2026], ProofWright
-[6], and the equivalence checker of Dubey et al. [15]—are compared on
-guarantees, scope, and cost in Table 12 rather than in executable rankings,
-since they prove different properties than tolerance-based differential
-testing.
+形式化验证方法——Kuiper [Martínez et al. 2026]、ProofWright [6] 与
+Dubey 等人的等价检查器 [15]——在 Table 12 中按保证、范围与成本对比，
+而不进入可执行排名，因为它们证明的性质与基于容差的差分测试不同。
 
-### 5.1.3 Implementation and Hardware
+### 5.1.3 实现与硬件
 
-All dynamic experiments run on the same execution substrate: paired
-construction with RNG-state replay, strict name-exact state
-synchronization, per-execution deep-cloned inputs, a structure-, dtype-,
-and NaN-position-aware oracle, and three-valued outcomes
-(PASS/FAIL/INCONCLUSIVE with ten failure categories). Infrastructure
-failures can therefore never inflate defect counts. Every non-PASS
-observation produces a replay bundle that re-executes in a fresh container;
-every headline counterexample is additionally verified through an
-independent replay of its bundle before being reported. All experiments
-run on NVIDIA A800 (80 GB) GPUs with PyTorch 2.1.2, CUDA 12.1, and
-Triton 2.1.0; run
-manifests record
-commits, environment fingerprints, contract/policy/operator versions,
-seeds, and budgets.
+全部动态实验运行在同一执行基座上：带 RNG 状态复放的成对构造、严格
+按名的状态同步、逐次执行深拷贝的输入、结构/dtype/NaN 位置感知的
+oracle，以及三值判决（PASS/FAIL/INCONCLUSIVE，含十类失败类别）。
+因此基础设施故障永远不能虚增缺陷计数。每个非 PASS 观测都产出一个
+replay bundle，可在全新容器中重执行；每个 headline 反例在报告前还要
+经过其 bundle 的独立复放验证。全部实验运行于 NVIDIA A800（80 GB）
+GPU，PyTorch 2.1.2、CUDA 12.1、Triton 2.1.0；run manifest 记录
+commit、环境指纹、契约/策略/算子版本、种子与预算。
 
-Before the main study we quantified the effect of the corrected substrate
-with a paired pilot (E0), run serially on a single A800 of the same
-setup: 180 historical probes, stratified by task level × reference
-statefulness × historical verdict group, were re-executed back-to-back
-under the legacy and the corrected substrate with the identical V1
-baseline protocol (5 random draws, atol = rtol = 1e-2, seed 42), together
-with a per-kernel un-mutated original-kernel control that both substrates
-must pass for a probe to enter the paired statistics. Three observations
-shape the full rerun. First, where both substrates handled the subject,
-verdicts are stable: 2 of 62 analyzable probes flipped (3.2 %; Wilson 95%
-CI [0.9, 11.0] %; Table 3). Both flips are individually diagnostic rather
-than noise: in one, the legacy harness failed to kill a probe whose
-divergence the corrected substrate witnesses in its first trial; in the
-other—on an L2 stateful subject—the legacy harness killed a probe whose
-outputs agree in all five paired trials under the corrected substrate,
-i.e., a legacy false kill. Second, the dominant substrate effect appears
-in the controls, not in the flips: the legacy harness killed 26 of 50
-un-mutated original kernels (L2: 17 of 21)—kernels that had passed this
-very protocol in the historical study—whereas the corrected substrate
-demonstrated that 15 of the 26 in fact pass, confirmed 7 as genuine
-architecture incompatibilities of this GPU, and returned INCONCLUSIVE on
-4; legacy verdicts on stateful subjects are therefore untrustworthy
-wholesale, which motivates the full rerun reported in this paper. Third,
-the exclusions concentrate in the stateful strata (11 and 3
-control-passing probes): beyond the legacy control failures and the
-architecture-incompatible subjects, 8 controls were INCONCLUSIVE under
-the corrected substrate—7 because candidate and reference admit no state
-bijection (the candidate folds or re-parameterizes weights), which the
-substrate refuses to guess by design, and 1 because an
-architecture-invalid launch configuration surfaces asynchronously in the
-oracle (the probe population contains no L2 stateless subjects).
+在主研究之前，我们用一个配对先导实验（E0）量化了修正基座的效应，
+串行运行于同一环境的单张 A800：180 个历史探针按任务层级 × 参考实现
+有无状态 × 历史判定组分层，在 legacy 与修正基座下背靠背重执行，采用
+完全相同的 V1 基线协议（5 次随机抽样、atol = rtol = 1e-2、种子 42），
+并附带逐内核的未变异原始内核对照——两个基座都必须通过该对照，探针才
+进入配对统计。三个观察塑造了全量重跑。第一，在两个基座都能处理科目
+之处，判定是稳定的：62 个可分析探针中 2 个翻转（3.2 %；Wilson 95%
+CI [0.9, 11.0] %；Table 3）。两个翻转都各自具有诊断意义而非噪声：
+其一，legacy 基座未能杀死一个探针，而修正基座在首个 trial 就见证了
+其发散；其二（一个 L2 有状态科目），legacy 基座杀死的探针在修正基座
+下五次配对 trial 输出全部一致，即 legacy 误杀。第二，基座效应的主体
+出现在对照而非翻转中：legacy 基座判杀了 50 个未变异原始内核中的 26
+个（L2：21 个中的 17 个）——这些内核在历史研究中通过过同一协议——
+而修正基座证明其中 15 个事实上通过，确认 7 个是本 GPU 的真实架构
+不兼容，4 个返回 INCONCLUSIVE；因此 legacy 对有状态科目的判定整体
+不可信，这正是本文报告全量重跑的动机。第三，排除集中在有状态层
+（11 与 3 个对照通过的探针）：除 legacy 对照失败与架构不兼容科目外，
+8 个对照在修正基座下 INCONCLUSIVE——7 个因候选与参考不存在状态双射
+（候选折叠或重参数化了权重），基座按设计拒绝猜测；1 个因架构非法的
+launch 配置在 oracle 中异步暴露（探针总体中不存在 L2 无状态科目）。
 
-**Table 3. Paired verdict flips under the corrected execution substrate
-(E0 pilot, single A800).**
+**Table 3. 修正执行基座下的配对判定翻转（E0 先导，单张 A800）。**
 
-| Stratum | Sampled probes | Controls passed | Paired flips | Flip rate (95% CI) |
+| 层 | 抽样探针 | 对照通过 | 配对翻转 | 翻转率（95% CI） |
 |---------|---------------:|----------------:|-------------:|-------------------:|
-| L1, stateless reference | 60 | 49 | 1 | 2.1 % [0.4, 10.9] |
-| L1, stateful reference | 60 | 11 | 0 | 0.0 % [0.0, 25.9] |
-| L2, stateful reference | 60 | 3 | 1 | 33.3 % [6.1, 79.2] |
-| Overall (analyzable) | 180 | 63 | 2 | 3.2 % [0.9, 11.0] |
+| L1，无状态参考 | 60 | 49 | 1 | 2.1 % [0.4, 10.9] |
+| L1，有状态参考 | 60 | 11 | 0 | 0.0 % [0.0, 25.9] |
+| L2，有状态参考 | 60 | 3 | 1 | 33.3 % [6.1, 79.2] |
+| 合计（可分析） | 180 | 63 | 2 | 3.2 % [0.9, 11.0] |
 
-One control-passing stateless probe returned INCONCLUSIVE in the
-corrected arm and is excluded from the flip denominators (62 analyzable
-probes overall). Secondary comparison against the historical labels
-(confounded with the GPU change and reported for completeness only):
-9/62 verdicts flipped (6 killed→survived, 3 survived→killed).
+一个对照通过的无状态探针在修正臂返回 INCONCLUSIVE，从翻转分母中排除
+（合计 62 个可分析探针）。与历史标签的次要对比（混杂了 GPU 更换，仅
+为完整性报告）：9/62 判定翻转（6 杀→存，3 存→杀）。
 
-### 5.1.4 Ground-Truth Protocol
+### 5.1.4 真值协议
 
-*Alarm-level and subject-level labels are produced by an independent,
-blinded human audit; no LLM decision and no detector verdict is ever used
-as ground truth.* After all validator executions were sealed (digest
-chain), we constructed an audit queue containing (i) the union of all
-alarms from all thirteen validators, (ii) every execution-unresolved
-subject, and (iii) a preregistered stratified random sample of all-PASS
-subjects (strata: corpus × language × task level; n = ? per stratum). Each
-item was presented under a neutral ID with a policy-neutral evidence
-bundle (materialized input tensors, self-contained replay program, contract
-text) that conceals which validator, policy, or seed produced it. Two
-GPU-qualified annotators labeled independently; disagreements were settled
-by a third adjudicator only after both primary labels were locked.
-Pre-adjudication agreement was ? % (Cohen's κ = ?; per-label confusion in
-the artifact).
+*告警级与科目级标签由独立、盲评的人工审计产生；任何 LLM 决定与任何
+检测器判定都永不用作真值。* 在全部验证器执行封存（摘要链）之后，我们
+构建审计队列，包含 (i) 全部十三个验证器的告警并集，(ii) 每个执行
+未决科目，(iii) 全 PASS 科目的预注册分层随机样本（分层：语料 × 语言
+× 任务层级；每层 n = ?）。每个条目以中性 ID 呈现，附带策略中性的
+证据包（物化输入张量、自包含复放程序、契约文本），隐去产生它的验证
+器、策略与种子。两位具 GPU 资质的标注者独立标注；分歧仅在两个初始
+标签锁定后由第三位裁定者解决。裁定前一致率为 ? %（Cohen's κ = ?；
+逐标签混淆矩阵见 artifact）。
 
-The two item kinds receive different tasks. For *alarmed* items the
-annotators confirm or reject the presented counterexample. For sampled
-*all-PASS* items—where no counterexample exists to review—the annotators
-perform an **independent, time-boxed defect search**: each receives the
-candidate source, the reference, the full contract, and a live GPU
-environment; may construct arbitrary in-contract inputs, vary in-contract
-dtypes/configurations, repeat executions, and apply static reasoning or
-standard tooling; and has a fixed budget of ? minutes per kernel. They
-never see any validator's outcome for the item. A defect label requires
-submitting a replayable in-contract counterexample; otherwise the item is
-labeled `NO_DEFECT_FOUND`, which throughout this paper means "no defect
-found within the search budget," never a proof of correctness—the
-population-recall estimator (Section 5.1.5) is therefore itself a lower-
-bound construction, and we report the search budget alongside it.
+两类条目接受不同任务。对*告警*条目，标注者确认或否决所呈现的反例。
+对抽样的*全 PASS* 条目——不存在可审的反例——标注者执行**独立、限时的
+缺陷搜索**：每人获得候选源码、参考实现、完整契约与可用的 GPU 环境；
+可构造任意契约内输入、变化契约内 dtype/配置、重复执行、运用静态推理
+或标准工具；每内核预算固定为 ? 分钟。他们永远看不到任何验证器对该
+条目的结果。缺陷标签要求提交可复放的契约内反例；否则条目标注为
+`NO_DEFECT_FOUND`——全文中它的含义都是"在搜索预算内未发现缺陷"，
+而永不是正确性证明——因此总体召回估计量（5.1.5 节）本身就是一个下界
+构造，我们把搜索预算与之并列报告。
 
-### 5.1.5 Metrics and Statistical Analysis
+### 5.1.5 度量与统计分析
 
-A defect population defined as "the union of what the compared detectors
-found" would bias recall toward detectors that contribute more alarms to
-the audit pool. We therefore separate two measures with different
-epistemic status:
+将缺陷总体定义为"被比较检测器所发现之并集"会使召回偏向为审计池贡献
+更多告警的检测器。因此我们区分两个认识论地位不同的度量：
 
-- **Discovered-defect coverage (Cov).** Let **A** be the set of
-  audit-confirmed in-contract defective subjects discovered by *any*
-  compared validator. Cov(v) = |confirmed alarms(v) ∩ A| / |A|. This is
-  exactly computable but conditional on the discovered pool; we never
-  present it as population recall.
-- **Estimated population recall (Reĉ).** The audit design is a
-  stratified probability sample: *all* alarmed subjects are audited with
-  inclusion probability 1, and all-PASS subjects are audited via
-  preregistered stratified random sampling with known per-stratum
-  inclusion probabilities (strata: corpus × language × task level;
-  probabilities, weights, and finite-population corrections disclosed in
-  the artifact). The total number of defective subjects is estimated
-  with both the Horvitz–Thompson estimator and the Hájek ratio estimator
-  (reported side by side; design effects and effective sample sizes in
-  the artifact), and
-  Reĉ(v) = confirmed detections of *v* / estimated population defect
-  count, with stratified-bootstrap confidence intervals. Reĉ is the
-  headline recall metric in RQ1/RQ2; defects surfaced only through the
-  all-PASS search (missed by every validator) enter its denominator.
-  All-PASS strata are *sized by a preregistered power analysis*: n = ?
-  per stratum gives ? % probability of observing at least one
-  jointly-missed defect if the true joint miss rate is at least ? %; an
-  all-clean sample is accordingly reported as bounding the joint miss
-  rate, never as demonstrating its absence.
-- **Precision** = audit-confirmed alarms(v) / alarms(v);
-- **TTFC**: median and p95 time to first counterexample (wall-clock,
-  cold-compile time reported separately);
-- **Cost**: GPU-seconds per confirmed defect.
+- **已发现缺陷覆盖率（Cov）。** 令 **A** 为被*任一*对比验证器发现且
+  经审计确认的契约内缺陷科目集合。Cov(v) = |v 的确认告警 ∩ A| / |A|。
+  它可精确计算，但以已发现池为条件；我们永不将其呈现为总体召回。
+- **估计总体召回（Reĉ）。** 审计设计是一个分层概率抽样：*全部*告警
+  科目以纳入概率 1 受审，全 PASS 科目经预注册分层随机抽样受审，每层
+  纳入概率已知（分层：语料 × 语言 × 任务层级；概率、权重与有限总体
+  修正披露于 artifact）。缺陷科目总数同时用 Horvitz–Thompson 估计量
+  与 Hájek 比率估计量估计（并排报告；设计效应与有效样本量见
+  artifact），Reĉ(v) = v 的确认检出 / 估计总体缺陷数，配分层
+  bootstrap 置信区间。Reĉ 是 RQ1/RQ2 的 headline 召回度量；仅通过
+  全 PASS 搜索浮出（被所有验证器漏掉）的缺陷进入其分母。全 PASS 层
+  的样本量*由预注册功效分析确定*：每层 n = ? 使得当真实联合漏检率
+  至少为 ? % 时，以 ? % 的概率观察到至少一个联合漏检缺陷；全阴性
+  样本相应地报告为对联合漏检率的上界约束，永不作为其不存在的证明。
+- **精确率** = 审计确认的告警(v) / 告警(v)；
+- **TTFC**：到首个反例的时间中位数与 p95（墙钟；冷编译时间单独
+  报告）；
+- **成本**：每确认缺陷的 GPU 秒数。
 
-The clustering unit for all inference is the *underlying benchmark task*,
-not the candidate kernel: C2–C5 contain multiple candidates generated for
-the same KernelBench task (sharing the reference, input specification,
-and often the same failure-triggering conditions), so candidates of one
-task—across corpora—fall into one cluster. Byte-identical candidate
-duplicates across corpora are deduplicated and flagged. Descriptive
-counts are still reported per candidate; confidence intervals and tests
-are task-clustered. We report task-clustered bootstrap 95% confidence
-intervals (10,000 replicates) and, for Cov—whose per-subject pairing is
-exact—paired exact McNemar tests with Holm correction against M-full and
-odds ratios as effect sizes; Reĉ comparisons use design-weighted paired
-bootstrap differences with their own intervals, and McNemar serves only
-as auxiliary evidence for the population-level claims. INCONCLUSIVE
-outcomes remain visible in all denominators; headline results are
-accompanied by sensitivity bounds that count all INCONCLUSIVE cases
-first as defects and then as non-defects. All metrics, exclusion rules,
-sampling probabilities, and the two hypotheses tested in RQ2/RQ5
-(H1: M-full ≥ B3 at equal budget; H2: M-dir ≥ M-full at equal budget)
-were frozen before the primary runs.
+全部推断的聚类单位是*底层基准任务*而非候选内核：C2–C5 包含为同一
+KernelBench 任务生成的多个候选（共享参考实现、输入规约，且常共享
+同一触发失败的条件），因此同一任务的候选——跨语料——落入同一簇。
+跨语料逐字节相同的候选重复经去重并标记。描述性计数仍按候选报告；
+置信区间与检验按任务聚类。我们报告任务聚类的 bootstrap 95% 置信区间
+（10,000 次重抽），对 Cov——其逐科目配对是精确的——用配对精确
+McNemar 检验（对 M-full，Holm 校正）与优势比作为效应量；Reĉ 的比较
+使用设计加权的配对 bootstrap 差值及其区间，McNemar 仅作为总体层面
+主张的辅助证据。INCONCLUSIVE 结果在所有分母中保持可见；headline
+结果均附敏感性界：先把全部 INCONCLUSIVE 当缺陷计一遍，再当非缺陷
+计一遍。全部度量、排除规则、抽样概率与 RQ2/RQ5 检验的两个假设
+（H1：等预算下 M-full ≥ B3；H2：等预算下 M-dir ≥ M-full）在主运行
+之前冻结。
 
-## 5.2 RQ1: Natural False Acceptance
+## 5.2 RQ1：自然误收
 
-Table 4 reports, per corpus, how many baseline-accepted kernels carry an
-audit-confirmed in-contract defect. We report *lower bounds*: absence of a
-discovered counterexample is not evidence of correctness, and population
-prevalence is only estimated for the audited strata with sampling weights.
+Table 4 按语料报告有多少被基线接受的内核携带经审计确认的契约内缺陷。
+我们报告的是*下界*：未发现反例不是正确性的证据，总体患病率也只对受审
+层配合抽样权重进行估计。
 
-**Table 4. Confirmed false acceptance among baseline-accepted kernels.**
-The estimated rate applies Horvitz–Thompson weighting over the audit
-sampling design (Section 5.1.5) and therefore accounts for defects found
-in the all-PASS sample that every validator missed (n = ?).
+**Table 4. 基线接受内核中的确认误收。** 估计率对审计抽样设计施加
+Horvitz–Thompson 加权（5.1.5 节），因此计入了全 PASS 样本中所有验证
+器都漏掉的缺陷（n = ?）。
 
-| Corpus | Baseline-accepted | Stress-flagged | Audit-confirmed (alarmed) | Confirmed in all-PASS sample | Estimated defect rate [95% CI] |
+| 语料 | 基线接受 | 应力标记 | 审计确认（告警项） | 全 PASS 样本中确认 | 估计缺陷率 [95% CI] |
 |--------|------------------:|---------------:|--------------------------:|-----------------------------:|-------------------------------:|
 | CUDA-L1 | ? | ? | ? | ? | ? % [?, ?] |
 | AI-CUDA-Engineer | ? | ? | ? | ? | ? % [?, ?] |
 | TritonBench-G | ? | ? | ? | ? | ? % [?, ?] |
 | KernelBench-samples | ? | ? | ? | ? | ? % [?, ?] |
-| Total | ? | ? | ? | ? | ? % [?, ?] |
+| 合计 | ? | ? | ? | ? | ? % [?, ?] |
 
-Of the ? stress-flagged subjects, the audit confirmed ? (precision ? %),
-rejected ? as reference/oracle artifacts, and left ? INCONCLUSIVE.
-? flagged subjects depended solely on a dtype or batch configuration
-outside the task's frozen contract; these are reported as
-extended-contract findings and excluded from Table 4. Confirmed defects
-distribute over fault classes as shown in Table 5, with
-? and ? the two most frequent classes; this distribution is compared
-against the natural error distribution of the RealismGuard corpus in
-Section 5.6.
+在 ? 个应力标记科目中，审计确认 ? 个（精确率 ? %），否决 ? 个为
+参考/oracle 伪影，留 ? 个 INCONCLUSIVE。? 个被标记科目仅依赖于任务
+冻结契约之外的 dtype 或 batch 配置；这些作为扩展契约发现报告，从
+Table 4 中排除。确认缺陷按故障类的分布见 Table 5，其中 ? 与 ? 是
+最常见的两类；该分布在 5.6 节与 RealismGuard 语料的自然错误分布
+对比。
 
-**Table 5. Fault-class distribution of confirmed defects.**
+**Table 5. 确认缺陷的故障类分布。**
 
-| Fault class | Confirmed defects | Share | Detected only under (dimension) |
+| 故障类 | 确认缺陷 | 占比 | 仅在（维度）下检出 |
 |-------------|------------------:|------:|--------------------------------|
-| F-EPS (epsilon handling) | ? | ? % | ? |
-| F-STAB (numerical stabilization) | ? | ? % | ? |
-| F-PREC-ACC (accumulator precision) | ? | ? % | ? |
-| F-SYNC (synchronization) | ? | ? % | ? |
-| F-BOUND (boundary/masking) | ? | ? % | ? |
-| ... (remaining 11 classes) | ? | ? % | ? |
-| Not represented in taxonomy | ? | ? % | — |
+| F-EPS（epsilon 处理） | ? | ? % | ? |
+| F-STAB（数值稳定化） | ? | ? % | ? |
+| F-PREC-ACC（累加器精度） | ? | ? % | ? |
+| F-SYNC（同步） | ? | ? % | ? |
+| F-BOUND（边界/掩码） | ? | ? % | ? |
+| ...（其余 11 类） | ? | ? % | ? |
+| 分类学未覆盖 | ? | ? % | — |
 
-> **Answer to RQ1.** An estimated ? % (95% CI [?, ?]) of baseline-
-> accepted public kernels contain confirmed in-contract defects
-> (Horvitz–Thompson estimate over the audit sampling design; ? defects
-> were confirmed among alarmed subjects and ? in the all-PASS sample),
-> ranging from ? % (TritonBench-G) to ? % (KernelBench-samples). The de-facto
-> validation standard materially overstates the correctness of generated
-> kernels.
+> **RQ1 答案。** 估计有 ? %（95% CI [?, ?]）的基线接受公开内核包含
+> 确认的契约内缺陷（对审计抽样设计的 Horvitz–Thompson 估计；告警
+> 科目中确认 ? 个，全 PASS 样本中确认 ? 个），范围从 ? %
+> （TritonBench-G）到 ? %（KernelBench-samples）。事实上的验证标准
+> 实质性地高估了生成内核的正确性。
 
-## 5.3 RQ2: Budget-Matched Validator Comparison
+## 5.3 RQ2：预算匹配的验证器对比
 
-Table 6a reports, for each of the four natural corpora individually, how
-much of that corpus's confirmed-defect pool every validator covers;
-Table 6b aggregates the same comparison across corpora and adds
-precision, latency, and cost, all under the equal-invocation budget
-(32 candidate calls per subject); Table 7 decomposes MutaKernel's gain
-under the same budget through controlled baselines; Tables 8a and 8b
-repeat the external and constructed groups, respectively, under equal
-GPU time. Native, unrestricted protocols are reported in the artifact
-appendix and never mixed with budget-matched rows.
+Table 6a 对四个自然语料逐一报告每个验证器覆盖该语料确认缺陷池的
+比例；Table 6b 跨语料聚合同一对比并加入精确率、延迟与成本，全部在
+等调用预算（每科目 32 次候选调用）下；Table 7 在同一预算下通过受控
+基线分解 MutaKernel 的增益；Table 8a 与 8b 分别对外部组与构造组在
+等 GPU 时间下重复对比。Native 的无限制协议报告于 artifact 附录，
+永不与预算匹配行混排。
 
-*Oracle unification.* A stricter tolerance alone can inflate apparent
-detection power. Every test-based validator in the primary comparison
-therefore shares the identical judging pipeline: the same reference
-implementation, contract input validation, dtype-aware tolerances
-(Section 5.1.1), NaN/Inf handling, and output-structure comparison; only
-the *inputs and execution contexts* differ across rows. Native rows in
-the appendix retain their own oracles. To decompose input-generation
-effects from oracle effects, Table 7 includes a 2×2 factorial: the
-baseline input suite and the MutaKernel suite are each judged under both
-the legacy oracle (atol=rtol=1e-2, as shipped with KernelBench-style
-harnesses) and the unified dtype-aware oracle (rows B1, B1u, M-legacy,
-M-full). The detection gain reported for MutaKernel is the
-input/dimension effect (M-full vs. B1u); the oracle effect (B1u vs. B1,
-M-full vs. M-legacy) is reported separately and never folded into the
-headline claim.
+*预算匹配统一什么。* 主对比的每一行都被约束到同一冻结科目集、同一
+等调用与等 GPU 时间预算、同一三值判决计数规则（PASS/FAIL/
+INCONCLUSIVE，不可判轮次计入分母、永不计为检出）与同一统计处理
+（任务聚类 bootstrap、Holm 校正、INCONCLUSIVE 敏感性界）。这些是
+公平对比必须对齐的量，因为它们决定每个验证器被给予多少工作量、其
+输出如何计分。
 
-*Per-corpus view.* An aggregate number can mask large heterogeneity
-across generation systems and kernel languages—a method that dominates
-on KernelBench-samples but degrades on Triton subjects would look deceptively
-uniform in a pooled table. Table 6a therefore crosses every external
-validator with the four natural corpora individually: each cell reports
-discovered-defect coverage on that corpus's confirmed-defect pool, so
-the table answers directly whether MutaKernel's advantage—and each
-baseline's strength—holds per generation system and per language, or is
-driven by a single corpus. Because per-corpus pools can be small,
-per-cell task-clustered bootstrap intervals are given in the artifact
-and significance tests are computed only at the aggregate level
-(Table 6b); the full per-corpus breakdown of precision, TTFC, cost, and
-per-corpus Reĉ appears in the appendix.
+*执行层优化：检出后提前停止（early-stop-on-fail）。* wave-1 执行采用
+一项不改变计分语义的调度优化：当某个（科目 × 策略）配对产出首个 FAIL
+后，运行器跳过该配对剩余的 case，并将其记为 `skipped_after_fail`。其
+口径如下，与上文计数规则完全一致：（i）科目级检出判定不受影响——
+headline 指标是"该科目是否被检出"，首个可复现 FAIL 已充分建立检出，
+后续 case 不提供额外的检出信用；（ii）`skipped_after_fail` 的 case
+既不计入分母也不计为检出，等价于该配对的预算"未用尽即已达成目的"；
+（iii）未产出 FAIL 的配对仍执行完整预算，因此*未检出*的结论所依据的
+工作量不因该优化而缩水——这是预算匹配真正要保护的方向。该优化的启用
+时点、Git 提交与环境指纹变更均带版本记录（artifact），启用前后的账本
+均为追加式且可按时间戳切分复核。
 
-**Table 6a. Per-corpus discovered-defect coverage (equal budget: 32
-candidate invocations/subject).** Each cell reports "confirmed defects
-detected / confirmed-defect pool of that corpus (percentage)"; the
-Overall column equals the Cov column of Table 6b. B2 (TritonBench
-default) applies only to TritonBench-G and is reported as a native
-anchor in the appendix breakdown of that column.
+*我们自己配置内的 oracle 统一。* 仅凭更严的容差就能虚增表观检测力。
+因此我们自己的行共享同一条判定管线——M-full、M-dir、锚点 B1u 与构造
+阶梯 B3–B6 使用相同的参考实现、契约输入校验、dtype 感知容差
+（5.1.1 节）、NaN/Inf 处理与输出结构比较——使它们之间只有*输入与
+执行上下文*不同。为把输入生成效应与 oracle 效应分解开，Table 7 包含
+一个 2×2 因子设计：基线输入套件与 MutaKernel 套件各自在 legacy
+oracle（atol=rtol=1e-2，随 KernelBench 风格 harness 出厂）与统一
+dtype 感知 oracle 下分别评判（行 B1、B1u、M-legacy、M-full）。
+MutaKernel 报告的检出增益是输入/维度效应（M-full 对 B1u）；oracle
+效应（B1u 对 B1、M-full 对 M-legacy）单独报告，永不并入 headline
+主张。
 
-| Validator | CUDA-L1 | AI-CUDA-Engineer | TritonBench-G | KernelBench-samples | Overall |
+*例外：移植验证器保留其已发表 oracle。* 预算匹配对齐的是验证器获得
+的资源，不是它施加的接受准则。oracle 是验证器设计的组成部分，因此
+Table 6a 与 6b 的每个移植行（B7、B8、B9）由其自己已发表协议指定的
+oracle 评判，B11 由其原生属性检查评判；附录中的 native 行同样保留
+各自 oracle。B9 是决定性案例：其协议以 fp64 CPU 参考为对照，在逐
+（算子, dtype）的绝对容差下评判，该容差从正确内核的误差分布校准而来
+——32 次对照执行的第 95 百分位数乘以 1.5——这两个要素正是该行存在
+所要测量的设计轴。若替换为我们的 dtype 感知容差，就会剥离它们、留下
+一个 strawman，而这恰是忠实移植要避免的失败模式。因此我们陈述这种
+不对称而非掩盖它：B9 行读作"在我们的预算下、其自身 fp64 oracle 之下
+的种子差分模糊测试"，移植的每一条款（含校准程序）均记录并发布
+（5.1.2 节）。
+
+*不对称是分析对象，而非瑕疵。* 由于移植 oracle 与我们的按构造不同，
+这一对比产出统一 oracle 设计无法产出的证据：fp64 参考能判定而基于
+容差的三方差分 oracle 不能判定的故障类，以及自校准容差在何处变得
+不稳定。第一个方向在下文量化（B9 的 fp64 参考优于我们 oracle 的
+故障类，以及我们从中推导的组合配置）。第二个方向已被 B9 port 计分
+前必须执行的对照校准运行所约束，其机制是精确的而非偶然的：在 fp16
+下，大规模归约把输出置于单个 binade 内，最大绝对误差因此只能取值于
+间距等于局部 fp16 ulp 的二进制网格上。当对照的第 95 百分位数落在
+某格点上时，校准容差 p95×1.5 严格落在该点与下一点之间（因为
+1.5 < 2）；任何落在更高格点的对照样本必然被由它自己校准出的容差
+拒绝，且比值不变：max/tol = 4/3。我们在 392 个校准单元中的 10 个
+（2.6 %）观察到此现象：194 个 fp16 单元中的 9 个（4.6 %）与 198 个
+fp32 单元中的 1 个（0.5 %）——唯一的 fp32 案例是一个标量输出的
+loss 内核，其对照误差通过同一离散性机制塌缩到 fp32 ulp 网格（观测
+值为 0、1、3 ulp @ 2⁻²²；因所占格点不相邻，max/tol = 2.0），证实
+不稳定性跟随误差网格塌缩而非 fp16 格式本身——另有 194 个 fp16 单元
+中的 106 个（54.6 %）其 32 个对照全部落在单一格点上，只要一个样本
+落高一格就会翻转——因此该比率由采样噪声主导，不稳定的是规则本身
+而非我们对它的移植。故 B9 在 fp16 归约科目上的自身假告警率每受影响
+单元有 1/32 的下限，必须与其精确率列一并解读；port 既不修复该规则
+也不丢弃科目（校准协议、逐单元证据与不可判单元账本随 artifact
+发布）。
+
+*逐语料视图。* 聚合数字可能掩盖生成系统与内核语言之间的巨大异质性
+——一个在 KernelBench-samples 上占优、在 Triton 科目上退化的方法在
+合并表中看起来会有欺骗性的均匀。因此 Table 6a 将每个外部验证器与
+四个自然语料逐一交叉：每格报告该验证器对该语料确认缺陷池的已发现
+缺陷覆盖率，使该表直接回答 MutaKernel 的优势——以及每个基线的强项
+——是否按生成系统、按语言成立，还是被单一语料驱动。由于逐语料池
+可能很小，逐格的任务聚类 bootstrap 区间见 artifact，显著性检验只在
+聚合层计算（Table 6b）；逐语料的精确率、TTFC、成本与逐语料 Reĉ 的
+完整分解见附录。
+
+**Table 6a. 逐语料已发现缺陷覆盖率（等预算：每科目 32 次候选
+调用）。** 每格报告"检出确认缺陷数 / 该语料确认缺陷池规模（百分
+比）"；Overall 列等于 Table 6b 的 Cov 列。B2（TritonBench 默认）仅
+适用于 TritonBench-G，在该列的附录分解中作为 native 锚点报告。
+
+| 验证器 | CUDA-L1 | AI-CUDA-Engineer | TritonBench-G | KernelBench-samples | Overall |
 |-----------|--------:|-----------------:|--------------:|-----------:|--------:|
-| B1u KernelBench inputs, unified oracle | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
+| B1u KernelBench 输入，统一 oracle | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
 | B7 robust-kbench (port) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
 | B8 KernelBenchX (port) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
-| B9 Seeded fuzzing + fp64 ref (port) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
+| B9 种子模糊测试 + fp64 参考 (port) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
 | B11 Compute Sanitizer | ?/? (? %) | ?/? (? %) | ?/? (? %) | ?/? (? %) | ? % |
 | **M-full** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **? %** |
-| **M-dir (site-directed)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **? %** |
+| **M-dir（位点定向）** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **? %** |
 
-Across the four corpora, M-full's margin over the strongest external
-baseline ranges from ? points (?) to ? points (?), and its coverage
-?(does / does not) drop on the Triton-language corpus relative to the
-CUDA corpora—?(supporting / qualifying) the claim that the advantage is
-stable across generation systems and languages rather than an artifact
-of one dataset.
+*Table 6a 的已声明覆盖缺口。* 在撰写本文时，该表科目空间的两个部分
+在冻结科目集之外。我们将两者如实声明而非报告残缺的格子，因为空列是
+我们科目准备工作的属性，不是关于任何验证器的证据。
 
-**Table 6b. Aggregate comparison with external validators (equal
-budget: 32 candidate invocations/subject).** Cov: coverage of the
-discovered-defect pool; Reĉ: estimated population recall
-(Horvitz–Thompson weighted; Section 5.1.5). † marks differences vs.
-M-full significant at α=0.05 after Holm correction (exact McNemar,
-computed on Cov, whose pairing is exact).
+**TritonBench-G 列对所有预算匹配行为空**，包括我们自己的行。原因是
+该语料的性质，经逐文件核实：每个任务文件自带一个 Triton 内核和驱动
+它的测试函数，其已发表评测所对照的参考值由*被测文件自身*产出。因此
+该语料不提供任何独立参考实现，基于契约的差分验证——对 B1u、B7、B8、
+B9、B11、M-full 与 M-dir 一视同仁——在参考被单独撰写之前没有对照
+可比。该缺失在各行间是均匀的，因此不会使行间对比产生偏差；它约束的
+是外部效度——在该列补齐之前，外部效度由 CUDA 语料承担。我们的补齐
+方案预先固定：对 184 个任务的一个*预注册均匀随机子样本*（记录种子）
+自撰 PyTorch 参考，届时该列按该子样本报告，抽样设计与纳入概率显式
+声明，使全 PASS 审计层已用的同一 Horvitz–Thompson 与 Hájek 估计量
+（5.1.5 节）把子样本带向总体陈述。与语料自带记录值不一致的参考经
+人工裁定，追因到内核而非我们参考的不一致本身记为一项发现；一致仅
+视为冒烟校验，永不作为参考正确性的证据。
 
-| Validator | Cov | Reĉ [95% CI] | Precision | Median TTFC (s) | GPU-s / defect |
+该设计的两个后果值得在读者自行推出之前言明。第一，约束已填列精度的
+是子样本产出的确认缺陷池规模，而非我们自撰参考的份数：池 = 子样本量
+× 语料缺陷密度，因此区间偏宽的原因在语料规模与缺陷密度，而不在抽样
+设计——任何抽样方案（包括对全部 184 个任务普查）都无法消除这一点。
+第二，在我们能够自撰的任何子样本量下，该列的逐语料假设检验都不可得，
+这是*遵循*设计而非未达标：逐格区间归 artifact，检验只在聚合层
+（Table 6b）计算，这些缺陷在聚合层参与合并比较并确有贡献。
+
+CUDA-L1、AI-CUDA-Engineer 与 KernelBench-samples 三列当前覆盖这些
+语料所引用的 KernelBench Level-1 与 Level-2 任务（250 个任务中的
+200 个）；其余 50 个 Level-3 任务的缺失是工程原因而非语料原因——
+用于契约提取的 vendored 基准树缺失其 Level-3 目录，而任务定义本身
+在我们的 artifact 中是完整的，并经逐文件摘要核验与已使用的 Level-1/
+Level-2 文件出自同一上游 revision。恢复该目录并重跑提取器即可使这些
+列覆盖 250 个任务；输出非单张量的 Level-3 科目落在 B9 port 的可判定
+域之外，按 5.3 节不可判定单元的完全相同方式计入分母、不计检出。
+
+最后，**CUDA-L1 列因一项显式的范围决定（2026-08-01）排程最后**：
+执行战役先跑 AI-CUDA-Engineer 与 KernelBench-samples 两列（其冻结的
+Level-1/Level-2 科目集共 653 个科目），85 个 CUDA-L1 科目推迟到后续
+波次。该推迟是运行排序选择，不是语料或任何验证器的性质：契约、预算
+与判定管线跨列一致，因此晚填该列不会使行间对比产生偏差。在其填充
+之前，跨语料主张只对已实际报告的语料陈述。
+
+在四个语料上，M-full 对最强外部基线的优势幅度从 ? 个百分点（?）到
+? 个百分点（?），其覆盖率在 Triton 语言语料上相对 CUDA 语料
+?（下降 / 不下降）——?（支持 / 限定）"该优势跨生成系统与语言稳定、
+而非单一数据集伪影"的主张。
+
+**Table 6b. 与外部验证器的聚合对比（等预算：每科目 32 次候选
+调用）。** Cov：已发现缺陷池覆盖率；Reĉ：估计总体召回
+（Horvitz–Thompson 加权；5.1.5 节）。† 标记与 M-full 的差异在
+Holm 校正后 α=0.05 显著（精确 McNemar，在配对精确的 Cov 上计算）。
+
+| 验证器 | Cov | Reĉ [95% CI] | 精确率 | TTFC 中位数 (s) | GPU-s / 缺陷 |
 |-----------|----:|-------------:|----------:|----------------:|---------------:|
-| B1 KernelBench (5-call anchor, legacy oracle) | ? | ? [?, ?] | ? | ? | ? |
-| B1u KernelBench inputs, unified oracle | ? | ? [?, ?] | ? | ? | ? |
+| B1 KernelBench（5 调用锚点，legacy oracle） | ? | ? [?, ?] | ? | ? | ? |
+| B1u KernelBench 输入，统一 oracle | ? | ? [?, ?] | ? | ? | ? |
 | B7 robust-kbench (port) | ?† | ? [?, ?] | ? | ? | ? |
 | B8 KernelBenchX (port) | ?† | ? [?, ?] | ? | ? | ? |
-| B9 Seeded fuzzing + fp64 ref (port) | ?† | ? [?, ?] | ? | ? | ? |
+| B9 种子模糊测试 + fp64 参考 (port) | ?† | ? [?, ?] | ? | ? | ? |
 | B11 Compute Sanitizer | ?† | ? [?, ?] | ? | ? | ? |
 | **M-full** | **?** | **? [?, ?]** | ? | ? | ? |
-| **M-dir (site-directed)** | **?** | **? [?, ?]** | ? | ? | ? |
+| **M-dir（位点定向）** | **?** | **? [?, ?]** | ? | ? | ? |
 
-B10 (LLM self-review) is reported in the appendix with token-based
-costing; B11 alarms cover memory/race properties and are additionally
-broken down by alarm type in the artifact.
+B10（LLM 自审）在附录中按 token 计费报告；B11 的告警覆盖内存/竞态
+属性，并在 artifact 中按告警类型进一步分解。
 
-Against the strongest external baseline (B?), M-full's advantage is
-? points (OR = ?, p = ?). On fault classes where B9's fp64 reference
-outperformed our tolerance oracle (?), a combined configuration
-(MutaKernel policies + fp64 reference) reached ? coverage, which we
-adopt/reject (?) as a design refinement.
+对最强外部基线（B?），M-full 的优势为 ? 个百分点（OR = ?，p = ?）。
+在 B9 的 fp64 参考优于我们容差 oracle 的故障类（?）上，组合配置
+（MutaKernel 策略 + fp64 参考）达到 ? 覆盖率，我们?（采纳/不采纳）
+其为一项设计改进。
 
-Table 7 isolates *why* MutaKernel outperforms: the 2×2 oracle factorial
-(B1, B1u, M-legacy, M-full) separates oracle strictness from input
-effects, and the constructed ladder B3–B6 strengthens the baseline one
-ingredient at a time. It is deliberately *not* labeled an ablation:
-Table 7 builds the baseline *up* toward MutaKernel to show that the gain
-is not attributable to budget, tolerance, or generic test diversity
-alone, whereas the ablation proper (Table 11) removes components *from*
-M-full to establish per-dimension necessity. The shared rows B1u,
-M-full, and M-dir permit direct reading across Tables 6a, 6b, and 7.
+Table 7 隔离 MutaKernel 胜出的*原因*：2×2 oracle 因子设计（B1、
+B1u、M-legacy、M-full）把 oracle 严格性与输入效应分开，构造阶梯
+B3–B6 一次一个要素地加强基线。它刻意*不*称为消融：Table 7 把基线
+*向上*构建、逼近 MutaKernel，以表明增益不能只归于预算、容差或泛化
+的测试多样性；而真正的消融（Table 11）从 M-full 中*移除*组件以确立
+逐维度必要性。共享行 B1u、M-full 与 M-dir 使 Table 6a、6b 与 7
+可以直接横读。
 
-**Table 7. Controlled baselines and design-increment decomposition
-(equal budget: 32 candidate invocations/subject).** Columns and
-significance marking as in Table 6b.
+**Table 7. 受控基线与设计增量分解（等预算：每科目 32 次候选
+调用）。** 列与显著性标记同 Table 6b。
 
-| Configuration | Cov | Reĉ [95% CI] | Precision | Median TTFC (s) | GPU-s / defect |
+| 配置 | Cov | Reĉ [95% CI] | 精确率 | TTFC 中位数 (s) | GPU-s / 缺陷 |
 |---------------|----:|-------------:|----------:|----------------:|---------------:|
-| B1 KernelBench inputs, legacy oracle (5-call anchor) | ? | ? [?, ?] | ? | ? | ? |
-| B1u KernelBench inputs, unified oracle | ? | ? [?, ?] | ? | ? | ? |
+| B1 KernelBench 输入，legacy oracle（5 调用锚点） | ? | ? [?, ?] | ? | ? | ? |
+| B1u KernelBench 输入，统一 oracle | ? | ? [?, ?] | ? | ? | ? |
 | B3 IID-32 | ?† | ? [?, ?] | ? | ? | ? |
-| B4 Diversified values | ?† | ? [?, ?] | ? | ? | ? |
-| B5 Boundary values | ?† | ? [?, ?] | ? | ? | ? |
-| B6 Dtype/mode/config grid | ?† | ? [?, ?] | ? | ? | ? |
-| M-legacy: MutaKernel inputs, legacy oracle | ? | ? [?, ?] | ? | ? | ? |
+| B4 值多样化 | ?† | ? [?, ?] | ? | ? | ? |
+| B5 边界值 | ?† | ? [?, ?] | ? | ? | ? |
+| B6 Dtype/模式/配置网格 | ?† | ? [?, ?] | ? | ? | ? |
+| M-legacy：MutaKernel 输入，legacy oracle | ? | ? [?, ?] | ? | ? | ? |
 | **M-full** | **?** | **? [?, ?]** | ? | ? | ? |
-| **M-dir (site-directed)** | **?** | **? [?, ?]** | ? | ? | ? |
+| **M-dir（位点定向）** | **?** | **? [?, ?]** | ? | ? | ? |
 
-The 2×2 factorial separates the two effects: unifying the oracle alone
-(B1→B1u) changes coverage by ? points, and enriching inputs alone under
-the legacy oracle (B1→M-legacy) by ?; the headline input/dimension
-effect (B1u→M-full, oracle held fixed) is ? points. The strengthening
-ladder then decomposes that effect: raising the budget alone (B1u→B3) recovers
-? points; undirected value diversity (B3→B4) adds ?; boundary and
-context diversity (B4→B5/B6) add ? and ?; fault-directed composition
-(B5/B6→M-full) adds ?; and per-subject site direction (M-full→M-dir)
-changes coverage by ? points while reducing median TTFC by ? %.
+2×2 因子设计把两种效应分开：仅统一 oracle（B1→B1u）使覆盖率变化 ?
+个百分点，仅在 legacy oracle 下丰富输入（B1→M-legacy）变化 ?；
+headline 的输入/维度效应（B1u→M-full，oracle 固定）为 ? 个百分点。
+加强阶梯继而分解该效应：仅提高预算（B1u→B3）收回 ? 个百分点；
+无定向的值多样性（B3→B4）增加 ?；边界与上下文多样性（B4→B5/B6）
+分别增加 ? 与 ?；故障定向的组合（B5/B6→M-full）增加 ?；逐科目位点
+定向（M-full→M-dir）使覆盖率变化 ? 个百分点、同时使 TTFC 中位数
+降低 ? %。
 
-The equal GPU-time analysis mirrors the two-table split: Table 8a
-answers whether external tools close the gap when granted the same wall
-clock rather than the same call count, and Table 8b answers the same
-question for the constructed configurations of the decomposition.
-M-full and M-dir are repeated in both sub-tables as the common anchor.
+等 GPU 时间分析沿用两表拆分：Table 8a 回答外部工具在获得相同墙钟
+（而非相同调用数）时是否缩小差距，Table 8b 对分解中的构造配置回答
+同一问题。M-full 与 M-dir 在两张子表中重复出现，作为共同锚点。
 
-**Table 8a. Equal GPU-time comparison, external group (? s/subject wall
-budget).**
+**Table 8a. 等 GPU 时间对比，外部组（每科目 ? s 墙钟预算）。**
 
-| Validator | Cov | Reĉ [95% CI] | Defects found in budget |
+| 验证器 | Cov | Reĉ [95% CI] | 预算内发现缺陷数 |
 |-----------|----:|-------------:|------------------------:|
 | B7 robust-kbench (port) | ? | ? [?, ?] | ? |
 | B8 KernelBenchX (port) | ? | ? [?, ?] | ? |
-| B9 Seeded fuzzing + fp64 ref (port) | ? | ? [?, ?] | ? |
+| B9 种子模糊测试 + fp64 参考 (port) | ? | ? [?, ?] | ? |
 | **M-full** | **?** | **? [?, ?]** | ? |
-| **M-dir (site-directed)** | **?** | **? [?, ?]** | ? |
+| **M-dir（位点定向）** | **?** | **? [?, ?]** | ? |
 
-**Table 8b. Equal GPU-time comparison, constructed-configuration group
-(? s/subject wall budget).**
+**Table 8b. 等 GPU 时间对比，构造配置组（每科目 ? s 墙钟预算）。**
 
-| Configuration | Cov | Reĉ [95% CI] | Defects found in budget |
+| 配置 | Cov | Reĉ [95% CI] | 预算内发现缺陷数 |
 |---------------|----:|-------------:|------------------------:|
-| B3 IID random testing | ? | ? [?, ?] | ? |
-| B4 Diversified values | ? | ? [?, ?] | ? |
-| B5 Boundary values | ? | ? [?, ?] | ? |
-| B6 Dtype/mode/config grid | ? | ? [?, ?] | ? |
+| B3 IID 随机测试 | ? | ? [?, ?] | ? |
+| B4 值多样化 | ? | ? [?, ?] | ? |
+| B5 边界值 | ? | ? [?, ?] | ? |
+| B6 Dtype/模式/配置网格 | ? | ? [?, ?] | ? |
 | **M-full** | **?** | **? [?, ?]** | ? |
-| **M-dir (site-directed)** | **?** | **? [?, ?]** | ? |
+| **M-dir（位点定向）** | **?** | **? [?, ?]** | ? |
 
-> **Answer to RQ2.** Under matched budgets MutaKernel attains an
-> estimated population recall of ? % vs. ? % for the strongest simple
-> baseline and ? % for the strongest external validator, and its
-> per-corpus coverage leads on ?(all four / ? of four) natural corpora
-> (Table 6a), spanning both CUDA and Triton subjects; ? % of its
-> advantage is attributable to fault-directed composition rather than
-> test volume or generic diversity. Site direction preserves/improves
-> (?) recall while cutting time-to-first-counterexample by ? %.
+> **RQ2 答案。** 在匹配预算下，MutaKernel 达到 ? % 的估计总体召回，
+> 对比最强简单基线的 ? % 与最强外部验证器的 ? %；其逐语料覆盖率在
+> ?（全部四个 / 四个中的 ?）自然语料上领先（Table 6a），横跨 CUDA
+> 与 Triton 科目；其优势的 ? % 可归因于故障定向的组合，而非测试量
+> 或泛化多样性。位点定向?（保持/提升）召回，同时把到首个反例的时间
+> 缩短 ? %。
 
-## 5.4 RQ3: External Validity on an Independently Labeled Corpus
+## 5.4 RQ3：独立标注语料上的外部效度
 
-**Seeded-bug corpus (C6).** Table 9 reports detection on gpuemu's 26-op
-corpus, whose 10 seeded LLM-style bugs and 16 correct controls were
-labeled and released by a third party; no label in this experiment was
-produced by us. Given the corpus size, we position this experiment as
-*complementary credibility evidence* under fully independent labels—not
-as a standalone effectiveness result: we report exact binomial
-(Clopper–Pearson) intervals, itemize every bug (detected by which
-validators, under which case), and root-cause every miss.
+**种子缺陷语料（C6）。** Table 9 报告在 gpuemu 26 算子语料上的检出，
+其 10 个种子化的 LLM 风格缺陷与 16 个正确对照由第三方标注并发布；
+本实验中没有任何标签由我们产生。鉴于语料规模，我们把该实验定位为
+*完全独立标签下的补充可信度证据*——而非独立的有效性结果：我们报告
+精确二项（Clopper–Pearson）区间，逐一列明每个缺陷（被哪些验证器、
+在哪个 case 下检出），并对每个漏检追溯根因。
 
-**Table 9. Third-party seeded-bug corpus: recall and false positives.**
+**Table 9. 第三方种子缺陷语料：召回与假阳性。**
 
-| Validator | Bugs detected (/10) | Controls falsely flagged (/16) |
+| 验证器 | 检出缺陷数 (/10) | 误标对照数 (/16) |
 |-----------|--------------------:|-------------------------------:|
 | B1 | ? | ? |
-| B3–B6 (best) | ? | ? |
+| B3–B6（最优） | ? | ? |
 | B7 / B8 / B9 (ports) | ? / ? / ? | ? / ? / ? |
 | M-full | ? | ? |
 | M-dir | ? | ? |
 
-The site fingerprint mapped ? of the 10 seeded bugs to a fault class in
-our taxonomy; the remaining ? (e.g., ?) fall outside it and are counted
-as `not represented`, consistent with the taxonomy boundary reported in
-Section 5.6.
+位点指纹把 10 个种子缺陷中的 ? 个映射到我们分类学中的故障类；其余
+? 个（例如 ?）落在分类学之外，计为 `not represented`，与 5.6 节报告
+的分类学边界一致。
 
-> **Answer to RQ3.** On ground truth established entirely outside this
-> paper, MutaKernel detects ?/10 seeded bugs with ?/16 control false
-> positives—?(consistent with / better than / worse than) the strongest
-> external baselines, corroborating the audited results of RQ1–RQ2.
+> **RQ3 答案。** 在完全由本文之外建立的真值上，MutaKernel 检出
+> ?/10 个种子缺陷、误标 ?/16 个对照——?（与最强外部基线相当 / 优于
+> / 劣于），印证 RQ1–RQ2 的受审结果。
 
-## 5.5 RQ4: Controlled Fault Study
+## 5.5 RQ4：受控故障研究
 
-**Baseline blind spots.** We regenerate all 1,646 first-order fault
-probes and re-execute the baseline validator under the corrected
-substrate. Table 10 reports per-category detection with the equivalence-
-uncertain population made explicit: ? probes are machine-proven
-equivalent—a label reserved for two machine-checkable arguments,
-byte-identical (unnormalized) source or one of four versioned static
-rules whose proof template is released and human-spot-checked; anything
-weaker is at most LIKELY_EQUIVALENT—? carry a replayed non-equivalence
-witness, and ? remain INCONCLUSIVE after the blinded equivalence audit
-(κ = ?).
+**基线盲区。** 我们重新生成全部 1,646 个一阶故障探针，并在修正基座
+下重执行基线验证器。Table 10 报告逐类别检出，并将等价性不确定的
+总体显式化：9 个探针为机器证明等价——该标签只保留给两种机器可查验
+的论证：（未规范化的）逐字节相同源码，或四条版本化静态规则之一（其
+证明模板已发布并经人工抽查）；任何更弱的证据至多记 LIKELY_EQUIVALENT
+——68 个携带经复放的非等价见证，? 个在盲评等价审计后仍为
+INCONCLUSIVE（κ = ?）。
 
-**Table 10. Baseline detection on controlled probes (rerun).**
+**Table 10. 基线在受控探针上的检出（重跑）。**
 <!-- "Probes" 列为生成期常量（同源码+同算子+同降采样种子下确定性可复现），
      已按 V1 生成记录核验（757+702+178+9=1,646；details/*.json 逐条计数）。
      V2 重新生成后须复核一致；其余列全部依赖修正基座重跑与盲审，不得预填。 -->
 
-| Operator category | Probes | Killed | Machine-proven eq. | Witnessed non-eq., survived | INCONCLUSIVE | Detection rate (witnessed) |
+| 算子类别 | 探针数 | 杀死 | 机器证明等价 | 见证非等价，幸存 | INCONCLUSIVE | 检出率（见证口径）† |
 |-------------------|-------:|-------:|-------------------:|----------------------------:|-------------:|---------------------------:|
-| A: Arithmetic | 757 | 186 | ? | ? | ? | ? % |
-| B: GPU parallel | 702 | 337 | ? | ? | ? | ? % |
-| C: ML numerical | 178 | 13 | ? | ? | ? | ? % |
-| D: LLM patterns | 9 | 3 | ? | ? | ? | ? % |
-| Overall | 1,646* | 539 | ? | ? | ? | ? % |
+| A：算术 | 757 | 186 | 9 | 20 | ? | 90.3 % |
+| B：GPU 并行 | 702 | 337 | 0 | 40 | ? | 89.4 % |
+| C：ML 数值 | 178 | 13 | 0 | 8 | ? | 61.9 % |
+| D：LLM 模式 | 9 | 3 | 0 | 0 | ? | 100.0 % |
+| 合计 | 1,646* | 539 | 9 | 68 | ? | 88.8 % |
 
-*minus 105 stillborn (compile-failed) probes excluded from all denominators.
+*减去 105 个死产（stillborn，编译失败）探针，其从全部分母中排除。
+†检出率（见证口径）= 杀死 / (杀死 + 见证非等价且幸存)；INCONCLUSIVE
+列（待盲评等价审计）不进入该分母。一个 A 类见证
+（`L1_P95__relop_replace__5`）是崩溃型 SPEC_VIOLATION 而非数值发散；
+两个见证（P68、P98）间歇性复现，已在发布账本中如实标注。
 
-Escape-mechanism classification of the ? confirmed blind spots attributes
-? % to value-activation failures, ? % to precision masking, ? % to
-mode-reachability, ? % to nondeterminism-observation, and ? % to
-configuration-reachability (Figure ?), grounding the five stress
-dimensions in measured failure modes rather than design intuition.
-Counterexample search additionally falsified the equivalence hypothesis
-for ? of 453 probes the evidence pipeline had graded LIKELY_EQUIVALENT
-(? %), quantifying the residual risk of heuristic equivalence detection;
-only specification violations—never tolerance-conforming bitwise
-divergences (? cases, reported separately)—count toward any of these
-figures.
+对 68 个确认盲区的逃逸机制分类将 ? % 归因于值激活失败、? % 归因于
+精度掩蔽、? % 归因于模式可达性、? % 归因于非确定性观测、? % 归因于
+配置可达性（Figure ?），使五个应力维度植根于实测的失败模式而非设计
+直觉。反例搜索还对证据管线已判 LIKELY_EQUIVALENT 的 453 个探针中的
+7 个证伪了等价假设（1.5 %），量化了启发式等价检测的残余风险；只有
+规范违背（specification violation）——而永不是容差内的位级差异
+（? 例，单独报告）——计入上述任何数字。
 
-**Predictive validity.** Using leave-one-corpus-out analysis, fault-class
-detection rates measured on probes predict natural-defect detection on the
-held-out corpus with Spearman ρ = ? (per-class recall correspondence in
-the artifact). Because the 16-operator taxonomy was *designed on* the
-1,020-generation development corpus, we report its coverage of that
-corpus (? %, double-coded, κ = ?) as descriptive only; the evaluative
-taxonomy-coverage number is computed on the *held-out* natural defects
-confirmed in C2–C5 (Section 5.1.1, data separation): ? % mapped onto the
-taxonomy, ? % explicitly `not represented` (dominated by ?).
+**预测效度。** 使用留一语料分析，在探针上测得的故障类检出率以
+Spearman ρ = ? 预测留出语料上的自然缺陷检出（逐类召回对应关系见
+artifact）。由于 16 算子分类学*设计于* 1,020 条生成的开发语料，我们
+将其对该语料的覆盖率（? %，双人编码，κ = ?）仅作描述性报告；评估性
+的分类学覆盖率数字在 *C2–C5 中确认的留出自然缺陷*上计算（5.1.1 节，
+数据分离）：? % 映射到分类学内，? % 显式 `not represented`（以 ?
+为主）。
 
-> **Answer to RQ4.** The baseline validator misses ? % of witnessed
-> non-equivalent probes, concentrated in ML-numerical (? %) and
-> LLM-pattern (? %) fault classes; probe-measured blind spots ?(do / do
-> not) predict natural-defect detection (ρ = ?), supporting mutation
-> analysis as a diagnostic instrument ?(and / but not) as a proxy for
-> natural-defect recall.
+> **RQ4 答案。** 基线验证器漏掉 11.2 % 的见证非等价探针，集中于
+> ML 数值类（漏检 38.1 %，其余每类至多 10.6 %）；探针测得的盲区
+> ?（能 / 不能）预测自然缺陷检出（ρ = ?），支持变异分析作为诊断
+> 工具?（并且 / 但不）作为自然缺陷召回的代理。
 
-## 5.6 RQ5: Component Contribution
+## 5.6 RQ5：组件贡献
 
-**Dimension necessity.** Removing one dimension at a time from M-full
-(Table 11) reduces discovered-defect coverage by ? (value), ? (dtype),
-? (training), ? (repetition), and ? (configuration) points; ? % of kills
-are independently confirmed by ≥2 dimensions.
+**维度必要性。** 从 M-full 中一次移除一个维度（Table 11）使已发现
+缺陷覆盖率分别降低 ?（值）、?（dtype）、?（训练）、?（重复）与
+?（配置）个百分点；? % 的杀死由 ≥2 个维度独立确认。
 
-**Table 11. Leave-one-dimension-out (equal budget redistributed).**
+**Table 11. Leave-one-dimension-out（等预算重新分配）。**
 
-| Configuration | Cov | Δ vs. M-full | Sole-detector defects lost |
+| 配置 | Cov | 相对 M-full 的 Δ | 失去的唯一检出缺陷 |
 |---------------|----:|-------------:|---------------------------:|
 | M-full | ? | — | — |
-| − value | ? | −? | ? |
+| − 值 | ? | −? | ? |
 | − dtype | ? | −? | ? |
-| − training | ? | −? | ? |
-| − repetition | ? | −? | ? |
-| − configuration | ? | −? | ? |
+| − 训练 | ? | −? | ? |
+| − 重复 | ? | −? | ? |
+| − 配置 | ? | −? | ? |
 
-**Site direction.** Because the fault-to-stress map is itself derived
-from the C1 probe study, evaluating site direction on C1 with that same
-map would be circular. The controlled evaluation therefore uses
-*task-level cross-fitting*: the 90 source tasks are partitioned into
-? folds; for each fold, a map is built from the probes of the remaining
-tasks only and evaluated on the held-out fold's probes (probes of one
-task never straddle folds), and results are pooled over folds. Under
-cross-fitting, the map closes ? % of witnessed blind spots within the
-first k=8 planned cases (closure curve in Figure ?; the non-cross-fitted
-curve, an upper bound, is in the appendix). The deployment-grade map
-(built on all of C1 and frozen before any C2–C5 execution) is then
-evaluated on the natural corpora: on C2–C5 subjects whose fingerprints
-contain the relevant sites, M-dir reaches the first counterexample ? ×
-faster than M-full at equal budget; on the ? % of confirmed defects
-whose fault class had no fingerprint site (fingerprint false negatives),
-the 30% general budget recovered ? of ?. We claim predictive power for
-the map only where the cross-fitted and frozen-corpus results agree.
-Varying the directed-budget fraction (50/50, 90/10) changes coverage by
-at most ? points (appendix).
+**位点定向。** 由于故障-应力映射本身推导自 C1 探针研究，用同一映射
+在 C1 上评估位点定向会构成循环。因此受控评估使用*任务级交叉拟合*：
+90 个源任务划分为 5 折；对每一折，仅用其余任务的探针构建映射，在
+留出折的探针上评估（同一任务的探针永不跨折），结果按折合并。在交叉
+拟合下，映射在前 k=8 个计划 case 内闭合 73.3 % 的见证盲区（闭合曲线
+见 Figure ?；非交叉拟合曲线为上界，见附录）。部署级映射（在全部 C1
+上构建、在任何 C2–C5 执行之前冻结）随后在自然语料上评估：在指纹
+包含相关位点的 C2–C5 科目上，M-dir 以等预算比 M-full 快 ? × 到达
+首个反例；在故障类没有指纹位点的 ? % 确认缺陷（指纹假阴性）上，30%
+通用预算收回了 ? 个中的 ? 个。只有当交叉拟合与冻结语料两侧结果一致
+时，我们才声明映射的预测力。改变定向预算比例（50/50、90/10）使
+覆盖率变化至多 ? 个百分点（附录）。
 
-> **Answer to RQ5.** All five dimensions contribute non-redundantly
-> (leave-one-out losses of ?–? points; cross-confirmation ? %), and
-> site-directed selection converts static fingerprint evidence into a
-> ? × median speed-up of defect discovery at ?(no / minor) recall cost.
+> **RQ5 答案。** 全部五个维度均有不可冗余的贡献（leave-one-out 损失
+> ?–? 个百分点；交叉确认 ? %），位点定向选择把静态指纹证据转化为
+> 缺陷发现的 ? × 中位加速，代价为?（零 / 轻微）召回损失。
 
-## 5.7 Cost
+## 5.7 成本
 
-Validating one candidate costs a median of ? s (p95 ? s) in deploy mode
-(early exit on first violation) and ? s in full-audit mode; cold JIT
-compilation accounts for ? % and is amortized across cases. Validating
-1,000 candidates costs ? GPU-hours (~$? on-demand cloud), versus ? for
-robust-kbench (port) and ? for B9. The budget–recall curve (Figure ?)
-saturates at ? invocations, which we adopt as the recommended deployment
-budget. A guarantees/scope/cost comparison with formal-verification
-approaches (Kuiper, ProofWright, Dubey et al.)—whose proofs cover
-different properties than tolerance-based differential testing—appears
-in the appendix; the two paradigms are complementary.
+验证一个候选在 deploy 模式（首违规即提前退出）下成本中位 214.8 s
+（p95 925.5 s），在完整审计（full-audit）模式下 557.1 s；冷 JIT
+编译占 ? %，且跨 case 摊销。验证 1,000 个候选花费 59.7 GPU 小时
+（按需云价约 $56），对比 robust-kbench (port) 的 ? 与 B9 的 ?。
+预算-召回曲线（Figure ?）在 32 次调用处饱和，我们将其采纳为推荐
+部署预算。与形式化验证方法（Kuiper、ProofWright、Dubey et al.）的
+保证/范围/成本对比见附录——它们的证明覆盖与基于容差的差分测试不同
+的性质；两种范式互补。
 
-## 5.8 Scope of the Main Study and Appendix Material
+## 5.8 主研究范围与附录材料
 
-To keep the evaluation focused, the main body reports five experiment
-families: natural false acceptance (RQ1), the budget-matched comparison
-(RQ2), external validity (RQ3), the controlled fault study (RQ4), and
-component contribution with cost (RQ5, 5.7). The following analyses are
-preregistered but reported in the appendix/artifact: unrestricted native
-protocols of all external tools; the full per-corpus breakdown of the
-external comparison (per-corpus precision, TTFC, cost, and Reĉ
-complementing the coverage matrix of Table 6a); the L3/backward
-generalization sample (C8); LLM self-review (B10);
-directed-budget-fraction sensitivity; the formal-verification paradigm
-comparison; and the ADRS-loop repair case study.
+为保持评估聚焦，正文报告五个实验族：自然误收（RQ1）、预算匹配对比
+（RQ2）、外部效度（RQ3）、受控故障研究（RQ4）、组件贡献与成本
+（RQ5、5.7）。以下分析已预注册但报告于附录/artifact：全部外部工具
+的无限制 native 协议；外部对比的完整逐语料分解（逐语料精确率、
+TTFC、成本与 Reĉ，补全 Table 6a 的覆盖矩阵）；L3/backward 泛化样本
+（C8）；LLM 自审（B10）；定向预算比例敏感性；形式化验证范式对比；
+以及 ADRS 循环修复案例研究。
 
-## 6 Threats to Validity
+## 6 效度威胁
 
-**Construct.** Confirmed-defect labels come from a blinded two-annotator
-audit (κ = ?); we mitigate residual subjectivity with the external
-ground-truth corpus of RQ3, whose labels we cannot influence, and with
-the Horvitz–Thompson recall estimator, which frees the headline recall
-from the "union of detector alarms" pool (Section 5.1.5)—though the
-estimate's variance depends on the all-PASS sampling rate (n = ? per
-stratum). Contracts encode judgment in their boundary clauses; the
-governance protocol (automatic extraction, dual review, pre-observation
-freezing, versioned amendments, conservative INCONCLUSIVE) bounds this
-threat, and all contract sources and diffs are released. Fault classes
-outside the 16-operator taxonomy (? % of held-out natural defects;
-cross-stream ordering, multi-kernel interactions) bound the reach of
-site-directed selection; the general budget and the documented taxonomy-
-maintenance protocol partially compensate. **Internal.** Paired re-execution under the corrected substrate flipped
-3.2 % of analyzable verdicts (2/62) and invalidated the legacy harness's
-un-mutated original-kernel controls on 26 of 50 kernels (Table 3); all
-reported numbers come from the rerun, and legacy results are cited only
-as pilot evidence. The taxonomy, policy library, and fault-to-stress map were
-developed and frozen on data disjoint from the test corpora
-(Section 5.1.1), and controlled evaluations of the map use task-level
-cross-fitting (Section 5.6); the primary comparison holds the judging
-oracle fixed across validators and decomposes oracle strictness from
-input effects (Section 5.3), so tolerance choices cannot masquerade as
-detection power. Ported baselines carry a residual implementation-
-fidelity risk that we bound by native-dataset reproduction (deltas: ?)
-and released port code. Reference implementations are trusted; rounds
-where the reference itself fails its contract are INCONCLUSIVE and never
-counted. **External.** Results cover KernelBench-style single-kernel
-tasks in CUDA/Triton on a single GPU architecture (NVIDIA A800, Ampere);
-architecture-dependent behaviors—tensor-core codepaths, SM-count-
-sensitive launch configurations—may differ on other GPUs, and
-cross-architecture portability of verdicts is left to replication; the
-L3/backward sample (C8, appendix) probes but does not establish
-generality beyond this population. **Conclusion.**
-All primary comparisons are budget-matched, task-clustered, and
-Holm-corrected; INCONCLUSIVE sensitivity bounds are reported alongside
-every headline number.
+**构念效度。** 确认缺陷标签来自盲评双标注者审计（κ = ?）；我们用
+RQ3 的外部真值语料（其标签我们无法影响）与 Horvitz–Thompson 召回
+估计量（使 headline 召回摆脱"检测器告警并集"池；5.1.5 节）缓解残余
+主观性——不过该估计量的方差取决于全 PASS 抽样率（每层 n = ?）。
+契约在其边界条款中编码了判断；治理协议（自动提取、双人复核、观测前
+冻结、版本化修订、保守 INCONCLUSIVE）约束该威胁，且全部契约来源与
+diff 均发布。16 算子分类学之外的故障类（占留出自然缺陷的 ? %；
+跨流排序、多内核交互）限定位点定向选择的触及范围；通用预算与成文的
+分类学维护协议部分补偿。**内部效度。** 修正基座下的配对重执行翻转
+了 3.2 % 的可分析判定（2/62），并使 legacy 基座的未变异原始内核对照
+在 50 个内核中的 26 个上失效（Table 3）；全部报告数字均来自重跑，
+legacy 结果仅作为先导证据引用。分类学、策略库与故障-应力映射在与
+测试语料不相交的数据上开发并冻结（5.1.1 节），映射的受控评估使用
+任务级交叉拟合（5.6 节）；主对比在我们自己的配置间固定判定 oracle，
+并把 oracle 严格性与输入效应分解（5.3 节），使容差选择无法伪装成
+检测力。移植验证器则保留其已发表协议的 oracle，因为 oracle 是被测
+设计的一部分；该不对称如实报告并分析，而非平均掉（5.3 节）。移植
+基线携带残余的实现保真风险，我们以原生数据集复现（偏差：?）与发布
+的移植代码约束之。参考实现被信任；参考自身违反契约的轮次记
+INCONCLUSIVE，永不计数。**外部效度。** 结果覆盖 CUDA/Triton 的
+KernelBench 风格单内核任务，单一 GPU 架构（NVIDIA A800，Ampere）；
+依赖架构的行为——tensor-core 代码路径、对 SM 数敏感的 launch 配置
+——在其他 GPU 上可能不同，判定的跨架构可移植性留待复制研究；
+L3/backward 样本（C8，附录）试探但不建立超出该总体的普遍性。
+**结论效度。** 全部主对比均预算匹配、任务聚类、Holm 校正；每个
+headline 数字旁均报告 INCONCLUSIVE 敏感性界。
 
-## Data Availability
+## 数据可用性
 
-The artifact contains the frozen corpora manifests and contracts, all run
-manifests and observations, replay bundles for every non-PASS observation,
-the blinded audit queues, raw annotations, adjudications and agreement
-statistics, the fault-to-stress map, all analysis scripts, and a smoke
-mode that reproduces every table from released data on a single GPU.
+Artifact 包含冻结的语料 manifest 与契约、全部 run manifest 与观测、
+每个非 PASS 观测的 replay bundle、盲评审计队列、原始标注、裁定与
+一致性统计、故障-应力映射、全部分析脚本，以及一个可在单张 GPU 上
+从已发布数据复现每张表的冒烟模式。

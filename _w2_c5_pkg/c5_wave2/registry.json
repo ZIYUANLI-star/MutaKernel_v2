@@ -1,0 +1,442 @@
+{
+ "corpus": "C5",
+ "wave": 2,
+ "subject_count": 62,
+ "source": "local corpus external/C5_kernelbench_samples/repeated_sampling, raw_sha256-verified at packaging",
+ "subjects": [
+  {
+   "stable_id": "6591f18b960daad98bf977d654ca9c54ee9703141279eeec05c51898751f4459",
+   "task_key": "KB_L3_P13",
+   "frame_id": "C5-01383",
+   "raw_sha256": "1c5461cc282dbfcac6e1a2482af0b9245ab424a27a2321c16c30a620ef6777a5",
+   "origin": "level3\\claude-3.5-sonnet\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "22ef13ef78f024d90bafc1aa893a175d6081f18af4a3944e386fbaabe28a4b98",
+   "task_key": "KB_L3_P25",
+   "frame_id": "C5-01396",
+   "raw_sha256": "e508ab60e7e88d4abee99a4526481f7435ab53d7971afea57755737e8c1290c0",
+   "origin": "level3\\claude-3.5-sonnet\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2769c8836ca19269542c234a408927b3fec102593fd7947bb3af4c7f83b567d7",
+   "task_key": "KB_L3_P28",
+   "frame_id": "C5-01399",
+   "raw_sha256": "ac847874cd72ffa81bbef04ddc2a10a470eaf02ec2002fb2877fedf28dadd7bd",
+   "origin": "level3\\claude-3.5-sonnet\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8c9f40aad5fab9fb627454ec9cd6f317fb564e77fadb320c8017144937379369",
+   "task_key": "KB_L3_P32",
+   "frame_id": "C5-01404",
+   "raw_sha256": "f89805e2f5c2b5111958184d62c54ac31c9035ac4d6f7078fbbf8553348839c2",
+   "origin": "level3\\claude-3.5-sonnet\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "fef161498dc1400cb05e135067db6017ca8b4fd34cd2330bbb7b86ea5104584b",
+   "task_key": "KB_L3_P33",
+   "frame_id": "C5-01405",
+   "raw_sha256": "e918303f43f077a28c8c70c06de7a7252f0e08a32c9464d20fd4f60ed5c652c5",
+   "origin": "level3\\claude-3.5-sonnet\\problem_33\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "fa703768c872c0680e28fdc04ea8b3669a9c5e4948e3f6a803ee1b97869ec4c9",
+   "task_key": "KB_L3_P4",
+   "frame_id": "C5-01412",
+   "raw_sha256": "e93ab953069413a18267d65458f30cf54e626569bb7c06070a49c32fe44837fd",
+   "origin": "level3\\claude-3.5-sonnet\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bda3cb8fe10bc9a0b2c2906546d8972507ae0723784fb252dd5e2763368d4d3a",
+   "task_key": "KB_L3_P1",
+   "frame_id": "C5-01428",
+   "raw_sha256": "14a26a7ae44b1f3b69bfc39ff8040fa019f47b2a352ab273aa3269799d243e94",
+   "origin": "level3\\deepseek-r1\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "59e695b6f0f3f1cabb25c82902778ad8777665b764852520f569e59ecf394dc9",
+   "task_key": "KB_L3_P11",
+   "frame_id": "C5-01430",
+   "raw_sha256": "0d26e3926386ec5cf320fa7bafd836265b1db0ca73211560545c0f326d48211d",
+   "origin": "level3\\deepseek-r1\\problem_11\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b75c186d522b2cc6a7665b0b7ddfc3352dfb3d3029306f4bb51c353dac5c43ff",
+   "task_key": "KB_L3_P3",
+   "frame_id": "C5-01449",
+   "raw_sha256": "1c8d3e5cc6d4cfebbe4e7620f9da268682fd8616420888ef49f114e9b57498e5",
+   "origin": "level3\\deepseek-r1\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "af85ba08fcc3e8ff006e27b7aead811f1e3fc019e56569312df10da63f45b7f9",
+   "task_key": "KB_L3_P4",
+   "frame_id": "C5-01460",
+   "raw_sha256": "db055e036cf41d4e23f809429ac77120e98e13e26d56095a38e2b4924189d2d9",
+   "origin": "level3\\deepseek-r1\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2c44b8e42cae98b065c28635bbd002e25859cef8985ccd137d530d3012f975e8",
+   "task_key": "KB_L3_P1",
+   "frame_id": "C5-01475",
+   "raw_sha256": "ad36e33153904a2cb1bba9b3ec503dc109105f079049c8e11ea8b8fbbf0d916c",
+   "origin": "level3\\deepseek-V3\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3cafa6c1b81069db1f457e22d31c1a7b82b08838cde000cf5dc6cc8c9ef95d41",
+   "task_key": "KB_L3_P11",
+   "frame_id": "C5-01477",
+   "raw_sha256": "429b2b5164b5c9244a22f67584120024c04e5e4df5a55ddab3bdebca0e3795c1",
+   "origin": "level3\\deepseek-V3\\problem_11\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "28a37875b66402d6420d1787b7f253aec39d2db3fa13155bf424f59f167ac0db",
+   "task_key": "KB_L3_P12",
+   "frame_id": "C5-01478",
+   "raw_sha256": "9078a427cf28558c519a3d4e973cd2e7214782b3ef342702fd1303158b60fd4f",
+   "origin": "level3\\deepseek-V3\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a252204be89fdcf1b4585b5ef580f3aae2fe5ed8d0ff921dd5733d9fe4991d80",
+   "task_key": "KB_L3_P19",
+   "frame_id": "C5-01485",
+   "raw_sha256": "0562fdd8fdd2f9111b6a802a156c6385d66f9ddf827b2d669623ab615a41609f",
+   "origin": "level3\\deepseek-V3\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f75eb98b403b785233654586bb7b901b85495530ba83ebf09f03148392a83373",
+   "task_key": "KB_L3_P20",
+   "frame_id": "C5-01487",
+   "raw_sha256": "a8942452c59bfea8a1928d9fbf360b5a4db6bdafdcb021b04c1274ffa4f42246",
+   "origin": "level3\\deepseek-V3\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1306a559db9f8e22927919b45f1109ca3eb72eb892d89c0befaf92b8b13794ae",
+   "task_key": "KB_L3_P23",
+   "frame_id": "C5-01490",
+   "raw_sha256": "66978c1f57bfae0ae9869662fadbd6f53839ee267be81e99bb5c6063ae4ec65c",
+   "origin": "level3\\deepseek-V3\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "abc7ce58239f1ca222461245f492b8c9efcbd41c9be643266cc484b08850646d",
+   "task_key": "KB_L3_P25",
+   "frame_id": "C5-01492",
+   "raw_sha256": "b187e63682cdae2707d72c7aa8a1bf75809b984322740c88dc67311fe0095bb8",
+   "origin": "level3\\deepseek-V3\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "58400103dea09b9d177c52d3d8cb00433b9395f3f7e7ab97c8a97100911de6a6",
+   "task_key": "KB_L3_P26",
+   "frame_id": "C5-01493",
+   "raw_sha256": "2ac930c0fc584353c149996f893d0ce3a958fe806ca11594601c723c4631cd07",
+   "origin": "level3\\deepseek-V3\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1538e4b0f1ec3e279b566a8a34ca15d83d1a62479f6a48627bbbbc02c659e3e8",
+   "task_key": "KB_L3_P28",
+   "frame_id": "C5-01495",
+   "raw_sha256": "aa96cb00cd538a475e12f81816e20e22de9ea72bcbb00cb85df8801b2b6f214e",
+   "origin": "level3\\deepseek-V3\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6f07ac092f430f247c8689fca83343c5748d678685a67045c3d2ac2ee177aaef",
+   "task_key": "KB_L3_P29",
+   "frame_id": "C5-01496",
+   "raw_sha256": "35a92915fd8f15ae79b6b6e72636c7235aea814f9a7dcb18a4b76a81e26f9432",
+   "origin": "level3\\deepseek-V3\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e8a442a51db4e5b56f0fc0dca24af13bff8c032023cfb1fbd691152e8cd0dcb7",
+   "task_key": "KB_L3_P34",
+   "frame_id": "C5-01502",
+   "raw_sha256": "27cfee3b779b3ec23b735f8408ad5651fb3515149d085706d28f9ea507456bf1",
+   "origin": "level3\\deepseek-V3\\problem_34\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e606e2b29e02290499bc74d3319d443e4d22d7435cdaf1aba52accaec28e87bc",
+   "task_key": "KB_L3_P44",
+   "frame_id": "C5-01513",
+   "raw_sha256": "42b5223dc9c6180a93ad71b0aad8d8b0b942925f0e11bde1fb1d93326b85359a",
+   "origin": "level3\\deepseek-V3\\problem_44\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0ce948dfa65b7c4801cf3eb3034e6a90552fcc272463a90bae2625931e989b9c",
+   "task_key": "KB_L3_P46",
+   "frame_id": "C5-01515",
+   "raw_sha256": "9f475eb231ad325318f85403a573d1a4f901fd2aaf3f43526964ce021b040f0c",
+   "origin": "level3\\deepseek-V3\\problem_46\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "03b2a9cc14acdabf91b25ef47ad37d27232ce70ca841397611179e3e48513921",
+   "task_key": "KB_L3_P47",
+   "frame_id": "C5-01516",
+   "raw_sha256": "c4ec1a2454e0c1b526a91b610e3d78bd50b09456a69201993b503291e53db4f4",
+   "origin": "level3\\deepseek-V3\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8558060e49d6f13d03977ae7659e3cd7adff4d749eafac4f38642477936d3345",
+   "task_key": "KB_L3_P7",
+   "frame_id": "C5-01522",
+   "raw_sha256": "e400bcb148851e39755a34d77e09eafead2c9980b7286816ee1f30576841433f",
+   "origin": "level3\\deepseek-V3\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ff940ee6113d1c768bb0ffff4e0561e0c59f7150b9cd058221f3442c13733261",
+   "task_key": "KB_L3_P11",
+   "frame_id": "C5-01527",
+   "raw_sha256": "be561dd74ea8d05f9b369f6f6b354f27e2344962db11d7f33d85de79e14a2d6d",
+   "origin": "level3\\gpt-4o\\problem_11\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "15771e96f0e4ac2be94e967c10f3ed8e0bf4f72f7460523cc1c1da44fbee451f",
+   "task_key": "KB_L3_P15",
+   "frame_id": "C5-01531",
+   "raw_sha256": "652a01d83b832852abcdad39b44657d7e87245a698f3fc155ff5345161609eb1",
+   "origin": "level3\\gpt-4o\\problem_15\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "18af7b693ab1f9559c9b6f5c999397827e33c03d8f8112b7acbe12215791da57",
+   "task_key": "KB_L3_P16",
+   "frame_id": "C5-01532",
+   "raw_sha256": "cd571698005a83fcff7ab51a2392dea96e97007942e9f4ced62ba907221278c6",
+   "origin": "level3\\gpt-4o\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "60d505a10096d8e5a1933eed946501c87c9836d50b57367034b3f5f6eb8e47e2",
+   "task_key": "KB_L3_P18",
+   "frame_id": "C5-01534",
+   "raw_sha256": "526767f4e1b8f72bad5edfb7fcfdd7e51af693ec7fcd16b658326196591f7c44",
+   "origin": "level3\\gpt-4o\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "776c8aff7092327143fbe41ae713d4dacd1e1c2be836cd1e7645a0fd24639a85",
+   "task_key": "KB_L3_P19",
+   "frame_id": "C5-01535",
+   "raw_sha256": "e635eac121e1778436ccbb3e30da7cd98e5f0591ee9dd06ebc7e0ad054e4285b",
+   "origin": "level3\\gpt-4o\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "283f2c2b9ff09dff678c557b620fb09f8f98e9721bffd6eb62c1937b223c1f2a",
+   "task_key": "KB_L3_P26",
+   "frame_id": "C5-01543",
+   "raw_sha256": "0fa73dc2aa42916f1334d46f4da180f6704f02ee4418624cab6544020993fe1b",
+   "origin": "level3\\gpt-4o\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "156263a87393aaf6d59d42fd24a1c48f4c29589eeea39900aafcec1cc79b1a6e",
+   "task_key": "KB_L3_P28",
+   "frame_id": "C5-01545",
+   "raw_sha256": "fa9ae59a42c1c7e23682a9a035d7addb864875717bc9cdb39347106db509fc4b",
+   "origin": "level3\\gpt-4o\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9e6688c898f84e089ee0c24f4b20a0d7336e88ac7d9b309e1446f32e9e7d5715",
+   "task_key": "KB_L3_P29",
+   "frame_id": "C5-01596",
+   "raw_sha256": "01ada8b9c4729d2d2c7b13cea6734bda0d596675c70113e9c7d107055fde156a",
+   "origin": "level3\\llama-3.1-405b\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2b450f4373d66762f385284e51e8f3f4dbabf8b04aaf9f8fc165172f9c8bae07",
+   "task_key": "KB_L3_P47",
+   "frame_id": "C5-01616",
+   "raw_sha256": "26d39ae508acad8717867788bbc16226169288be92bceab58db575f2abd9987b",
+   "origin": "level3\\llama-3.1-405b\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "09739e60ac7b9f92de77c0cf5c52d12a9d31db6fc5c4f033d51d3fea505e4e83",
+   "task_key": "KB_L3_P10",
+   "frame_id": "C5-01675",
+   "raw_sha256": "f56d32a3d2e727c2d5e73a57b9c8320d207e68b27b342f9eab3df2bcf1d6bd23",
+   "origin": "level3\\openai-o1\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7a7be14f506807dfac9dd32ca247a758bb24c09b4166601e96de06af95a0e338",
+   "task_key": "KB_L3_P11",
+   "frame_id": "C5-01676",
+   "raw_sha256": "b93151022af49b3b7638d6ceeebdde7938c8d916972ed4f8833907605882e7f6",
+   "origin": "level3\\openai-o1\\problem_11\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "41bc8fbb4fd81950212b166e3b3b83f410ded65dc311bd001e840c5733d94fce",
+   "task_key": "KB_L3_P12",
+   "frame_id": "C5-01677",
+   "raw_sha256": "19317431b204f1b02c487f34b9ad9dfc49a18279bc991ad5bc1d81881b8f83fb",
+   "origin": "level3\\openai-o1\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a2a4cbd02157c216c5405a26626741db121a3edf3945f4edb6524fb5190b97dd",
+   "task_key": "KB_L3_P14",
+   "frame_id": "C5-01679",
+   "raw_sha256": "4303813287a9ab7fec501e5068586f342dd14e80af5365f4240d4057cad9e635",
+   "origin": "level3\\openai-o1\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aee7804a8239ccdbdb082e4e453f78204b8fb44d269830316aa6b8a1508ea4e3",
+   "task_key": "KB_L3_P15",
+   "frame_id": "C5-01680",
+   "raw_sha256": "ce66c433caee72d4cd087a7359a1d0c3058c3ae810d25c2126a06850c3971a61",
+   "origin": "level3\\openai-o1\\problem_15\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bde7ad9fa422a162796b32614cdfe20077291827339b033375bc90bfbb06f454",
+   "task_key": "KB_L3_P16",
+   "frame_id": "C5-01681",
+   "raw_sha256": "9f4d0f3f93ba08e73fb63135e97d1e63921aaaf9c0aef5bd38662de63dcac079",
+   "origin": "level3\\openai-o1\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3c9d71b465f86b5b111a2091ea6c3692d796cf5a620c2cdc8a724def6c59bd1d",
+   "task_key": "KB_L3_P18",
+   "frame_id": "C5-01683",
+   "raw_sha256": "b621a6debadbabb6f5d92fb2ffc3d44f9874b7a9ddc25cfb64dd5c331cc1b14e",
+   "origin": "level3\\openai-o1\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "abcc6bbb90bbdadbe1bbf55a4b29af771282f888d4fc738da169bcc04533f892",
+   "task_key": "KB_L3_P19",
+   "frame_id": "C5-01684",
+   "raw_sha256": "76a42790ba335a7cf888dc47cabac485be8f17ca177b9c1217ad36522d257540",
+   "origin": "level3\\openai-o1\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b7ac0aaf896036072847e4311dde34b006ed7e2b8b9e32383e3b4757d4f0be95",
+   "task_key": "KB_L3_P20",
+   "frame_id": "C5-01686",
+   "raw_sha256": "fd1e4ed1f075ef9fee72d195aa85b1a4eca07adfd69ba82cde4fe6dbe14455b4",
+   "origin": "level3\\openai-o1\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "03525155d139c758181fdc3fb517d330f0b7408695e98f038425f7e3cfdb2bd1",
+   "task_key": "KB_L3_P22",
+   "frame_id": "C5-01688",
+   "raw_sha256": "e66eda9823a6aae6f577c4e7f201465e2d44293b5aedbb63566a06f2fc8f82af",
+   "origin": "level3\\openai-o1\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "566073cf1d25a622d34ae39279d10eab1963a8f1fe2d3f4039d9c68871b78f87",
+   "task_key": "KB_L3_P23",
+   "frame_id": "C5-01689",
+   "raw_sha256": "2e2a94aa41d6bbe262b114d4a0b0abc1465695b8ee59c6d969bd70bb3ae9e195",
+   "origin": "level3\\openai-o1\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e9e1c3bcd4eb2dd08a0fca68adacd35a2d159a15201157d00593352077b700d5",
+   "task_key": "KB_L3_P24",
+   "frame_id": "C5-01690",
+   "raw_sha256": "fc87746f83215b9a6ddd627a186e531219366f1be1cb16f4a2f2398474d1c79b",
+   "origin": "level3\\openai-o1\\problem_24\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6c2453c8d72a0d6c3977db9fb5ebac3a5807c31e7c40024caebd8743900b6f70",
+   "task_key": "KB_L3_P26",
+   "frame_id": "C5-01692",
+   "raw_sha256": "a061e69666455b580e8806d3d60ecac9b1137c9b375214061c0c0e652693530a",
+   "origin": "level3\\openai-o1\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0436cf672c3d9fdd4bc495db34aeed4dcdf2289db024a4932ac3acdc6906b209",
+   "task_key": "KB_L3_P27",
+   "frame_id": "C5-01693",
+   "raw_sha256": "f123b34944737ecffe6fa6b7ff76e3c4f2632a065cf1620e7be0e173bdcfb831",
+   "origin": "level3\\openai-o1\\problem_27\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "33671a9d7c2e678352d6b94475c8c9d295f881829e74a1d362531353e38f6c0b",
+   "task_key": "KB_L3_P28",
+   "frame_id": "C5-01694",
+   "raw_sha256": "9732c4c2d5fda914c23e070fb2acfc46980ed9766e796a711fa4aff2063ff229",
+   "origin": "level3\\openai-o1\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7b9a9fe14c95b20404ccb4ebfc58ea854aa3d71a0e063a604380f130d71a6532",
+   "task_key": "KB_L3_P29",
+   "frame_id": "C5-01695",
+   "raw_sha256": "a1edc0ff6348344f5adf0072e955d0989219cedca5180875afead16ab5c2548d",
+   "origin": "level3\\openai-o1\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "85f5339aa02246c9286796108b5a274da640536e9c80173456d0baca2cb967b4",
+   "task_key": "KB_L3_P32",
+   "frame_id": "C5-01699",
+   "raw_sha256": "0d18e7797403e82bdd45bbc5ceaeb9f963602cc1d2a667344da8bce90a2f4b61",
+   "origin": "level3\\openai-o1\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1ac2f4a7401b4b13e34d6b9937c7e505bb54cf324a14ac7ab192a238a6b8e60e",
+   "task_key": "KB_L3_P34",
+   "frame_id": "C5-01701",
+   "raw_sha256": "92cd63535e363267e2f7f0fb6b261e45d99b1bd60c03aa2166c40207d3ff48c0",
+   "origin": "level3\\openai-o1\\problem_34\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "39ccdec568ad31ac0525ffc8fff9925eda61c4980198313fff61a7016ee76d56",
+   "task_key": "KB_L3_P36",
+   "frame_id": "C5-01703",
+   "raw_sha256": "afc81d0f83fac411e3406579640230bdd6982c01f2cd6720222d5c730c2a392f",
+   "origin": "level3\\openai-o1\\problem_36\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "898e5d93a92c2d1da8688398e3f44d257893c01b5ca8dc253e087729bd5566ea",
+   "task_key": "KB_L3_P4",
+   "frame_id": "C5-01707",
+   "raw_sha256": "7e83b73d5e15aa3776e56e5b021fd44f9cb852a43a5d6ea70d72b6094926d9c9",
+   "origin": "level3\\openai-o1\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1cf89c9493fe71c95d7b21dc9333974543870972134398f3899c8473b3c693fd",
+   "task_key": "KB_L3_P43",
+   "frame_id": "C5-01711",
+   "raw_sha256": "0d7169296379ef2f220b707470100c3666eeac7e0ca59f7932558aa0a7b0cb51",
+   "origin": "level3\\openai-o1\\problem_43\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a9e0a34d49fe092366db22adce50729c6c19ddb077c0b721b9333718443da30b",
+   "task_key": "KB_L3_P46",
+   "frame_id": "C5-01714",
+   "raw_sha256": "1aee81e4a1ee3bdb41f4f8e8b5971e8b516534ff1659fdaf3f84dc04d60d30dd",
+   "origin": "level3\\openai-o1\\problem_46\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e8e7b23deb82db86d979d30f441ae40ea4075fcfa88e7b24707116ab0ad37475",
+   "task_key": "KB_L3_P5",
+   "frame_id": "C5-01718",
+   "raw_sha256": "50dd4b8759bef3e473ae8d58fe71d1029259b4f12a1fdcaf6240fc1e3d32198c",
+   "origin": "level3\\openai-o1\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5644f21bfb91a9eb221d11d930a2011f9b9ae751b257c890d10d64ad00370d91",
+   "task_key": "KB_L3_P50",
+   "frame_id": "C5-01719",
+   "raw_sha256": "26536e54130f9bddc93114989f46d2fe2019f8eb104eec76d651498b8c6144d8",
+   "origin": "level3\\openai-o1\\problem_50\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9b39ad8f19bba093cb9a33dfd851b3ca9d9728659df421895aa033087c972a2a",
+   "task_key": "KB_L3_P6",
+   "frame_id": "C5-01720",
+   "raw_sha256": "854cc432d67e4da047fc1bdc7162b621d7c66b9c393e8573ff36d5e03b2e5490",
+   "origin": "level3\\openai-o1\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5c1cc9c2df4980b6903eb826041f061cdb3ec0f0d79b9a0ded9b686c908d185e",
+   "task_key": "KB_L3_P7",
+   "frame_id": "C5-01721",
+   "raw_sha256": "927296848a8b025e6b2bb1b5f76d082a9cbc9f152dc9c3457c52f0a970485c23",
+   "origin": "level3\\openai-o1\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aed4b810d39904e6fe5547bd81f03318aefcc7090b5be69590078e8100a344ef",
+   "task_key": "KB_L3_P8",
+   "frame_id": "C5-01722",
+   "raw_sha256": "ff1fa60e337e39e9e7c7becd1b33e6b32dceaceb7ddbc26abff57d928d752afd",
+   "origin": "level3\\openai-o1\\problem_8\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c5810dc24327b6e3cce6daa4d53d4d05bb81511a1effd1ac6e4bbda9fd5a4a9f",
+   "task_key": "KB_L3_P9",
+   "frame_id": "C5-01723",
+   "raw_sha256": "70504110d6ffb31776b97803089680b08ea24d82d2cd8b64a659463360149960",
+   "origin": "level3\\openai-o1\\problem_9\\sample_0\\kernel.json"
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "cell_id": "conf__L1_P37__sync_remove__1__cse",
+ "kind": "confirm",
+ "kernel": "L1_P37",
+ "stage": "cse",
+ "probe_id": "L1_P37__sync_remove__1",
+ "probe_ids": null,
+ "positions": null,
+ "position": {
+  "round_type": "stress",
+  "policy": "sparse_extreme",
+  "sub_index": 2,
+  "round_index": null,
+  "seed": 50042
+ },
+ "planned_replays": 20,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P37__sync_remove__1",
+  "base_seed": 50042,
+  "equiv_runs": 0,
+  "stress_repeats": 1,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "sparse_extreme",
+  "sparse_extreme",
+  "sparse_extreme",
+  "sparse_extreme",
+  "sparse_extreme",
+  "sparse_extreme"
+ ],
+ "validation_status": "fail",
+ "valid_rounds": 5,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 1525,
+ "wall_s": 218.3,
+ "divergence": {
+  "round_type": "stress",
+  "policy": "sparse_extreme",
+  "sub_index": 0,
+  "seed": 50042,
+  "detail": "output_diverged",
+  "input_summary": [
+   {
+    "shape": [
+     112,
+     64,
+     512,
+     512
+    ],
+    "dtype": "torch.float32",
+    "min": -55027.22265625,
+    "max": 51352.046875,
+    "mean": 0.006323643960058689,
+    "has_nan": false,
+    "has_inf": false
+   }
+  ],
+  "oracle": {
+   "status": "fail",
+   "compared_leaves": 2,
+   "reason": "observed 1 output mismatch(es)",
+   "mismatches": [
+    {
+     "path": "$['output']",
+     "kind": "value",
+     "message": "1 value(s) exceed rtol=0.01, atol=0.01; max_abs_error=0.0113606",
+     "reference": "Tensor(shape=(112, 64, 512, 512), dtype=torch.float32, device=cuda:0, layout=torch.strided)",
+     "candidate": "Tensor(shape=(112, 64, 512, 512), dtype=torch.float32, device=cuda:0, layout=torch.strided)"
+    }
+   ]
+  },
+  "errors": []
+ },
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "sparse_extreme",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 50042,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse_extreme",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 50042,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse_extreme",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 50042,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse_extreme",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 50042,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse_extreme",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 50042,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse_extreme",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 50042,
+   "status": "fail",
+   "max_abs_error": 0.0113606,
+   "reason": "observed 1 output mismatch(es)"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-31T00:20:29.672805"
+}

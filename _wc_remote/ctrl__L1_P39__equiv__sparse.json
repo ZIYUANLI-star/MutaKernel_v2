@@ -1,0 +1,298 @@
+{
+ "cell_id": "ctrl__L1_P39__equiv__sparse",
+ "kind": "control",
+ "kernel": "L1_P39",
+ "stage": "equiv",
+ "probe_id": null,
+ "probe_ids": [
+  "L1_P39__arith_replace__8",
+  "L1_P39__mask_boundary__0"
+ ],
+ "positions": [
+  [
+   "sparse",
+   0
+  ],
+  [
+   "sparse",
+   1
+  ]
+ ],
+ "position": null,
+ "planned_replays": 10,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P39__WC_AUDIT_CONTROL__equiv",
+  "base_seed": 10020,
+  "equiv_runs": 0,
+  "stress_repeats": 2,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "sparse",
+  "sparse",
+  "sparse",
+  "sparse",
+  "sparse",
+  "sparse"
+ ],
+ "validation_status": "inconclusive",
+ "valid_rounds": 15,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 1410,
+ "wall_s": 721.1,
+ "divergence": null,
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "pass",
+   "max_abs_error": null,
+   "reason": "all 2 compared output leaf/leaves agree"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "inconclusive",
+   "max_abs_error": null,
+   "reason": "candidate execution hit a resource/infrastructure limit"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "inconclusive",
+   "max_abs_error": null,
+   "reason": "candidate execution hit a resource/infrastructure limit"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "inconclusive",
+   "max_abs_error": null,
+   "reason": "candidate execution hit a resource/infrastructure limit"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "inconclusive",
+   "max_abs_error": null,
+   "reason": "candidate execution hit a resource/infrastructure limit"
+  },
+  {
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "round_index": null,
+   "seed": 10021,
+   "status": "inconclusive",
+   "max_abs_error": null,
+   "reason": "candidate execution hit a resource/infrastructure limit"
+  }
+ ],
+ "errors": [
+  {
+   "phase": "candidate",
+   "exception_type": "OutOfMemoryError",
+   "message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacty of 79.25 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 32.48 GiB memory in use. Process 300642 has 40.81 GiB memory in use. Of the allocated memory 32.00 GiB is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "seed": 10021
+  },
+  {
+   "phase": "candidate",
+   "exception_type": "OutOfMemoryError",
+   "message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacty of 79.25 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 32.48 GiB memory in use. Process 300642 has 40.81 GiB memory in use. Of the allocated memory 32.00 GiB is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "seed": 10020
+  },
+  {
+   "phase": "candidate",
+   "exception_type": "OutOfMemoryError",
+   "message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacty of 79.25 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 32.48 GiB memory in use. Process 300642 has 40.81 GiB memory in use. Of the allocated memory 32.00 GiB is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "seed": 10021
+  },
+  {
+   "phase": "candidate",
+   "exception_type": "OutOfMemoryError",
+   "message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacty of 79.25 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 32.48 GiB memory in use. Process 300642 has 40.81 GiB memory in use. Of the allocated memory 32.00 GiB is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 0,
+   "seed": 10020
+  },
+  {
+   "phase": "candidate",
+   "exception_type": "OutOfMemoryError",
+   "message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacty of 79.25 GiB of which 5.95 GiB is free. Including non-PyTorch memory, this process has 32.48 GiB memory in use. Process 300642 has 40.81 GiB memory in use. Of the allocated memory 32.00 GiB is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF",
+   "round_type": "stress",
+   "policy": "sparse",
+   "sub_index": 1,
+   "seed": 10021
+  }
+ ],
+ "finished_at": "2026-07-30T23:31:46.628256"
+}

@@ -56,6 +56,12 @@ CALIBRATION_FACTOR = 1.5
 # until per-(subject,dtype) control calibration has run.
 B9_DEFAULT_TOLERANCES = {"float32": 1e-5, "float16": 2e-2}
 
+# torch.quantile refuses inputs larger than this (measured on torch 2.1.2:
+# 2**24 accepted, 2**24 + 1 raises "quantile() input tensor is too large").
+# Reduction-class subjects reach 1.6e9 output elements, so anything above the
+# limit goes through :func:`_exact_percentiles`.
+QUANTILE_NUMEL_LIMIT = 16_777_216
+
 B9_PORT_STRATEGY = StrategySpec(
     name="b9-seeded-fuzzing-style-port",
     version="1",
@@ -153,39 +159,117 @@ def run_fp64_cpu_reference(
     return ideal.to(output_dtype)
 
 
+ERROR_PERCENTILES = (0.50, 0.90, 0.99)
+
+
+def _owned_float64(tensor: torch.Tensor) -> torch.Tensor:
+    """A flat CPU float64 copy this module may consume in place.
+
+    ``to`` is a no-op for a tensor that is already flat CPU float64, so the
+    caller's buffer would otherwise be aliased and destroyed.
+    """
+
+    flat = tensor.detach().to("cpu", torch.float64).reshape(-1)
+    if flat.data_ptr() == tensor.data_ptr():
+        flat = flat.clone()
+    return flat
+
+
+def _exact_percentiles(
+    values: torch.Tensor, quantiles: Sequence[float] = ERROR_PERCENTILES
+) -> Dict[float, float]:
+    """Exact percentiles of a 1-D float64 tensor torch.quantile refuses.
+
+    Introselect (numpy's in-place ``partition``) puts the needed order
+    statistics at their sorted positions inside the tensor's own buffer, so
+    this allocates nothing and never samples -- the values are the exact
+    order statistics, and the interpolation between them is torch's own
+    ``lerp``, i.e. bit-for-bit what torch.quantile('linear') would return.
+    ``values`` is permuted in place and must not be reused afterwards.
+    """
+
+    last = values.numel() - 1
+    ranks = {}
+    for q in quantiles:
+        rank = q * last
+        below = int(rank)
+        ranks[q] = (below, min(below + 1, last), rank - below)
+    buffer = values.numpy()  # zero-copy view; partitioned in place
+    buffer.partition(sorted({index for below, above, _ in ranks.values()
+                             for index in (below, above)}))
+    percentiles = {}
+    for q, (below, above, weight) in ranks.items():
+        low = torch.tensor(float(buffer[below]), dtype=torch.float64)
+        high = torch.tensor(float(buffer[above]), dtype=torch.float64)
+        percentiles[q] = float(torch.lerp(low, high, weight).item())
+    return percentiles
+
+
 def error_stats(
     output: torch.Tensor, reference: torch.Tensor, tol: float
 ) -> Dict[str, float]:
-    """Mirror _p1lib.error_stats (abs/rel error distribution vs the ideal)."""
+    """Mirror _p1lib.error_stats (abs/rel error distribution vs the ideal).
 
-    out64 = output.detach().to("cpu", torch.float64).reshape(-1)
-    ref64 = reference.detach().to("cpu", torch.float64).reshape(-1)
-    abs_err = (out64 - ref64).abs()
-    abs_err = torch.where(
-        torch.isfinite(abs_err), abs_err, torch.full_like(abs_err, math.inf)
-    )
+    Every statistic is computed over exactly the same float64 values in the
+    same order as the straightforward formulation (upcast, subtract, abs,
+    non-finite -> inf, compact the finite entries), so the numbers are
+    bit-identical; the fp64 temporaries are fused in place because a
+    reduction-class subject reaches 1.6e9 output elements, where the
+    straightforward formulation's ten live copies exceed the memory budget.
+    """
+
+    flat_out = output.detach().to("cpu").reshape(-1)
+    ref64 = _owned_float64(reference)
+    abs_err = _owned_float64(output)
+    abs_err.sub_(ref64).abs_()
+    finite = torch.isfinite(abs_err)
+    all_finite = bool(finite.all())
+    if not all_finite:
+        abs_err.masked_fill_(finite.logical_not(), math.inf)
+
+    count = int(abs_err.numel())
+    num_exceeding = int((abs_err > tol).sum().item())
+    max_abs = float(abs_err.max().item()) if count else 0.0
+
     nonzero = ref64 != 0.0
     if bool(nonzero.any()):
-        rel = (out64[nonzero] - ref64[nonzero]).abs() / ref64[nonzero].abs()
+        if all_finite and bool(nonzero.all()):
+            # |out - ref| already sits in abs_err; land the quotient in ref64
+            rel = torch.div(abs_err, ref64.abs_(), out=ref64)
+        else:
+            gathered_ref = ref64[nonzero]
+            rel = flat_out[nonzero].to(torch.float64)
+            rel.sub_(gathered_ref).abs_()
+            rel.div_(gathered_ref.abs_())
+            del gathered_ref
     else:
         rel = torch.zeros(1, dtype=torch.float64)
-    finite_abs = abs_err[torch.isfinite(abs_err)]
+    max_rel = float(rel.max().item()) if rel.numel() else 0.0
+    mean_rel = float(rel.mean().item()) if rel.numel() else 0.0
+    del rel, ref64, nonzero
 
-    def pct(q: float) -> float:
-        if finite_abs.numel() == 0:
-            return 0.0
-        return float(torch.quantile(finite_abs, q).item())
+    finite_abs = abs_err if all_finite else abs_err[finite]
+    del abs_err, finite
+    n_finite = finite_abs.numel()
+    mean_abs = float(finite_abs.mean().item()) if n_finite else math.inf
+    if n_finite == 0:
+        percentiles = {q: 0.0 for q in ERROR_PERCENTILES}
+    elif n_finite <= QUANTILE_NUMEL_LIMIT:
+        percentiles = {q: float(torch.quantile(finite_abs, q).item())
+                       for q in ERROR_PERCENTILES}
+    else:
+        percentiles = _exact_percentiles(finite_abs)
 
     return {
-        "count": int(abs_err.numel()),
-        "num_exceeding": int((abs_err > tol).sum().item()),
-        "max_abs": float(abs_err.max().item()) if abs_err.numel() else 0.0,
-        "mean_abs": float(finite_abs.mean().item()) if finite_abs.numel() else math.inf,
-        "p50_abs": pct(0.50),
-        "p90_abs": pct(0.90),
-        "p99_abs": pct(0.99),
-        "max_rel": float(rel.max().item()) if rel.numel() else 0.0,
-        "mean_rel": float(rel.mean().item()) if rel.numel() else 0.0,
+        "count": count,
+        "num_exceeding": num_exceeding,
+        "max_abs": max_abs,
+        "mean_abs": mean_abs,
+        "p50_abs": percentiles[0.50],
+        "p90_abs": percentiles[0.90],
+        "p99_abs": percentiles[0.99],
+        "max_rel": max_rel,
+        "mean_rel": mean_rel,
     }
 
 
@@ -203,11 +287,13 @@ def compare_to_fp64(
             "error_stats": None,
         }
     stats = error_stats(output, reference, tol)
-    out64 = output.detach().to("cpu", torch.float64)
+    # nan/inf survive the float64 upcast exactly, so the flags are unchanged
+    # while the second full-size fp64 copy of the output is avoided
+    checked = output.detach()
     failure_kind = None
-    if bool(torch.isnan(out64).any()):
+    if bool(torch.isnan(checked).any()):
         failure_kind = "nan"
-    elif bool(torch.isinf(out64).any()):
+    elif bool(torch.isinf(checked).any()):
         failure_kind = "inf"
     elif stats["num_exceeding"] > 0:
         failure_kind = "tolerance"

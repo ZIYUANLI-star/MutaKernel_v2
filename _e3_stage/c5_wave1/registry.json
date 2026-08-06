@@ -1,0 +1,3254 @@
+{
+ "scope_id": "e3_campaign_scope_v1",
+ "corpus": "C5",
+ "subjects": [
+  {
+   "stable_id": "29da977f0d0dc783d01428d5c0868b59534c3fa77dd11477602390f8da3f76a9",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00397",
+   "raw_sha256": "f01c89a53b11159f267547720fda01571832f77da3894fbd3977ec37f2ebdda3",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4db0f9d6ef6add23f3e6a5280805e5e6af6731c619bddf623095f1a698a3df17",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00000",
+   "raw_sha256": "5e9d871c1bd90bfc50e8cf706d7b81064edc501819401f1451687af1c5f2c711",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6824eedf23413355d9ccf0548ee6466c34c062aeac809ab6c01a5b31c2f7f673",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00199",
+   "raw_sha256": "3d4b8611629a565071e5c291c6b33678c17581cff0c49bf8180460ac5519e933",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8b0df89bc65ad3c73aa4a048f5f657c020a2239bdb26106e461fed570ce7367e",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00298",
+   "raw_sha256": "17586161224cc000960f595bd0ac57174ecd20369e6a8156f641a24cb44b4150",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8fe22ac6a5ef1389cb937d53ed08bb557bb6d90a10068a54ff62541b57addb24",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00597",
+   "raw_sha256": "93aeea3a04b44dca724e78273bd93ad7f4ac2a00e0223f4d71c695f137bacb97",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a01d067e4ee1c656d3cc34807749ae52a75ff7d139490ce6f7bc2fff0fdf0acb",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00497",
+   "raw_sha256": "47e22c2c645cce6dd04ee11f1e83589ac69800eac453a67b15b6e1556d7098a8",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f44e11fa8d4a63f0bf8c59fa151144a6fd0e5b56661fc952b17ecbdb9065d6d2",
+   "task_key": "KB_L1_P1",
+   "frame_id": "C5-00099",
+   "raw_sha256": "e7c9c8d532c6fdc1abd705a5acc1770eb8d79894b84e169877d24d961771fb24",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_1\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "92f0ce52c17d76a2db1a5e3a6c574e3fd26b27e653a0e5de983be09be36301d9",
+   "task_key": "KB_L1_P10",
+   "frame_id": "C5-00398",
+   "raw_sha256": "9cd86cacb6a2ea980e0c784d2c5735ca9b7a2775a69d53ab38147eb023046143",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a4cfd4a769d70dd2f7a666ab5bdce07f187f530173d049b21daa6b9b7fc5a0cf",
+   "task_key": "KB_L1_P10",
+   "frame_id": "C5-00598",
+   "raw_sha256": "551d79b03a457cf78f8bd4f514e854244d6c1fedd3204915aa9d798e4079cbee",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b44d6d5b30e5d88e092295b44db680b70170f1286cd455fa717380154b970845",
+   "task_key": "KB_L1_P10",
+   "frame_id": "C5-00100",
+   "raw_sha256": "db31a27a44feb4ebcf647e403b4b148fa5f3b85ac045d6b265f81b753cbdd963",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e6415b63f9aacc64537b1efa60f153faf538dc85b6e2408e14d557484a909194",
+   "task_key": "KB_L1_P10",
+   "frame_id": "C5-00200",
+   "raw_sha256": "f7ef9e5cd0b80fdc778e625e6ce47c100ad13da8aa39ca6595aedd2e94eb642b",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f803c28fdc0382f24ecc610746891c3407faa98ee7ffae399883cd8a0b5b37d1",
+   "task_key": "KB_L1_P10",
+   "frame_id": "C5-00001",
+   "raw_sha256": "d6bcb79f47e7597315340653177bc2875a3bd67f308ab7020ad6db7315132fd7",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "868dac70cc5d96463e103f875041ec26cf0281e104d34a117073441ea5b33404",
+   "task_key": "KB_L1_P100",
+   "frame_id": "C5-00201",
+   "raw_sha256": "2945873a2d27b6fc5c50edc68e616a848a6fa589cedc3a1c064ee8b112f33795",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_100\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "888d039f86444b5e320dee6c088c19a522dff6ea06e3f8684096ec8335eae9e2",
+   "task_key": "KB_L1_P100",
+   "frame_id": "C5-00499",
+   "raw_sha256": "b5b0272260ad10f7218ad892e3ea47646dd44951066a6b30e3082d047359274b",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_100\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d34f62c26b33730d60c3e1f0880e863364d68e4643c2782ae584ac6715538933",
+   "task_key": "KB_L1_P100",
+   "frame_id": "C5-00300",
+   "raw_sha256": "6a627697b19301b18c65da6791598c5d0b948666dcfd4cfcf6744e5f3e0e01a9",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_100\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bc378cc697d09d20263c058abda8ccb28fe3c65969f28316f9b38cbb1555216e",
+   "task_key": "KB_L1_P11",
+   "frame_id": "C5-00600",
+   "raw_sha256": "cef0dc4fe8bec9e2161fa5d2eea64cc9c1d030963bb4dd4625406761f1271082",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_11\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d6cf09af4caa94220741634aa9deae209886eee4c06e68ab3c5dfb0db783a515",
+   "task_key": "KB_L1_P11",
+   "frame_id": "C5-00202",
+   "raw_sha256": "1a59150fe5ffa8a8f5f28ed57aad91886273441fba6d61352e57403d07b1b30e",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_11\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "41518f88ac69504d8f8154b4279997fbadf48f8d66fc980d495747cebd2661d6",
+   "task_key": "KB_L1_P12",
+   "frame_id": "C5-00203",
+   "raw_sha256": "40288ab86332d3757c35e272aa7d2d81997d36b102003446e78409db10f5ceeb",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4bfda2bcd61416a276483adcf5e24d56d9445ac5e094bdec27d35f2f41ffd5a3",
+   "task_key": "KB_L1_P12",
+   "frame_id": "C5-00302",
+   "raw_sha256": "a76e1a3468778baef2c59559880ee88e70f655af8591c8a0fa1325ea057115be",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "925c08b37267a4d9b9f5ceebafa6efa10e773776644b165528c80ab6ff9cbf67",
+   "task_key": "KB_L1_P12",
+   "frame_id": "C5-00004",
+   "raw_sha256": "d02fb106067054a9b4e2ac4b93977cb4ce2b32070d0ebbf01210ae3d9cd3cfe9",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cdf6e15d4b2be3e00d3080a11ca92064892da3e8d699ebf22017ab530c8081d3",
+   "task_key": "KB_L1_P12",
+   "frame_id": "C5-00103",
+   "raw_sha256": "f64bae1bf7038a259d203a2b755ebc640bc275191acaba3a49affc7b108b461a",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d5884b9f6105e42d9fb5e6daa8ff6142075075e0ed5ab0b6f8835dff8eb2ec72",
+   "task_key": "KB_L1_P12",
+   "frame_id": "C5-00401",
+   "raw_sha256": "5e3eab1cb0032541b1626f8a2e5f348c62b73a846c0618905cefeb10bd113139",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "fa99d00f10c759855db9186d3970b55fbab082b56ca32e2dd29aa3523a23064f",
+   "task_key": "KB_L1_P12",
+   "frame_id": "C5-00601",
+   "raw_sha256": "50f69c6921e345f72f74f35b7dd22d7adf62dc4e1c41d4af4f4ff42dcc2510cd",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "28dde350dc0fad7bfed4075015f695749c402297333ecf50479d0c5706daf72e",
+   "task_key": "KB_L1_P13",
+   "frame_id": "C5-00602",
+   "raw_sha256": "91d891e3ea4dff56700bced978c8dea495f1795ba960b924cac1adf92a26cbd6",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "33ed04dc12e9b7a7a7d74e49965946cc88c6c5de691c8f29bd58eb1028c446c2",
+   "task_key": "KB_L1_P13",
+   "frame_id": "C5-00402",
+   "raw_sha256": "3079ee083bf8139ae11675991bdb9e63961f4c1f43f3c0bf3d8a52060d9331e2",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "53901a1a751887037833c879a9039120763d21daddec9b76484e886956162e1f",
+   "task_key": "KB_L1_P13",
+   "frame_id": "C5-00502",
+   "raw_sha256": "0d3c39fbe4b1699725d3eba8835afcea60c8ff8d4812cfeef0b564f5a5f24d58",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8441891b821ad014286803eda6c8d50ee79ad045b687ff79d32b16286422a347",
+   "task_key": "KB_L1_P13",
+   "frame_id": "C5-00303",
+   "raw_sha256": "ef709565467c35fa978ab623024ef7fa283eabaedb8b91e279719b3d4f7d70de",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b5eec12e6e72815382d9359450b7aa59d48989b3edb016696f15a922cf00bb2d",
+   "task_key": "KB_L1_P13",
+   "frame_id": "C5-00204",
+   "raw_sha256": "0ef97650a67061941271dd40c781d563cdc590680128301166037ce0ccc37e8d",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e7675d91afaebb0c66fc69224ad5a2a9f85154dbf3c496027ae94c9ed1d8a44b",
+   "task_key": "KB_L1_P13",
+   "frame_id": "C5-00005",
+   "raw_sha256": "168515bd1ba08006adf214e3f44e484c56ac4e8b57966b9a353b143a131eb064",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "084a94aade99df50cc73a088adadb3d647ded1702ddfc779f52dc98e6407be53",
+   "task_key": "KB_L1_P14",
+   "frame_id": "C5-00403",
+   "raw_sha256": "280b9c2ccaf7413790f8cce0ed44261fa65813e1c500f64e10f2831b3949ef34",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7b5237bcb9891514f6690b302a979a0b7b013c73e1c6e7d2ddfa966ea853d963",
+   "task_key": "KB_L1_P14",
+   "frame_id": "C5-00006",
+   "raw_sha256": "adfec520300c2a0cfbd90d7d2747572232a17989fde6f1d2d1cb35f910494ad6",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "80c805fcd565ca15860b69551a8628f9d6700af082faa38902a597e4d09489bf",
+   "task_key": "KB_L1_P14",
+   "frame_id": "C5-00105",
+   "raw_sha256": "ec47b68e091aba3d43b470bf88ee978342f60c55b01686061bae15900e9a4b66",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8b83dd392c4f91a9e10173933868b5fb9670197e53d9f51736a2516108a1b26b",
+   "task_key": "KB_L1_P14",
+   "frame_id": "C5-00205",
+   "raw_sha256": "63c5b4bd4da0a7f68a51872e18fc94cefbd4028b4088c3b118d8d451c7f8f2f8",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b20d38fd599e2d818b5b3400ed4f924b35adaa7b5190b4d20464bf141112c04c",
+   "task_key": "KB_L1_P14",
+   "frame_id": "C5-00603",
+   "raw_sha256": "da9b0996928f57cb72231ace9ce30c881f6cd757bc0445164bf0f069cef9c725",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "fcab97d8aad81645353857c6f3474a1fb54644c1375fa1e9117ebd061fbf217e",
+   "task_key": "KB_L1_P14",
+   "frame_id": "C5-00304",
+   "raw_sha256": "2ef938210e098f215e056515ce2f04a328df16dc227d94f06c04e7a127158971",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7cb18db20b456ce7bc6aa62edaf6a48b44e5119b24d36ceac969fc1ff451f591",
+   "task_key": "KB_L1_P15",
+   "frame_id": "C5-00106",
+   "raw_sha256": "526527615669548e56abee9547d963237194b3e3957f3b7896190f1376bdc852",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_15\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9176ee42c89851aae3f327a1c890677e2c2e9d8ecbb8049954cac42c52435574",
+   "task_key": "KB_L1_P15",
+   "frame_id": "C5-00206",
+   "raw_sha256": "ea6dd47d5eab6a0d32250f76b1f5490cdbf78649225c964e113dd6f5bbfa2318",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_15\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "95492d0ee4801017a0db15d360c5301a402f246f350d39d77e62e3dbc5982fae",
+   "task_key": "KB_L1_P15",
+   "frame_id": "C5-00305",
+   "raw_sha256": "753010c0971375212ad3b9bd8ec2fb0ce10009663155309794ad30ced4234a85",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_15\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0fe7902fb8938e1dc70359135b3c2bf5539b2c83ecedbc8c74116efa56ada44e",
+   "task_key": "KB_L1_P16",
+   "frame_id": "C5-00107",
+   "raw_sha256": "8f9b1cce7397969edcadf745dcbec495b1c93330910487f6dda83fb284a0ade4",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4ef4b8caee2135180db0db7291d45f2cfea79f6f681c07475ff7f88e4e3d79b1",
+   "task_key": "KB_L1_P16",
+   "frame_id": "C5-00405",
+   "raw_sha256": "d04604ba4496fad1f8be62d9872bc1d42c771a57d66967ab1f49013f425554f6",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6685b1afa5ee058804105a6464ad155130647c2cb8b91e7d4be840f17afccc6d",
+   "task_key": "KB_L1_P16",
+   "frame_id": "C5-00207",
+   "raw_sha256": "a3d19239ff12a12233da852591390e13bf0ee5ed906373758ac0661e8c3e78a9",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9ba9b92ecd1ddd4bae4dc16c5b2b35d1171fda287a9a419d8fba52c827de9cfc",
+   "task_key": "KB_L1_P16",
+   "frame_id": "C5-00306",
+   "raw_sha256": "614c278a57d7a0608d61930602edc8db2395804e31762f9310d1d3bdceee664b",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b86fceab82d2666492c80e0bfbbe71c14b1cc61b07d43c39442cd15e8e0fab39",
+   "task_key": "KB_L1_P16",
+   "frame_id": "C5-00605",
+   "raw_sha256": "837e1d27b18eb5ead633e6ed0fa72c355e9fa5d1cf3a2b6ffcde595ab1ecb37f",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c835d0bb755b07fafd6173961d6f29146108e16e6a4ae8a21ca2a72582aa1214",
+   "task_key": "KB_L1_P16",
+   "frame_id": "C5-00008",
+   "raw_sha256": "8425f46a11b2f9614931e5210eab75f8c47be634fcdc9aeccbe85fff1a0a9585",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "475edb99ca8a68c37b2784fe43c493551bd8578d5a8bd3bc156e4443afb4eb77",
+   "task_key": "KB_L1_P17",
+   "frame_id": "C5-00606",
+   "raw_sha256": "43f797eb0a66ad7317ce8808958779db9376e2acf73b864a9272da816698798e",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "507e9713130998f39a3b4297f9ba7635c048176d3a89d650b69fbb8f70638ec0",
+   "task_key": "KB_L1_P17",
+   "frame_id": "C5-00506",
+   "raw_sha256": "85a35aa38b098f5181158654510b7a939b7cff14fcb79581d80598dbfad16254",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5f9a923e3b66c9117dbe296af2ed5824ab83daa17fdaa51bba0f0242c3f54c68",
+   "task_key": "KB_L1_P17",
+   "frame_id": "C5-00307",
+   "raw_sha256": "0f77c5e132515bbad334b0505ef4efefb72d96a5e351fb9370965bee4aaf33d1",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "adc4457498d763fb20c87bc3efe290938ea02983ee3f1bb6c690f080bad30eb2",
+   "task_key": "KB_L1_P17",
+   "frame_id": "C5-00009",
+   "raw_sha256": "37df90af0c6ac0ebcb9f2600cfd67dcd95273a4b549925538c21b4557e015234",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bc47ee5fdb5fd975ce198da0ab45ccb9bddeee28bbd527791d124ef0566920a5",
+   "task_key": "KB_L1_P17",
+   "frame_id": "C5-00406",
+   "raw_sha256": "84b82b31374f5c6821e88922995dd46015e1b6814edf76ecf41ea5a35cd8b9dc",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d903d6492bd83e0142089bd43fd4f565f319121f948d86ccb2dd5c675d092a1d",
+   "task_key": "KB_L1_P17",
+   "frame_id": "C5-00108",
+   "raw_sha256": "c7e4d81cc333b14bb6ddda429fc0daaf03f268ddffe920475b306ff6e05aff43",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "094c0e23e62d9e36459c84666ef6e2c03d168898b577c48e866475fe8b0907d4",
+   "task_key": "KB_L1_P18",
+   "frame_id": "C5-00109",
+   "raw_sha256": "84aa10b3105e3250ab609142dee272f3bc83692b319d46481e40ab7e23fc3bff",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "274e5a96bafac8afd3351916ec7528a96ae3431bb440111e3b26bf9243eba6a8",
+   "task_key": "KB_L1_P18",
+   "frame_id": "C5-00308",
+   "raw_sha256": "872ff23f0003d77fb005f6bf3f9a979480e9e7753abb70dc17ff9bfa23b31d23",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f001f3ccdfb8788e1828ab99637c6c45c3a796973a8fe97b66cb86ea2d87cabf",
+   "task_key": "KB_L1_P18",
+   "frame_id": "C5-00607",
+   "raw_sha256": "249ad09bd7edcd87582aa0f73e8078d10cb9946c2cd0f00a2a11d29ff4e70eee",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "18fb94e5845a1659d88875c70db931fef3d261c1d8ed4a8fc61277bf2cacd3be",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00508",
+   "raw_sha256": "5b9a38625f22a28aec5c3d7a4d90aa926ba8895b98103ff01b99a58ba6e142f7",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "267e545455c4a5ec58488f91334826f842af92d1319cec523f689744ac32bb5f",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00408",
+   "raw_sha256": "d5aaf2be41a9d578ec5cc51ce16ec9693f8c1c3a4add13dbda3caae7e30a9e67",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7b115d86ddbf592316995642f7f058535b44cfabe70b62238c49761e5b3782ae",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00110",
+   "raw_sha256": "c9f4d179e731a97e73df24308473d8f1f6ea50a34e162bf0465102e0f627ad74",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "86cd0e8ed59e134c180971ff351380534820cd54c5056aac1a783350554dee3b",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00011",
+   "raw_sha256": "fcc692f52d28a09d7d14e4eddb280e3d73d19ffbdfbd8eaf77bb4ae668c84375",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "940e5c0662f89a974a7af5b0e55c8060593cd281a79943f0d98e93f3fe7a9a2a",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00309",
+   "raw_sha256": "649ab9ab10990c6e7d90e3f95cd2790c22306451b5445670e2e4af3e6f676b0f",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c74efbde440d167b10085f686ad8fc878e91e426f401c462e5196b3d017c0879",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00608",
+   "raw_sha256": "568ec4da454e8515def15acca262effaac5d8bcd2919576d27fe748a5c173913",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f87c56a73a69f77eb826066fc5a5af1e8f601b79c31084fd85799132e97fcbea",
+   "task_key": "KB_L1_P19",
+   "frame_id": "C5-00210",
+   "raw_sha256": "f3ab3a16408402a1eb2ca9bd3833b96fdfbacdda69785fe0da003460d8107219",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0631c70e4356fc20f5ec18755a3061edd41cda51117c3f7325d1541dca98b910",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00012",
+   "raw_sha256": "d0a2a71cffac45792171627035bcb254d9c369f18cef78c5f081341a701355df",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "14537c84b7fa33f266fff2ecc982c2f9ed4902a02b71c6353bde397a75c84871",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00211",
+   "raw_sha256": "af9df27c829442bb7782c92cd0076eaf697a97cf14e9f438932eef480be32b1b",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1a54f8ed7497397dfb3794869dd665a7ae0c2503eb161a90ab51bfb3ebc823dd",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00310",
+   "raw_sha256": "e01bc5082be38fbe98fdd947df777b1c3c620144383a7e6ce9c886a4e4924b4d",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "375ce3504e5861ad23616d3935d8ae974493a6fdbff51e7c47f623fcb8ddfc6b",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00111",
+   "raw_sha256": "609e712ac8d4dc0f1246d02c01f0d0f929fcb6a44b6c5a0df324aa03d813af2e",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "46bfcbe9b616f0878672ef025725d11d61d65c60c4ac27685b235f173a05744b",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00409",
+   "raw_sha256": "28ec5422fd3f6811d9e16e23db022bd59308bb2b68d6809d1560c02dd73727df",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "720ecb9e96985eac8c94e6602d4f0af99473d79ef0b324ded1c585f267c38749",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00509",
+   "raw_sha256": "083b2b608b51d8b89e0e4233abff4d97c0309e4878b57eae0119d8eb8e08c970",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b5b6f963f6d5226cef3057f94e14276d41c4b9a30b0f970aa2e82a8c53a3fd6e",
+   "task_key": "KB_L1_P2",
+   "frame_id": "C5-00609",
+   "raw_sha256": "16a9e88a22843ee56ef0e6a7d5c8ff28e153d5d8f07bc749699374bb8e5082b2",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0b083ff535bed983058468c5e2474863d3bffe482b2d4ddfc696d6ef43be3d52",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00112",
+   "raw_sha256": "2f39a3161ff7dadcb8e9368a56032e1018799c46e22f5b21b11c1ca7ca3f51a9",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6dabea83fdd6d77bd5e5b3f0b7a32cb3f08bf320a1da4fbf0a289d1272085c0c",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00410",
+   "raw_sha256": "5704c37656c6ce06d6bd0011a9cedeb0b47f82479446e1c90d11fa4b6a40d00e",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "83ac0783106c8fd3d27d5f6cf2e5cc1c71fdb9acca5e4fc6fb97b1654173bdfe",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00311",
+   "raw_sha256": "3b6345d0fc7b9087b018d276478b5173302685469027a3c28568e8c46644d15c",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9b1e39ffb656962a77131a6e205db3502aafaa88d054e0c55445ab2a12944456",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00013",
+   "raw_sha256": "11c3aefca5e15801e9eff86a6fd69f7c4976cbf8b7a5662f3736a02404dc0959",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b0525711a41365f5ac44489c052cd80723cd62eda88b73efab89351af40de794",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00610",
+   "raw_sha256": "840d9ad8d48598cc7bd0ad50d43e8ba63c847a2c8cfbee49ee348f37b6590eed",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cef37c652de512847624ddb32598093e49039bc4a071c695d2cb9914ad41a589",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00212",
+   "raw_sha256": "ffdc8a552afe13e55e76cf100cd71dd76930874c67f1b6316b78dab43398388f",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d0e68c6554c46b15fef6847b38f70f18ed7a07690882cbb57f01fcc44472fb9a",
+   "task_key": "KB_L1_P20",
+   "frame_id": "C5-00510",
+   "raw_sha256": "1cdc7538671396adbb92253df440fc40352a5fdf47db409da398d6b69b847a7a",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0eaf326d54dbbe1cbec3fd1575a8d83dcf874370b7702670ef126ef00217a4bf",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00411",
+   "raw_sha256": "d8e30cf705ba19b6e5d77534aa3d51edae8467c312defc1982879c45cddafc95",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1f11509ada2409cbafe70111dfaaf2f3faf02d86420be4272093ee164b7c895e",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00113",
+   "raw_sha256": "baeeab6594fa0b5650e1f96223e6ef23db397607a572f79c92084194d7f5040a",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "517d8f2bdf7f9cc227f3918b94ecb9e2ac8de2b3efe8d59f9ea7a71c53f02c73",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00511",
+   "raw_sha256": "926439749c176491997f9e1aea2d58a24441c6d3ad834305f3feed6fdf597d09",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7ab16f697e6e37283cf636fdcd3f9d128893de6d10cb055d7b8269aaa2351e29",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00611",
+   "raw_sha256": "d4aa7c816310a64ef9dd7ef5b7153d65df36d2db26cec192f42c3c4523123894",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "889da87e24e4c42fc9eb0d9126953aa2c82eca90390e14e850ec39028a6919b8",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00213",
+   "raw_sha256": "c968d11caa06c981f6f2c6c3b32587e37fc4119e4a83b0490a7dcbc8e96a5f91",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c633f683811dd4b7eeade6cbfab66a9d629d69a04b9db2b849ed51690ae88cab",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00312",
+   "raw_sha256": "f591285d7fedb7c40c77efd50df8e948bc545b21ccd3fadefa2e457934f64b42",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d01dcacd8b47e660dfbcf8598a7b307c45e31c6fac42cfc1d5a2528e9405dad3",
+   "task_key": "KB_L1_P21",
+   "frame_id": "C5-00014",
+   "raw_sha256": "af6171166f2fa5d87639359dbc83344c0a44b87799d301d45675f4085f4948ad",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "10cd7407d96f68da4b5b572e8634584bb8d4b93204d2efbd35d2e183bfd4bd50",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00412",
+   "raw_sha256": "b80843a9dd2bacec3783004f774d1a5f4150385b215e8b489b564ad2599d532d",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "520219d6cab1572b3a6721f1d13448bdbee37aabf40f9b7ca9db92e27e01451e",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00313",
+   "raw_sha256": "619bd5676ce3364ce46ab3ee6bf519702fd8cd5e7e0fad3c982cfae4b02b3a45",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "86eb177cac3955bef8e22c11c87d7d67325e96a0ca1ba2e4cbe9db38a94151c6",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00214",
+   "raw_sha256": "105ee2c2bec235c30766acad7a148cd5de1ac1a082a6883d8f365beacf114e76",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aa2944b33e9dcaaae686938f64ce55f4afb4a1ddecb7a9f5abedb9451582f25c",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00015",
+   "raw_sha256": "ed997da0acde5e1ad173a7419944b050e8d99fe8ba9108af4bffb69a87e96b3b",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b3018b79ff2723f7fea015195cfa88c80d4606b3c14af22e72772bed98ffc31c",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00114",
+   "raw_sha256": "7046df27bdb1bff9960a87cb888105c86fb3de1b175d15b1dd6a7f90e2784ede",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bc4609f9e6f9275771faf5ceb1736c6267fb0be15c9560c87abcad573aa929ee",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00512",
+   "raw_sha256": "2a612e1977914bb14dabeab66cad70c4f33e175a955c4f0be4948e4cfe1cdcf0",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ca2b2dfcd10c858f0df736d58832bd6411eaf70108ad3d5d3d23e9acb7211e74",
+   "task_key": "KB_L1_P22",
+   "frame_id": "C5-00612",
+   "raw_sha256": "31b09ec55b1d29a049d14bfdec6c864c7e8bd681575ae4b24420d01b0d3ae025",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "47f1fd643de3cdc383ba6a979c9070c346cc68bbe0f9f2d506f4680d0b3c5598",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00215",
+   "raw_sha256": "99593e314300cc45d7adba78ed7270706876695299ecd71bf5d5d82b34c53481",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "522a8fd4229c46311ea6e12318af804255dd33e392285eee565038561dd7ef17",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00314",
+   "raw_sha256": "dc784497a278fd184cb9f9edeb682d70d9eae87482f1942c072085af97c08a25",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "76b1b32555c394d22bb76cf6a40d1f64c6becbd33256156d3f8f79fd75f81bcd",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00115",
+   "raw_sha256": "16012da11ff421fee3e6d238ad643ec20b5b144492ab6f46ac2e02823c3b1c39",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a202845679c8602b6e584afa94a5b6f5b7f70998ceb7e92ea27498b275dae4b7",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00613",
+   "raw_sha256": "b66b2078258b2415e0eb188ffec05e2bdee952d7ecbbc1930920332746665683",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ac3a02dcfc341498b0f900f855bddb0f1e9c58b9c70fc329cab50ea9be81cfce",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00016",
+   "raw_sha256": "70254545250aefb539cef51a580d78ff0341b378880d2ec4f480174237ee2435",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bd3e09cf92f9d224a318e4a4b94f0366171fff9475ae56d3af64393857c65865",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00413",
+   "raw_sha256": "6a1bec2a46cb33fc2cd6d813f4972192452610e85fcdd5a653af731571317dec",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "db5271bcf3c2e85b205d9c9f00ee481c2d96212064cdc1837733e4b28118d837",
+   "task_key": "KB_L1_P23",
+   "frame_id": "C5-00513",
+   "raw_sha256": "a23a13bb397e43e509ddb7d7612c600257f825d9c0c1cce0b61b1133dde7f93e",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6a662b5c68ccae943260b874c3f636544aadf85324ad706a99eb8e5757ed2ffd",
+   "task_key": "KB_L1_P24",
+   "frame_id": "C5-00216",
+   "raw_sha256": "40963d67fce64f50902ddeb295d538d7baf984f9551280a1d156de8b26477767",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_24\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b86ef6b6692c6db5b25d779fceef9e62ea6dd714c359100e438bb1a37542e114",
+   "task_key": "KB_L1_P24",
+   "frame_id": "C5-00116",
+   "raw_sha256": "8f58a8bf9d569bd007f80b0e0768203d4dacd1b027fdb4f037c552845d5d0606",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_24\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e1cff4880fe5d188f50c3c9784194c7fb6031a40ea9e86b9fe32bac6539779ed",
+   "task_key": "KB_L1_P24",
+   "frame_id": "C5-00017",
+   "raw_sha256": "9870f0add8b54340f66653b3f0e3b1540458a95a953423ad82790bd6bc40eb63",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_24\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "fb13a13f172fc01afdfc5501787620fa9a9ff3f72ce793af619663a4c735e733",
+   "task_key": "KB_L1_P24",
+   "frame_id": "C5-00614",
+   "raw_sha256": "b32ca262fb80715924d99b771c9e53d803a72797b3eada097ce3ea618659eefc",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_24\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "34e0da1aff5588bd45356771955fe383996e6372f805b0edd2aa7f9d4ae47bc7",
+   "task_key": "KB_L1_P25",
+   "frame_id": "C5-00117",
+   "raw_sha256": "4d679379e6a00e2874ed79530655236da02c68c548b55da16201e8315866e5cc",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "366b5a1a86fdd993d6d4ad2abb46e64f8502ca9c29ef535e43bb1fa2e4b09a9b",
+   "task_key": "KB_L1_P25",
+   "frame_id": "C5-00615",
+   "raw_sha256": "94a2f28c207f0eb7b22dc8be3d7177059f576df1767b53297418a48f42aa6be6",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "59258be91844d51e476a776b22bb3f51b8cf44b6c52910c35095f415e61c66ef",
+   "task_key": "KB_L1_P25",
+   "frame_id": "C5-00217",
+   "raw_sha256": "c30b8a51a1fb182a781b49837df38d9112faccc4b1cce2339d24443571d72e9c",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7ed66e1ab4075a0d8fc5ba8f93ebef92e2518f71c72ff4210a2c70a18701304e",
+   "task_key": "KB_L1_P25",
+   "frame_id": "C5-00018",
+   "raw_sha256": "6410a62918f3ab3f4a45372f392fa478db261c7d2464c141a4f8f59b201f72e7",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "859fb324f5503fd6237f7810042f68eab8f6923a509e75796128cfc6e38fbedd",
+   "task_key": "KB_L1_P25",
+   "frame_id": "C5-00515",
+   "raw_sha256": "bba9a4ff71314a8d232548e2d2e2d8c6335f0bad4b8dacfcc28839e95f7f91f7",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ca12bc1eb80950a1a5e311b05d75549380134b19bf96d60201a320aeb5ab93e6",
+   "task_key": "KB_L1_P25",
+   "frame_id": "C5-00316",
+   "raw_sha256": "fe7caf942d644e6050def4f35b66ea871be1135a936eae4791e1ad384093f5f6",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1e1e224ece0d46f7b817d888a753a8ac52a7c05522b2f50766dabf8ca33acc14",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00616",
+   "raw_sha256": "e14f52aedf593a5f20230ca8a99b6eaa09f09cd7286442dfb425e42ca6aedecb",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3637366813a3e0c3f14101d1cec83e1759d1e44d7d7f1eb8659fa7cd976ebd67",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00019",
+   "raw_sha256": "44081190fe152af140d69a7964063c2fff4895fba8dad9a4fda22b35232ec3f4",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5d29757f72e00541e06996c31febc35c288241e944389d952c4d3b36696cda12",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00218",
+   "raw_sha256": "c9a49df61ae68fff400fa3c78a3540ad806fb7f0c96dc0e52f131d591960fc14",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7d2cc9dee12fd335a9cebf30d4ba21b3b93e67d545c1dcd05fdc6c86a4d00771",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00516",
+   "raw_sha256": "04762201ff70cde8e63d226c52ff54ed4975a4dec796eafd4c84389a11ae04a7",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "946de8485fc3bda7b3e1d8acb952f0ed5d1ca990956a5ab70d0f88fa8313e574",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00317",
+   "raw_sha256": "429c58d8d21581e42c97e8e855d308eb1ae3d2d9feccbb74e276d9989958e3fa",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c8b29b30f21d6ad0e2343ae7ad327d2591f92046b7798dd4e058a653cc543929",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00118",
+   "raw_sha256": "1c79124fd25a41eb8e2bb3abacb7d48498efe5e953b5fd84692895d51e20d910",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f623908bac3a5d6191668575d4c9e0b078245a7342598baf2a888a586dd8c464",
+   "task_key": "KB_L1_P26",
+   "frame_id": "C5-00416",
+   "raw_sha256": "a2b153c6125ae6b46842f0127dbf86c071525e2ff7b6494b5e8bccb8b4b79e83",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3a8a05fb32345dac0a063e562d6741177fd51e7d293ead6e08f52eebd253d685",
+   "task_key": "KB_L1_P27",
+   "frame_id": "C5-00417",
+   "raw_sha256": "0fd0db2ecf5df688406117a4cb71501853bbdf2bce369ebedac58d4ec0e5e1cf",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_27\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5cda87abcb1fb99ee839460f3c33da2775e23f769cf3d5fe8a05a03115e2bba0",
+   "task_key": "KB_L1_P27",
+   "frame_id": "C5-00219",
+   "raw_sha256": "1363f65b178c7e2e17acc95957a0a201a72dbff0e49abe6e86b6817ef4d38aa2",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_27\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "846594cf5286a764e9aa1a1932c9da313a8bfabd7a64cb20e7f98d9047c48989",
+   "task_key": "KB_L1_P27",
+   "frame_id": "C5-00020",
+   "raw_sha256": "0aee929ba2f92174d0b05e9b2b15c6b9ad08db02c007ce9a62704acb84a95b25",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_27\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9166c15504589ea983ec3df08e2f72db823a163d9367488dce20c004d554ae6a",
+   "task_key": "KB_L1_P27",
+   "frame_id": "C5-00617",
+   "raw_sha256": "a4621f5969b0f3fc986e31384c3256828b8fc97913daf48cea20c3cf199aee32",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_27\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6e91e7e0d306fd8f4bda507ac40fddfca97641954553d4aa8d7097ab661836a0",
+   "task_key": "KB_L1_P28",
+   "frame_id": "C5-00120",
+   "raw_sha256": "5755ea4b183cf30dfe6ac7759b036a7f9d72e6af7fb601050afe52c006b0c4f0",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9ef9b3aaf5491fa144762cea837d882ce8e3cc4ff2e22b12aac084cfc2d886d3",
+   "task_key": "KB_L1_P28",
+   "frame_id": "C5-00618",
+   "raw_sha256": "f92ed2dc6bc7bd3128fd1910d94f2ce6071c53ce071aee4b2c9747bf99caa768",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b01e436942777a3d88f289a17a0aa2c71e93481da62044832f6861d2cad052de",
+   "task_key": "KB_L1_P28",
+   "frame_id": "C5-00220",
+   "raw_sha256": "0d98c33a95311eea91fac99b0fa09f0b9563691ee53fb559b325573a6a31f440",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d93c79bd40e4f06c0350f567dac870355b2656c37e20b0a480b99703eb024a13",
+   "task_key": "KB_L1_P28",
+   "frame_id": "C5-00021",
+   "raw_sha256": "8eec9bd4d1cddcf0921dfa65239431408c7cbe4c90208d098bf96ab0a878dc48",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "de280cc5193e7adcff1fe301b36d6bf29420113f76d79ed27ef0c92955b0f826",
+   "task_key": "KB_L1_P28",
+   "frame_id": "C5-00418",
+   "raw_sha256": "a6d44ad577547abbbee658bfead2a79a29e5b22e07c6455a9cd7b4a6925eb491",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_28\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1731503e17a052d550b0b2a0406a7c12f921598e4287c11cfa8b390f0fb34726",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00419",
+   "raw_sha256": "a3e4d3508839578ce716da20fcccf483af77ac3bd96f40dbf14f056bd6ca20fe",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3f72254017d0ac961b545c654b93e55541da589910ac746ce710d648e1692a25",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00121",
+   "raw_sha256": "492c3b66dd4a62db5474873a9b19b232d0a55a4197b6d82589895965fe0888b9",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "60c2ecef1c8bb3835ce266b07eeadc3af3fe5c584be0cac186fdeb623fae68c9",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00022",
+   "raw_sha256": "e8468a36f10cfdba6fea708d0e09b0a28b494e7460ba715c96306f2627470f5f",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "79ca91ab29d7fae3a9335263cbd9bfba6c02a4fb0afeadc101497d691c4c8cbf",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00619",
+   "raw_sha256": "915aeb9da5ad8f066e86cfbd3daf6e497ed474cb5ae79052c11ebbc5f48ec6c0",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cf74ba2727b6765c17328c9f8602ca383cf91a61d3941dbec6bf445697012807",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00320",
+   "raw_sha256": "6e4b2c10a9eac660d6b6a31d5ecbeb8673e8b0dc712ce2a3fb4e427886f79bf2",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e13de1f8e3725c799ea0418dd76480effd7950d48d2199d10b09d58c5fb3c4a3",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00221",
+   "raw_sha256": "03dad5c1a9ca9acaf399afd544e677a35a7db3d78cfcbea83e8286bf589e28fb",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f3a80d9eb2dcc4705aab3b49bcacce819dad65f518a7bfa4b5b4c083c3ad9b9e",
+   "task_key": "KB_L1_P29",
+   "frame_id": "C5-00519",
+   "raw_sha256": "6627a2fd2a104ac20156515ac21a55981dc0e6a0afd88498641640dc50d92a58",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1d57baf15baf6d38bd3d1c5b33da0a59e76fedc8e51808f1da4fe27222858d29",
+   "task_key": "KB_L1_P3",
+   "frame_id": "C5-00620",
+   "raw_sha256": "74e02a96b75397b3113d7efdc53dc202bffec6ac3d4a6ae9cdb46e7a46444147",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "331473f4bc25aef97d8d23cd78765e9e0d89e9ca68782b55b3cdcd19f6b7cb86",
+   "task_key": "KB_L1_P3",
+   "frame_id": "C5-00420",
+   "raw_sha256": "fed1459f29fa0d999d310a85e5df1f1383e303c0586d667a6b4d002c22e78c93",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3af28592110c89bd934bd4e988bd07f2e6d88f12f7031ea6e77bd557aaf59da0",
+   "task_key": "KB_L1_P3",
+   "frame_id": "C5-00321",
+   "raw_sha256": "73ab6df69ca266d44acfa84409dbfbbcb4d10bdcf588e9fb3e5e522e540cf163",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "42f633d617e236e75a3f10ba8cdd001f6ad2ea89f4fe4700a1edcddf2625e412",
+   "task_key": "KB_L1_P3",
+   "frame_id": "C5-00122",
+   "raw_sha256": "dfd06e53af92aed6f661f3bfff443667f74ef089375c7464fff6f512e5d3587b",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a4e5c18145937af35c79fe75ff61464813544b343b7bae1f6f5481e00cd517d1",
+   "task_key": "KB_L1_P3",
+   "frame_id": "C5-00222",
+   "raw_sha256": "d32dd321a9725ebfb4a56e03cd4e7c6a709af0e982ed4cdaf1146ec1acad1abb",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a9c2d29f93795b2c6ed09a8b15270b03644d723ee4d35a1697970aee0c4c3589",
+   "task_key": "KB_L1_P3",
+   "frame_id": "C5-00023",
+   "raw_sha256": "ae07cd2b8529d43acefceaf7a152538d60c5579c0eda247824db3d8ccc54598a",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0993bed41d456eebfe73350a53b794f1db9a1bff47bea8cecee78d96e466bf8e",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00223",
+   "raw_sha256": "dee663df53a8db94237dd885c3909f79f42aaad5f71f55c20e6af9771dc411e4",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0c5809fb43bc4ffb10786259f1c60eb54755a7991450b9a76c13cb22fddcbe1e",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00322",
+   "raw_sha256": "809efb9dead135b590d8120f9df644ea603b7547f6789870e8dd77b4f4148067",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "72e8085a10fea1a79772b75aee45db867557bd2d889f383dd9b029bbc9a00440",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00024",
+   "raw_sha256": "939fcd23bb5caf309498665d74eda5445559067f7f8e523be3e5a7ca84318c85",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a023f0a70b639bc36e8ad9260b29ddbc4e37cff6a97b8cfe3405a48ae0ca84f0",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00621",
+   "raw_sha256": "5bc27d0ba5784de19d8582a12e8f55f0cba231d075ed0c9a70ef1fb23fe967c2",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b2c877cfc49bd363a3e846322efa92df9af89fbf04c90865f194ead123f4e2f2",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00421",
+   "raw_sha256": "b86999584a3b737962bfba6dfced9c8cc1f07cdc9238186721fae73b835dcec0",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c661061832370dd7883369a1f3a28895fa737068c117a43f9a010285f59d9d20",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00521",
+   "raw_sha256": "18c341972dce9c873a7645dda3e2d65cad8219d03966e91bb0ee5e26156fa37e",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e02322c310f6d3f4c171fe6da64fda23b8f7f68a0fdea2138be05c9b1a1b3d18",
+   "task_key": "KB_L1_P30",
+   "frame_id": "C5-00123",
+   "raw_sha256": "0950c6d88473844ac3531453faea85e4bccef2b462c008a9933ce9c8fc79699b",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "22f021ea4489d7277e639cfbf3bafc58d6c8d46a466d38e1625f212435dfd892",
+   "task_key": "KB_L1_P31",
+   "frame_id": "C5-00025",
+   "raw_sha256": "bdbb86f81d7f5871b8bb9ecf4e060ad97c0c6c22493c990eefd0db22cc22dbfb",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7a9e9c791074c93fafdb4c59a57c14f3aeccf9e99bd3eaa6fc07d18098faa9f0",
+   "task_key": "KB_L1_P31",
+   "frame_id": "C5-00622",
+   "raw_sha256": "4dba6129797f09142ca7114df7cb8f7068c41fc1735a37a4de9497cf031ed582",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "88e73b4508c3107c82830ceb009b4b8fd43179241b04cae107ba1a371263ab87",
+   "task_key": "KB_L1_P31",
+   "frame_id": "C5-00224",
+   "raw_sha256": "4fcad7b6875b94f6da0e5b9e5d0158cd01cce8a5083fcbe7490f7381a2ccaa34",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "922107103b6996707d06d98d55f69559bac77c937bf655c978eb325501e5f616",
+   "task_key": "KB_L1_P31",
+   "frame_id": "C5-00323",
+   "raw_sha256": "b53fe2ac6b625a988d7258815dfe86c446cd367ae0bbfb85de3c47eb77dcf53e",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b6a4842b35a13db9710b523dacf263462c9281ed9f101cf294f3069aa1191cfa",
+   "task_key": "KB_L1_P31",
+   "frame_id": "C5-00422",
+   "raw_sha256": "7075d1acb70b8fdd8d078dba7edee14872c97cf5113e84ee00afff51424f4bfc",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d66747523252da43615d6dc2219c3c2bfc85b02a7fe789811904bfe950038737",
+   "task_key": "KB_L1_P31",
+   "frame_id": "C5-00124",
+   "raw_sha256": "7583c395e865fe6dfc762d0f654c9a1eda578d474c681bdbd1b23ec84cb21c5c",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3608acfa0c170c34e8040b91d0fa2a645a8416a7ad7b71f2dc4c2ddc2d0151d8",
+   "task_key": "KB_L1_P32",
+   "frame_id": "C5-00026",
+   "raw_sha256": "1151f0e35a41153351471de462d6738c3158a06c5cca6c8b7e102f47c53b0855",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "36dbbc917832a2f5ebb4aa9973b550b4f3920e5480f20f4c6122824e4ba2c1d8",
+   "task_key": "KB_L1_P32",
+   "frame_id": "C5-00523",
+   "raw_sha256": "3ce9d3236f588a46b9a443513df716d23724ad8ea8a72e11ad0a707b679ce92c",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5ea6ea5d331a0e2f281304774216fd3427ce3198c1c79912af36c5434b613488",
+   "task_key": "KB_L1_P32",
+   "frame_id": "C5-00225",
+   "raw_sha256": "2b3482e6dbd20388cc152a236a62cd0fd1b8a0d206deaeb4ee1691af0eb5bf14",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9ef81f0c236eac02fa253c982a8785d8b0fecacf5678309b502ecf11defcb187",
+   "task_key": "KB_L1_P32",
+   "frame_id": "C5-00423",
+   "raw_sha256": "25c21b5006c8a077a7f3ffa6a6eff2aa927569c983d858d1e701366025bb58a1",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d03e61e1c6d4ae19e07d89ef99f674e2597e83906a4254af2fe8fc823854c464",
+   "task_key": "KB_L1_P32",
+   "frame_id": "C5-00623",
+   "raw_sha256": "e2e64e6b6b7e46cf31f3b67dd0ed555f771543269d16ea782dd7bc7ca2ae9d93",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ea1fec6568325f543d8c942efb20e5ac4d670d5fd10ecc830faaabc0dc521ef0",
+   "task_key": "KB_L1_P32",
+   "frame_id": "C5-00125",
+   "raw_sha256": "d474ac65a0c4f1fad9c8fd42d0b4baca593eb3aa5f514324a60a627e3e4a11c7",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "179920a3a8c21e7d93843e58f37884d4a1cb00518b98fa48efc345438b7012af",
+   "task_key": "KB_L1_P33",
+   "frame_id": "C5-00027",
+   "raw_sha256": "b5c40bb910faba49713d68536dc9500d4bdcdcb5b6d305419523ab5b6d5ce788",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_33\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a8c5ded3187d3cb2dde38ecbb868ecb0c4a55671f9de63135beca59472109a6b",
+   "task_key": "KB_L1_P33",
+   "frame_id": "C5-00126",
+   "raw_sha256": "69bd3ef5ef6ca0bbcc74d365d8d59b341000f7c8ea9c3e09bad0fac79d43381f",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_33\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e681f2581b865b78f159db5aa9b90100d2c453602802d076a14579c9aee054f6",
+   "task_key": "KB_L1_P33",
+   "frame_id": "C5-00624",
+   "raw_sha256": "62c1797f336c76dc83141a334d985c0c99ca1124ff062aca0109414acd82b64c",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_33\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f85c38786503f69f9e01eabd68c386b50f0a6b970f00432ad37f532dd2cf8bb6",
+   "task_key": "KB_L1_P33",
+   "frame_id": "C5-00424",
+   "raw_sha256": "95cbe855e52cb5ba98140f398c83c6d5872d30730e1bfab9a84897f8296167cb",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_33\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9f600d597fe10ec617b67c5870dfa45ed867c33138e9fba644eb86e00a55aaea",
+   "task_key": "KB_L1_P34",
+   "frame_id": "C5-00425",
+   "raw_sha256": "50e5945162abb482f46820d593a9fe4e030b3fe7d3709465f34d3ae8f40458e4",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_34\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b8273a2c778b184463fba75f17708160ee6407325e0228e59f0cf0f94abb865a",
+   "task_key": "KB_L1_P34",
+   "frame_id": "C5-00028",
+   "raw_sha256": "771dae2b5ec73f4b37c8d5f2d8d511f0237bf294cf9516937319334986972638",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_34\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b94489591aec1478aad615064b84bc89ed0fb2fe7021bbdfab2c3cfda33c4827",
+   "task_key": "KB_L1_P34",
+   "frame_id": "C5-00326",
+   "raw_sha256": "a6db8ea813d2528ce124471d96ae32052ccf7fa5aa612c66707d23df193f5448",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_34\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e87cee418d24001f5d48610e7fd228dae169cec5ccd6a97443cf13cf9cfcc253",
+   "task_key": "KB_L1_P35",
+   "frame_id": "C5-00625",
+   "raw_sha256": "feeee7015d652933aacc1871e0b30fade27f7d8760b75e6693cde63c4448446c",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_35\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "92c0fafcd88321cac22fc14e67968e6aee1eb67da962737b57808986972df695",
+   "task_key": "KB_L1_P36",
+   "frame_id": "C5-00626",
+   "raw_sha256": "585b9fbdfe5b5ac7a69209c0af5791965b35e02ab7c7d0c2871751cc2ecd2660",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_36\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a8a687c51a11173b9702e2d4684b14057627024491ff745c452bd61214efeaca",
+   "task_key": "KB_L1_P36",
+   "frame_id": "C5-00427",
+   "raw_sha256": "ddcaa5ee33deb53cb29e66045e327392c3d9cd2c82532b38af515d7a513c8c2a",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_36\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "14e554b1d46601b9980285ac6dfa05e78dceb49fc87b0e35ea25c2b221c9f85f",
+   "task_key": "KB_L1_P37",
+   "frame_id": "C5-00328",
+   "raw_sha256": "9f50da1a5d676db87545d35c62ba590c238d5a98600c832e19069bddd0e3b4d7",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3c9c9b5fee27395a49445a37d8e5a3a6334dc4eee38298767831053a837882f8",
+   "task_key": "KB_L1_P37",
+   "frame_id": "C5-00130",
+   "raw_sha256": "346d2290efb426e9f4dbb78b73b567d80afcd773e5cf74196d6b1e127bec8c81",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5883356ea1e8092676844939058af52dd79dcda2eee5bcddd76c32faec08e6a8",
+   "task_key": "KB_L1_P37",
+   "frame_id": "C5-00428",
+   "raw_sha256": "094cb1e2d6b246e24c443719cbb37d885b48584841678f016f8049b4a41d71b0",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "67d428bcecfba425c5635f687d959ef20eae8a830955706f50784ba25cbf07f4",
+   "task_key": "KB_L1_P37",
+   "frame_id": "C5-00528",
+   "raw_sha256": "d181d2c15d016179fda38cf4af4791edbc04114755dd13d039a26f152908d438",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bc8cc8f875bc86017919d4972ac82faf8a599aa0cd0672eb8301645394a6d27f",
+   "task_key": "KB_L1_P37",
+   "frame_id": "C5-00030",
+   "raw_sha256": "118cc7b2809f6b522cff3a3e1756e2399b319a89e8d1a1142f01144a4db245b7",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "edf5f02da4d5c59bd859d6fbc859b655a8eebdd6a87a1060d42963379e646750",
+   "task_key": "KB_L1_P37",
+   "frame_id": "C5-00627",
+   "raw_sha256": "11fbc9e9a578f0d73cdd6525412c393398a46b72f6bfb3bdc9a6ca411c0b095e",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "008843136d7ba6f49e85db63ce8c68d22cd4475fc0d82e8c7b39f46e782b1044",
+   "task_key": "KB_L1_P38",
+   "frame_id": "C5-00529",
+   "raw_sha256": "43ef2fe5f13937ac66e8036b57048309e897d9ddde60042f9b5c987383d90167",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "090931663790a6c53f2690f683a03c0d36fe6da004c58f1eb223a2b932436a5b",
+   "task_key": "KB_L1_P38",
+   "frame_id": "C5-00628",
+   "raw_sha256": "87971bd6f95a143e561a845b902fb634b56c44b912d680a7d9f9b691ca726a0b",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5f434dbd36903be7cbf21c50feebb3a596faf83a78d83926cc7d4f7ef96d5dcc",
+   "task_key": "KB_L1_P38",
+   "frame_id": "C5-00230",
+   "raw_sha256": "d9ab05a732bbfc8fb34eefd1f589128931aee4fa2ff7617d7fd858e04ea4fc81",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7c1ab36a66d4faa28ef4a83264d10dc84e2a0abcb3c0eae0a374f90135edad70",
+   "task_key": "KB_L1_P38",
+   "frame_id": "C5-00329",
+   "raw_sha256": "651d65a909dcbc055f625c0605bbf056f8a09b25f43be96a07021dbf149e84f7",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "af99f912cd30bdb2aa3b7efc5030c0a89adfff309c568f4c650bf5c264f06b8b",
+   "task_key": "KB_L1_P38",
+   "frame_id": "C5-00131",
+   "raw_sha256": "ef3b1ce792fb50c6010051ac5e449983dc051097ce1674c0bcc5dcfe1ee2b9db",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6ec5453c17ee96f77f1b97e4ca8466624a90740e1f33fddbed6c35175b72170e",
+   "task_key": "KB_L1_P39",
+   "frame_id": "C5-00330",
+   "raw_sha256": "7868d50b47a361009b2b9a2ac4f7efd62faa85c0af66fa99f42518362060eb2a",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7e4e49a7c35e396281bd01ab9fc5d3b733d02b69e223f5ea357a91e39ea85f49",
+   "task_key": "KB_L1_P39",
+   "frame_id": "C5-00430",
+   "raw_sha256": "cd85d2bba8849aa41c0e8c4e1e5d48dbc15183200f7e372be1696aa846582aa9",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "99ca7070b1a5bc559b09f9dd3bb9f7e075d46257f2be05166abf28ef25ea2bd0",
+   "task_key": "KB_L1_P39",
+   "frame_id": "C5-00629",
+   "raw_sha256": "23e0e83548c68179e70eb316ae575957ad1eb4277089d601e4a7301ce57f19bb",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b6a85e9038722e6d60962ccfe9969121271ddaed387ccfc59a77801521f4021c",
+   "task_key": "KB_L1_P39",
+   "frame_id": "C5-00032",
+   "raw_sha256": "f10b31b9fba064ed1ea0e8170ee27f5103a8cb8b35e4bf43824fa9e1e9ff37e5",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e8bff46bd278e10f11f6c0479f076aa2ba7cfc8e25d622b0330a9bc7e8ef7233",
+   "task_key": "KB_L1_P39",
+   "frame_id": "C5-00231",
+   "raw_sha256": "2434a36d9a4e953d5630877a7042d09af636c32eb7d0c07cd9f179c3c486ec21",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ec5e8e3399235e3e22dbcebdc6bfb5b38781a73b4b7e2636bb201db78e28d75d",
+   "task_key": "KB_L1_P39",
+   "frame_id": "C5-00132",
+   "raw_sha256": "0d063b838014a92c71a8d9642ad5152ff390cbd8c4a3d96c3fa43bfc2e673f32",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "44d4bca49329e3be5cf8f72753a493730bb86b2578cecefe0bcb287aa536da33",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00232",
+   "raw_sha256": "3b1453f599a266b10e49cca81fb66db9226a8466f25adb999dddfd21f3b19a03",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "61a20f2c2c7eef0cda37069722054601d568c399a4e851897b2c17e89ff5da3d",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00331",
+   "raw_sha256": "a1e59e00c9c2a0648a1b5df66ad3da0b87d613d16b0cc299ed8de3c2e3c1cba1",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6a824b4a39bc57dfa3684081b1372ce4c423f0636b91bb7a6ff5a64507fc52bb",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00531",
+   "raw_sha256": "ea0f02ec7e3b74011e530899ffb627326825598b546272d674debd3b109f3e34",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "893595e7b66f6e32f13b356b4170293bf5e97ce1d818e1266ce63a69a03f51ee",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00630",
+   "raw_sha256": "54ea8c74aefc7e1bdc16ce09179c0d6ac3aac8da3f312dd76ccdac1ca88051be",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "92afaf97feacc04eb0f8b4caf639a1755f7589ddf2f5da54792465be7dbb3e6a",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00133",
+   "raw_sha256": "b00e3f9d2c9cea9fd72e1eb3058008af5564e82bb71af19af2808e544e8c9934",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aa050cc06c67572671cee9bd08ab656f62cd3a474c782044e7f1b074d3e382fb",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00033",
+   "raw_sha256": "5d6d4e5c6252e5e524ecbf9ebaff4611445364420dd1bdb44353023bd0b69a96",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f757d65bc9b439c8fb10281896c8698f5550031ea913e27cd9ea90958821f669",
+   "task_key": "KB_L1_P4",
+   "frame_id": "C5-00431",
+   "raw_sha256": "f0d6ea9e8bfba5137d3f81d23633a7ad2434f8dd1f4e6788e38ad6c4bdf41ab3",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1cc3ede1f657ce3c283686862b9696b75c548630cc0830ad849a12a6b48eb7eb",
+   "task_key": "KB_L1_P40",
+   "frame_id": "C5-00432",
+   "raw_sha256": "134d0989c4fe2ca7b5769c5a1d0bd77545a1830d1e11a4bb16194567eacd3a0c",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_40\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ee17553a3f462990be874556a8df2b326b80ac4765d7c4c4b561d722384a2f43",
+   "task_key": "KB_L1_P40",
+   "frame_id": "C5-00631",
+   "raw_sha256": "6962bbd3d386d4bb14f8d35c723e40fec9db48ad2734a77c94457f5e76facf27",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_40\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1d4da3dbd49154d49201808edba4ebd51e04daf36ce23cb2475dae5fd4234b4c",
+   "task_key": "KB_L1_P41",
+   "frame_id": "C5-00135",
+   "raw_sha256": "1a720207e4e9f228b05878dfab40c0d8a11431e7b5f9b1f9b7dc85bf8abfd7dc",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "41f21fac4a25564ca6ab4f2040ba597b8b75cd5715628bc10ce1ed17a8d4b9f2",
+   "task_key": "KB_L1_P41",
+   "frame_id": "C5-00632",
+   "raw_sha256": "5fde631aa1b8a094597688af97295396b79db159c70f31b7aa6c79483a3cf48d",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a20fdb4dc6bd292c55992fc5de98a4916fe9bee3261c22640016049596b9275f",
+   "task_key": "KB_L1_P41",
+   "frame_id": "C5-00035",
+   "raw_sha256": "eff62112ec570a8151dd6f60277bb7576fbeb1a4d7fc60db3eb134d99a8b6ac9",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f264efe7e4689abe68e3e43fa727ffbdf7c100476364038bbb378856bb9f8324",
+   "task_key": "KB_L1_P41",
+   "frame_id": "C5-00234",
+   "raw_sha256": "269bfd7b932a34c452a37324cfd90eabb2691e5771d8128c7868e6c0ddf3410b",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1e5c366a1216e3768c6ccddc17016ca2ce7a92d03f60bdb639b376ebd7a24cee",
+   "task_key": "KB_L1_P42",
+   "frame_id": "C5-00434",
+   "raw_sha256": "67cb2071d4d3741f6b1f04c0c664d92110dcb2efda10cb5de4bf4ca35f38ed20",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_42\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2e1f8558e9ac87b39e11464ae5112e1ed313384b31590b01bfe045521574be9c",
+   "task_key": "KB_L1_P42",
+   "frame_id": "C5-00633",
+   "raw_sha256": "e37182e4f0db2fea6b90d100be6bbabd7588d5127a5230fd22e80219b33851d4",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_42\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4472b753976843c55c7ffc36aa694729b6075e61106ee144b4be4bf545fcbce5",
+   "task_key": "KB_L1_P42",
+   "frame_id": "C5-00136",
+   "raw_sha256": "4d4d1727b076df97fc778eb9d3d9b021d90bc93ad6132dc0ba9a7e4b49bd9a29",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_42\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "82e656f2d1bea6f5cb8e1a23120c83dab61c723e80bf78844fd6017da634ec9f",
+   "task_key": "KB_L1_P42",
+   "frame_id": "C5-00036",
+   "raw_sha256": "11cc455de8812c0e0c914495e313f8e9886f0c69f4d05a2f6843afca5b973228",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_42\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e5752df0bbe4458d609939b32dd13fd3ac7ac544d6b799f836b3aad1fd75513f",
+   "task_key": "KB_L1_P42",
+   "frame_id": "C5-00235",
+   "raw_sha256": "a614a6b25e94a1fe8352689eeb227cfdc42af0b75af68220251d794d86b57e37",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_42\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6716d47d69ec9af2736384a1ca66f341b7bab57601077cdb50bf2293d0222f5d",
+   "task_key": "KB_L1_P43",
+   "frame_id": "C5-00037",
+   "raw_sha256": "589fd851d5e61b96acff209dfd20da05cfe8e74182f78daa41e918ee81881f70",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_43\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "827d6a99f4357db37d0332370d8bc9381baaf73d2659d53cf5b924378cecab38",
+   "task_key": "KB_L1_P43",
+   "frame_id": "C5-00137",
+   "raw_sha256": "0f18153ee56f1b9c798aacac2a2eaf9e8f4a5ec6579e88e16e635469449a8d0c",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_43\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e71c09133f4037b1b2ce22ffb5994196c2ba804c1b13c5a2dabe6dbc3336dc17",
+   "task_key": "KB_L1_P43",
+   "frame_id": "C5-00634",
+   "raw_sha256": "1efd9cdb28bacc8e3bd4ba5f74007b26116ee7137d89b238eff147ae57915213",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_43\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "97ffc4c25a1ac8d0123290aed0cacf460d621bf0d096baf8332da669513f3713",
+   "task_key": "KB_L1_P44",
+   "frame_id": "C5-00138",
+   "raw_sha256": "617729f0f2c53ea65db12dbc75bdd7581eed775e21a2a4cfd5c9566c2d747578",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_44\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "08a3aff2ab87fbeaa5ced6b7702304af93ecabb56c71a3fbd3112211b3fceb7d",
+   "task_key": "KB_L1_P45",
+   "frame_id": "C5-00139",
+   "raw_sha256": "4b74b0c076def92c9e0478d8080b55ab81fd8c99baaef77596b37c0f754ba925",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_45\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "32dd75143b1cd97cf3530fdee89283c1e5e308961a0b77df1d1f11f321bf21e8",
+   "task_key": "KB_L1_P45",
+   "frame_id": "C5-00337",
+   "raw_sha256": "9016a33d1adc585f87ddf919a4efb0bd49bd1dea122c8ccfd5ba4db07c3cfecf",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_45\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "93e692544519be422f02b6d389cae444fd21363b738f8fbb1dd204b396f8ba7e",
+   "task_key": "KB_L1_P45",
+   "frame_id": "C5-00636",
+   "raw_sha256": "2274d8060f81b36671d90e925b7b1a905a717931ad8c43bcb98896fed54fbd50",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_45\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9c4c9b994037c0175d3a241a86ba2aff7b97b1f2ef972220fb860547d6d4bcc0",
+   "task_key": "KB_L1_P45",
+   "frame_id": "C5-00039",
+   "raw_sha256": "a69d8ba4fc2775ca3966f061a7a07b181c24778ca3362458bb7e6fef08692662",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_45\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "688be85dbc15f739a3be6ffd7c3a657430ebbdca5193fc0ab37d94fdb0129e6a",
+   "task_key": "KB_L1_P46",
+   "frame_id": "C5-00140",
+   "raw_sha256": "42c0049ff98f2e0bcd224b1db53323ed43a86997c826f95b843f1d68e78f7eb6",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_46\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "545b0e45b25c19cfe30df3e53207908dcbda1ef2f719bfa756c4649ca4ac1eae",
+   "task_key": "KB_L1_P47",
+   "frame_id": "C5-00041",
+   "raw_sha256": "fd428259fb4312d802c62ebdefff5bf9d3422e148d93b55983d675498f0bcd79",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8190adaa3dbd58739d90dcf69410bbf5da30ff3094c580d48d9c15e0748b3617",
+   "task_key": "KB_L1_P47",
+   "frame_id": "C5-00339",
+   "raw_sha256": "14d61d03ee65356f246bf8c48f9f60563dfd6144beaac9b0581f38030314db2f",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "82dfb8a7e0cfa065b1169276c61331884ff9b274906763333071e96172117c3c",
+   "task_key": "KB_L1_P47",
+   "frame_id": "C5-00638",
+   "raw_sha256": "dbd86fccf63a1bc58a43186e1664756996507065ebd51883aab1ab34b8cf26a1",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "92e92080e02717e2946f6bfca0a9182e1a000fd716de63a8890d20310ba8f46e",
+   "task_key": "KB_L1_P47",
+   "frame_id": "C5-00141",
+   "raw_sha256": "16607b4c56843078f85687142f56fce4c8155feb1f8c677dd9abbc225fc55dc6",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2408c5b2843d2185d65a114229f1ba23250cc992a25465f188b948601f26c42d",
+   "task_key": "KB_L1_P48",
+   "frame_id": "C5-00639",
+   "raw_sha256": "e673791eec2bfa08ab33af7316a0efbe665da227d99c76182190835195c6cc0a",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_48\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "454aa035fbcdadbdfdba5d20188ae0f05c47aeddb7f128d38ec241018b1816e0",
+   "task_key": "KB_L1_P48",
+   "frame_id": "C5-00042",
+   "raw_sha256": "419a38b415d78b31c456da3f2e283e9722220e0a453f8ea080c912dcc05844ae",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_48\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "52f6cd97fd45a6448046b26bc6e96de0f0d2f08b79ace4ca9963c1e5604f1c4b",
+   "task_key": "KB_L1_P48",
+   "frame_id": "C5-00340",
+   "raw_sha256": "7b5d888c6b9d16ce354ba7790f0cc6694530217a091a1ec370cb96ac56ac03ac",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_48\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d8903c5561dbb2608b374e667cc9365afb41a0a501ace5a143647ff366f9c282",
+   "task_key": "KB_L1_P48",
+   "frame_id": "C5-00440",
+   "raw_sha256": "23f0081f4c09fe33324b3c4c04f37a590687d453429402bc90212747f05f0209",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_48\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d285f3dc6c0d72e0acb960851e5ab77300b3fad1d1c2ce7f83ba2c5fa2dcc8ee",
+   "task_key": "KB_L1_P49",
+   "frame_id": "C5-00341",
+   "raw_sha256": "86e9079d9383b7f3e912ef5ef7610e2bd5f3f7efaecc92c5e9df029a3d78558b",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "dade294d96c8f97af540c0dd02da0516bcf2aed80c19e33ab2c6be491477da87",
+   "task_key": "KB_L1_P49",
+   "frame_id": "C5-00143",
+   "raw_sha256": "09a686465753076631397a1352a22dc7849abfe8bf1cda4062c01cfea364f536",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ff1d68cffb8108701c8d595cf6abed60df73b8f5def9e0aa05434f261532c3f8",
+   "task_key": "KB_L1_P49",
+   "frame_id": "C5-00043",
+   "raw_sha256": "a8cfdcbff24d88a0d5e41f73e2f08a54aae6ce464e7f7c6428ca3b1d50038d72",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "074de971ff21fee2129a793ad3f6b3758bd5d5a75d8a680c577897181498d59c",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00542",
+   "raw_sha256": "d42237d3546903b6d4bd6d7c0339c2ce66edcd536fd9235668fd841a7dc4e65a",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1db6290792610ebc546d1daab59e35ccf37f15b31856aae4a24bde001d989f92",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00641",
+   "raw_sha256": "712623a2600afd22dd2eeebc6d364a43c99430f1924ec54d1e3cf978161a5d09",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "36a0e40e413e543991ba213c3aca659bfade787a2397fc7e57c0624a7c7e6e13",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00342",
+   "raw_sha256": "592e16cb25865eec4aab3c33bc89dadf975354816cf0d90edaedef8693b0eeab",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "680f87e2dfbfc551447d2ba943d5084a0c6a067a610f85e1a586c8317098955c",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00243",
+   "raw_sha256": "6e808265d9aaf5069e6d6b9a7f83f01aab07498e2ad3bf52a8ae61903cebecd1",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "958c9d54b097546b6abc3fd181d8dd61cbd6f81d5aefe4f61204ebd44d000251",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00044",
+   "raw_sha256": "cff125cb8e2d4560575db7b79c33ed857966a08a13890a5505dc74f6c8ec6264",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b31fead5b2fc77c23039c7fa4700db5f5eb9021427e8b052c8ba56cefce479be",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00442",
+   "raw_sha256": "e6abb40d7a5d5870031befe78e6d34702218f58f5cd7c071e67c99cb6a93ada4",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c95f66e260f6cebe20476806f10743c144f776eed0ed24d878ce1855dccb3d9d",
+   "task_key": "KB_L1_P5",
+   "frame_id": "C5-00144",
+   "raw_sha256": "aa4aff32b3748960a22e9bb3cb0686426367bb48514d9d25d03c23925e6cd35f",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "49cfffe9158810282d6f4b77c6cbbff2c5702cf480db3a4542e573c326ac8a8c",
+   "task_key": "KB_L1_P50",
+   "frame_id": "C5-00145",
+   "raw_sha256": "4295d1cd910215ae057f1a19c42b3c28f6ca3dc231c707b9c0cc04ca27098f19",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_50\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5b415cf59e81d81b67874a49dbc509e63afd3286d1fa42a17ebb0dbe439466d3",
+   "task_key": "KB_L1_P50",
+   "frame_id": "C5-00045",
+   "raw_sha256": "a87db96b1ad8ead6d24777e1551635003887752e3cd28e4eb224ec901ff48e7e",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_50\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bef76004debdfb11f10aca35e14a4bf71cc73a4eb1a4ed46db9dcb5224285ccf",
+   "task_key": "KB_L1_P50",
+   "frame_id": "C5-00642",
+   "raw_sha256": "768a456919e53d8f5631ae2b773c91be77b4b9abbdb87b317f9eadd43da48886",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_50\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2b2c9fc36c4def23a379e89d6adb0d57fb2118481496cd2d183f195d21467961",
+   "task_key": "KB_L1_P51",
+   "frame_id": "C5-00643",
+   "raw_sha256": "500690df900ab778245d1bb11fd36ba04b9522dd0eb2daf49c57673313f811f9",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_51\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4e946370db5d0a62b8099d0ac6f08367d115df78e4d25380cef35acd811f2bbf",
+   "task_key": "KB_L1_P51",
+   "frame_id": "C5-00146",
+   "raw_sha256": "a5b657342d5456400288df883ea4b6524f39608d7458800c9f1831e2eec252d5",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_51\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "51bff4679b1bd4b56b783c8445ad6b29ef5b72769d34275fd06f6c63cbd2d31a",
+   "task_key": "KB_L1_P51",
+   "frame_id": "C5-00046",
+   "raw_sha256": "8c8aea57ea7c4b708754e8da623fd2c5ad44d19e691ce14e853a9833cc1373bf",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_51\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "317eb5db0506c8501ce3ef35efa9e00f4fcda5e678d702c1c3265deedbb27063",
+   "task_key": "KB_L1_P52",
+   "frame_id": "C5-00047",
+   "raw_sha256": "43be25a5ba6ea6e3ad9a49d104b64d7b0cbcdb2c2940dfd81033ac356bc514e4",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_52\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4088b10226ab87c5de4145a7b7fc0d8a58926fe983ff013378228d91e334fb4e",
+   "task_key": "KB_L1_P52",
+   "frame_id": "C5-00147",
+   "raw_sha256": "ea5d0ee5b35a09ee1a28063ed1e334dd40bd77902382f66dd06a58b555df354d",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_52\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1fc7951c15caebe4e1ac71ef7588f52ac396dff9094b036a2742c5ba9585cf66",
+   "task_key": "KB_L1_P53",
+   "frame_id": "C5-00048",
+   "raw_sha256": "246a7301cd88d51ab5257905d23128a6dcb3ad151d71f185d0ee739560233a4b",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_53\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "460110944f99ab3d26eda9fd615c5c84fe75f5b1b2acfdf99da07f91f071ce2f",
+   "task_key": "KB_L1_P53",
+   "frame_id": "C5-00148",
+   "raw_sha256": "c3bbbde92e1c69a864babd9c0ee8b826ee4923ae7e583ebe607b497d68198531",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_53\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "86f82d7a310d25c8dedaa6994cd96ef347967791245352ebd7a461c71667ced3",
+   "task_key": "KB_L1_P53",
+   "frame_id": "C5-00645",
+   "raw_sha256": "5df721735e44888182ca6af0cf8a14d81d750a807acd0a087a0d47b9392e0fb5",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_53\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c215d37c805df19a39b6da1a8196670a1b1323137fce3a545c7ade5e156ed527",
+   "task_key": "KB_L1_P53",
+   "frame_id": "C5-00346",
+   "raw_sha256": "fc845b412523ef97e345058a8627abf0e9386b612be0474aa7036b8761c25170",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_53\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2be55f9a49075248d8e081cfb5e90eafcc843327ed5eb58957a60b421f865e7a",
+   "task_key": "KB_L1_P54",
+   "frame_id": "C5-00149",
+   "raw_sha256": "6cb72b3b4c2ca58772840c1853084232753ab3575b7687930a2f2f144d198ee6",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_54\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "323fcd27d1dbf7c8987f69182d9b079ef2df62c3a209f3988e25089f8b7c5416",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00254",
+   "raw_sha256": "23fe08dccf165f656b9f8332419aa8318f1c50f18b5aceafc2a1d7c33d4fe4f2",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "519536486811caf0adc0e7dd50f56206a974b82ea7e4d0730f4e1833de9641f3",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00553",
+   "raw_sha256": "3406656a27b8b0f8ddfc9e70edd0d1c20c2b89912481fdfc0c1f00ef4f56f35d",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5b79e86ccb51b4218cec4f35693bf8fca58210730271675ba902e64517c7a06b",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00652",
+   "raw_sha256": "aed13ca2776a6ec361b65703efdf5066eb89d1be608eec3253d0ce436f89a1d3",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "66c39a26053608dc15b35a7b34cdd924a21edfa754ba226812a289e5b97d9feb",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00155",
+   "raw_sha256": "796fd166eb54fec517e9bebc094584320589d00722f9d7382f948b6bb13efbab",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b031b6fdde80dcb71e3362ea75c921318f6e83ed913c0cc5c6dd04b588a87d97",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00055",
+   "raw_sha256": "b5e9d5294ad216e6522e14f9271b01d7c2c608b678905f1b9355fe604b8b7c23",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d9874e4c40dd3d3325c113d92003d5426d70637601b5c6e486d3ca4a6156aad6",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00453",
+   "raw_sha256": "c7d3ea173f891c435c472ab8735e91716468def1a97faf758bce279a66b6ff66",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e75d0157cbbb6e69b1fdf4bb1f83ac3d95afd49690fda121453168ff186d2c47",
+   "task_key": "KB_L1_P6",
+   "frame_id": "C5-00353",
+   "raw_sha256": "ed41e8c0f229bf23f5222d2729faf400e5d01223c6b5d63aebd484aef5f300e8",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_6\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5f2da4806fba96c24df3b48d4fc478d949dbe74267303640d8661306d252685f",
+   "task_key": "KB_L1_P62",
+   "frame_id": "C5-00158",
+   "raw_sha256": "7b964c26e383118952b4663162d31958edc8cadd2be17437bfc86b298021c794",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_62\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e93b26f34dc79bf4c03b842360546e482376f0b6b5b7864a57711085458bf848",
+   "task_key": "KB_L1_P64",
+   "frame_id": "C5-00160",
+   "raw_sha256": "2d00e3a87fd6479ff01b6e7c74145259fdd5c45d4bfedeb716999f4f0a492605",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_64\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d757ad5fdc57f354f547bba4f51e8084a354236ec67062d63db3108ac06dab81",
+   "task_key": "KB_L1_P65",
+   "frame_id": "C5-00658",
+   "raw_sha256": "cc39d100b4d4baeb53462919068df2180302c45fdf254751de9656597a60483a",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_65\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1eecb2c1a611eb41ea75696b3c7996264bc794469520683ab7d6f238f2144f93",
+   "task_key": "KB_L1_P66",
+   "frame_id": "C5-00162",
+   "raw_sha256": "b53ad39643516a52d79f0555d89ea663e8dd802d6ba2504aa90863772dab34dd",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_66\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c552f4c5e382d07a113211c642b2db7bbab539487b5a7d72431df6a3751599a5",
+   "task_key": "KB_L1_P67",
+   "frame_id": "C5-00163",
+   "raw_sha256": "0f1317f3d17537146f02463831c92f1ed34a5114ec5bcd11bba3df46313ec8ac",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_67\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "abd085b7e9dfc8098a3537af466e728525eec4c2693b02cd31c4f2b6d9208f9c",
+   "task_key": "KB_L1_P68",
+   "frame_id": "C5-00164",
+   "raw_sha256": "9141e1a7ad25f61edde3f68f6996571d119fc35241325b999607918064640037",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_68\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "85ca7300d1bdc396ed2c476eafbd2616f12c866c5ad47e250c42b0c4820b3bdb",
+   "task_key": "KB_L1_P69",
+   "frame_id": "C5-00065",
+   "raw_sha256": "1bb92c562ea051e466a72eb829223eeef6f9cf40b4dd845c7c2c2d70d6dfc85e",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_69\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "02d5748f2e4c7ba69aebc2bca4b763156f67c6df15ac4116b41b7e1bbfa4fc3c",
+   "task_key": "KB_L1_P7",
+   "frame_id": "C5-00166",
+   "raw_sha256": "6d17e9069ef9813dc1622663cace8227bc1fa5657ba6368993c55150bfc0e15c",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2c1cbea0a1162eb75832b78bf5a7ddad44f2fa963aadf7dc6c20e645b76f776b",
+   "task_key": "KB_L1_P7",
+   "frame_id": "C5-00564",
+   "raw_sha256": "c6d918a4d8402ca0e1b98f5d4913005d03244fbd488f7be0fac965f8970d57cf",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "46fc02835d5ba31d2f8c5e5bcc21e791830d36d4b85cd7ec29f37d43a43c6149",
+   "task_key": "KB_L1_P7",
+   "frame_id": "C5-00364",
+   "raw_sha256": "3bc90e78b952f43bac431386ef3527ad5dd226c49a95c987556b12eaa45bb27b",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "591c58457234c1357a4d75a9f8fabba2ab7ec6d3ca8434817041727b1e050e85",
+   "task_key": "KB_L1_P7",
+   "frame_id": "C5-00663",
+   "raw_sha256": "2640be57944090a1ff37f8cad57186047b8260315455bd0f8d881ad94adb5739",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "758ecb55fafecd5ec32708699d8020bf075a8d88e646f81779ba92c2dd4e08bc",
+   "task_key": "KB_L1_P7",
+   "frame_id": "C5-00265",
+   "raw_sha256": "d39636e357cd3f8dec77486b9a1c7f883880c599d194f2daf99efca95951b08f",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c5aab0b6063b80af412bba13bfc2b13834bf9d4493f6d112116a09b2845a6dcc",
+   "task_key": "KB_L1_P7",
+   "frame_id": "C5-00464",
+   "raw_sha256": "36269faa11dd3733a8f80a2a063544e392925612b93c357890c0a7c6732224d7",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a447986ba907ec3333e2600363cf8de07883f9cf7dd5a6954a8be2bf39daa529",
+   "task_key": "KB_L1_P76",
+   "frame_id": "C5-00173",
+   "raw_sha256": "22a22e0200a132ea2abf28b4774a0a64e402104a1457106e5decdf3aea164f7f",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_76\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "00db99e10cfbd05c99949101edbf9e0d008fe464755d01c5b65a295bc57523f8",
+   "task_key": "KB_L1_P77",
+   "frame_id": "C5-00174",
+   "raw_sha256": "c29b02e7f9a107123c38898834f06b5a9cd17316c80dac2071593314a86027f4",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_77\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "15bc9df397aae4be0c2d1eb7ffee246a03de10af5e6a3b4be65b00a1d983671e",
+   "task_key": "KB_L1_P78",
+   "frame_id": "C5-00075",
+   "raw_sha256": "ba8b00df818cf2d2b58b1ce0fd1eb1323a4648fd34850ef0b78e70b7fc11a8ba",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_78\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6cca789f393f259112330157ed63526701d3e8ba7f39a1b973dbaa4b23adca21",
+   "task_key": "KB_L1_P78",
+   "frame_id": "C5-00175",
+   "raw_sha256": "f5c2c1781b8a593ea4d7cd500c9bcae3f936559325ec96455c410088f35f8d85",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_78\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "784bb5af7011664f68326794dd21da4229d36b3a98fa8812550ca391494fb9ed",
+   "task_key": "KB_L1_P79",
+   "frame_id": "C5-00176",
+   "raw_sha256": "e22c234091912d36e3583ac7d13ec731919c03c0008c6982cdd1361b92f84a76",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_79\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2cff3287c7cf1be4d47ec393dde86831de6fdf09d948488b1187cbd69db4cf65",
+   "task_key": "KB_L1_P8",
+   "frame_id": "C5-00575",
+   "raw_sha256": "64aec8585373a17b7aa621ce06dc587304990f3bfcfd8a92c6211968be8352d4",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_8\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6c7542d1e513a3ac509e62e48e98af48dcaf93d6b59b11fa242d2dd91c002bd5",
+   "task_key": "KB_L1_P8",
+   "frame_id": "C5-00077",
+   "raw_sha256": "7ef9a9be1302398df665091877471b323e91d15bb451901f4e8b4b539b03fafe",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_8\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b0ed64f14c67e697bdc0517e4c4e708d4e7e325139a016c7618f4326e291626b",
+   "task_key": "KB_L1_P8",
+   "frame_id": "C5-00177",
+   "raw_sha256": "eb4559c256bcfed1cfcd91deaca300e46264a8039f1fd28581d11d813cb09fcd",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_8\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "dc8e9df9af312eaca6936f1f4c30a5eabe566183b890b4948e5db17b38ba2c0f",
+   "task_key": "KB_L1_P8",
+   "frame_id": "C5-00673",
+   "raw_sha256": "e0d0e48b01e50298da3f0922d569d860996e97fb4fbf55a4e2d29f182c5a5934",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_8\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b0a90a4fa7540752508651a4db9d6158c235578ee4d603cc001dbf69256ca7b6",
+   "task_key": "KB_L1_P80",
+   "frame_id": "C5-00178",
+   "raw_sha256": "b29fb3f7910a5fc16cd43840fe27f74e5810c93978a038324d5950904a916df0",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_80\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "067caa17442ee680944bc78b46bd2ce7fcd0b6c39bf583f1ce0db4db623a501a",
+   "task_key": "KB_L1_P81",
+   "frame_id": "C5-00179",
+   "raw_sha256": "8deff0898ab9f3bd342fcc7608cc9363067569d7773b17ea7387cb3dc84c8747",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_81\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "72eda5ce93f918d3b80692a1914a29abe56b6e34648ad886c8e9a814c4d27d19",
+   "task_key": "KB_L1_P83",
+   "frame_id": "C5-00181",
+   "raw_sha256": "6d8bd054c46aa4a0d23248afd323f8787f2155418f99a43837ba3c42c8e3296d",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_83\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "54959e0b022bc428c347bf05b798eb3bf8556496f0c77adce96ffabf2c309aa0",
+   "task_key": "KB_L1_P85",
+   "frame_id": "C5-00183",
+   "raw_sha256": "231725d831ae40b04d89114ec10d8c56804868a6d8b0d9f61f073c9d95a8943a",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_85\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b0177ccf2d8f8339daa8ee71dde900a220de0d999fad230bcd63a2aae2c0b933",
+   "task_key": "KB_L1_P86",
+   "frame_id": "C5-00184",
+   "raw_sha256": "56f62c08040cd07cc54e1f9d9c97701ca12a8580674acd04431d66bbffb64367",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_86\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "36661203bbfea8089e888438854c74ea85abfdd669406d2e44d67c0155825276",
+   "task_key": "KB_L1_P87",
+   "frame_id": "C5-00185",
+   "raw_sha256": "94db3f5caf591b4d530cb4c356c69f22629294e9aecbc7825a2310b4db8052fa",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_87\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f630ef87af6e71e3a7adae1c5d963e511404b828372928b61178c06a6bbe3308",
+   "task_key": "KB_L1_P87",
+   "frame_id": "C5-00681",
+   "raw_sha256": "626b54ebdf865d3e134d59604b26ab4edb26fcc7b42a8df23b6e1b8818f5586e",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_87\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "521ad81b0dc7ac06b5b7ef786ae84609e7796a09d5f14df33335786e04b5ce8a",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00086",
+   "raw_sha256": "45d6453d399a9c80171e3f5e74d8d745e0796846e12578972e58fec0addb7efe",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "575f98f4f32cdd2ece00e1dd55ef773d5fe06b0c2fa3f3509d67d33e7878465b",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00484",
+   "raw_sha256": "985d6e67320ea74f55ef211e46faf50b2cfc55f6e95c54092d269a9ab9020384",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "72effd977249506ba6742dfcbdf9ab05e0d039e16970bb1ee0292a93f357d509",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00384",
+   "raw_sha256": "77c05c757796266ec0c2c3a939df8ffd57a9bec7b1ea747ca11ea5e86e937d8d",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "856d5df11fe31ae008bf934a59b4738578848d5394aba1a96ef7f660bc073772",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00186",
+   "raw_sha256": "32d87349846c4e94d2b2386bd0c111b26ba84086760ebdf483f634823713ee5e",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c13bea01bbd9678a91f2e8cadb60463f543ec89060f8fd834f5fa5ea95060d8f",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00285",
+   "raw_sha256": "1c23e0635696a94ea5e7070f730008cf572cf2b1f227075ceec0d7b3713a6f73",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c8d5dd511de1fb85a745cbd5ff9871a6d717681f5e0f61ae60e73bf4aed26fbc",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00682",
+   "raw_sha256": "317c6c4f945bbfd8b284035a0f1ee6c791303cd5e3d689e0b6c3251c46c6b0fc",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "da7e633a5656caa1a4b2814b639b05100495d4d62c0231783a284f453cd7cc96",
+   "task_key": "KB_L1_P88",
+   "frame_id": "C5-00584",
+   "raw_sha256": "2b4551fe44cc2059492b272827c7be9e0b46495207b404bff1c4ac6481cfaa2e",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3b3bb82dda2fa4a0da7684ef1d26f4b952cbc442799a76aad2a8873dca57d7b6",
+   "task_key": "KB_L1_P89",
+   "frame_id": "C5-00683",
+   "raw_sha256": "920f5a321f17296e296f96be55043fa3078e371b746624ce394f0ec514380ac9",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_89\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8f58a2e6e1f0c1a2b38470670b40693aadb16ff25dd366550e8e08ba95434b4f",
+   "task_key": "KB_L1_P89",
+   "frame_id": "C5-00087",
+   "raw_sha256": "4168c272c6ae42b34b3352a02dee2f4676602389e1ca3c283eea80e0c08728ed",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_89\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0c6083b594049fc2c10571825a8a7067cc0d12175f77aaf2cf5088a4c67d9f08",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00486",
+   "raw_sha256": "51d9c60843f7e31ec1b7b9944306ca556f5500c371fce6a382b659db49c0fb28",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "174c285177f42a29b970ebccb8ffaf0939260b3db4df62a57fee9c8b4cef4419",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00386",
+   "raw_sha256": "f25d6098f9ee47066683ed90548d428c2cc0ff91ff150df6d12d7b8d6b0fc370",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "21930f4fbb3eda12bda96a3770d009d7e579d286cd9986fc7b731379a972508c",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00287",
+   "raw_sha256": "56267d3faaa4ea2530571de7d0afde6ce0184ab245c0a1db170e69033b4cfd26",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "58b5fb29f8dbc3f9f4981ed54bd3903e3e5c667870271a16a30e5e1daae9574a",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00684",
+   "raw_sha256": "349cae0d371676100f7e7e79b2cd4a98d21299e8c6503b5d1abb3fe49fd42a1f",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a1bef51bf38ec0ee74a3b7a320de02e129dd5aee6334f29859f8eecb201c4a4c",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00188",
+   "raw_sha256": "be8b8fc69b30cbb604e63cd360764f104725d621484cb490713948d0a91d7160",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "be671b0ec175a126ace845a81570099e8d57bd52d5df00203b402b5ae9196c79",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00586",
+   "raw_sha256": "12851dd3836637f281f056fbca740c3ce7d8c091e042966e0344e2c270091ef4",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e5c70292520bddbed6e94c672734fb4af57f4491fbf3dfa123cdba17f952d532",
+   "task_key": "KB_L1_P9",
+   "frame_id": "C5-00088",
+   "raw_sha256": "f6061769d7420fd3bb03891f9f551b4f1ecd5a982b40549c95f4619c1a3682cd",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5476b264957fe9bc87c886f061e620a661b95b45194bbb75d03083a164e4033d",
+   "task_key": "KB_L1_P90",
+   "frame_id": "C5-00587",
+   "raw_sha256": "52c549647d7242f0f3aea8a93bf5ad85c603727f9f9b8f820f6981137f08eea8",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5add9261bd6e64c2ffe31693b0502d3fcef9d3b7b6e94abdd58e30d9b54e6fde",
+   "task_key": "KB_L1_P90",
+   "frame_id": "C5-00189",
+   "raw_sha256": "debcdeea82e6530d22960fa0fa8b357a6e38687151e8eae0ae81e76a62823b3e",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6086993b9616a720ef2552314c8244de16c0a571a33a1a048544645c07951b34",
+   "task_key": "KB_L1_P90",
+   "frame_id": "C5-00089",
+   "raw_sha256": "f1c5fd2c386a2a0f98fb690ccb2e674ee848fb5c2d62e0eb6d14611fa9ba10ee",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "644841acaa133af9ed3f1ca3d4778b4f1bf08e14375db706fcf1f7761aef28ba",
+   "task_key": "KB_L1_P90",
+   "frame_id": "C5-00685",
+   "raw_sha256": "3f05accad9076eecf45aaf589e296671bb1eeada6b7dcb5b6961951cb1d28e63",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "64bb8e3e525a87b8beebbc286724301dba68d2211c9799cfa5087b9201a1bba8",
+   "task_key": "KB_L1_P90",
+   "frame_id": "C5-00288",
+   "raw_sha256": "e4948e3a60299813ee5539ed74c667033ec43e656f41bc061712588b94fc6569",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "828e24bdebe35391ae0b8464b6ba72c4d9c2f7a43b19aed541053499d42394cc",
+   "task_key": "KB_L1_P91",
+   "frame_id": "C5-00190",
+   "raw_sha256": "27da2e92bd5913bf60cba54de44b3e1f792df785abe5bf7457f5a080ad15b456",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_91\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aff6aae1d8c2e504497f0af84362cd53ad62d538df1efde759e7f0bfc7ba6880",
+   "task_key": "KB_L1_P91",
+   "frame_id": "C5-00090",
+   "raw_sha256": "9e170de74d656fd555ac1254bf2654cd22a34e25c7dd6a427e0efcaf77087f59",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_91\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f13a0c4148a8ce79045806e091db79d11c53a9612de07cbbcd99353c81f7f490",
+   "task_key": "KB_L1_P91",
+   "frame_id": "C5-00686",
+   "raw_sha256": "5a2d34f49b695e15d8a9865d3fd5e9ee7fcf77f9ab7f868761ad730b7199f2e3",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_91\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "02ba25ede3f7a7791b08732350f3c73dcec7844da2716f25c23e1ff71eec219c",
+   "task_key": "KB_L1_P93",
+   "frame_id": "C5-00192",
+   "raw_sha256": "2aacd180fb95b0536ae747476f7a6d9a37d46e411136d94c26ee9d7021edc63d",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "57b3421118345a537715627fef079163404851a48e725819c64577d9d758acde",
+   "task_key": "KB_L1_P93",
+   "frame_id": "C5-00291",
+   "raw_sha256": "6cdb8fc30b64fdfca506b246a52b285a7f709360fd19856d2d39d134db59f377",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5ac5fc82f0a9f9c3b7cf4da18b77408e18768ac68cdcdd1f52cad34c34e06d8a",
+   "task_key": "KB_L1_P93",
+   "frame_id": "C5-00092",
+   "raw_sha256": "54d35e933dba11ec58f0d602b5b966e46e96b890e39bd3120d51dca5564975fb",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8cd090053e43a0196877b7861e00df13bf623501cc38fecd8894bc27ea48791f",
+   "task_key": "KB_L1_P93",
+   "frame_id": "C5-00490",
+   "raw_sha256": "7f1423aa5056bd87ef68b62d7ba1fed44be8680310bc4f25ef10b82316b42dd9",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b50f883d157496fa3e29e7b5e448fc7a7d7973d23ecc613ee7104b79e0bfac50",
+   "task_key": "KB_L1_P93",
+   "frame_id": "C5-00688",
+   "raw_sha256": "de85a70716b90e17f5e13be4e18b7d65ea9d4910a00d8815df1243af4ffee1c6",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f21ad8a27410e7b8217bc43ae91521309803c7b24baeed57281433e0391839bf",
+   "task_key": "KB_L1_P93",
+   "frame_id": "C5-00390",
+   "raw_sha256": "ad30fba435c713b97dfcb7299cdaf9c6bf1389d1edd525dec7374c65ea7bb727",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e5d6a212310b8d62888dc2bf83ecb855164de8f54c8ed82bba68a5030050bcfe",
+   "task_key": "KB_L1_P94",
+   "frame_id": "C5-00292",
+   "raw_sha256": "3f98b973352fa0433f46828afc7bf9b05ca48c4f5f77a2220202ba2ca8a97474",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_94\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "03a8d0da6a69cdc52b2bedfeb46c0878c0c2f7329e2f1641380530282a63d7af",
+   "task_key": "KB_L1_P95",
+   "frame_id": "C5-00094",
+   "raw_sha256": "af39e45cad3144acb0649c0f138d16752c3c40ec61112c3ab94cc2c99e5d183b",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_95\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d3bcf05a66f446288c7ca302445c1693f47a4bb22ba6dd4ac29513117f28f9c9",
+   "task_key": "KB_L1_P95",
+   "frame_id": "C5-00293",
+   "raw_sha256": "eb8bf740df83bb2c155cde2f3cbeb9b29132d6ad0d4a3c649f762a93780ebad2",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_95\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3f66870c1fc986508ad65850d8aa6b3123a14baf18731e84f1123728aebffa42",
+   "task_key": "KB_L1_P96",
+   "frame_id": "C5-00294",
+   "raw_sha256": "2f9398d3c7b10ae62754848a09a41a0d0045f068d5bab33336fb73cea84b6197",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7c4b2fd7a894c26505b899f517e3d7df507643ed4dad8a007767ab37c6b3e84d",
+   "task_key": "KB_L1_P96",
+   "frame_id": "C5-00195",
+   "raw_sha256": "e6c43cc00fdd8cd5f60a472d1600bf77dc1fbfa46f4184242046ac352aabb882",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9c87eabac840dfb9941c6c4ca81fa56e548729b5c52772e99debf8afe6045490",
+   "task_key": "KB_L1_P96",
+   "frame_id": "C5-00593",
+   "raw_sha256": "4bf56ec984199846634dd46bc6d76f2223d6c558c3ec766e3af0a1ccd7f52ab7",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e0a6be2d4b7180773ae6f94c0316d0e23b62b2109d56a74903a4f76da16b8925",
+   "task_key": "KB_L1_P96",
+   "frame_id": "C5-00095",
+   "raw_sha256": "a782adbb9bc3ef4a486ca76602f9912a72d49306ffa52244f5c9eebdb69d8a99",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e89e6bd3cd2276c0b19b36dd6c14307f1fe92850076e049945a1a279e74a7257",
+   "task_key": "KB_L1_P96",
+   "frame_id": "C5-00493",
+   "raw_sha256": "fe4e6669f8f1c8f5aa084d3d32a91f219194d4473969e0a420a5062df5d70895",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0fefc02c5db0a4f153afaccdb9aa30e9dbf2bad6786ee94ac37a0f0099c0d5b2",
+   "task_key": "KB_L1_P97",
+   "frame_id": "C5-00295",
+   "raw_sha256": "1c5b7653f2be725d20df620976dec3df17b01581c861dc1c7a18b52aedf8f6f5",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_97\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "99940cb9c5fecbb514b710ebd8115d08d73b3c18995e88e1f3e54be8fe077901",
+   "task_key": "KB_L1_P97",
+   "frame_id": "C5-00394",
+   "raw_sha256": "b7bc1775bf203ec0547e71af710e25dc24ad1b025370fa69607fba8c1a0033c4",
+   "source_path": "baseline_eval\\level1\\gpt-4o\\problem_97\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9cd14cc6f0a2e5fcf8810ed153b9c95ac9dc3991b9011bf7b9d41aaa53b66a3e",
+   "task_key": "KB_L1_P97",
+   "frame_id": "C5-00494",
+   "raw_sha256": "b4ecad32d23847daaab81cf7f0838f22937ee75e23b724a7cf632b58844420dc",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_97\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e935b966cf47c5f25be277e2626cee3143fdf1adcf3153eba77c86270f5ca5e4",
+   "task_key": "KB_L1_P97",
+   "frame_id": "C5-00594",
+   "raw_sha256": "1e8eee1d038d969761f08915a2323d22ca29862a0af27ef4ec87ff5f5dd19469",
+   "source_path": "baseline_eval\\level1\\llama-3.1-70b\\problem_97\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "375fae3c77a4ded2abe3bdedbd53248a76baad9d3572b4b32ffd3b1c337115d6",
+   "task_key": "KB_L1_P98",
+   "frame_id": "C5-00693",
+   "raw_sha256": "709cd4f83ba77f0ea9944b2bfaf08f6b760ccacb4b8b77da71afc8fe083a0f73",
+   "source_path": "baseline_eval\\level1\\openai-o1\\problem_98\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4294667cf4fe46ba7548aae7ea25623d9c6f48a9c9f1ff1f5d9db25139d71ca8",
+   "task_key": "KB_L1_P98",
+   "frame_id": "C5-00097",
+   "raw_sha256": "d4bc7328e35be2dd05a832063d61c196acc5f5aa8fbabb882b5257d209ff874e",
+   "source_path": "baseline_eval\\level1\\claude-3.5-sonnet\\problem_98\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a05a248a87561af0a1f8e361ca0c303c3ae0e77545bb77f25f48c4a2b6aa7e7a",
+   "task_key": "KB_L1_P98",
+   "frame_id": "C5-00296",
+   "raw_sha256": "c706b9453084144e3f4769fae38b722df5719fa2e27a6dbaa495f008102b3696",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_98\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2fb8164b8012c20d18e13f410c1490316c3c7a90e544565c036a36bc7d7c74a0",
+   "task_key": "KB_L1_P99",
+   "frame_id": "C5-00496",
+   "raw_sha256": "c3d45eed9b76446359852bc837e3a6c0f73e604d5bef9cbd48068da36210a010",
+   "source_path": "baseline_eval\\level1\\llama-3.1-405b\\problem_99\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "34138c2a4a3c93e349b5133cfbc4ea2c6718e62c12220955fb1a1b263a9ee1e3",
+   "task_key": "KB_L1_P99",
+   "frame_id": "C5-00297",
+   "raw_sha256": "2083183f9bcb33829edc6ea4c91eec40451a822ad6886ef6f42b5af245f919ed",
+   "source_path": "baseline_eval\\level1\\deepseek-v3\\problem_99\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "69aa4fb44139a4ddb7ec51d20f3228889efc92a6c417da92114434900303eea8",
+   "task_key": "KB_L1_P99",
+   "frame_id": "C5-00198",
+   "raw_sha256": "5fb924af20a2827fc911ad15217f7bad328859d6876e0589815f87d1cc68f126",
+   "source_path": "baseline_eval\\level1\\deepseek-r1\\problem_99\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "413021865621b2e371aafde7b3f28afcf641b228a5c1608b8c21d54c5852a96d",
+   "task_key": "KB_L2_P10",
+   "frame_id": "C5-00794",
+   "raw_sha256": "d75cc5952126f8ef4d99af2b1200f98d93bda1fe739baac0d21e288a51ac4cb0",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cf372951cdeed12f67e1abc60db7cc3ca7a563fc00cf4a7228c04035b56b73c2",
+   "task_key": "KB_L2_P10",
+   "frame_id": "C5-00696",
+   "raw_sha256": "d28874419d9717d4bef459bb45a7a7718a317c5aa7b1f2b48092b47ca55721fe",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "dc890606c6269808d02ec638df81595b06aa10777773bf271d12c998f12b1047",
+   "task_key": "KB_L2_P10",
+   "frame_id": "C5-01289",
+   "raw_sha256": "5cf7a098d794aea124d68b69ee8556f8b09f4fde4ab6613eec7df3cbcf4574e0",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_10\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2d12875595a295cdfa57354de179e36362838e99b1c75521b099dd56f94c6e89",
+   "task_key": "KB_L2_P100",
+   "frame_id": "C5-00795",
+   "raw_sha256": "218580ff0b54b15746a0f8a4f99207ac42c3d2ffcc852939c3a1155df4e403aa",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_100\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a012bc64d25f41caac1a80029ad7980c25a14bd89e039231a6ac2a271198d184",
+   "task_key": "KB_L2_P100",
+   "frame_id": "C5-01290",
+   "raw_sha256": "85fb561d9d7bcabc35011c4d4a907999488d394f8a6debecb9fce2782f861064",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_100\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c1a37199780819eb74e718b340563ede222c34df022249d2ca338be5dcf97753",
+   "task_key": "KB_L2_P12",
+   "frame_id": "C5-00797",
+   "raw_sha256": "dc03fece6b61ecf5b917458f6ec6381b43ad7af6e59aa8fe5644976b22dee199",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_12\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "71d390407b1fc294eae4664dd81f6a0fceb3352f5627e451bc85c331774b102b",
+   "task_key": "KB_L2_P13",
+   "frame_id": "C5-00700",
+   "raw_sha256": "bc99a0790b862ea254a560ba1861fc5bd4cf65d52f01c4f8bbd3b144c03fc16c",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_13\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "138ce5676f0569f061f9b583c678d73f0385ea703c6a5365169ebdd65c60182e",
+   "task_key": "KB_L2_P14",
+   "frame_id": "C5-00995",
+   "raw_sha256": "95bebdf231f698a7d2a0e84cc12993cec6be679596f38413eb32a9c25544f6f2",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "98e5433da2ef4605736988339ac381e4ae831f9e9a0387394600660ed6132b32",
+   "task_key": "KB_L2_P14",
+   "frame_id": "C5-00799",
+   "raw_sha256": "34cc64965bfe173bbdd18da76c0a0a07124e77413bcdcc5a0914f4b989a50523",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d29f1a59d458f8c396417c8df42ffa0bb863774a417e9b5d84ce75d0df6d94a9",
+   "task_key": "KB_L2_P14",
+   "frame_id": "C5-00701",
+   "raw_sha256": "2b26da19bf3378acaa4765ed660ff623014d06ca6230527e9795455087dd7b75",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e43100bc7a59bc11eaa4d232c633a6acf15e9bf05c222c086eeaa85213d8bc30",
+   "task_key": "KB_L2_P14",
+   "frame_id": "C5-01293",
+   "raw_sha256": "4d8ea0f7ffa0e34ffbf5532c53ac211e34a1d6574c4d985bc2a5af7b1d7fbb64",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_14\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4bda7c8d5cbf72928e65dbbb50f048fa4c24ac37394e2c6f3463576220a921f5",
+   "task_key": "KB_L2_P16",
+   "frame_id": "C5-00703",
+   "raw_sha256": "f88783833afb6798b69dedfb152013f90eded914790428949f645ac1a6db82cf",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5d1df72f6be97fd2cd64c86e967c9e520e7db65cdfda4596dab8a536099b303b",
+   "task_key": "KB_L2_P16",
+   "frame_id": "C5-01295",
+   "raw_sha256": "139bb8635cf0600cc1b6f5cc99fe771b0fb41ab0ba3f9847a8a87a2b02e3c335",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5e899df1030982043c5014b0b6c82c0c2f03bc2928c0e965da75908a7003ab61",
+   "task_key": "KB_L2_P16",
+   "frame_id": "C5-00801",
+   "raw_sha256": "1f33e07b6c089c216994bbf4d64de03b3f0722595993186bd7a56bf26de0fb81",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aadaaea02229bf5ae113f3bfe7b8fb2f5a0d002430ddd1bfe7fff7e299265b4a",
+   "task_key": "KB_L2_P16",
+   "frame_id": "C5-00997",
+   "raw_sha256": "a1170b1092d62d5068aa11892b95267392916cdcba777118a004af88ff244acd",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "df005551613a7d1044bf0d889ad071e5b1146493f4b72ed5caf5dc7ffe8449bf",
+   "task_key": "KB_L2_P16",
+   "frame_id": "C5-00900",
+   "raw_sha256": "507bec9a04392c13ac61ab2759147ac294a04606a7d1ae55e50ef1cf73201251",
+   "source_path": "baseline_eval\\level2\\deepseek-V3\\problem_16\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "04fd20bf2b16e635b82a0c6a7b5048fc02dd050d96727e2d13cb37141fa66815",
+   "task_key": "KB_L2_P17",
+   "frame_id": "C5-00802",
+   "raw_sha256": "5babb8340436e143e1b17c992ba56e9eb90d88acf4f2b3e1a79302220d3005c8",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d69b6b1fc21a6d9dd458c689f9cb978b5afcab2c9a1d7293ccd3978564542f0f",
+   "task_key": "KB_L2_P17",
+   "frame_id": "C5-01296",
+   "raw_sha256": "ed00e08d7cfc436974469d36c1742c663b56b3b7ffdef2f4d18decce6594fc3f",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_17\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "154047671dc02c182fd554785f36a6e84a89035a58b6e344a7a890e2869deaf7",
+   "task_key": "KB_L2_P18",
+   "frame_id": "C5-00803",
+   "raw_sha256": "bc15c0567934d715b4a39cfce5176c8d57d6a964b18d7ff9908a622ad8a5c4c5",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4393e85575080908d1e814839f7ccc64ef85f0391c2481d5535efe25bbf8c5be",
+   "task_key": "KB_L2_P18",
+   "frame_id": "C5-01297",
+   "raw_sha256": "9b367fa1544b85c01943f779724eaad1014f051a6391b16d8c452632f4ba1497",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_18\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a7d4f6167bbfd9b26d5efeb3bd70d4cafde1b69959293ba3c6a64d0afc45675c",
+   "task_key": "KB_L2_P19",
+   "frame_id": "C5-00804",
+   "raw_sha256": "75df989b0cce7db0e4954445b7ec72f2c161a1491df9c0f762611adc1d9e02bb",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_19\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0cb426e6b187a13a37bcf27712d5e25ca38678732ccce24289594edac4ddfaba",
+   "task_key": "KB_L2_P2",
+   "frame_id": "C5-01001",
+   "raw_sha256": "09259f7487c54f2bb2816d31e06225f78bcc3ccaa96b67ce5cd76000fbb56784",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "348abd71149478781198377829e40aaee3d1894d537b582464d8b160117790a8",
+   "task_key": "KB_L2_P2",
+   "frame_id": "C5-00805",
+   "raw_sha256": "ba153ad4db9e4c7f25d43a3c24ecc16395e9c9e0184c2ce40a32bf98c916cb00",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e972d4730609c595918aea329a78d0867ccf42f1731b7d6709318653142bad8c",
+   "task_key": "KB_L2_P2",
+   "frame_id": "C5-01298",
+   "raw_sha256": "10f7a1e61945cd9eab487e81f72eac8fd108ccae53bb78c571207ed1777cd3b5",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_2\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "55950020d29905606ce5c0d0a32424bf3e7411103d1d0049a98a5c5424276d43",
+   "task_key": "KB_L2_P20",
+   "frame_id": "C5-00905",
+   "raw_sha256": "578a5fec9bbca549348f858293ec3a5f27dde0af49df9c14f61bb11a42526e67",
+   "source_path": "baseline_eval\\level2\\deepseek-V3\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "835d9ce8fa2680abcf93490ba1f24cbdb940b0c1c3b31de06543189801b5a70e",
+   "task_key": "KB_L2_P20",
+   "frame_id": "C5-00708",
+   "raw_sha256": "69c6b6deb70758302e1012ee206190c5847b08d90581a34e568c1e3cefb1616b",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "848837a725c329c96650da512091fa2f821549a857e05d5f15b90fbb10c9749e",
+   "task_key": "KB_L2_P20",
+   "frame_id": "C5-01299",
+   "raw_sha256": "7c7cdeb90783a1e1c46e10a41d0dfe5abadef2a487b9e49c942c27e9ed4c663c",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f9c8bdc4727bba8605753f0c75dbc56d93855441c592c67497a2f15c0b84c3c2",
+   "task_key": "KB_L2_P20",
+   "frame_id": "C5-00806",
+   "raw_sha256": "04ff325cd9fe38cfff3e9279c7f6e7d6252a03781a6889492e3a09877ddc6dbd",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_20\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7b73f0afb124f319f34281051931e384c8cecfa7c0e32ae607351ba27df9ef7f",
+   "task_key": "KB_L2_P21",
+   "frame_id": "C5-01300",
+   "raw_sha256": "49794e38fdc58fe7e7f65f51382dd820cb46b4dab163439c5490e8a461764fcd",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_21\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "795011c2b478ff3ed052134d5bf29f57ef3892753e8804467d755523f44c93e8",
+   "task_key": "KB_L2_P22",
+   "frame_id": "C5-01004",
+   "raw_sha256": "a7be4141230c23e98831230e8ddfe7bb785a10e5d07794a01cbd0fa1bffa3f0d",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_22\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aa26434c335d67ffe98640af7e0fbb778d4ed84160817027bc2ec32cfe3dfab5",
+   "task_key": "KB_L2_P23",
+   "frame_id": "C5-01302",
+   "raw_sha256": "b9d2a3d12612ee932c61e5d4065216f791a762dbaea0315cdb4312accf0571e8",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_23\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cddf2cfc3b7bd7798b595ca5030d2c31a9d646f96832c5b4bac3283dcf6ac670",
+   "task_key": "KB_L2_P24",
+   "frame_id": "C5-01303",
+   "raw_sha256": "e3adff859a6a90882bee8d2034072a242be9b0bdc9347bc6b6a9e4365bac8468",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_24\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "125c69c4f977ae0a54a1825b15bdc73de95319c117dac3570ada3ba8527f90a9",
+   "task_key": "KB_L2_P25",
+   "frame_id": "C5-01304",
+   "raw_sha256": "6997db837df550da53a619210df7598b38589a9b52869b4a4720221c699d53d5",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e483663972bee62fa25deeb2a92317e3bb817ae53fb8be603a8cbf7805ed3883",
+   "task_key": "KB_L2_P25",
+   "frame_id": "C5-00811",
+   "raw_sha256": "bee85b80ee06b4a1cf7945c09b2df8ff73e5e38ddb09c36cb607e4eef6ea608e",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_25\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aacf0a647b079a0068c0c6ecb6b32fd9eeffde6f8cc6c281b7efb64fac171053",
+   "task_key": "KB_L2_P26",
+   "frame_id": "C5-01305",
+   "raw_sha256": "e6e6d8b92b70e87e652e528242a90d108bdfdc8be80b6f031abfd42add7dd3a8",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ac81e1eaadaea2d3380f77e856a39881c5c1e298543d051af63d49a6a25d03e8",
+   "task_key": "KB_L2_P26",
+   "frame_id": "C5-00812",
+   "raw_sha256": "34e0c5e8f9ca22559b416acdc840a943c6ec97820bf3f80f5f15d2f006381857",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_26\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7884e2b59b30faac03ee492f68ddaa223d95bef054d1b3a8d7ce3726d34e2fdf",
+   "task_key": "KB_L2_P27",
+   "frame_id": "C5-00813",
+   "raw_sha256": "93e10cd92964e8742b9274ba2f223dedbd904ab631bdae95543afe8091dda4ff",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_27\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8ebcc46a50ad881f0a53a23667ceb868059bf52efdcd4df97a54caafba50cbc1",
+   "task_key": "KB_L2_P29",
+   "frame_id": "C5-00815",
+   "raw_sha256": "4043630f1e5a9e1fbe73dac9a6ebf19293d9070712475de587cc072327c807eb",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_29\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4411eca119f87fb250fe384391127b50b8514dbec70ea658c0a68c9b3836d8d8",
+   "task_key": "KB_L2_P3",
+   "frame_id": "C5-01308",
+   "raw_sha256": "499a2cfe949cacb8ffba694e0d6e3e776265b6967a18b37847e744cbbebdfed0",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_3\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "872bc7278a41421958c2f8a3ddcee52fe23f64068a7998af89e563598a143057",
+   "task_key": "KB_L2_P30",
+   "frame_id": "C5-00817",
+   "raw_sha256": "2d3b56072d53348735c58792d7cfff8b77b5f9a75df1e69304f6896a74b3b33d",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_30\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a4bc82520ff11fa42959a25bcd64fa311c9a1b7f352e9055dc031f84f5b6a308",
+   "task_key": "KB_L2_P31",
+   "frame_id": "C5-01310",
+   "raw_sha256": "6c6792726d0c9215c96a5048386039d5c457adee7394f6cb594fbb3038b5ef9e",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d81e2ee96cd19877310f16c3c395c7c1d6cfb40f48cb176e69c8243fe2a1e377",
+   "task_key": "KB_L2_P31",
+   "frame_id": "C5-00818",
+   "raw_sha256": "da719e3d80a902d1bd776f17d7752e344300378fe241c019a88be6599d2c065a",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_31\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7c4df95a2e963cc9092e810aa2b2e44c70dd6510af24843c3e09454fb6e38ffa",
+   "task_key": "KB_L2_P32",
+   "frame_id": "C5-00819",
+   "raw_sha256": "f55c93dcd40ec490806b82f1281c4255933a76e6c93129e6b6211bcb7b149e65",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9a3c4f1d523457bd0389c8e691da7bacae62a710bb5e56144fca5bcdf10fe84f",
+   "task_key": "KB_L2_P32",
+   "frame_id": "C5-01311",
+   "raw_sha256": "b64d1af1c07ead800c5f96944564a617fa324743b7f95a12da39e66c88308f1f",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_32\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f276403ae996e3ffdcb0fe7043c80b379f5c659358ca72460613b65b03dba664",
+   "task_key": "KB_L2_P33",
+   "frame_id": "C5-01312",
+   "raw_sha256": "b52ae308f0380ece0453afeea2abc9246a324b2f090e25a6858238faaafdd9fb",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_33\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2aa5d7b26a8fd02e1bed00940b9aea42631aea0b279da04be75e0107ac492548",
+   "task_key": "KB_L2_P35",
+   "frame_id": "C5-00822",
+   "raw_sha256": "fd319e5dc3e5ef6bd677628cd845605d3468de6eb4817ff4e6007ca9d126ed69",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_35\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e2f0ffe6a0d15e637dab0fc6aa3a5f432d74c6ded6fae1c92521469901355a7e",
+   "task_key": "KB_L2_P35",
+   "frame_id": "C5-01314",
+   "raw_sha256": "bb794b111e26760a6565e4c6a7ffd9704dd4f8a6a9183b654a589fa2f66e59df",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_35\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "96f55c82da6126c9540653ef1d6c61a2c0dfd84e5b913b91313f7e312370776c",
+   "task_key": "KB_L2_P36",
+   "frame_id": "C5-00823",
+   "raw_sha256": "c70ac7c4921e18165cca942d74ffccc92cbdbfc95976f605650f45b17ea38cb2",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_36\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "deb34f5cc0b718725f4db86feeb5ec7fc4d862203ab5de5b1d2e4fb0398290e7",
+   "task_key": "KB_L2_P37",
+   "frame_id": "C5-00824",
+   "raw_sha256": "125e08e0cb4b0f9c9804688fe131833c17e077c260a7c730225d529a43c311d0",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_37\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "720d1250b80a55d511870a6431db499b01f5e4dd17fa69439d170e2fe071acaa",
+   "task_key": "KB_L2_P38",
+   "frame_id": "C5-00825",
+   "raw_sha256": "6ffdbd7e6e9734ef6c1006c238d7a1d6becdd6818f9efd3f8c916fc0664ccab2",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "e69a79868664081de8abb75abac39cda053781ac6916a2eaca0c381a6627899d",
+   "task_key": "KB_L2_P38",
+   "frame_id": "C5-01317",
+   "raw_sha256": "aa949826182e0b4ca3ecb17e68c68ea79ddca88ef9730f92d070c736a01519f0",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_38\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "74471e121da52a2105a4f8d14e86891a2d1614d1eed5a53e049fde6137042e3a",
+   "task_key": "KB_L2_P39",
+   "frame_id": "C5-00826",
+   "raw_sha256": "1a22f962d8e23d96948c1c9e584aa9d5cf74ade785d11e747eaa25dd36dbc186",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_39\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a15f7fddfadbc6bf4834a3c3b359bc4dfe5147b0038f139f883b38b11a27050c",
+   "task_key": "KB_L2_P4",
+   "frame_id": "C5-01319",
+   "raw_sha256": "e5c1d92db0e81317832f95165eddf71bc39f1007dd8108eedb6bd34225535a40",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_4\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "85580765328fbe1d89796569a46d11c06535b5ead6afd8a360e20032115524c2",
+   "task_key": "KB_L2_P40",
+   "frame_id": "C5-00828",
+   "raw_sha256": "47091d066fab8e9ad00ff9d2a0d549c0b556851420616b097bf0d0c83de49af4",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_40\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d096d6173e80e1801f3ea6689f472acb82c26c534f32216343cf36905a95a304",
+   "task_key": "KB_L2_P40",
+   "frame_id": "C5-01320",
+   "raw_sha256": "ad1297ab7bf0f615721da89f0c06b466c5b9e108698a49819e1cbb4583246cf2",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_40\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1443dac5c20b72c069932e7d036652eed41e89903e614acaf263e9b84e6cadfe",
+   "task_key": "KB_L2_P41",
+   "frame_id": "C5-00730",
+   "raw_sha256": "158ffb3c6b0b89f05048e675a5866045d1e9ca926477ee1839cf87e5f1f113a1",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a8313c173b2231ec5d5b8e98f9bc6d2f7c292cb75fefd11ad1a489152b578e44",
+   "task_key": "KB_L2_P41",
+   "frame_id": "C5-01025",
+   "raw_sha256": "9f66db9922bc2576ee6dcb2c7ccac8b5b9e458c59f63a24e36e00174682a3457",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a83e1a4ec49d775a5fc78a721ae49248ef57af6eb80b3cba73ea486a281267f7",
+   "task_key": "KB_L2_P41",
+   "frame_id": "C5-01321",
+   "raw_sha256": "6956b9f40fa28e93285c3012bb7580348c7de11fbba7977bf681a39cba4ed6ab",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_41\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d09c7f52ee61f871f4bbbcf8c6f4859f19b7b140ddea8038ec85cb6142793292",
+   "task_key": "KB_L2_P42",
+   "frame_id": "C5-00830",
+   "raw_sha256": "6b185245c9917a6a1567b4e408a6bb4851f94d93ee746df2e41e59bf42114e9b",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_42\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6c8573e4ecc91d2a2c456d59ad365b75a6c2eb0d77ebc154fd02bfcf8a509ea2",
+   "task_key": "KB_L2_P43",
+   "frame_id": "C5-01323",
+   "raw_sha256": "da0556784d410a2b8c2927e3a8cfc0965128103f2e89736a0315837f3723ecf3",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_43\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f43f077022772d7154a355184f6fe4584b6f400d923d5196a71a50e8e044e263",
+   "task_key": "KB_L2_P43",
+   "frame_id": "C5-00831",
+   "raw_sha256": "804c75a59c7fbe85bb47966eb09579cb62ec50ffdb1f8cade4e4df91c6e7461d",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_43\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "59e9dcd903107a7be3f1ba4ea2f08c705e0aa8a7800d5992a0e55b2ce7574a25",
+   "task_key": "KB_L2_P44",
+   "frame_id": "C5-01324",
+   "raw_sha256": "82e657c164e752d2aef6b166902c409078a13619f73996061dc9cf57a6edd86e",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_44\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3d5f5d59c317f161d2e1fd2b22ddbbd2a2c0f2c51e137fd08a5e21cf958a9411",
+   "task_key": "KB_L2_P46",
+   "frame_id": "C5-01326",
+   "raw_sha256": "8ae8f65675ec3f2bbc522238ed0f6395ef023b43971e1346f7654301cf4d6e8b",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_46\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d49d4cf5c365649f9758aee4f3692237b5ebbdae9cd61a6d137058433130345f",
+   "task_key": "KB_L2_P46",
+   "frame_id": "C5-00834",
+   "raw_sha256": "f79baacd1c9a1b8d073195fa6e9742210b06d9d1928af1a796fbfe0a527217e0",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_46\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "af0f76301966562c441f917c1d3775d7fbf23db8e7587366870836ea5af63a8b",
+   "task_key": "KB_L2_P47",
+   "frame_id": "C5-00835",
+   "raw_sha256": "b585e869b225b1d9d6657d3bdc4309c1d756a12453849d783c01bb5987ba0e97",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_47\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3bf734221762155fd23fc56a1a7c074cdb8b27da6313bebadbcd76d5937172d9",
+   "task_key": "KB_L2_P48",
+   "frame_id": "C5-00836",
+   "raw_sha256": "69fa0f5d872fae93aafd93bfc16023a709ac96a6427598d6cff4c7a31e00a4a9",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_48\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b38a4e26679cbea5df3b9ddc5c48ab155811fab6e28582b2ae8ef0c953f911e7",
+   "task_key": "KB_L2_P48",
+   "frame_id": "C5-01328",
+   "raw_sha256": "cebe750c7329f8445bfb1657be76d8a86e86361263b83a8c01c9e857301652d4",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_48\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "15d167d802f8a440f4e517fe52133d9d7c6158d0a1d0d11630f36955a4b1cb6c",
+   "task_key": "KB_L2_P49",
+   "frame_id": "C5-00935",
+   "raw_sha256": "8fb901ac7bf8384878e8af7853214965915ef7d51bd6324bdbf8bb5d67fa9b86",
+   "source_path": "baseline_eval\\level2\\deepseek-V3\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4a87cd12a6e5f443d6fa70e661416dc58409157af38bc8c50f1edf6c1da9a91a",
+   "task_key": "KB_L2_P49",
+   "frame_id": "C5-00837",
+   "raw_sha256": "b857679d230f512ba52a42e309ef4d697321f7f1e294cde3123b08d810e451e1",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6df1e5785df5e02333a663a2379a84714c06f9f9c8db5b77d518b3fcfcf5ac6d",
+   "task_key": "KB_L2_P49",
+   "frame_id": "C5-00738",
+   "raw_sha256": "9f640fd063397a3c81f95cfeb7a1c4064f7437968253f8a76f2b0790142ee25f",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8486b357483f560c6dcb798a17a1404d3776c75b6d0cab29d5b00ec4220a0648",
+   "task_key": "KB_L2_P49",
+   "frame_id": "C5-01329",
+   "raw_sha256": "2a47b66adff06e87322465aecc23dcc8892cbc3d77e003d144032ef1f27fb4d5",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_49\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "1e186e9ae25d6e642813b0a81b345d0c590fe98b05949e6d26d9ca38e27da5c7",
+   "task_key": "KB_L2_P5",
+   "frame_id": "C5-01330",
+   "raw_sha256": "d4d149e1002e72f1642af2b2525b860ab01f3b6f1519f922d26c677c57cc5f2f",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "5a64507166dee3b2f3d5ae9c6882e71a0a0e668f7d1a75c6cffb0834c5e5c99c",
+   "task_key": "KB_L2_P5",
+   "frame_id": "C5-00838",
+   "raw_sha256": "971a599d4a103938f1f7526c3e52eaf093bb5f0fd021994b8038d6a111c55214",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_5\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "d2dabf5f303aac1f7fa5deb7c5c40a9b9dbe7f00e34d37851baa8a52c43d587a",
+   "task_key": "KB_L2_P50",
+   "frame_id": "C5-00839",
+   "raw_sha256": "11cf70c6f0c1e9f42c0ae082487b6120a5c86a0ee2f672cbf43f615a3b19071f",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_50\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "02270b8ef4e8ee4fa037084b6ce11407adfede2cb55e32a89682c82d387142e8",
+   "task_key": "KB_L2_P51",
+   "frame_id": "C5-00840",
+   "raw_sha256": "464d839cbf07fc36e4a92eb66e6c85f5b5aafac75f84599a8644c400fde5cc08",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_51\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "767f8460955955e81d67d997ce6d0dff92748123497199b0462e3d761647da84",
+   "task_key": "KB_L2_P52",
+   "frame_id": "C5-00841",
+   "raw_sha256": "9d960efcd5dfc4b9562a2a7946ed103aacf9161c745f5736d49a42446f640daf",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_52\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bed6178345e72997f9d10b37dfa93957734ca420af7660573444822f22de76c2",
+   "task_key": "KB_L2_P52",
+   "frame_id": "C5-01332",
+   "raw_sha256": "8c39b9f753a386897a4f1bca64ae27d41cc49ecb23fc6e3cd90a6790f35dcb23",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_52\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a4ca9d7ec432a7353f94180d91a18c20fccb3ea6a20cf4524af424614316adc5",
+   "task_key": "KB_L2_P53",
+   "frame_id": "C5-00842",
+   "raw_sha256": "9bbee1df025ce829f518ccd5019435a04816e00f7f26b1dc4cb65ca2c70a85d1",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_53\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "513d2ed522717328d60a03ee891434d1e08365f85d1872cbfe8526d42676bd6e",
+   "task_key": "KB_L2_P54",
+   "frame_id": "C5-01334",
+   "raw_sha256": "f83c8d35d578148f4074b579d4d197dd3c6b80029dc742a19a2a7c176c7168c4",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_54\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "69bd945a5165eab75f5f65aee2553502249b0334dd1c40fb8982af5e78c40fee",
+   "task_key": "KB_L2_P54",
+   "frame_id": "C5-00843",
+   "raw_sha256": "d0b02dfd4bb8dade3173c63224fd1c9debe563e47e92a4cfa6d9eff4fc77043a",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_54\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "aabf3cc37d8686c04b2c4daf93954e043e18ff59c10fb6d82e51b480fae607b6",
+   "task_key": "KB_L2_P55",
+   "frame_id": "C5-00844",
+   "raw_sha256": "dff911b9ed6b5e8adaf54ef19f80a30eaf72d3bca78212fe7a4b94aa7a58ea50",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_55\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "012d12ed0e133f8e5d1f6e4869f155c926409288b91d232a219a2def4bc659fa",
+   "task_key": "KB_L2_P57",
+   "frame_id": "C5-01337",
+   "raw_sha256": "2a2a2a313d1ea3a5b553c37f344ae53a7245eb8b50178a1c93e962816d473257",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_57\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ac01da1b9d0682846973d94d060731d0ce7c309f4872f11234b0f28b1a5623d3",
+   "task_key": "KB_L2_P57",
+   "frame_id": "C5-00846",
+   "raw_sha256": "63adc5de45e30e3ec5e5971429ec78e06b4703cd73cf0445f2807f61b6eb8afc",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_57\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "298b8149ec6ceb4a49bc4b8dfe992a2da49597f869c2933a68f451546dd54317",
+   "task_key": "KB_L2_P58",
+   "frame_id": "C5-00847",
+   "raw_sha256": "af62770fd18a02a72ddb4ca1ee7d6c43027450484975a0ff91e5bca7f5891196",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_58\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "48204268716a5bf577da5e0f6eef380a1ccdecc617250272a038feef120eabcb",
+   "task_key": "KB_L2_P59",
+   "frame_id": "C5-00848",
+   "raw_sha256": "c1f0dce37b2beb3c2beb11f4e919cfa1c0ca6687dbfd01112593b31d40ba8d9a",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_59\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "41ceb9a7296f360765b62195a63d7d877a3a87986f6250e068a991b401e23293",
+   "task_key": "KB_L2_P60",
+   "frame_id": "C5-00850",
+   "raw_sha256": "c06f40d96e3001748a1dac1c05bd861440b21532e31a08b1fae738408e7626fe",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_60\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ebc06c55dee148db2b133db4c50ed42a01424d68ffbe5588f8fe64351798e456",
+   "task_key": "KB_L2_P60",
+   "frame_id": "C5-01341",
+   "raw_sha256": "16dd5e6cead0ab529384da8bd22d9a3043cf963f58b7a4130c2fa74623268621",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_60\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ed1ae6032d6d628dfe87108098ceabebcc4bd611fb882297d4ea2b8df317b681",
+   "task_key": "KB_L2_P61",
+   "frame_id": "C5-01342",
+   "raw_sha256": "6cd4cd3f382024998e6b83aae57990755c3dbb24e3761dbe90e6eb4ea2a759be",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_61\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8a584dd32611c23a3e733f02fe6e6ba69c3cf92ec45ccaa992f19d43014301cd",
+   "task_key": "KB_L2_P62",
+   "frame_id": "C5-00852",
+   "raw_sha256": "b6f7debf15fd5b548b04f2cc708d6ea27f2044172e58dcc5dd809ec061646a76",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_62\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ecdd355e311946226dd0dac0a3900cf3040a67afbbb987c6ffa51b7ecf1d7529",
+   "task_key": "KB_L2_P62",
+   "frame_id": "C5-01343",
+   "raw_sha256": "17446e6b77c4333d6cae26f85cef1ab94e86255f858bd05692a769bc490c9201",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_62\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3a81579c8b323def41d9ff0d7c8db616f9efcabdf39be628be6b5745355b3a2f",
+   "task_key": "KB_L2_P63",
+   "frame_id": "C5-01344",
+   "raw_sha256": "ca4a5208cfe79925eded4f9344bb94a84e54d39958de45cac20bb1a7af3e3612",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_63\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bb91181c1baad384fae644e955c8b6e682f3c79bc91c465b54f6407e8b028fcb",
+   "task_key": "KB_L2_P63",
+   "frame_id": "C5-00853",
+   "raw_sha256": "42b9d1e47fae81dbb956435e1a7062b2807451271873517b6d4ebf4cbecf356e",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_63\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f99bf62afb812f3d55f4743e382b300a135bedc1712667499714f71c77512931",
+   "task_key": "KB_L2_P64",
+   "frame_id": "C5-00854",
+   "raw_sha256": "28427412b5fbf7750e94cfdb34848c49f5fd0e4da56037637e1d1d5363718e76",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_64\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3d15a30d26e80c6fb02dd0ee0a759f2065ac6c86d68a6072063c303725c5a768",
+   "task_key": "KB_L2_P65",
+   "frame_id": "C5-01345",
+   "raw_sha256": "bb03306bd459f05080614c2de82b5629d99131b80325d36860e7c980a2baf708",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_65\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "b443b4978647eef9da5a3aded4ca6d09ddf19ced09597bbb439990aa69f6baa2",
+   "task_key": "KB_L2_P65",
+   "frame_id": "C5-00855",
+   "raw_sha256": "73d71c48c1d48e3eed9ed4c9f2f7e8523a23cc74df572e9f6f922bded4ae4add",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_65\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9b8b0a0a446b01ea1b30bb86a200cbb7fbc4f02b48fde0edf35ad6449cfbe845",
+   "task_key": "KB_L2_P66",
+   "frame_id": "C5-01346",
+   "raw_sha256": "b333effc84c49cdcc774ecf452379edac509cd297fc10696eb78125dbf497337",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_66\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "48250695168bc3d9d09f04f905b7991b760e90654ece935b5bce429a4db4137e",
+   "task_key": "KB_L2_P67",
+   "frame_id": "C5-01347",
+   "raw_sha256": "92c75c55947007b19577ab3aaeeca1f470537488cdf200100f0edd8a9fb4d338",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_67\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "18e02068047d39a307bf24345efc2d3d245b0a261a82187f88a003f200ed39d1",
+   "task_key": "KB_L2_P68",
+   "frame_id": "C5-01348",
+   "raw_sha256": "5ea2e6b9bb7e59dd81071feeadce472a52321278a4e39ea4137f2ceb64ec19bc",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_68\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a45305272f0aed3a3b429f0ce1e28d53d9de5b54ef58f1079a138deb61cc0041",
+   "task_key": "KB_L2_P68",
+   "frame_id": "C5-00858",
+   "raw_sha256": "156d128ceebebbe364282baa7c1b30cbb8ebb3703f204a6b3e3a6fa152bd697e",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_68\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7c2e74aee266d3d3dd603f938e1dbc8a62a8b91c32e13ce1780376fb169580f5",
+   "task_key": "KB_L2_P69",
+   "frame_id": "C5-01349",
+   "raw_sha256": "67fd85f17bf6d9d9ad8cf2a03bbb13c682b5aef316eeb25f7c130422301e8192",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_69\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "90147a1ecc286a74dd501e57ab4fff22e1abb8fc5cb9dd25f66b05aa6948ff92",
+   "task_key": "KB_L2_P69",
+   "frame_id": "C5-00859",
+   "raw_sha256": "cc59ce9a83d429d32485db8ef01ee7fb00bc168660d4e9761d0b8cf1e85aaef2",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_69\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "29aaae7132fa48e87d0348c2e6cb74be1912bea02990a3f50c681e8806d8e4ed",
+   "task_key": "KB_L2_P7",
+   "frame_id": "C5-00860",
+   "raw_sha256": "4c68f8f96ec150485b7c8f628aa758b5fc90fa851bf05202490c24c8dc1b8eb7",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "319414791c679997920eb96d98901d0a4b1177daed1b822aa4023ee50572f380",
+   "task_key": "KB_L2_P7",
+   "frame_id": "C5-00760",
+   "raw_sha256": "efbe1bb09811ba74127bc03aaac4a017b728fc1bb35da75b0fbafa00b18801df",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7abd22f598f94f8fe49beec07454766ffa8dd77d28047444b341242bab0168e6",
+   "task_key": "KB_L2_P7",
+   "frame_id": "C5-01350",
+   "raw_sha256": "e250194c8f6915aeb146526b03108f3238f08b1661c3cb27545b1cce2a331fc3",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_7\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "45176156bdfc7c0dea627622bf4a46bfe0477fe35ee9a297c18a8e3bf58a0c0b",
+   "task_key": "KB_L2_P71",
+   "frame_id": "C5-00862",
+   "raw_sha256": "db27f7e1a41e40ef683a62c80f0f4da7b4f916522d0468646b79f0e9880236a8",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_71\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4c8a01bdab7acabad909dc4239ffc77f45ff9798a745f5b1cfa37247cd3853a9",
+   "task_key": "KB_L2_P71",
+   "frame_id": "C5-01352",
+   "raw_sha256": "1daef041bb3b9962b75dab654ee2756acbaf225eed51bf65fd297d2170ad6118",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_71\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "9df2394cbf8f28718de6eb8f565055e009db81527117abd99b40b800934d104c",
+   "task_key": "KB_L2_P72",
+   "frame_id": "C5-01353",
+   "raw_sha256": "03653a3dc92a6990cc15008094c6bb393a12a50731079bdae0bd1bf93eb4dfa3",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_72\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "07aaf424699462fd00be02341ae51a3d839a10b5db9558e32e98f5260a4b1687",
+   "task_key": "KB_L2_P74",
+   "frame_id": "C5-00865",
+   "raw_sha256": "73e8105c7829495d1bf0231ee295dfd08d5d5da3820624cab1499f3cc8b315a9",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_74\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "88bcbc87d1d5e3094d704c3b9586038ad63a72b5fd855cfe31a433a3126a5013",
+   "task_key": "KB_L2_P74",
+   "frame_id": "C5-01355",
+   "raw_sha256": "613ba94eb006703aa978b1846afd95775629d5408d09ba3563f17bf22b1eb972",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_74\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "81d27d96955e9eb64101a80a0fbe90f064c07ad9ab96b20453ef6f02c4082629",
+   "task_key": "KB_L2_P78",
+   "frame_id": "C5-00869",
+   "raw_sha256": "4a2a386625ed23068900e8a6d16fe8a248f607862254352d5c51f9a3245bd1a7",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_78\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2e2be49e95483fe747b1f16a17acb5e8ae085a73e13e0d3ed51ee9b370a7e2ed",
+   "task_key": "KB_L2_P79",
+   "frame_id": "C5-01359",
+   "raw_sha256": "850410c603e312043d8591fa620d0c27120e592db737c1fbc651bf5251fe383f",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_79\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "321a5486e71c365c3a98f332dc3c0a63b1c3812abec345fcb35a39adecdcb297",
+   "task_key": "KB_L2_P8",
+   "frame_id": "C5-01067",
+   "raw_sha256": "a1a81bf7bf9188b2fbe0aa3efe8d150280f7552b220e41013ef50bff68f07c92",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_8\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "dbc2799470793a51265ff57ccf13b837144d0f7feba0fa9c2b4029983f042dd6",
+   "task_key": "KB_L2_P80",
+   "frame_id": "C5-00872",
+   "raw_sha256": "dc19fe34ccc9c498d2863a818e3dbbf860858b16123ba6779bdb5dcffc00c278",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_80\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "08fbe306f6656b5d6aa62ad46a783d1035abe14f8fbf69b247753e095cc1f7d7",
+   "task_key": "KB_L2_P81",
+   "frame_id": "C5-00873",
+   "raw_sha256": "814e1505a0ce2c51b9cae3d28dbec2ad0b098caaac798c5bb7488657a973d2a9",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_81\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "7402c8cd79f9e0a32512e70fbd46ce69173dc262595f0b33ccda2e838eabad96",
+   "task_key": "KB_L2_P82",
+   "frame_id": "C5-01363",
+   "raw_sha256": "5d9bd4dfa50cdd291a4f61b51f033c24fe11c2311a7f703a7028a91b64bc376f",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_82\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a343894acd73c42986ab5be3d61c6c92b2776db56798772067cf40ffaab30ac2",
+   "task_key": "KB_L2_P82",
+   "frame_id": "C5-00874",
+   "raw_sha256": "fda1590207e1ab1d20e8ceb3dfbab63973c793e37fa5969e72903b568eab9d50",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_82\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ae20156022961b45fe9ec691697b818c238364195ca61df35cb5fc58ee861421",
+   "task_key": "KB_L2_P83",
+   "frame_id": "C5-01364",
+   "raw_sha256": "bfcd06ea227fcf85642b70c955c26c3c3b32ae69e8f1a4b71a6c2ed0ed2d5d36",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_83\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "ceb8754a3a93a19eb386116862cbf27f32cfb3a43d00c34b8b16b14bc8e14604",
+   "task_key": "KB_L2_P83",
+   "frame_id": "C5-00875",
+   "raw_sha256": "76d439a82aa7db9840d02c27ef3b5f4607601cf4ce3863ed1a34bfc573db6d7e",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_83\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4842b8c10da6a1f0ac3ff70a630ec36221529ca46d362d9880f8e1734aea302d",
+   "task_key": "KB_L2_P85",
+   "frame_id": "C5-01365",
+   "raw_sha256": "3964c883635e4106baa6186057bb6e5b419f53e08f858a880ff87acb654faa60",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_85\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4f7414bed92418863414875a18b8776306cad7cc5c454cf6a2bab26188554505",
+   "task_key": "KB_L2_P86",
+   "frame_id": "C5-01366",
+   "raw_sha256": "a5839a062cdb1a0fb7feea6edd8e6ed0c9a6c370c4664e5f21302c5bffb9e1d3",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_86\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "c45becb10bfde092a1ea0adceac8947a46b643664b4bd276f65ebf8c8ddf6b28",
+   "task_key": "KB_L2_P86",
+   "frame_id": "C5-00877",
+   "raw_sha256": "f3f7622a1abd6a011bc4556999f9a4f8051f7cce714dbef6a3d6748cfeecdc7f",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_86\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "53558e8b6f0c5c32d40bd1ab63cf8fd153aff0207b274b4ab677ad94258be5c5",
+   "task_key": "KB_L2_P87",
+   "frame_id": "C5-00878",
+   "raw_sha256": "5f2b2639fd6daac5781507768e0db94fb3928b73cc38bd7fb61c3ce0297c177f",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_87\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cdf7d4ab8f660a5a531ef035e7979bafb1e8a7ad4e3c6a771d329339d2cb8e69",
+   "task_key": "KB_L2_P87",
+   "frame_id": "C5-01367",
+   "raw_sha256": "e71cce61ba0a398243f25600fb6cde6dc9968792065190ef9580252c019e8769",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_87\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0fca3045312c58e6ae609f002798d8c43d944c0c451f59c416f3bc6148a0b1f6",
+   "task_key": "KB_L2_P88",
+   "frame_id": "C5-01368",
+   "raw_sha256": "b47bdaacaee5ec98d2cf126c0ef7babe2a525ed1a05b73e00dd21f7529c84efb",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "4c5421f3c75705c6e0c6aafac585fe8cb5a08d45ceb2a0f824d44aa77eb7a51c",
+   "task_key": "KB_L2_P88",
+   "frame_id": "C5-01076",
+   "raw_sha256": "148d84629686f5f3bd8e39d9adeb28db87a658c170d3a1bcc863bce2f194fe98",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f73c0d6e295751e9365a94d750833c5218500f3fd0798845d49de86766a6d60e",
+   "task_key": "KB_L2_P88",
+   "frame_id": "C5-00879",
+   "raw_sha256": "498b6c4a9a57b3618ebaa0e485001c0316ac0cbf69c0b2995ec0c2deaed831a9",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_88\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "a4b2fb0fdc7ab26a8a2dbcdc317f808a3b1fb493aa88786660f00883c082f254",
+   "task_key": "KB_L2_P9",
+   "frame_id": "C5-00881",
+   "raw_sha256": "9c67bdbed2e1a28e4feb4160474a50a0c0adcf4fba39f546d94074a886a13f03",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_9\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6dc7d2914831d20961fe6d1d0dfda38795a452da96ad0ff3818651b22aac506e",
+   "task_key": "KB_L2_P90",
+   "frame_id": "C5-00783",
+   "raw_sha256": "edae696135a229f3caf9820c78fe19340cee3ec7725a12ccc3a1a09906c34243",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "cad498e7d03ad430dfcd8bbce1ffb64de30e2804d71725137b16cc9351d2d093",
+   "task_key": "KB_L2_P90",
+   "frame_id": "C5-00882",
+   "raw_sha256": "0ff0d2e3679c7669a2397318d1f46e9a20b35839bfbc7e07d1ecb84ab9278015",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_90\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "142ec07385f4a342c121ed3ba870db10942ef952679ff51e6a171517183c1377",
+   "task_key": "KB_L2_P91",
+   "frame_id": "C5-01371",
+   "raw_sha256": "a83fca932de3e5d2ad92121bbfe87d8f5d52a7536b0ab89891baae0b3b9512ef",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_91\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "f550491b67b6e6cfca42bca560c288bd9fecb60bd4de2a9858d7c8bccb49ca49",
+   "task_key": "KB_L2_P91",
+   "frame_id": "C5-00784",
+   "raw_sha256": "e50b436ae3141401b23f161282087aa43abea86fc6ba0c0f65a51a1b6a6c7998",
+   "source_path": "baseline_eval\\level2\\claude-3.5-sonnet\\problem_91\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "54239407050c3001381eab0c54e9b7e6e1989fcfb8e7a4735476753150f201b6",
+   "task_key": "KB_L2_P92",
+   "frame_id": "C5-01372",
+   "raw_sha256": "6868d8c963e461e6dd90a42a311d4677e90ba7c6bf656053d452b42226b73985",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_92\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "3ec9b412f1056c73b84989cc7679275b63e990d438c86db65ec8449e5ed90b5d",
+   "task_key": "KB_L2_P93",
+   "frame_id": "C5-01373",
+   "raw_sha256": "6f79397625f82dec6200055dcf8c05b1cb1ac2b6f6ea334cc3bcb1877342e2be",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "42d69c0177278794ddae378423c431a24b3fbdc4b72388ac08f7b2e50982da39",
+   "task_key": "KB_L2_P93",
+   "frame_id": "C5-00983",
+   "raw_sha256": "70bde8c6c9d5606b651c20db3af599f897a3326d0f638acba36c9bd4c2e829d1",
+   "source_path": "baseline_eval\\level2\\deepseek-V3\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "6fb915c6a0f17391cf0c72cfe569bec7418919173e67e52abf486f2706804e1b",
+   "task_key": "KB_L2_P93",
+   "frame_id": "C5-01082",
+   "raw_sha256": "7ceea63f193dcd088c63299244d121aaab5a5daf38ab80628b3e9427954ae352",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "fc21e27794823897ce417d2ee673719063718e8166f3e406b0da616230a4d5c5",
+   "task_key": "KB_L2_P93",
+   "frame_id": "C5-00885",
+   "raw_sha256": "8e9a3e7c2c8eff6f0e3d8c9aae2c3f601db53cb15b2848a6e298b757735ca281",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_93\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "edc77270d9fed202c53c71db21293b9e84d7932b698c85deaee37e5a372c283d",
+   "task_key": "KB_L2_P94",
+   "frame_id": "C5-01374",
+   "raw_sha256": "5f9b525b35d47a8104885032b966ef91b7f297852b5853be8c9d1e1ee119df1e",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_94\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bf12abc3ef73677ea06caf377eb4563e6b201bcef28e3495610ca0c4be56c227",
+   "task_key": "KB_L2_P95",
+   "frame_id": "C5-00887",
+   "raw_sha256": "3577e044303264e7a53bf7dce91949c2d692a99cefca01373e384dd8434a2161",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_95\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "0b33e8c9a4aa9817b891ce3997d3439f60e553f7fd320222715fa55a8879f080",
+   "task_key": "KB_L2_P96",
+   "frame_id": "C5-01376",
+   "raw_sha256": "0d848dcb2c095e8df918f1b66e2328f47d3edf26fb03e50bfffdf69bea5f90e9",
+   "source_path": "baseline_eval\\level2\\openai-o1\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "2af9106e6a7915d3323a594abc3819f899ef4a653bb763a29658fefc3d337cba",
+   "task_key": "KB_L2_P96",
+   "frame_id": "C5-00986",
+   "raw_sha256": "20d73b65e38cecba5aa6bfee99fc703e623644e78e8a8c4d6e6ea1ed0ca7d0a2",
+   "source_path": "baseline_eval\\level2\\deepseek-V3\\problem_96\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "bc17616d91d4b22c9472e5ae18980b61d2f56f3cf60ffd8f19a3566f704eb300",
+   "task_key": "KB_L2_P97",
+   "frame_id": "C5-01085",
+   "raw_sha256": "178b46c0fa79a550f8e4219e2f4778922ef9b75d5bad190c474cde14eb671417",
+   "source_path": "baseline_eval\\level2\\gpt-4o\\problem_97\\sample_0\\kernel.json"
+  },
+  {
+   "stable_id": "8afe88da957bc92ee78a1fa05e4262888b548dd2bd141fbd06a1772eb91a99ed",
+   "task_key": "KB_L2_P98",
+   "frame_id": "C5-00890",
+   "raw_sha256": "5b76970de0f7b0eccad1257cf669299532d38354e46114686a82fa6ab562be68",
+   "source_path": "baseline_eval\\level2\\deepseek-r1\\problem_98\\sample_0\\kernel.json"
+  }
+ ]
+}

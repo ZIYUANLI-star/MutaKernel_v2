@@ -1,0 +1,103 @@
+{
+ "cell_id": "conf__L1_P98__arith_replace__12__equiv",
+ "kind": "confirm",
+ "kernel": "L1_P98",
+ "stage": "equiv",
+ "probe_id": "L1_P98__arith_replace__12",
+ "probe_ids": null,
+ "positions": null,
+ "position": {
+  "round_type": "stress",
+  "policy": "extreme_magnitude",
+  "sub_index": 0,
+  "round_index": null,
+  "seed": 10020
+ },
+ "planned_replays": 20,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P98__arith_replace__12",
+  "base_seed": 10020,
+  "equiv_runs": 0,
+  "stress_repeats": 1,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "extreme_magnitude",
+  "extreme_magnitude",
+  "extreme_magnitude",
+  "extreme_magnitude",
+  "extreme_magnitude",
+  "extreme_magnitude"
+ ],
+ "validation_status": "fail",
+ "valid_rounds": 0,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 900,
+ "wall_s": 13.9,
+ "divergence": {
+  "round_type": "stress",
+  "policy": "extreme_magnitude",
+  "sub_index": 0,
+  "seed": 10020,
+  "detail": "output_diverged",
+  "input_summary": [
+   {
+    "shape": [
+     16384,
+     16384
+    ],
+    "dtype": "torch.float32",
+    "min": -5557613.5,
+    "max": 5524322.5,
+    "mean": 31.685489654541016,
+    "has_nan": false,
+    "has_inf": false
+   },
+   {
+    "shape": [
+     16384,
+     16384
+    ],
+    "dtype": "torch.float32",
+    "min": -5764962.0,
+    "max": 5768049.5,
+    "mean": -2.9102554321289062,
+    "has_nan": false,
+    "has_inf": false
+   }
+  ],
+  "oracle": {
+   "status": "fail",
+   "compared_leaves": 3,
+   "reason": "observed 1 output mismatch(es)",
+   "mismatches": [
+    {
+     "path": "$['output']",
+     "kind": "value",
+     "message": "1 value(s) exceed rtol=0.01, atol=0.01; max_abs_error=2.83263e+21",
+     "reference": "Tensor(shape=(), dtype=torch.float32, device=cuda:0, layout=torch.strided)",
+     "candidate": "Tensor(shape=(), dtype=torch.float32, device=cuda:0, layout=torch.strided)"
+    }
+   ]
+  },
+  "errors": []
+ },
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "extreme_magnitude",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "fail",
+   "max_abs_error": 2.83263e+21,
+   "reason": "observed 1 output mismatch(es)"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-31T00:24:18.204607"
+}

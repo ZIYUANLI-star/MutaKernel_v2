@@ -1,0 +1,639 @@
+{
+  "schema_version": "2.0",
+  "map_version": "e1-map-v1",
+  "taxonomy_version": "2.0",
+  "derived_from_run": "/root/mk_v2_runs/e1",
+  "operator_to_fault_class": {
+    "acc_downgrade": "F-PREC-ACC",
+    "arith_replace": "F-ARITH",
+    "broadcast_unsafe": "F-BCAST",
+    "cast_remove": "F-CAST",
+    "const_perturb": "F-CONST",
+    "epsilon_modify": "F-EPS",
+    "index_replace": "F-IDX",
+    "init_modify": "F-INIT",
+    "launch_config_mutate": "F-LAUNCH",
+    "layout_assume": "F-LAYOUT",
+    "mask_boundary": "F-BOUND",
+    "reduction_reorder": "F-RED-ORD",
+    "relop_replace": "F-RELOP",
+    "scale_modify": "F-SCALE",
+    "stab_remove": "F-STAB",
+    "sync_remove": "F-SYNC"
+  },
+  "witnessed_probe_count": 607,
+  "entries": [
+    {
+      "fault_class": "F-ARITH",
+      "witnessed_probes": 121,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 111
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 10
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "sparse"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 111,
+          "executions": 121,
+          "closure_rate": 0.9174,
+          "sole_detector_count": 111
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "extreme_magnitude"
+          },
+          "kills": 7,
+          "executions": 10,
+          "closure_rate": 0.7,
+          "sole_detector_count": 7
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "all_negative"
+          },
+          "kills": 1,
+          "executions": 2,
+          "closure_rate": 0.5,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "near_zero"
+          },
+          "kills": 1,
+          "executions": 3,
+          "closure_rate": 0.3333,
+          "sole_detector_count": 1
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-BOUND",
+      "witnessed_probes": 94,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 85
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 9
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "sparse"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 85,
+          "executions": 94,
+          "closure_rate": 0.9043,
+          "sole_detector_count": 85
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "boundary_last_element"
+          },
+          "kills": 8,
+          "executions": 9,
+          "closure_rate": 0.8889,
+          "sole_detector_count": 8
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-CONST",
+      "witnessed_probes": 32,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 25
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 7
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "structured_ramp"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 25,
+          "executions": 32,
+          "closure_rate": 0.7812,
+          "sole_detector_count": 25
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "boundary_last_element"
+          },
+          "kills": 3,
+          "executions": 5,
+          "closure_rate": 0.6,
+          "sole_detector_count": 3
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "sparse"
+          },
+          "kills": 1,
+          "executions": 2,
+          "closure_rate": 0.5,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "near_zero"
+          },
+          "kills": 2,
+          "executions": 7,
+          "closure_rate": 0.2857,
+          "sole_detector_count": 2
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-EPS",
+      "witnessed_probes": 7,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 4
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 3
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "denormals"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 4,
+          "executions": 7,
+          "closure_rate": 0.5714,
+          "sole_detector_count": 4
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "near_zero"
+          },
+          "kills": 1,
+          "executions": 2,
+          "closure_rate": 0.5,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "near_epsilon"
+          },
+          "kills": 1,
+          "executions": 3,
+          "closure_rate": 0.3333,
+          "sole_detector_count": 1
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-IDX",
+      "witnessed_probes": 157,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 150
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 7
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "boundary_last_element"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 150,
+          "executions": 157,
+          "closure_rate": 0.9554,
+          "sole_detector_count": 150
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "head_heavy"
+          },
+          "kills": 6,
+          "executions": 7,
+          "closure_rate": 0.8571,
+          "sole_detector_count": 6
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-INIT",
+      "witnessed_probes": 3,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 3
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "all_negative"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "large_magnitude"
+          },
+          "kills": 2,
+          "executions": 3,
+          "closure_rate": 0.6667,
+          "sole_detector_count": 2
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-LAUNCH",
+      "witnessed_probes": 73,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 67
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 6
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "tail_heavy"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 67,
+          "executions": 73,
+          "closure_rate": 0.9178,
+          "sole_detector_count": 67
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "head_heavy"
+          },
+          "kills": 4,
+          "executions": 5,
+          "closure_rate": 0.8,
+          "sole_detector_count": 4
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "structured_ramp"
+          },
+          "kills": 1,
+          "executions": 6,
+          "closure_rate": 0.1667,
+          "sole_detector_count": 1
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-LAYOUT",
+      "witnessed_probes": 3,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 3
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 3,
+          "executions": 3,
+          "closure_rate": 1.0,
+          "sole_detector_count": 3
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-PREC-ACC",
+      "witnessed_probes": 5,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 5
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 5,
+          "executions": 5,
+          "closure_rate": 1.0,
+          "sole_detector_count": 5
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-RELOP",
+      "witnessed_probes": 52,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 51
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 1
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "large_magnitude"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 51,
+          "executions": 52,
+          "closure_rate": 0.9808,
+          "sole_detector_count": 51
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-SCALE",
+      "witnessed_probes": 2,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 2
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 2,
+          "executions": 2,
+          "closure_rate": 1.0,
+          "sole_detector_count": 2
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-STAB",
+      "witnessed_probes": 4,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 2
+        },
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 2
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "large_magnitude"
+          },
+          "kills": 2,
+          "executions": 2,
+          "closure_rate": 1.0,
+          "sole_detector_count": 2
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 2,
+          "executions": 4,
+          "closure_rate": 0.5,
+          "sole_detector_count": 2
+        }
+      ],
+      "evidence_counterexamples": []
+    },
+    {
+      "fault_class": "F-SYNC",
+      "witnessed_probes": 54,
+      "escape_mechanisms": [
+        {
+          "mechanism": "ABSORPTION_FAILURE_TOLERANCE",
+          "count": 39
+        },
+        {
+          "mechanism": "ACTIVATION_FAILURE_VALUE",
+          "count": 15
+        }
+      ],
+      "effective_cases": [
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "large_magnitude"
+          },
+          "kills": 1,
+          "executions": 1,
+          "closure_rate": 1.0,
+          "sole_detector_count": 1
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "head_heavy"
+          },
+          "kills": 13,
+          "executions": 14,
+          "closure_rate": 0.9286,
+          "sole_detector_count": 13
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "iid"
+          },
+          "kills": 39,
+          "executions": 54,
+          "closure_rate": 0.7222,
+          "sole_detector_count": 39
+        },
+        {
+          "case": {
+            "mode": "eval",
+            "parameters": {},
+            "policy": "structured_ramp"
+          },
+          "kills": 1,
+          "executions": 15,
+          "closure_rate": 0.0667,
+          "sole_detector_count": 1
+        }
+      ],
+      "evidence_counterexamples": []
+    }
+  ]
+}

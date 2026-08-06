@@ -1,0 +1,17 @@
+import _remote
+c = _remote.connect()
+R = _remote.run
+print("=== chain trigger log tail ===")
+R(c, "tail -30 /root/mk_v2_runs/e3_b9_calib/chain_trigger.log")
+print("=== stage1 chain log ===")
+R(c, "tail -20 /root/mk_v2_runs/e3_b9_calib/stage1_chain.log")
+print("=== guard log ===")
+R(c, "tail -20 /root/mk_v2_runs/e3_b9_calib/guard_b9_v2.log")
+print("=== lane logs ===")
+R(c, "tail -6 /root/mk_v2_runs/e3_b9_calib/lane_v2_0.log; echo ---; tail -6 /root/mk_v2_runs/e3_b9_calib/lane_v2_1.log")
+print("=== archive + markers ===")
+R(c, "ls -la /root/mk_v2_runs/e3_b9_calib/archive/ /root/mk_v2_runs/e3_b9_calib/archive/* 2>/dev/null | head -40; ls /root/mk_v2_runs/e3_b9_calib/ | grep -E '^[A-Z]'")
+print("=== queue state ===")
+R(c, "/root/miniconda3/bin/python -c \"import json;s=json.load(open('/root/mk_v2_runs/e3_b9_calib/queue_state.json'));print('claimed',json.dumps(s.get('claimed'),indent=1));print('pending',s.get('pending'));print('done',len(s.get('done',{})))\"")
+R(c, "wc -l /root/mk_v2_runs/e3_b9_calib/calibration_v2_lane*.jsonl; cat /root/mk_v2_runs/e3_b9_calib/completed_v2_lane*.json")
+c.close()

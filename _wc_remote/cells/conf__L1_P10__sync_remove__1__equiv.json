@@ -1,0 +1,104 @@
+{
+ "cell_id": "conf__L1_P10__sync_remove__1__equiv",
+ "kind": "confirm",
+ "kernel": "L1_P10",
+ "stage": "equiv",
+ "probe_id": "L1_P10__sync_remove__1",
+ "probe_ids": null,
+ "positions": null,
+ "position": {
+  "round_type": "stress",
+  "policy": "head_heavy",
+  "sub_index": 0,
+  "round_index": null,
+  "seed": 10020
+ },
+ "planned_replays": 20,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P10__sync_remove__1",
+  "base_seed": 10020,
+  "equiv_runs": 0,
+  "stress_repeats": 1,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "head_heavy",
+  "head_heavy",
+  "head_heavy",
+  "head_heavy",
+  "head_heavy",
+  "head_heavy"
+ ],
+ "validation_status": "fail",
+ "valid_rounds": 0,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 900,
+ "wall_s": 4.8,
+ "divergence": {
+  "round_type": "stress",
+  "policy": "head_heavy",
+  "sub_index": 0,
+  "seed": 10020,
+  "detail": "output_diverged",
+  "input_summary": [
+   {
+    "shape": [
+     16,
+     1024,
+     2048
+    ],
+    "dtype": "torch.float32",
+    "min": -54389.43359375,
+    "max": 49756.50390625,
+    "mean": -1.9650421142578125,
+    "has_nan": false,
+    "has_inf": false
+   },
+   {
+    "shape": [
+     2048,
+     768
+    ],
+    "dtype": "torch.float32",
+    "min": -47701.21875,
+    "max": 43515.6953125,
+    "mean": -1.7387665510177612,
+    "has_nan": false,
+    "has_inf": false
+   }
+  ],
+  "oracle": {
+   "status": "fail",
+   "compared_leaves": 3,
+   "reason": "observed 1 output mismatch(es)",
+   "mismatches": [
+    {
+     "path": "$['output']",
+     "kind": "value",
+     "message": "5543497 value(s) exceed rtol=0.01, atol=0.01; max_abs_error=2.341e+09",
+     "reference": "Tensor(shape=(16, 1024, 768), dtype=torch.float32, device=cuda:0, layout=torch.strided)",
+     "candidate": "Tensor(shape=(16, 1024, 768), dtype=torch.float32, device=cuda:0, layout=torch.strided)"
+    }
+   ]
+  },
+  "errors": []
+ },
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "head_heavy",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "fail",
+   "max_abs_error": 2341000000.0,
+   "reason": "observed 1 output mismatch(es)"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-31T00:22:10.229577"
+}

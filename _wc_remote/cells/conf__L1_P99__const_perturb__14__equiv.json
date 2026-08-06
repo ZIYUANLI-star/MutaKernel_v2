@@ -1,0 +1,115 @@
+{
+ "cell_id": "conf__L1_P99__const_perturb__14__equiv",
+ "kind": "confirm",
+ "kernel": "L1_P99",
+ "stage": "equiv",
+ "probe_id": "L1_P99__const_perturb__14",
+ "probe_ids": null,
+ "positions": null,
+ "position": {
+  "round_type": "stress",
+  "policy": "boundary_last_element",
+  "sub_index": 0,
+  "round_index": null,
+  "seed": 10020
+ },
+ "planned_replays": 20,
+ "planned_rounds": 20,
+ "cfg_digest": {
+  "mutant_id": "L1_P99__const_perturb__14",
+  "base_seed": 10020,
+  "equiv_runs": 0,
+  "stress_repeats": 1,
+  "round_timeout": 300,
+  "atol": 0.01,
+  "rtol": 0.01
+ },
+ "stress_policy_multiset": [
+  "boundary_last_element",
+  "boundary_last_element",
+  "boundary_last_element",
+  "boundary_last_element",
+  "boundary_last_element",
+  "boundary_last_element"
+ ],
+ "validation_status": "fail",
+ "valid_rounds": 0,
+ "round_timeouts": 0,
+ "timed_out": false,
+ "worker_budget_s": 900,
+ "wall_s": 19.3,
+ "divergence": {
+  "round_type": "stress",
+  "policy": "boundary_last_element",
+  "sub_index": 0,
+  "seed": 10020,
+  "detail": "output_diverged",
+  "input_summary": [
+   {
+    "shape": [
+     32768,
+     8192
+    ],
+    "dtype": "torch.float32",
+    "min": -5.557613372802734,
+    "max": 10000.0,
+    "mean": 6.894987018313259e-05,
+    "has_nan": false,
+    "has_inf": false
+   },
+   {
+    "shape": [
+     32768,
+     8192
+    ],
+    "dtype": "torch.float32",
+    "min": -5.764962196350098,
+    "max": 10000.0,
+    "mean": 3.434592508710921e-05,
+    "has_nan": false,
+    "has_inf": false
+   },
+   {
+    "shape": [
+     32768,
+     8192
+    ],
+    "dtype": "torch.float32",
+    "min": -5.766304016113281,
+    "max": 10000.0,
+    "mean": -1.847290332079865e-05,
+    "has_nan": false,
+    "has_inf": false
+   }
+  ],
+  "oracle": {
+   "status": "fail",
+   "compared_leaves": 4,
+   "reason": "observed 1 output mismatch(es)",
+   "mismatches": [
+    {
+     "path": "$['output']",
+     "kind": "value",
+     "message": "1 value(s) exceed rtol=0.01, atol=0.01; max_abs_error=0.0390847",
+     "reference": "Tensor(shape=(), dtype=torch.float32, device=cuda:0, layout=torch.strided)",
+     "candidate": "Tensor(shape=(), dtype=torch.float32, device=cuda:0, layout=torch.strided)"
+    }
+   ]
+  },
+  "errors": []
+ },
+ "rounds": [
+  {
+   "round_type": "stress",
+   "policy": "boundary_last_element",
+   "sub_index": 0,
+   "round_index": null,
+   "seed": 10020,
+   "status": "fail",
+   "max_abs_error": 0.0390847,
+   "reason": "observed 1 output mismatch(es)"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-07-31T00:24:50.387543"
+}

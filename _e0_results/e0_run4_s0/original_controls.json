@@ -1,0 +1,806 @@
+{
+  "L1_P88": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 11911.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 5338.1,
+      "error": ""
+    }
+  },
+  "L1_P19": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 220007.0,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 75657.7,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P37": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 256114.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 83642.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P96": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 184764.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 96343.3,
+      "error": ""
+    }
+  },
+  "L1_P9": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 57224.0,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 3430.1,
+      "error": ""
+    }
+  },
+  "L1_P39": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 287748.7,
+      "error": ""
+    },
+    "corrected": {
+      "status": "inconclusive_timeout",
+      "wall_ms": 420789.6,
+      "error": ""
+    }
+  },
+  "L1_P25": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 215032.1,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 68612.4,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P42": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 16979.5,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 24850.5,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P100": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 20695.4,
+      "error": "Runtime trial 0: CUDA error: an illegal memory access was encountered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider pass"
+    },
+    "corrected": {
+      "status": "killed",
+      "wall_ms": 13939.5,
+      "error": "candidate execution failed while the reference succeeded"
+    }
+  },
+  "L1_P1": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 6505.4,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 4026.9,
+      "error": ""
+    }
+  },
+  "L1_P99": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 69644.0,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 37289.2,
+      "error": ""
+    }
+  },
+  "L1_P3": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 37391.9,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 16962.5,
+      "error": ""
+    }
+  },
+  "L1_P5": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 148360.1,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 57369.9,
+      "error": ""
+    }
+  },
+  "L1_P16": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 53978.4,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 4809.1,
+      "error": ""
+    }
+  },
+  "L1_P90": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 144966.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 49105.3,
+      "error": ""
+    }
+  },
+  "L1_P18": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 52758.7,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 4770.3,
+      "error": ""
+    }
+  },
+  "L1_P21": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 237003.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 69104.5,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P38": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 66237.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "inconclusive_timeout",
+      "wall_ms": 420991.4,
+      "error": ""
+    }
+  },
+  "L1_P7": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 62551.0,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 3753.9,
+      "error": ""
+    }
+  },
+  "L1_P15": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 53623.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 4187.9,
+      "error": ""
+    }
+  },
+  "L1_P51": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 230042.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 38522.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P27": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 230304.9,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 68407.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P46": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 190024.9,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 95017.0,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P48": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 227424.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 38266.0,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P95": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 60046.4,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 8191.5,
+      "error": ""
+    }
+  },
+  "L1_P23": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 275696.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 74361.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P2": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 52370.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 4786.2,
+      "error": ""
+    }
+  },
+  "L1_P41": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 162021.5,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 37970.9,
+      "error": ""
+    }
+  },
+  "L1_P24": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 264117.9,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 70277.5,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P34": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 300229.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 81512.8,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P52": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 228693.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 41329.0,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P31": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 98313.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 74470.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P49": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 236802.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 42080.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P12": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 55548.5,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 3025.1,
+      "error": ""
+    }
+  },
+  "L1_P53": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 224134.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 41237.3,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P29": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 284087.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 73185.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P8": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 59838.5,
+      "error": ""
+    },
+    "corrected": {
+      "status": "survived",
+      "wall_ms": 4465.3,
+      "error": ""
+    }
+  },
+  "L1_P47": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 231517.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 41487.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P65": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 56031.0,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 7679.9,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P50": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 51834.9,
+      "error": "Runtime trial 0: invalid configuration argument"
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3879.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P80": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 54113.1,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 4976.9,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P35": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 314086.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 82658.4,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P69": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 59564.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 7919.7,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P74": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 53988.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 7665.2,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P33": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 208100.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 51775.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L1_P40": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 61192.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 5042.8,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P53": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 52108.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 4089.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P84": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 54161.7,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3682.2,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P28": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 52718.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 4298.3,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P73": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 49985.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3000.9,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P40": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 54392.5,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 5158.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P64": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 52321.0,
+      "error": "Runtime trial 0: invalid argument"
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3688.9,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P58": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 51675.0,
+      "error": ""
+    },
+    "corrected": {
+      "status": "killed",
+      "wall_ms": 2694.9,
+      "error": "observed 1 output mismatch(es)"
+    }
+  },
+  "L2_P56": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 78204.9,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 21295.5,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P24": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 47186.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 2635.5,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P98": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 50558.9,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3690.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P87": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 56638.2,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 5031.7,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P63": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 48064.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3681.8,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P32": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 52620.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 13137.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P59": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 68432.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 22769.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P17": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 85453.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 7717.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P41": {
+    "legacy": {
+      "status": "stillborn",
+      "wall_ms": 97015.3,
+      "error": "Instantiation: ModelNew.__init__() missing 1 required positional argument: 'num_groups'"
+    },
+    "corrected": {
+      "status": "stillborn",
+      "wall_ms": 2428.1,
+      "error": "Instantiation: ModelNew.__init__() missing 1 required positional argument: 'num_groups'"
+    }
+  },
+  "L2_P86": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 49320.6,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3758.6,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P46": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 101398.8,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 7738.1,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P9": {
+    "legacy": {
+      "status": "survived",
+      "wall_ms": 52291.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 3824.9,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P44": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 50803.3,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 2973.8,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  },
+  "L2_P66": {
+    "legacy": {
+      "status": "killed",
+      "wall_ms": 53680.5,
+      "error": ""
+    },
+    "corrected": {
+      "status": "unknown",
+      "wall_ms": 7395.2,
+      "error": "One or more trials were inconclusive; no sound kill was observed"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+﻿lines: 1091 -> 1119
+'?' occurrences: 524 -> 525
+removed lines: 0 ; added lines: 28
+numbers in removed lines: []
+numbers in added lines: ['07', '13', '14', '184', '2026', '30', '60']
+
+=== unified diff ===
+--- before
++++ after
+@@ -246,6 +246,21 @@
+   manifest），非实验结果数字。
+ - 依据文档：补充实验数据/E3_契约缺口补齐计划_L3与C4.md（抽样协议、功效分析与
+   人工审核流程）。
++
++修订记录 v1.14（2026-07-30，Table 6a 缺口段补两句区间宽度口径；未改任何数字）：
++- 背景：C4 子样本方案定案（n=60、按 `difficulty` 五层比例分配、余数随机化使
++  π_i 精确等于 60/184）后，功效分析给出两条会被审稿人自行算出的结论，拍板要求
++  先行显式披露，避免读成"作者未意识到"。
++- 在 v1.13 的 *Declared coverage gaps of Table 6a.* 段的 TritonBench-G 小节末尾
++  追加一段，承接补齐路径说明，写明两点：
++  1) 该列区间偏宽的根因是**抽出的确认缺陷池规模**（= 子样本量 × 语料缺陷密度），
++     而**不是**自撰参考的份数，也不是抽样设计——换任何抽样方案乃至 184 任务普查
++     都改变不了这一点；
++  2) 逐语料假设检验在任何可撰写的子样本量下都拿不到，但这是**遵循**既定设计而非
++     未达标：per-cell 区间进 artifact、检验只在聚合层（Table 6b）计算，C4 的缺陷
++     在聚合层参与合并比较并确有贡献。
++- 数据纪律：未改动任何已填数字；未填任何 "?"；未引入任何新数字（段内仅复用已出现
++  的 184）；Table 6a 的行列与单元格逐字未动。
+ 
+ # 5 Experimental Evaluation
+ 
+@@ -757,6 +772,19 @@
+ disagreement traced to the kernel rather than to our reference is itself
+ recorded as a finding; agreement is treated as a smoke check and never as
+ evidence that the reference is correct.
++
++Two consequences of that design are worth stating before a reader derives
++them. First, what will bound the precision of the filled column is the size
++of the confirmed-defect pool the subsample yields, not the number of
++references we author: the pool is the subsample size multiplied by the
++corpus's defect density, so the interval will be wide for reasons of corpus
++scale and defect density rather than of sampling design, and no sampling
++scheme—a census of all 184 tasks included—removes that. Second, a
++per-corpus hypothesis test on this column is out of reach at any subsample
++size we can author, which follows the design rather than falling short of
++it: per-cell intervals belong to the artifact and tests are computed only
++at the aggregate level (Table 6b), where these defects join the pooled
++comparison and do carry weight.
+ 
+ The CUDA-L1, AI-CUDA-Engineer, and KernelBench-samples columns currently
+ cover the KernelBench Level-1 and Level-2 tasks those corpora reference

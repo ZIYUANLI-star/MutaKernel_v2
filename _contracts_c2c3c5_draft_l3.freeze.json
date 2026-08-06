@@ -1,0 +1,8 @@
+{
+  "created_at": "2026-07-30T13:22:04.624432+00:00",
+  "contracts": 250,
+  "failures": [],
+  "batch_sha256": "ad6f12c8277df3b8c1ee8378197f748649d8bfc610d76adbb820e122799117cf",
+  "draft": true,
+  "note": "DRAFT batch - do NOT freeze; pending dual human review"
+}

@@ -1,0 +1,49 @@
+{
+  "strata": {
+    "L1|stateful": {
+      "probes": 60,
+      "excluded_control": 60,
+      "inconclusive": 0,
+      "paired_n": 0,
+      "paired_flips": 0,
+      "k2s": 0,
+      "s2k": 0,
+      "hist_n": 0,
+      "hist_flips": 0
+    },
+    "L1|stateless": {
+      "probes": 60,
+      "excluded_control": 33,
+      "inconclusive": 0,
+      "paired_n": 27,
+      "paired_flips": 0,
+      "k2s": 0,
+      "s2k": 0,
+      "hist_n": 27,
+      "hist_flips": 4
+    },
+    "L2|stateful": {
+      "probes": 60,
+      "excluded_control": 60,
+      "inconclusive": 0,
+      "paired_n": 0,
+      "paired_flips": 0,
+      "k2s": 0,
+      "s2k": 0,
+      "hist_n": 0,
+      "hist_flips": 0
+    }
+  },
+  "overall": {
+    "probes": 180,
+    "excluded_control": 153,
+    "inconclusive": 0,
+    "paired_n": 27,
+    "paired_flips": 0,
+    "k2s": 0,
+    "s2k": 0,
+    "hist_n": 27,
+    "hist_flips": 4
+  },
+  "records": 180
+}

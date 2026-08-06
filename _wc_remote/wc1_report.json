@@ -1,0 +1,3636 @@
+{
+ "protocol": {
+  "id": "WC-1",
+  "n_A": 10,
+  "n_B": 20,
+  "k": 1,
+  "round_timeout_s": 300,
+  "equiv": {
+   "base_seed": 10000,
+   "equiv_runs": 20,
+   "stress_repeats": 2
+  },
+  "cse": {
+   "base_seed": 50000,
+   "equiv_runs": 40,
+   "stress_repeats": 3
+  }
+ },
+ "generated_at": "2026-07-30T22:07:58.315288",
+ "cells_done": 10,
+ "cells_planned": 143,
+ "control_cell_states": {
+  "MISSING": 57,
+  "CLEAN": 4
+ },
+ "kernel_determinism": {
+  "L1_P1": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P10": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P13": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P16": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "structured_ramp",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P17": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P18": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "extreme_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P2": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P23": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "extreme_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "large_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P24": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "tail_heavy",
+     "cell_state": "CLEAN",
+     "pass_rounds": 30,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "large_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 1,
+   "status": "incomplete"
+  },
+  "L1_P3": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P35": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "structured_ramp",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "near_epsilon",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "structured_ramp",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P37": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "sparse_extreme",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "denormals",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P39": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "tail_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "near_zero",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "sparse",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P41": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "near_overflow",
+     "cell_state": "CLEAN",
+     "pass_rounds": 30,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "large_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 1,
+   "status": "incomplete"
+  },
+  "L1_P49": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "__random__",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "all_negative",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P53": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "extreme_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P94": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "tail_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P95": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "extreme_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "tail_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P96": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "near_zero",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "all_negative",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L1_P98": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "structured_ramp",
+     "cell_state": "CLEAN",
+     "pass_rounds": 30,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "extreme_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "near_zero",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 1,
+   "status": "incomplete"
+  },
+  "L1_P99": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "large_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "sparse",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P24": {
+   "positions": [
+    {
+     "stage": "cse",
+     "position": "near_overflow",
+     "cell_state": "CLEAN",
+     "pass_rounds": 30,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "large_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 1,
+   "status": "incomplete"
+  },
+  "L2_P56": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "extreme_magnitude",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P59": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P63": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P68": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "__random__",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P81": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "__random__",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    },
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P86": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "head_heavy",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  },
+  "L2_P98": {
+   "positions": [
+    {
+     "stage": "equiv",
+     "position": "boundary_last_element",
+     "cell_state": "MISSING",
+     "pass_rounds": 0,
+     "fail_rounds": 0,
+     "flake_rate": 0.0
+    }
+   ],
+   "nondeterministic": false,
+   "audited_positions": 0,
+   "status": "incomplete"
+  }
+ },
+ "nondeterministic_kernels": [],
+ "verdicts": [
+  {
+   "stage": "cse",
+   "probe_id": "L1_P24__relop_replace__7",
+   "kernel": "L1_P24",
+   "operator": "relop_replace",
+   "fault_class": "F-RELOP",
+   "position": {
+    "round_type": "stress",
+    "policy": "tail_heavy",
+    "sub_index": 1,
+    "round_index": null,
+    "seed": 50041
+   },
+   "verdict": "PENDING_CANDIDATE",
+   "control": {
+    "cell_id": "ctrl__L1_P24__cse__tail_heavy",
+    "cell_state": "CLEAN",
+    "pass_rounds": 30,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P24__relop_replace__7__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 80
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P35__arith_replace__16",
+   "kernel": "L1_P35",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "structured_ramp",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P35__cse__structured_ramp",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P35__arith_replace__16__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 70
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P37__sync_remove__1",
+   "kernel": "L1_P37",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "sparse_extreme",
+    "sub_index": 2,
+    "round_index": null,
+    "seed": 50042
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__cse__sparse_extreme",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     2
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__sync_remove__1__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 99
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P39__relop_replace__6",
+   "kernel": "L1_P39",
+   "operator": "relop_replace",
+   "fault_class": "F-RELOP",
+   "position": {
+    "round_type": "stress",
+    "policy": "tail_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P39__cse__tail_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P39__relop_replace__6__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 79
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P41__init_modify__2",
+   "kernel": "L1_P41",
+   "operator": "init_modify",
+   "fault_class": "F-INIT",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_overflow",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CANDIDATE",
+   "control": {
+    "cell_id": "ctrl__L1_P41__cse__near_overflow",
+    "cell_state": "CLEAN",
+    "pass_rounds": 30,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P41__init_modify__2__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 43
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P94__const_perturb__7",
+   "kernel": "L1_P94",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "tail_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P94__cse__tail_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P94__const_perturb__7__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 79
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P96__relop_replace__8",
+   "kernel": "L1_P96",
+   "operator": "relop_replace",
+   "fault_class": "F-RELOP",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_zero",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P96__cse__near_zero",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P96__relop_replace__8__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 46
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L1_P98__arith_replace__1",
+   "kernel": "L1_P98",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "structured_ramp",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CANDIDATE",
+   "control": {
+    "cell_id": "ctrl__L1_P98__cse__structured_ramp",
+    "cell_state": "CLEAN",
+    "pass_rounds": 30,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 30,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P98__arith_replace__1__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 70
+  },
+  {
+   "stage": "cse",
+   "probe_id": "L2_P24__init_modify__2",
+   "kernel": "L2_P24",
+   "operator": "init_modify",
+   "fault_class": "F-INIT",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_overflow",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 50040
+   },
+   "verdict": "PENDING_CANDIDATE",
+   "control": {
+    "cell_id": "ctrl__L2_P24__cse__near_overflow",
+    "cell_state": "CLEAN",
+    "pass_rounds": 30,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 70,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P24__init_modify__2__cse",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 43
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P10__sync_remove__1",
+   "kernel": "L1_P10",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P10__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P10__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P13__sync_remove__1",
+   "kernel": "L1_P13",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P13__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P13__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P16__launch_config_mutate__0",
+   "kernel": "L1_P16",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "stress",
+    "policy": "structured_ramp",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P16__equiv__structured_ramp",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P16__launch_config_mutate__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P16__sync_remove__1",
+   "kernel": "L1_P16",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P16__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P16__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P17__launch_config_mutate__0",
+   "kernel": "L1_P17",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P17__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P17__launch_config_mutate__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P17__sync_remove__1",
+   "kernel": "L1_P17",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P17__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P17__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P18__arith_replace__18",
+   "kernel": "L1_P18",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P18__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P18__arith_replace__18__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P18__mask_boundary__2",
+   "kernel": "L1_P18",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P18__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P18__mask_boundary__2__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P1__sync_remove__1",
+   "kernel": "L1_P1",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P1__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P1__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__arith_replace__13",
+   "kernel": "L1_P23",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__arith_replace__13__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__arith_replace__4",
+   "kernel": "L1_P23",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__arith_replace__4__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__index_replace__5",
+   "kernel": "L1_P23",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__index_replace__5__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__index_replace__8",
+   "kernel": "L1_P23",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__index_replace__8__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__mask_boundary__2",
+   "kernel": "L1_P23",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__mask_boundary__2__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__stab_remove__0",
+   "kernel": "L1_P23",
+   "operator": "stab_remove",
+   "fault_class": "F-STAB",
+   "position": {
+    "round_type": "stress",
+    "policy": "large_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__large_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__stab_remove__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__sync_remove__1",
+   "kernel": "L1_P23",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P23__sync_remove__3",
+   "kernel": "L1_P23",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P23__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P23__sync_remove__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P24__mask_boundary__0",
+   "kernel": "L1_P24",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P24__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P24__mask_boundary__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P24__sync_remove__1",
+   "kernel": "L1_P24",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P24__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P24__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P24__sync_remove__3",
+   "kernel": "L1_P24",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "large_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P24__equiv__large_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P24__sync_remove__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 26
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P2__launch_config_mutate__0",
+   "kernel": "L1_P2",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P2__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P2__launch_config_mutate__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P2__sync_remove__1",
+   "kernel": "L1_P2",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P2__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P2__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P35__const_perturb__7",
+   "kernel": "L1_P35",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "structured_ramp",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P35__equiv__structured_ramp",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P35__const_perturb__7__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 28
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P35__epsilon_modify__1",
+   "kernel": "L1_P35",
+   "operator": "epsilon_modify",
+   "fault_class": "F-EPS",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_epsilon",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P35__equiv__near_epsilon",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P35__epsilon_modify__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__const_perturb__2",
+   "kernel": "L1_P37",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0,
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__const_perturb__2__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__const_perturb__3",
+   "kernel": "L1_P37",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 1,
+    "round_index": null,
+    "seed": 10021
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0,
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__const_perturb__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 23
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__const_perturb__7",
+   "kernel": "L1_P37",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 1,
+    "round_index": null,
+    "seed": 10021
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0,
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__const_perturb__7__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 23
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__epsilon_modify__1",
+   "kernel": "L1_P37",
+   "operator": "epsilon_modify",
+   "fault_class": "F-EPS",
+   "position": {
+    "round_type": "stress",
+    "policy": "denormals",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__denormals",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__epsilon_modify__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 24
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__index_replace__0",
+   "kernel": "L1_P37",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__index_replace__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__index_replace__11",
+   "kernel": "L1_P37",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0,
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__index_replace__11__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 30
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P37__mask_boundary__0",
+   "kernel": "L1_P37",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P37__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0,
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P37__mask_boundary__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P39__arith_replace__7",
+   "kernel": "L1_P39",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_zero",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P39__equiv__near_zero",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P39__arith_replace__7__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 24
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P39__arith_replace__8",
+   "kernel": "L1_P39",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "sparse",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P39__equiv__sparse",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P39__arith_replace__8__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 28
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P39__mask_boundary__0",
+   "kernel": "L1_P39",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "sparse",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P39__equiv__sparse",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P39__mask_boundary__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 28
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P39__sync_remove__0",
+   "kernel": "L1_P39",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P39__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P39__sync_remove__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P39__sync_remove__1",
+   "kernel": "L1_P39",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P39__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P39__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P3__mask_boundary__2",
+   "kernel": "L1_P3",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P3__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P3__mask_boundary__2__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P41__init_modify__3",
+   "kernel": "L1_P41",
+   "operator": "init_modify",
+   "fault_class": "F-INIT",
+   "position": {
+    "round_type": "stress",
+    "policy": "large_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P41__equiv__large_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P41__init_modify__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P49__init_modify__1",
+   "kernel": "L1_P49",
+   "operator": "init_modify",
+   "fault_class": "F-INIT",
+   "position": {
+    "round_type": "stress",
+    "policy": "all_negative",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P49__equiv__all_negative",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P49__init_modify__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 26
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P49__launch_config_mutate__0",
+   "kernel": "L1_P49",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P49__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P49__launch_config_mutate__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P49__sync_remove__0",
+   "kernel": "L1_P49",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "random",
+    "policy": null,
+    "sub_index": null,
+    "round_index": 0,
+    "seed": 10000
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P49__equiv__rand0",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 10,
+    "witness_sub_indices": null
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P49__sync_remove__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 1,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 0
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P53__arith_replace__4",
+   "kernel": "L1_P53",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P53__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P53__arith_replace__4__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P53__index_replace__3",
+   "kernel": "L1_P53",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P53__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P53__index_replace__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P94__index_replace__5",
+   "kernel": "L1_P94",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P94__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P94__index_replace__5__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P95__arith_replace__5",
+   "kernel": "L1_P95",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P95__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P95__arith_replace__5__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P95__index_replace__8",
+   "kernel": "L1_P95",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P95__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P95__index_replace__8__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P95__launch_config_mutate__1",
+   "kernel": "L1_P95",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "stress",
+    "policy": "tail_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P95__equiv__tail_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P95__launch_config_mutate__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 24
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P95__relop_replace__5",
+   "kernel": "L1_P95",
+   "operator": "relop_replace",
+   "fault_class": "F-RELOP",
+   "position": null,
+   "verdict": "OUT_OF_SCOPE_NON_NUMERIC",
+   "control": null,
+   "candidate": null
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P96__arith_replace__6",
+   "kernel": "L1_P96",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "all_negative",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P96__equiv__all_negative",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P96__arith_replace__6__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 26
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P96__sync_remove__1",
+   "kernel": "L1_P96",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P96__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P96__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P98__arith_replace__12",
+   "kernel": "L1_P98",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P98__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P98__arith_replace__12__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P98__const_perturb__10",
+   "kernel": "L1_P98",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_zero",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P98__equiv__near_zero",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P98__const_perturb__10__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P98__const_perturb__11",
+   "kernel": "L1_P98",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_zero",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P98__equiv__near_zero",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P98__const_perturb__11__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P98__epsilon_modify__1",
+   "kernel": "L1_P98",
+   "operator": "epsilon_modify",
+   "fault_class": "F-EPS",
+   "position": {
+    "round_type": "stress",
+    "policy": "near_zero",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P98__equiv__near_zero",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P98__epsilon_modify__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P99__const_perturb__14",
+   "kernel": "L1_P99",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P99__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P99__const_perturb__14__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P99__const_perturb__4",
+   "kernel": "L1_P99",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "sparse",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P99__equiv__sparse",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P99__const_perturb__4__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 24
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L1_P99__relop_replace__9",
+   "kernel": "L1_P99",
+   "operator": "relop_replace",
+   "fault_class": "F-RELOP",
+   "position": {
+    "round_type": "stress",
+    "policy": "large_magnitude",
+    "sub_index": 1,
+    "round_index": null,
+    "seed": 10021
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L1_P99__equiv__large_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 20,
+    "witness_sub_indices": [
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L1_P99__relop_replace__9__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 31
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P24__init_modify__3",
+   "kernel": "L2_P24",
+   "operator": "init_modify",
+   "fault_class": "F-INIT",
+   "position": {
+    "round_type": "stress",
+    "policy": "large_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P24__equiv__large_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P24__init_modify__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P24__stab_remove__0",
+   "kernel": "L2_P24",
+   "operator": "stab_remove",
+   "fault_class": "F-STAB",
+   "position": {
+    "round_type": "stress",
+    "policy": "large_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P24__equiv__large_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P24__stab_remove__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P56__arith_replace__11",
+   "kernel": "L2_P56",
+   "operator": "arith_replace",
+   "fault_class": "F-ARITH",
+   "position": {
+    "round_type": "stress",
+    "policy": "extreme_magnitude",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P56__equiv__extreme_magnitude",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P56__arith_replace__11__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P59__const_perturb__16",
+   "kernel": "L2_P59",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P59__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P59__const_perturb__16__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P59__const_perturb__21",
+   "kernel": "L2_P59",
+   "operator": "const_perturb",
+   "fault_class": "F-CONST",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P59__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P59__const_perturb__21__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P59__mask_boundary__3",
+   "kernel": "L2_P59",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P59__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P59__mask_boundary__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P63__mask_boundary__3",
+   "kernel": "L2_P63",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P63__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P63__mask_boundary__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P63__sync_remove__1",
+   "kernel": "L2_P63",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 1,
+    "round_index": null,
+    "seed": 10021
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P63__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P63__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 23
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P68__relop_replace__3",
+   "kernel": "L2_P68",
+   "operator": "relop_replace",
+   "fault_class": "F-RELOP",
+   "position": {
+    "round_type": "random",
+    "policy": null,
+    "sub_index": null,
+    "round_index": 4,
+    "seed": 10004
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P68__equiv__rand4",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 10,
+    "witness_sub_indices": null
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P68__relop_replace__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 1,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 4
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P81__index_replace__3",
+   "kernel": "L2_P81",
+   "operator": "index_replace",
+   "fault_class": "F-IDX",
+   "position": {
+    "round_type": "random",
+    "policy": null,
+    "sub_index": null,
+    "round_index": 0,
+    "seed": 10000
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P81__equiv__rand0",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 10,
+    "witness_sub_indices": null
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P81__index_replace__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 1,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 0
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P81__launch_config_mutate__2",
+   "kernel": "L2_P81",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "random",
+    "policy": null,
+    "sub_index": null,
+    "round_index": 0,
+    "seed": 10000
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P81__equiv__rand0",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 10,
+    "witness_sub_indices": null
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P81__launch_config_mutate__2__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 1,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 0
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P81__mask_boundary__2",
+   "kernel": "L2_P81",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P81__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P81__mask_boundary__2__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 20
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P81__mask_boundary__4",
+   "kernel": "L2_P81",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "random",
+    "policy": null,
+    "sub_index": null,
+    "round_index": 0,
+    "seed": 10000
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P81__equiv__rand0",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 10,
+    "witness_sub_indices": null
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P81__mask_boundary__4__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 1,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 0
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P81__mask_boundary__5",
+   "kernel": "L2_P81",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "random",
+    "policy": null,
+    "sub_index": null,
+    "round_index": 0,
+    "seed": 10000
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P81__equiv__rand0",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 10,
+    "witness_sub_indices": null
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P81__mask_boundary__5__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 1,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 0
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P86__launch_config_mutate__0",
+   "kernel": "L2_P86",
+   "operator": "launch_config_mutate",
+   "fault_class": "F-LAUNCH",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P86__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P86__launch_config_mutate__0__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P86__sync_remove__1",
+   "kernel": "L2_P86",
+   "operator": "sync_remove",
+   "fault_class": "F-SYNC",
+   "position": {
+    "round_type": "stress",
+    "policy": "head_heavy",
+    "sub_index": 0,
+    "round_index": null,
+    "seed": 10020
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P86__equiv__head_heavy",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     0
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P86__sync_remove__1__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 22
+  },
+  {
+   "stage": "equiv",
+   "probe_id": "L2_P98__mask_boundary__3",
+   "kernel": "L2_P98",
+   "operator": "mask_boundary",
+   "fault_class": "F-BOUND",
+   "position": {
+    "round_type": "stress",
+    "policy": "boundary_last_element",
+    "sub_index": 1,
+    "round_index": null,
+    "seed": 10021
+   },
+   "verdict": "PENDING_CONTROL",
+   "control": {
+    "cell_id": "ctrl__L2_P98__equiv__boundary_last_element",
+    "cell_state": "MISSING",
+    "pass_rounds": 0,
+    "fail_rounds": 0,
+    "planned_replays": 10,
+    "planned_rounds": 40,
+    "witness_sub_indices": [
+     1
+    ]
+   },
+   "candidate": {
+    "cell_id": "conf__L2_P98__mask_boundary__3__equiv",
+    "state": "MISSING",
+    "j": null,
+    "planned_replays": 20,
+    "max_abs_error": {},
+    "rounds_executed": 0
+   },
+   "valid_rounds_in_production": 21
+  }
+ ],
+ "verdict_counts": {
+  "cse": {
+   "PENDING_CANDIDATE": 4,
+   "PENDING_CONTROL": 5
+  },
+  "equiv": {
+   "PENDING_CONTROL": 73,
+   "OUT_OF_SCOPE_NON_NUMERIC": 1
+  }
+ },
+ "final_counts": {
+  "cse_FALSIFIED_before": 9,
+  "cse_FALSIFIED_after": 0,
+  "equiv_WITNESSED_before": 74,
+  "equiv_WITNESSED_after": 1
+ },
+ "cse_fault_classes_before": {
+  "F-RELOP": 3,
+  "F-ARITH": 2,
+  "F-SYNC": 1,
+  "F-INIT": 2,
+  "F-CONST": 1
+ },
+ "cse_fault_classes_after": {},
+ "equiv_fault_classes_before": {
+  "F-SYNC": 16,
+  "F-LAUNCH": 7,
+  "F-ARITH": 10,
+  "F-BOUND": 12,
+  "F-IDX": 8,
+  "F-STAB": 2,
+  "F-CONST": 10,
+  "F-EPS": 3,
+  "F-INIT": 3,
+  "F-RELOP": 3
+ },
+ "equiv_fault_classes_after": {
+  "F-RELOP": 1
+ },
+ "regrade_plan": []
+}

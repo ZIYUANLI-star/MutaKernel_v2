@@ -1,0 +1,85 @@
+﻿lines: 1025 -> 1091
+'?' occurrences: 523 -> 524
+removed lines: 0 ; added lines: 66
+numbers in removed lines: []
+numbers in added lines: ['07', '13', '184', '200', '2026', '250', '30', '50']
+
+=== unified diff ===
+--- before
++++ after
+@@ -222,4 +222,29 @@
+   流程回填；不变量（max/tol = 4/3、1.5 < 2、fp16-only）已定稿写入。
+ - Table 6a/6b、Table 7 的行列与占位符未改动；文件头历史修订记录按惯例不追改。
++
++修订记录 v1.13（2026-07-30，Table 6a 覆盖范围缺口标注；仅范围声明，未改任何数字）：
++- 拍板结论：空列如实标注比沉默安全。Table 6a 表后新增
++  *Declared coverage gaps of Table 6a.* 段，逐条声明两处当前不在冻结科目集内的
++  子空间，并说明其性质与补齐路径：
++  1) **TritonBench-G（C4）列对所有预算匹配行（含 M-full/M-dir）为空**。原因经逐
++     文件核实是语料性质而非某一行的能力缺陷：每个任务文件自带 Triton kernel 与
++     其测试函数，其官方评测的参考值由**被测文件自身**产出，语料不提供任何独立
++     参考实现，故 B1u/B7/B8/B9/B11/M-full/M-dir 的差分判定同等无对照。缺口对各
++     行一致，不产生行间偏差；其代价是外部效度在该列补齐前只由 CUDA 语料承担；
++  2) 补齐路径已定并写入正文：对 184 个任务做**预注册均匀随机抽样**（固定种子）、
++     自撰 PyTorch 参考，该列届时按子样本报告并显式声明抽样设计与纳入概率，接入
++     §5.1.5 已有的 Horvitz–Thompson / Hájek 估计量（不另造口径）；参考与语料自带
++     记录值不一致时人工判定，归因到内核的不一致本身记为一项发现，一致仅算冒烟
++     校验、不构成参考正确性证明；
++  3) **C2/C3/C5 三列当前覆盖其引用的 KernelBench L1+L2 任务（250 任务中的 200）**，
++     余 50 个 L3 任务缺失属**工程缺口**：用于契约提取的 vendored 基准树缺 level3
++     目录，任务定义本身在 artifact 内完整且经逐文件摘要核验与 level1/level2 同一
++     上游 revision；补齐后三列覆盖 250 任务。L3 中输出非单张量的科目落在 B9 port
++     可判定域之外，按 §5.3 的不可判定口径计入分母、不计检出。
++- 数据纪律：未改动任何已填数字；未填任何 "?"；Table 6a 的行列与单元格占位符逐字
++  未动；新增的 250/200/50/184 为科目集计数（来源：契约批次 freeze 记录与语料
++  manifest），非实验结果数字。
++- 依据文档：补充实验数据/E3_契约缺口补齐计划_L3与C4.md（抽样协议、功效分析与
++  人工审核流程）。
+ 
+ # 5 Experimental Evaluation
+@@ -705,4 +730,45 @@
+ | **M-full** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **? %** |
+ | **M-dir (site-directed)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **?/? (? %)** | **? %** |
++
++*Declared coverage gaps of Table 6a.* Two parts of the table's subject
++space are, at the time of writing, outside the frozen subject set. We
++state both rather than reporting partial cells, because an empty column is
++a property of our subject preparation and not evidence about any
++validator.
++
++The **TritonBench-G column is empty for every budget-matched row**, ours
++included. The cause is a property of that corpus, verified file by file:
++each task ships a Triton kernel together with the test function that
++exercises it, and the reference values against which its published
++evaluation compares are produced by *the file under test itself*. The
++corpus therefore supplies no independent reference implementation, and
++contract-based differential validation—for B1u, B7, B8, B9, B11, M-full,
++and M-dir alike—has nothing to compare against until references are
++authored separately. The absence is uniform across rows, so it cannot bias
++the comparison among them; what it does bound is external validity, which
++rests on the CUDA corpora until the column is filled. Our remediation is
++fixed in advance: we author PyTorch references for a *pre-registered
++uniform random subsample* of the 184 tasks under a recorded seed, and the
++filled column will be reported on that subsample with its sampling design
++and inclusion probabilities declared, so that the same Horvitz–Thompson
++and Hájek estimators used for the all-PASS audit stratum (Section 5.1.5)
++carry the subsample to a population statement. A reference that disagrees
++with the corpus's own recorded values is adjudicated manually, and a
++disagreement traced to the kernel rather than to our reference is itself
++recorded as a finding; agreement is treated as a smoke check and never as
++evidence that the reference is correct.
++
++The CUDA-L1, AI-CUDA-Engineer, and KernelBench-samples columns currently
++cover the KernelBench Level-1 and Level-2 tasks those corpora reference
++(200 of 250 tasks); the remaining 50 Level-3 tasks are absent for an
++engineering reason rather than a corpus one—the vendored benchmark tree
++used for contract extraction lacked its Level-3 directory, while the task
++definitions themselves are complete in our artifact and verified by
++per-file digest to come from the same upstream revision as the Level-1 and
++Level-2 files already used. Restoring the directory and re-running the
++extractor brings these columns to 250 tasks, and Level-3 subjects whose
++outputs are not single tensors fall outside the B9 port's decidable domain
++and are counted in the denominator without crediting a detection, exactly
++as the undecidable units of Section 5.3 are.
+ 
+ Across the four corpora, M-full's margin over the strongest external

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/root/mk_v2/_wc_analyze.py", line 295, in <module>
+    main()
+  File "/root/mk_v2/_wc_analyze.py", line 124, in main
+    "max_abs_error": (rec or {}).get("divergence", {}).get("oracle", {}) and None,
+AttributeError: 'NoneType' object has no attribute 'get'

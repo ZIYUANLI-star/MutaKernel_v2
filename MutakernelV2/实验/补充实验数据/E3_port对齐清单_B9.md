@@ -18,6 +18,13 @@
 | 7 | 预算：上游按 `--iters` 每 (strategy, kernel) 固定迭代数 | port 行恰好 32 次候选调用（fp64 参考执行为参考侧，不计候选预算——与所有其他行同口径） | 已对齐（预算匹配是蓝图要求） |
 | 8 | native 语料复现（reproduction delta B9）：在 C6 26-op 语料上复现论文 10/10 caught、16/16 clean | 未执行——`run_e3_external.py c6` 装载器与任务表就绪，执行阻塞于 GPU（Triton kernel 需要设备） | 待办（阻塞于 GPU） |
 
+## 校准执行侧（第 5 条的补充）
+
+第 5 条的控制校准已进入执行。执行决定（线程数保真、大科目独占与跳过规则、
+heavy_tail 保留上游规则、fp16 不可判定域列账）、`torch.quantile` 超限缺陷的
+bit-exact 修复论证、宿主内存模型，以及 heavy_tail 假阳性的量化，见
+`E3_B9校准决定与限制说明.md`。该文件是蓝图中 B9 方法学脚注的引用源。
+
 ## 明确不支持条款
 
 1. **Rust 守护进程的逐位一致用例流**：我们镜像文档化的分布（uniform[-10,10] × schema 抽样），不复刻其字节级 RNG 流；上游自己的 local oracle 也如此声明（"not bit-identical to the Rust fuzzer"）。
