@@ -68,6 +68,7 @@ def test_maintained_python_has_no_literal_secret_assignment():
         return (
             "PASSWORD" in normalized
             or "SECRET" in normalized
+            or "BEARER_TOKEN" in normalized
             or normalized in {
                 "PASSWORD",
                 "TOKEN",
@@ -95,6 +96,15 @@ def test_maintained_python_has_no_literal_secret_assignment():
                     for target in targets:
                         if isinstance(target, ast.Name) and sensitive(target.id):
                             violations.append((path.relative_to(PROJECT_ROOT).as_posix(), node.lineno, target.id))
+                        elif (
+                            isinstance(target, ast.Subscript)
+                            and isinstance(target.slice, ast.Constant)
+                            and isinstance(target.slice.value, str)
+                            and sensitive(target.slice.value)
+                        ):
+                            violations.append(
+                                (path.relative_to(PROJECT_ROOT).as_posix(), node.lineno, target.slice.value)
+                            )
             elif isinstance(node, ast.keyword) and node.arg and sensitive(node.arg):
                 if isinstance(node.value, ast.Constant) and isinstance(node.value.value, str) and node.value.value:
                     violations.append((path.relative_to(PROJECT_ROOT).as_posix(), node.lineno, node.arg))

@@ -372,3 +372,92 @@ def test_resume_rejects_changed_worker_implementation(tmp_path: Path) -> None:
 
     with pytest.raises(runner.RunnerError, match="manifest does not match"):
         runner.run_experiment(**arguments)
+
+
+def test_timeout_streak_survives_resume_without_claiming_new_calls(
+    monkeypatch: Any, tmp_path: Path,
+) -> None:
+    runner = _load(RUNNER_PATH, "fse_timeout_streak_resume")
+    subjects, plan, environment = _prepare_inputs(tmp_path)
+    calls = []
+
+    def timeout_worker(config, **_kwargs):
+        calls.append(config["case"]["test_id"])
+        return runner._inconclusive_worker_result(
+            "timed out", "parent_timeout", parent_wall_ms=12.0,
+        ), 12.0
+
+    monkeypatch.setattr(runner, "_run_worker", timeout_worker)
+    arguments = dict(
+        plan_path=plan, subject_manifest_path=subjects, environment_path=environment,
+        artifact_root=tmp_path, output_directory=tmp_path / "run",
+        run_id="timeout-resume", device="cpu", timeout_s=1.0,
+        selected_strategies=["five-iid-historical-anchor"],
+        timeout_streak_limit=2,
+        runtime_environment_probe=lambda: json.loads(environment.read_text(encoding="utf-8")),
+    )
+    runner.run_experiment(**arguments, max_tests=2)
+    before = (tmp_path / "run" / "observations.jsonl").read_bytes()
+    summary = runner.run_experiment(**arguments)
+    after = (tmp_path / "run" / "observations.jsonl").read_bytes()
+    rows = [json.loads(line) for line in after.splitlines()]
+
+    assert len(calls) == 2
+    assert after.startswith(before)
+    assert summary["timeout_streak_skipped"] == 3
+    assert len(rows) == 5
+    for row in rows[2:]:
+        assert row["validation_status"] == "inconclusive"
+        assert row["worker_result"]["phase"] == "timeout_streak"
+        assert row["observed_candidate_runs"] == 0
+        assert row["parent_wall_ms"] == 0
+
+
+def test_successful_comparison_resets_a_timeout_streak(
+    monkeypatch: Any, tmp_path: Path,
+) -> None:
+    runner = _load(RUNNER_PATH, "fse_timeout_streak_reset")
+    subjects, plan, environment = _prepare_inputs(tmp_path)
+    outcomes = iter(["timeout", "pass", "timeout", "timeout"])
+    calls = []
+
+    def worker(config, **_kwargs):
+        calls.append(config["case"]["test_id"])
+        if next(outcomes) == "timeout":
+            return runner._inconclusive_worker_result(
+                "timed out", "parent_timeout", parent_wall_ms=12.0,
+            ), 12.0
+        return {
+            "validation_status": "pass", "phase": "validation",
+            "candidate_runs": 1, "reference_runs": 1, "reason": "matched",
+        }, 1.0
+
+    monkeypatch.setattr(runner, "_run_worker", worker)
+    summary = runner.run_experiment(
+        plan_path=plan, subject_manifest_path=subjects, environment_path=environment,
+        artifact_root=tmp_path, output_directory=tmp_path / "run",
+        run_id="timeout-reset", device="cpu", timeout_s=1.0,
+        selected_strategies=["five-iid-historical-anchor"],
+        timeout_streak_limit=2,
+        runtime_environment_probe=lambda: json.loads(environment.read_text(encoding="utf-8")),
+    )
+    assert len(calls) == 4
+    assert summary["timeout_streak_skipped"] == 1
+    rows = [
+        json.loads(line)
+        for line in (tmp_path / "run" / "observations.jsonl").read_text().splitlines()
+    ]
+    assert rows[1]["validation_status"] == "pass"
+    assert rows[-1]["worker_result"]["phase"] == "timeout_streak"
+
+
+@pytest.mark.parametrize("limit", [0, -1])
+def test_timeout_streak_limit_must_be_positive(tmp_path: Path, limit: int) -> None:
+    runner = _load(RUNNER_PATH, "fse_timeout_streak_invalid")
+    subjects, plan, environment = _prepare_inputs(tmp_path)
+    with pytest.raises(runner.RunnerError, match="timeout_streak_limit must be positive"):
+        runner.run_experiment(
+            plan_path=plan, subject_manifest_path=subjects, environment_path=environment,
+            artifact_root=tmp_path, output_directory=tmp_path / "run", run_id="invalid-limit",
+            device="cpu", timeout_s=1.0, timeout_streak_limit=limit,
+        )

@@ -693,6 +693,7 @@ def run_experiment(
     selected_strategies: Optional[Iterable[str]] = None,
     max_tests: Optional[int] = None,
     early_stop_on_fail: bool = False,
+    timeout_streak_limit: Optional[int] = None,
     allow_dirty: bool = False,
     worker_path: Path = WORKER_PATH,
     command: Sequence[str] = ("run_fse_experiment.py",),
@@ -706,6 +707,8 @@ def run_experiment(
         raise RunnerError("wall budget must be positive")
     if max_tests is not None and max_tests <= 0:
         raise RunnerError("max_tests must be positive")
+    if timeout_streak_limit is not None and timeout_streak_limit <= 0:
+        raise RunnerError("timeout_streak_limit must be positive")
 
     plan, subject_manifest, environment = _load_verified_inputs(
         plan_path=plan_path.resolve(),
@@ -755,6 +758,7 @@ def run_experiment(
         "selected_subjects": None if selected_subject_set is None else sorted(selected_subject_set),
         "selected_strategies": None if selected_strategy_set is None else sorted(selected_strategy_set),
         "early_stop_on_fail": early_stop_on_fail,
+        "timeout_streak_limit": timeout_streak_limit,
     }
     manifest_config = {
         "schema_version": RUNNER_SCHEMA_VERSION,
@@ -780,11 +784,25 @@ def run_experiment(
 
     wall_spent: Dict[Tuple[str, str], float] = defaultdict(float)
     detected_pairs = set()
+    timeout_streaks: Dict[Tuple[str, str], int] = defaultdict(int)
     for record in observations.records():
         key = (str(record.get("subject_id")), str(record.get("strategy_id")))
         wall_spent[key] += float(record.get("parent_wall_ms", 0.0))
         if record.get("validation_status") == "fail":
             detected_pairs.add(key)
+        prior_worker = record.get("worker_result")
+        prior_phase = (
+            prior_worker.get("phase")
+            if isinstance(prior_worker, Mapping)
+            else None
+        )
+        if (
+            record.get("validation_status") == "inconclusive"
+            and prior_phase in ("parent_timeout", "timeout_streak")
+        ):
+            timeout_streaks[key] += 1
+        elif prior_phase != "wall_budget":
+            timeout_streaks[key] = 0
 
     summary = {
         "executed": 0,
@@ -792,6 +810,7 @@ def run_experiment(
         "skipped_by_filter": 0,
         "skipped_after_fail": 0,
         "budget_exhausted": 0,
+        "timeout_streak_skipped": 0,
     }
     for scheduled in plan["schedule"]:
         subject_id = str(scheduled["subject_id"])
@@ -828,6 +847,20 @@ def run_experiment(
             )
             parent_wall_ms = 0.0
             summary["budget_exhausted"] += 1
+        elif (
+            timeout_streak_limit is not None
+            and timeout_streaks[key] >= timeout_streak_limit
+        ):
+            worker_result = _inconclusive_worker_result(
+                (
+                    f"skipped after {timeout_streak_limit} consecutive "
+                    "parent-timeout cases in this subject/strategy pair"
+                ),
+                "timeout_streak",
+                parent_wall_ms=0.0,
+            )
+            parent_wall_ms = 0.0
+            summary["timeout_streak_skipped"] += 1
         else:
             raw_subject = raw_by_id[subject_id]
             case = _materialize_case(scheduled, raw_subject.get("contract", {}), device)
@@ -882,6 +915,14 @@ def run_experiment(
         observations.append(observation)
         if observation["validation_status"] == "fail":
             detected_pairs.add(key)
+        result_phase = worker_result.get("phase")
+        if (
+            observation["validation_status"] == "inconclusive"
+            and result_phase in ("parent_timeout", "timeout_streak")
+        ):
+            timeout_streaks[key] += 1
+        elif result_phase != "wall_budget":
+            timeout_streaks[key] = 0
         summary["executed"] += 1
     return summary
 
@@ -897,6 +938,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--timeout", type=float, default=180.0)
     parser.add_argument("--wall-budget-ms", type=float)
+    parser.add_argument(
+        "--timeout-streak-limit",
+        type=int,
+        help=(
+            "Skip later cases for a subject/strategy pair after this many "
+            "consecutive parent-timeout INCONCLUSIVE cases"
+        ),
+    )
     parser.add_argument("--subject", action="append", dest="selected_subjects")
     parser.add_argument("--strategy", action="append", dest="selected_strategies")
     parser.add_argument("--max-tests", type=int)
@@ -922,6 +971,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             device=args.device,
             timeout_s=args.timeout,
             max_wall_ms_per_subject_strategy=args.wall_budget_ms,
+            timeout_streak_limit=args.timeout_streak_limit,
             selected_subjects=args.selected_subjects,
             selected_strategies=args.selected_strategies,
             max_tests=args.max_tests,

@@ -1,0 +1,12 @@
+# Optional capabilities: LLM-assisted repair/triage, SSH, plots, and dataset ingestion.
+-r requirements.txt
+openai>=1.0
+boto3>=1.34
+paramiko>=3
+matplotlib>=3.7
+pandas>=1.5
+pyarrow>=14
+datasets>=2.14
+
+# Triton is needed only when executing Triton candidates on a supported Linux stack.
+# Install a Triton version compatible with your PyTorch/GPU toolchain separately.

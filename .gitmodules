@@ -1,0 +1,27 @@
+[submodule "external/B7_robust_kbench"]
+	path = external/B7_robust_kbench
+	url = https://github.com/SakanaAI/robust-kbench.git
+[submodule "external/B8_kernelbenchx"]
+	path = external/B8_kernelbenchx
+	url = https://github.com/BonnieW05/KernelBenchX.git
+[submodule "external/C2_cuda_l1"]
+	path = external/C2_cuda_l1
+	url = https://github.com/deepreinforce-ai/CUDA-L1.git
+[submodule "external/C4_tritonbench"]
+	path = external/C4_tritonbench
+	url = https://github.com/thunlp/TritonBench.git
+[submodule "external/C5_cuda_agent"]
+	path = external/C5_cuda_agent
+	url = https://github.com/BytedTsinghua-SIA/CUDA-Agent.git
+[submodule "external/C5_kernelbench_samples"]
+	path = external/C5_kernelbench_samples
+	url = https://huggingface.co/datasets/ScalingIntelligence/kernelbench-samples
+[submodule "external/C6_gpuemu/gpuemu"]
+	path = external/C6_gpuemu/gpuemu
+	url = https://github.com/Skelf-Research/gpuemu.git
+[submodule "external/C6_gpuemu/gpuemu-corpus"]
+	path = external/C6_gpuemu/gpuemu-corpus
+	url = https://github.com/sarkar-dipankar/gpuemu-corpus.git
+[submodule "external/C7_kuiper"]
+	path = external/C7_kuiper
+	url = https://github.com/FStarLang/kuiper.git
